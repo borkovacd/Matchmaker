@@ -1,46 +1,42 @@
-import React, {Component} from 'react';
-import Loader from '../components/Loader';
-import {withRouter} from 'react-router-dom';
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
+import React, { Component } from "react";
+import Loader from "../components/Loader";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 class BaseLayout extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-    constructor(props) {
-        super(props);
-    }
+  render() {
+    const { children } = this.props;
 
-    render() {
+    return (
+      <React.Fragment>
+        {this.props.loader && <Loader />}
 
-        const {children} = this.props;
-
-        return (
-            <React.Fragment>
-                {
-                    this.props.loader &&
-                    <Loader/>
-                }
-
-                <Header/>
-                { children }
-                <Footer/>
-            </React.Fragment>
-        )
-    }
+        <Header />
+        {children}
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
-function mapDispatchToProps(dispatch)
-{
-    return bindActionCreators({}, dispatch);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({}, dispatch);
 }
 
-function mapStateToProps({ authReducers, siteDataReducers })
-{
-    return {
-        loader: siteDataReducers.loader
-    };
+function mapStateToProps({ authReducers, siteDataReducers }) {
+  return {
+    loader: siteDataReducers.loader,
+    language: siteDataReducers.language
+  };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BaseLayout));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(BaseLayout)
+);
