@@ -36,7 +36,9 @@ function load() {
       return;
     }
 
-    store.dispatch(loadData(response.data.blogs ? response.data.blogs : []));
+    store.dispatch(
+      loadData(response.data.languages ? response.data.languages : [])
+    );
   });
 }
 

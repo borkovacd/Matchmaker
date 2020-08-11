@@ -20,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd60a36e-86f9-45d1-8b28-4a801836b537" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../matchmaker/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchmaker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/actions/SiteDataActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/actions/SiteDataActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/base/BaseLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/base/BaseLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/base/HTTP.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/base/HTTP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/common/BaseComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/common/BaseComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/common/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/common/Page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchmaker/src/components/LanguageSwitcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/components/LanguageSwitcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/src/localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +45,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.5.0" />
@@ -64,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597136600621</updated>
       <workItem from="1597136601739" duration="1569000" />
-      <workItem from="1597138294347" duration="95000" />
+      <workItem from="1597138294347" duration="5195000" />
     </task>
     <servers />
   </component>

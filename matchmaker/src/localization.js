@@ -3,12 +3,13 @@ import LocalizedStrings from "react-localization";
 let strings = new LocalizedStrings({
   en: {
     menu: {
-      Home: "Home",
+      Home: "Serb, get married!",
       About: "About",
       Register: "Register",
       Login: "Login",
       Profile: "Profile",
-      Logout: "Logout"
+      Logout: "Logout",
+      LanguageSwitch: "Change language"
     },
 
     forgotPassword: {
@@ -335,12 +336,13 @@ let strings = new LocalizedStrings({
   },
   de: {
     menu: {
-      Home: "Home",
+      Home: "Heirate sich, Serbe!",
       About: "Über uns",
       Register: "Registrieren",
       Login: "Anmelden",
       Profile: "Profil",
-      Logout: "Abmelden"
+      Logout: "Abmelden",
+      LanguageSwitch: "Sprache ändern"
     },
 
     forgotPassword: {
@@ -672,12 +674,13 @@ let strings = new LocalizedStrings({
 
   rs: {
     menu: {
-      Home: "Početna",
+      Home: "Srbine, oženi se!",
       About: "O nama",
       Register: "Registrujte se",
       Login: "Prijavite se",
       Profile: "Profil",
-      Logout: "Odjavite se"
+      Logout: "Odjavite se",
+      LanguageSwitch: "Promenite jezik"
     },
 
     forgotPassword: {

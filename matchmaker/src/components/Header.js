@@ -4,6 +4,10 @@ import { isUserLoggedIn, logout } from "../base/OAuth";
 import { Link, withRouter } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +22,30 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
+      <Navbar bg="light" variant="light">
+        <Navbar.Brand href="#home">
+          <img
+            alt=""
+            src={"images/flags/rs.png"}
+            width="125"
+            height="100"
+            className="d-inline-block align-top"
+          />
+          {strings.menu.Home}
+        </Navbar.Brand>
+        <Navbar.Collapse id="basic-navbar-nav" className="mr-auto">
+          <Nav>
+            <Button className="btn btn-danger">{strings.menu.Login}</Button>
+
+            <Button className="btn ">{strings.menu.Register}</Button>
+
+            <LanguageSwitcher />
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    );
+    {
+      /*<div>
         <div id="menu" className="active">
           <div className="menu-item">
             <Link to={"/"}>{strings.menu.Home}</Link>
@@ -89,8 +116,8 @@ class Header extends Component {
             </Link>
           </div>
         </div>
-      </div>
-    );
+          </div> */
+    }
   }
 }
 
