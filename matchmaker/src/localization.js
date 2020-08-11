@@ -127,11 +127,16 @@ let strings = new LocalizedStrings({
     },
 
     loginForm: {
+      title: "Members Login",
+      username: "Username",
       email: "Email",
       password: "Password",
       login: "Login",
       forgotYourPassword: "Forgot your password?",
-      register: "Register"
+      register: "Register",
+      rememberMe: "Remember me",
+      continue: "Continue",
+      notMember: "Not a member?"
     },
 
     about: {
@@ -460,11 +465,16 @@ let strings = new LocalizedStrings({
     },
 
     loginForm: {
+      title: "Mitglieder Login",
+      username: "Nutzername",
       email: "E-Mail",
       password: "Passwort",
       login: "Anmelden",
-      forgotYourPassword: "Passwort vergessen",
-      register: "Anmelden"
+      forgotYourPassword: "Passwort vergessen?",
+      register: "Anmelden",
+      rememberMe: "Erinnere dich an mich",
+      continue: "Fortsetzen",
+      notMember: "Kein Mitglied?"
     },
 
     about: {
@@ -796,11 +806,16 @@ let strings = new LocalizedStrings({
     },
 
     loginForm: {
+      title: "Korisnička prijava",
+      username: "Korisničko ime",
       email: "E-mail",
       password: "Lozinka",
       login: "Prijavite se",
-      forgotYourPassword: "Zaboravili ste lozinku",
-      register: "Registrujte se"
+      forgotYourPassword: "Zaboravili ste lozinku?",
+      register: "Registrujte se",
+      rememberMe: "Zapamti me",
+      continue: "Nastavi",
+      notMember: "Niste korisnik?"
     },
 
     about: {
