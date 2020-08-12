@@ -9,6 +9,7 @@
 
   &.active {
     background: $header;
+    opacity: 0.9;
     transition: 0.25s;
   }
 

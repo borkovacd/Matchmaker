@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd60a36e-86f9-45d1-8b28-4a801836b537" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../matchmaker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/public/css/scss/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/public/css/scss/components/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dd60a36e-86f9-45d1-8b28-4a801836b537" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

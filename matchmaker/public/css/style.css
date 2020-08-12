@@ -260,6 +260,7 @@ select {
   width: 100%; }
   #header.active {
     background: rgba(3, 24, 86, 0.95);
+    opacity: 0.9;
     transition: 0.25s; }
   #header .logo img {
     top: 0;
