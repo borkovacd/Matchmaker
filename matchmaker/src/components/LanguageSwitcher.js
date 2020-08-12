@@ -3,10 +3,6 @@ import { bindActionCreators } from "redux";
 import * as Actions from "../actions/Actions";
 import { withRouter } from "react-router-dom";
 import connect from "react-redux/es/connect/connect";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
-import strings from "../localization";
-import Image from "react-bootstrap/Image";
 
 class LanguageSwitcher extends Component {
   constructor(props) {
@@ -14,35 +10,32 @@ class LanguageSwitcher extends Component {
   }
 
   changeLanguage(language) {
-    //console.log(language);
     this.props.changeLanguage(language);
   }
 
   render() {
     return (
-      <DropdownButton
-        id="dropdown-basic-button"
-        title={strings.menu.LanguageSwitch}
-      >
-        <Dropdown.Item
-          className={this.props.language === "rs" ? "active" : ""}
-          onClick={() => this.changeLanguage("rs")}
-        >
-          <Image fluid alt="RS" src={"images/flags/rs.png"} />
-        </Dropdown.Item>
-        <Dropdown.Item
-          className={this.props.language === "en" ? "active" : ""}
-          onClick={() => this.changeLanguage("en")}
-        >
-          <Image fluid alt="EN" src={"images/flags/gb.png"} />
-        </Dropdown.Item>
-        <Dropdown.Item
-          className={this.props.language === "de" ? "active" : ""}
-          onClick={() => this.changeLanguage("de")}
-        >
-          <Image fluid alt="DE" src={"images/flags/de.png"} />
-        </Dropdown.Item>
-      </DropdownButton>
+      <div className="language-container">
+        <div className="language" onClick={() => this.changeLanguage("rs")}>
+          <img
+            className={this.props.language === "rs" ? "active" : ""}
+            src={"images/flags/rs.png"}
+          />
+        </div>
+        <div className="language" onClick={() => this.changeLanguage("en")}>
+          <img
+            className={this.props.language === "en" ? "active" : ""}
+            src={"images/flags/gb.png"}
+          />
+        </div>
+
+        <div className="language" onClick={() => this.changeLanguage("de")}>
+          <img
+            className={this.props.language === "de" ? "active" : ""}
+            src={"images/flags/de.png"}
+          />
+        </div>
+      </div>
     );
   }
 }
