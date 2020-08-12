@@ -19,7 +19,42 @@ class Header extends Component {
   }
 
   render() {
-    return <LanguageSwitcher />;
+    return (
+      <div>
+        <div id="header">
+          <div className="logo">
+            <Link to={"/"}>
+              <img src={"images/logo.png"} />
+            </Link>
+            <div className="title">{strings.menu.Home}</div>
+          </div>
+
+          {!isUserLoggedIn() && (
+            <div>
+              <div className="header-btn-left">
+                <Link to={"/login"}>{strings.menu.Login}</Link>
+              </div>
+              <div className="header-btn-right">
+                <Link to={"/registration"}>{strings.menu.Register}</Link>
+              </div>
+            </div>
+          )}
+          {isUserLoggedIn() && (
+            <div>
+              <div className="header-btn-left">
+                <Link to={"/profile"}>{strings.menu.Profile}</Link>
+              </div>
+              <div className="header-btn-right" onClick={this.logout}>
+                <a href="#">{strings.menu.Logout}</a>
+              </div>
+            </div>
+          )}
+          <div id="language-switcher">
+            <LanguageSwitcher />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 function mapDispatchToProps(dispatch) {

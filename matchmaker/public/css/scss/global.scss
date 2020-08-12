@@ -1,4 +1,186 @@
+html {
+  margin: 0;
+  overflow-x: hidden;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
 body {
-    margin: 0 !important;
-    overflow-x: hidden;
+  margin: 0;
+  overflow-x: hidden;
+
+  min-height: 100vh;
+  background: url("../../images/background.jpg");
+
+  background-size: cover !important;
+  background-position-x: center !important;
+  background-position-y: center !important;
+  background-repeat: no-repeat !important;
+
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+}
+
+p {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+a {
+  color: $orange;
+  font-size: 15px;
+  opacity: 0.9;
+  transition: 0.15s;
+
+  &:hover {
+    opacity: 1;
+    transition: 0.15s;
+  }
+}
+
+input,
+textarea,
+select,
+a,
+button {
+  outline: none;
+}
+
+input:disabled {
+  opacity: 0.7;
+}
+
+.layout-container {
+  position: relative;
+  min-height: 1300px;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: calc(100% - 30px);
+  padding: 140px 15px;
+  min-height: 60vh;
+
+  background: $pageBackground;
+
+  @media screen and (min-width: $break-md) {
+    width: calc(90% - 200px);
+    padding: 140px 100px;
+  }
+
+  @media screen and (min-width: $break-lg) {
+    width: calc(75% - 200px);
+    padding: 140px 100px;
+  }
+
+  @media screen and (min-width: $break-xl) {
+    width: calc(60% - 200px);
+    padding: 140px 100px;
+  }
+}
+
+input,
+textarea,
+select {
+  height: 35px;
+  max-width: 320px;
+  background: $inputBackground;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0 15px;
+  color: white;
+  letter-spacing: 1px;
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 115px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  margin: 5px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: unset;
+  opacity: 0.9;
+  transition: 0.15s;
+
+  &:hover {
+    opacity: 1;
+
+    transition: 0.15s;
+  }
+}
+
+.btn-orange {
+  background: $orange;
+
+  &:hover {
+    opacity: 1;
+
+    transition: 0.15s;
+  }
+}
+
+.btn-blue {
+  background: $btnBlue;
+  transition: 0.15s;
+
+  &:hover {
+    border-color: $btnBlue;
+    background: transparent;
+
+    transition: 0.15s;
+  }
+}
+
+.add-button {
+  color: $orange;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.15s;
+  padding-right: 20px;
+  margin-top: 15px;
+
+  @media screen and (min-width: $break-md) {
+    padding-right: 0;
+    margin-top: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+    transition: 0.15s;
+  }
+
+  &.disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+.orange-text {
+  color: $orange;
+}
+
+.black-text {
+  color: $grayText;
 }

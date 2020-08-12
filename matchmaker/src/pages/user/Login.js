@@ -4,6 +4,8 @@ import Validators from "../../constants/ValidatorTypes";
 import { login } from "../../base/OAuth";
 import strings from "../../localization";
 import { Link, withRouter } from "react-router-dom";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
+import LoginForm from "../../components/forms/user/LoginForm";
 
 class Login extends Page {
   validationList = {
@@ -51,7 +53,27 @@ class Login extends Page {
   }
 
   render() {
-    return <h1>{strings.menu.Login}</h1>;
+    return (
+      <div id="login-page" className="page-container">
+        <Link to={"/"}>
+          <img src={"images/logo.png"} />
+        </Link>
+
+        <div id="language-switcher">
+          <LanguageSwitcher />
+        </div>
+
+        <p>{/*{ strings.login.text }*/}</p>
+
+        <LoginForm
+          errors={this.state.errors}
+          data={this.state.data}
+          keyPress={this.keyPress}
+          onChange={this.changeData}
+          onSubmit={() => this.login()}
+        />
+      </div>
+    );
   }
 }
 

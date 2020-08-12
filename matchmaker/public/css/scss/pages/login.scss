@@ -1,0 +1,40 @@
+#login-page {
+  text-align: center;
+
+  img {
+    max-width: 300px;
+
+    @media screen and (min-width: $break-md) {
+      max-width: 400px;
+    }
+  }
+
+  #login-form {
+    margin-top: 50px;
+
+    .form-row {
+      .column {
+        justify-content: center;
+        align-items: center;
+
+        input {
+          width: 100%;
+        }
+
+        &.controls {
+          display: flex;
+          flex-direction: row;
+          margin-top: 40px;
+
+          .btn {
+            margin: 5px 10px;
+          }
+        }
+
+        .forget-link {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

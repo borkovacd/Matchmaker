@@ -10,6 +10,7 @@ class LanguageSwitcher extends Component {
   }
 
   changeLanguage(language) {
+    console.log("Language switched to: " + language);
     this.props.changeLanguage(language);
   }
 

@@ -1,0 +1,99 @@
+#header {
+  display: flex;
+  position: absolute;
+  height: 100px;
+  transition: 0.25s;
+
+  .logo {
+    img {
+      top: 0;
+      left: 0;
+      height: 100px;
+    }
+  }
+
+  .title {
+    width: 220px;
+    float: right;
+    color: $blue;
+    font-weight: 600;
+    font-size: 45px;
+    font-style: oblique;
+    transition: 0.3s;
+    cursor: pointer;
+    padding-left: 30px;
+  }
+
+  .header-btn-left {
+    position: fixed;
+    top: 5%;
+    left: calc(100% - 27%);
+    background: $red;
+    display: flex;
+    border-radius: 10px;
+
+    a {
+      width: 130px;
+      color: white;
+      font-weight: 500;
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+      border-radius: 10px;
+
+      &:hover {
+        background: $blue;
+        color: white;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .header-btn-right {
+    position: fixed;
+    top: 5%;
+    left: calc(100% - 19%);
+    border-radius: 10px;
+    display: flex;
+    background: $red;
+
+    a {
+      background: $red;
+      border-radius: 10px;
+      width: 130px;
+      color: white;
+      font-weight: 500;
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background: $blue;
+        color: white;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .language-container {
+    position: fixed;
+    top: 4%;
+    left: calc(100% - 11%);
+
+    display: flex;
+    .language {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
