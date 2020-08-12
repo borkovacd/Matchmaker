@@ -1,8 +1,16 @@
 #header {
   display: flex;
-  position: absolute;
+  position: fixed;
   height: 100px;
   transition: 0.25s;
+  background: white;
+  border-bottom: 1px solid gray;
+  width: 100%;
+
+  &.active {
+    background: $header;
+    transition: 0.25s;
+  }
 
   .logo {
     img {
@@ -17,7 +25,7 @@
     float: right;
     color: $blue;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 42px;
     font-style: oblique;
     transition: 0.3s;
     cursor: pointer;
@@ -94,6 +102,17 @@
         width: 30px;
         height: 30px;
       }
+    }
+  }
+}
+
+.hamburger-box {
+  .hamburger-inner {
+    background-color: white !important;
+
+    &:before,
+    &:after {
+      background-color: white !important;
     }
   }
 }

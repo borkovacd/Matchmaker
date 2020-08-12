@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import getErrorClass from "../../../functions/Validation";
 import strings from "../../../localization";
 import ErrorViewer from "../../ErrorViewer";
-import getErrorClass from "../../../functions/Validation";
 
 const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
   <form id="login-form" onSubmit={event => onSubmit(event)}>
@@ -39,7 +40,18 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
     </div>
 
     <div className="form-row">
+      <div className="column">
+        <Link to={"/forgot-password"} className="forget-link">
+          {strings.loginForm.forgotYourPassword}
+        </Link>
+      </div>
+    </div>
+
+    <div className="form-row">
       <div className="column controls">
+        <Link to={"/registration"} className="btn btn-blue">
+          {strings.loginForm.register}
+        </Link>
         <a onClick={event => onSubmit(event)} className="btn btn-orange">
           {strings.loginForm.login}
         </a>

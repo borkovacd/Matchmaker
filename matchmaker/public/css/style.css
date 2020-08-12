@@ -252,9 +252,15 @@ select {
 
 #header {
   display: flex;
-  position: absolute;
+  position: fixed;
   height: 100px;
-  transition: 0.25s; }
+  transition: 0.25s;
+  background: white;
+  border-bottom: 1px solid gray;
+  width: 100%; }
+  #header.active {
+    background: rgba(3, 24, 86, 0.95);
+    transition: 0.25s; }
   #header .logo img {
     top: 0;
     left: 0;
@@ -264,7 +270,7 @@ select {
     float: right;
     color: #1d348a;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 42px;
     font-style: oblique;
     transition: 0.3s;
     cursor: pointer;
@@ -324,6 +330,11 @@ select {
     #header .language-container .language img {
       width: 30px;
       height: 30px; }
+
+.hamburger-box .hamburger-inner {
+  background-color: white !important; }
+  .hamburger-box .hamburger-inner:before, .hamburger-box .hamburger-inner:after {
+    background-color: white !important; }
 
 .language-container {
   display: flex;
