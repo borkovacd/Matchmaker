@@ -179,7 +179,7 @@ class Registration extends Page {
 
   render() {
     return (
-      <div id="login-page">
+      <div id="register-page">
         <div className="title">{strings.menu.Register}</div>
 
         <div className="form-grid-container">
