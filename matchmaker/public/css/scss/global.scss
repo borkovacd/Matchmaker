@@ -38,14 +38,12 @@ p {
 }
 
 a {
-  color: $grayText;
+  color: $red;
   font-size: 15px;
   opacity: 0.9;
-  transition: 0.15s;
 
   &:hover {
     opacity: 1;
-    transition: 0.15s;
   }
 }
 
@@ -72,7 +70,7 @@ input:disabled {
   padding: 140px 15px;
   min-height: 60vh;
 
-  background: $formBackground;
+  background: $white;
 
   @media screen and (min-width: $break-md) {
     width: calc(90% - 200px);
@@ -93,41 +91,43 @@ input:disabled {
 input,
 textarea,
 select {
-  height: 30px;
   max-width: 320px;
   background: white;
   border: none;
-  border-bottom: 0.5px ridge $lightGrayBorder;
-  border-left: 0.5px ridge $lightGrayBorder;
-  border-right: 0.5px ridge $lightGrayBorder;
   padding: 0 15px;
-  color: $grayText;
   letter-spacing: 1px;
   margin: 15px 0;
+  height: 39.96px;
+  width: 367px;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  color: $placeholder-text;
 }
 
 .btn {
+  color: $white;
+  font-family: "Futura Md BT";
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 35px;
-  min-width: 115px;
   text-align: center;
-  border-radius: 10px;
-  border: 2px solid transparent;
   margin: 5px;
   background: transparent;
-
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: unset;
-  opacity: 0.9;
-  transition: 0.15s;
+  opacity: 1;
+  height: 34px;
+  width: 135px;
+  min-width: 115px;
+  border-radius: 5px;
+  background-color: $red;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
 
   &:hover {
-    opacity: 1;
-    transition: 0.15s;
+    opacity: 0.85;
   }
 }
 
@@ -136,27 +136,23 @@ select {
 
   &:hover {
     opacity: 1;
-    transition: 0.15s;
   }
 }
 
 .btn-blue {
-  background: $btnBlue;
-  transition: 0.15s;
+  background: $blue;
 
   &:hover {
     opacity: 1;
-    transition: 0.15s;
   }
 }
 
 .btn-red {
   color: white;
-  background: $btnRed;
+  background: $red;
 
   &:hover {
     opacity: 1;
-    transition: 0.15s;
   }
 }
 
@@ -169,7 +165,6 @@ select {
   font-size: 15px;
   cursor: pointer;
   opacity: 0.9;
-  transition: 0.15s;
   padding-right: 20px;
   margin-top: 15px;
 
@@ -180,7 +175,6 @@ select {
 
   &:hover {
     opacity: 1;
-    transition: 0.15s;
   }
 
   &.disabled {

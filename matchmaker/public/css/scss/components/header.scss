@@ -1,37 +1,41 @@
 #header {
   display: flex;
   position: fixed;
-  height: 100px;
+  height: 104px;
   top: 0;
-  transition: 0.25s;
   background: white;
   border-bottom: 1px ridge $lightGrayBorder;
   width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 
   &.active {
-    background: $header;
+    background: $blue;
     opacity: 0.9;
-    transition: 0.25s;
   }
 
   .logo {
     img {
       top: 0;
       left: 0;
-      height: 100px;
+      height: 105px;
+      width: 174px;
     }
   }
 
   .title {
-    width: 210px;
     float: right;
+    margin-top: 14px;
+    margin-left: 100px;
+    height: 57px;
+    width: 346px;
     color: $blue;
-    font-weight: 600;
-    font-size: 41px;
-    font-style: oblique;
-    transition: 0.3s;
+    font-family: "Times Cirilica";
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 36px;
     cursor: pointer;
-    padding-left: 30px;
   }
 
   .header-btn-left {
@@ -40,56 +44,60 @@
     left: calc(100% - 27%);
     background: $red;
     display: flex;
-    border-radius: 10px;
+    justify-content: center;
+    height: 35px;
+    width: 127px;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    border: 0.5px solid #979797;
+
+    &:hover {
+      background: $blue;
+      color: white;
+    }
 
     a {
-      width: 130px;
-      color: white;
-      font-weight: 500;
-      font-size: 20px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
       text-decoration: none;
-      transition: 0.3s;
       cursor: pointer;
-      border-radius: 10px;
-
-      &:hover {
-        background: $blue;
-        color: white;
-        transition: 0.3s;
-      }
+      border-radius: 4px;
+      height: 23px;
+      width: 58.46px;
+      color: #fff;
+      font-family: "Futura Md BT";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center;
     }
   }
 
   .header-btn-right {
+    height: 35px;
+    width: 127px;
     position: fixed;
     top: 5%;
     left: calc(100% - 19%);
-    border-radius: 10px;
     display: flex;
-    background: $red;
+    justify-content: center;
+
+    &:hover {
+      background: $blue;
+      color: white;
+    }
 
     a {
-      background: $red;
-      border-radius: 10px;
-      width: 130px;
-      color: white;
-      font-weight: 500;
-      font-size: 20px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
+      margin: 5%;
       text-decoration: none;
-      transition: 0.3s;
       cursor: pointer;
-
-      &:hover {
-        background: $blue;
-        color: white;
-        transition: 0.3s;
-      }
+      height: 25px;
+      width: 67.68px;
+      color: #737373;
+      font-family: "Futura Md BT";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center;
     }
   }
 

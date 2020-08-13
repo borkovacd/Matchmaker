@@ -23,13 +23,11 @@ p {
   word-spacing: 2px; }
 
 a {
-  color: #686868;
+  color: #d93943;
   font-size: 15px;
-  opacity: 0.9;
-  transition: 0.15s; }
+  opacity: 0.9; }
   a:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
 
 input,
 textarea,
@@ -50,7 +48,7 @@ input:disabled {
   width: calc(100% - 30px);
   padding: 140px 15px;
   min-height: 60vh;
-  background: white; }
+  background: #fff; }
   @media screen and (min-width: 992px) {
     .page-container {
       width: calc(90% - 200px);
@@ -67,58 +65,57 @@ input:disabled {
 input,
 textarea,
 select {
-  height: 30px;
   max-width: 320px;
   background: white;
   border: none;
-  border-bottom: 0.5px ridge #cacaca;
-  border-left: 0.5px ridge #cacaca;
-  border-right: 0.5px ridge #cacaca;
   padding: 0 15px;
-  color: #686868;
   letter-spacing: 1px;
-  margin: 15px 0; }
+  margin: 15px 0;
+  height: 39.96px;
+  width: 367px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  color: #bbb; }
 
 .btn {
+  color: #fff;
+  font-family: "Futura Md BT";
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 35px;
-  min-width: 115px;
   text-align: center;
-  border-radius: 10px;
-  border: 2px solid transparent;
   margin: 5px;
   background: transparent;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: unset;
-  opacity: 0.9;
-  transition: 0.15s; }
+  opacity: 1;
+  height: 34px;
+  width: 135px;
+  min-width: 115px;
+  border-radius: 5px;
+  background-color: #d93943;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
   .btn:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 0.85; }
 
 .btn-orange {
   background: #f55323; }
   .btn-orange:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
 
 .btn-blue {
-  background: #031856;
-  transition: 0.15s; }
+  background: #00498e; }
   .btn-blue:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
 
 .btn-red {
   color: white;
-  background: red; }
+  background: #d93943; }
   .btn-red:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -128,7 +125,6 @@ select {
   font-size: 15px;
   cursor: pointer;
   opacity: 0.9;
-  transition: 0.15s;
   padding-right: 20px;
   margin-top: 15px; }
   @media screen and (min-width: 992px) {
@@ -136,8 +132,7 @@ select {
       padding-right: 0;
       margin-top: 0; } }
   .add-button:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
   .add-button.disabled {
     opacity: 0.7;
     pointer-events: none; }
@@ -146,7 +141,7 @@ select {
   color: #f55323; }
 
 .black-text {
-  color: #686868; }
+  color: #737373; }
 
 .required:after {
   content: " *";
@@ -159,24 +154,21 @@ select {
 
 .form-grid-item {
   width: 50%;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid #cacaca;
   padding: 30px;
   font-size: 30px;
   text-align: center;
-  margin-left: 30%; }
+  margin-left: 30%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
 
 .form-button {
   color: #f55323;
   font-size: 15px;
   cursor: pointer;
   text-decoration: underline;
-  opacity: 0.9;
-  transition: 0.15s; }
+  opacity: 0.9; }
   .form-button:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
 
 .remove-button,
 .edit-button {
@@ -189,12 +181,10 @@ select {
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  opacity: 0.9;
-  transition: 0.15s; }
+  opacity: 0.9; }
   .remove-button:hover,
   .edit-button:hover {
-    opacity: 1;
-    transition: 0.15s; }
+    opacity: 1; }
   .remove-button.disabled,
   .edit-button.disabled {
     pointer-events: none;
@@ -236,7 +226,7 @@ select {
   height: 1px;
   margin: 10px 0;
   margin-bottom: 20px;
-  background: red; }
+  background: #d93943; }
 
 .navigation {
   display: flex;
@@ -282,77 +272,85 @@ select {
 #header {
   display: flex;
   position: fixed;
-  height: 100px;
+  height: 104px;
   top: 0;
-  transition: 0.25s;
   background: white;
   border-bottom: 1px ridge #cacaca;
-  width: 100%; }
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
   #header.active {
-    background: rgba(3, 24, 86, 0.95);
-    opacity: 0.9;
-    transition: 0.25s; }
+    background: #00498e;
+    opacity: 0.9; }
   #header .logo img {
     top: 0;
     left: 0;
-    height: 100px; }
+    height: 105px;
+    width: 174px; }
   #header .title {
-    width: 210px;
     float: right;
-    color: #1d348a;
-    font-weight: 600;
-    font-size: 41px;
-    font-style: oblique;
-    transition: 0.3s;
-    cursor: pointer;
-    padding-left: 30px; }
+    margin-top: 14px;
+    margin-left: 100px;
+    height: 57px;
+    width: 346px;
+    color: #00498e;
+    font-family: "Times Cirilica";
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 36px;
+    cursor: pointer; }
   #header .header-btn-left {
     position: fixed;
     top: 5%;
     left: calc(100% - 27%);
-    background: red;
+    background: #d93943;
     display: flex;
-    border-radius: 10px; }
+    justify-content: center;
+    height: 35px;
+    width: 127px;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    border: 0.5px solid #979797; }
+    #header .header-btn-left:hover {
+      background: #00498e;
+      color: white; }
     #header .header-btn-left a {
-      width: 130px;
-      color: white;
-      font-weight: 500;
-      font-size: 20px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
       text-decoration: none;
-      transition: 0.3s;
       cursor: pointer;
-      border-radius: 10px; }
-      #header .header-btn-left a:hover {
-        background: #1d348a;
-        color: white;
-        transition: 0.3s; }
+      border-radius: 4px;
+      height: 23px;
+      width: 58.46px;
+      color: #fff;
+      font-family: "Futura Md BT";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center; }
   #header .header-btn-right {
+    height: 35px;
+    width: 127px;
     position: fixed;
     top: 5%;
     left: calc(100% - 19%);
-    border-radius: 10px;
     display: flex;
-    background: red; }
+    justify-content: center; }
+    #header .header-btn-right:hover {
+      background: #00498e;
+      color: white; }
     #header .header-btn-right a {
-      background: red;
-      border-radius: 10px;
-      width: 130px;
-      color: white;
-      font-weight: 500;
-      font-size: 20px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
+      margin: 5%;
       text-decoration: none;
-      transition: 0.3s;
-      cursor: pointer; }
-      #header .header-btn-right a:hover {
-        background: #1d348a;
-        color: white;
-        transition: 0.3s; }
+      cursor: pointer;
+      height: 25px;
+      width: 67.68px;
+      color: #737373;
+      font-family: "Futura Md BT";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center; }
   #header .language-container {
     position: fixed;
     top: 4%;
@@ -375,12 +373,10 @@ select {
       height: 35px;
       border-radius: 50%;
       opacity: 0.9;
-      transition: 0.15s;
       border: 2px solid transparent; }
       .language-container .language img:hover {
         cursor: pointer;
-        opacity: 1;
-        transition: 0.15s; }
+        opacity: 1; }
       .language-container .language img.active {
         border: 2px solid rgba(3, 24, 86, 0.95); }
 
@@ -416,27 +412,32 @@ select {
 #login-page {
   margin: 10% auto;
   text-align: center;
-  color: #686868; }
+  color: #737373; }
   #login-page .title {
-    color: #686868;
-    font-weight: 600;
-    font-size: 25px;
+    color: #737373;
+    text-transform: uppercase;
     font-style: initial;
     line-height: 40px;
     text-decoration: none;
-    width: 100%; }
+    width: 100%;
+    color: #737373;
+    font-family: "Futura Md BT";
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 42px; }
   #login-page #login-form .title {
     align-items: left;
     text-align: left;
-    font-weight: 500;
-    border-bottom: 0.5px ridge #e61010;
+    font-weight: 600;
+    border-bottom: 1px solid #d93943;
     margin-bottom: 10%;
     width: 100%;
-    font-size: 15px; }
+    font-size: 20px;
+    text-transform: none; }
   #login-page #login-form .form-row {
     text-align: left;
     font-size: 15px;
-    color: #686868;
+    color: #737373;
     font-weight: bolder;
     width: 100%; }
     #login-page #login-form .form-row .column {
@@ -450,7 +451,7 @@ select {
       #login-page #login-form .form-row .column.controls {
         display: flex;
         flex-direction: row;
-        margin-top: 40px; }
+        margin-top: 15px; }
         #login-page #login-form .form-row .column.controls .btn {
           margin: 5px 10px; }
       #login-page #login-form .form-row .column.not-a-member {
@@ -465,7 +466,9 @@ select {
   #login-page #login-with-buttons {
     /* Responsive layout - when the screen is less than 1200px wide */ }
     #login-page #login-with-buttons .title {
-      font-weight: 500;
+      text-transform: none;
+      font-size: 20px;
+      font-weight: 600;
       align-items: left;
       text-align: left;
       margin-bottom: 1%; }
@@ -474,13 +477,15 @@ select {
       color: white; }
       #login-page #login-with-buttons .row .btn {
         position: relative;
-        width: 60%;
+        width: 40%;
+        height: 35px;
         padding: 12px;
         border: none;
         border-radius: 4px;
         margin: 5px 0;
         opacity: 1;
         display: inline-block;
+        font-family: "Futura Md BT";
         font-size: 17px;
         line-height: 20px;
         text-decoration: none;
