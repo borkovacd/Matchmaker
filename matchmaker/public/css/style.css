@@ -68,9 +68,7 @@ select {
   max-width: 320px;
   background: white;
   border: none;
-  padding: 0 15px;
   letter-spacing: 1px;
-  margin: 15px 0;
   height: 39.96px;
   width: 367px;
   border-radius: 5px;
@@ -463,7 +461,7 @@ select {
   margin: 15px 0;
   cursor: pointer; }
   .select.disabled {
-    opacity: .8;
+    opacity: 0.8;
     pointer-events: none; }
   .select p {
     margin: 0;
@@ -498,10 +496,10 @@ select {
       border-bottom: 1px solid #031856;
       cursor: pointer;
       margin: 0;
-      transition: .15s; }
+      transition: 0.15s; }
       .select .options p:hover {
         background: rgba(5, 15, 55, 0.25);
-        transition: .15s; }
+        transition: 0.15s; }
   .select .add-container {
     display: flex;
     flex-direction: row;
@@ -516,12 +514,12 @@ select {
       align-items: center;
       justify-content: center;
       opacity: 1;
-      transition: .15s;
+      transition: 0.15s;
       cursor: pointer; }
       .select .add-container span.disabled {
-        opacity: .6;
+        opacity: 0.6;
         pointer-events: none;
-        transition: .15s; }
+        transition: 0.15s; }
 
 .filter {
   position: absolute;
@@ -628,44 +626,51 @@ select {
     font-size: 35px;
     font-weight: 500;
     line-height: 42px; }
-  #login-page #login-form .title {
-    align-items: left;
-    text-align: left;
-    font-weight: 600;
-    border-bottom: 1px solid #d93943;
-    margin-bottom: 10%;
-    width: 100%;
-    font-size: 20px;
-    text-transform: none; }
-  #login-page #login-form .form-row {
-    text-align: left;
-    font-size: 15px;
-    color: #737373;
-    font-weight: bolder;
-    width: 100%; }
-    #login-page #login-form .form-row .column {
-      justify-content: left;
+  #login-page #login-form {
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%; }
+    #login-page #login-form .title {
       align-items: left;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1px solid #d93943;
+      margin-bottom: 10%;
+      width: 100%;
+      font-size: 20px;
+      text-transform: none; }
+    #login-page #login-form .form-row {
+      text-align: left;
+      font-size: 15px;
+      color: #737373;
+      font-weight: bolder;
       width: 100%; }
-      #login-page #login-form .form-row .column .label-container {
-        font-size: 20px; }
-      #login-page #login-form .form-row .column input {
-        width: 100%; }
-      #login-page #login-form .form-row .column.controls {
-        display: flex;
-        flex-direction: row;
-        margin-top: 15px; }
-        #login-page #login-form .form-row .column.controls .btn {
-          margin: 5px 10px; }
-      #login-page #login-form .form-row .column.not-a-member {
-        display: flex;
+      #login-page #login-form .form-row .column {
         justify-content: left;
-        flex-direction: row;
-        margin-top: 15px; }
-        #login-page #login-form .form-row .column.not-a-member .space {
-          margin: 0 5px; }
-      #login-page #login-form .form-row .column .forget-link {
-        margin-top: 15px; }
+        align-items: left;
+        width: 100%; }
+        #login-page #login-form .form-row .column .label-container {
+          margin-top: 5%;
+          font-size: 20px; }
+        #login-page #login-form .form-row .column input {
+          margin-top: 1%;
+          width: 100%;
+          color: #bbb; }
+        #login-page #login-form .form-row .column.controls {
+          display: flex;
+          flex-direction: row;
+          margin-top: 15px; }
+          #login-page #login-form .form-row .column.controls .btn {
+            margin: 5px 10px; }
+        #login-page #login-form .form-row .column.not-a-member {
+          display: flex;
+          justify-content: left;
+          flex-direction: row;
+          margin-top: 15px; }
+          #login-page #login-form .form-row .column.not-a-member .space {
+            margin: 0 5px; }
+        #login-page #login-form .form-row .column .forget-link {
+          margin-top: 15px; }
   #login-page #login-with-buttons {
     /* Responsive layout - when the screen is less than 1200px wide */ }
     #login-page #login-with-buttons .title {
@@ -730,57 +735,64 @@ select {
     font-size: 35px;
     font-weight: 500;
     line-height: 42px; }
-  #register-page #register-form .title {
-    align-items: left;
-    text-align: left;
-    font-weight: 600;
-    border-bottom: 1px solid #d93943;
-    margin-bottom: 10%;
-    width: 100%;
-    font-size: 20px;
-    text-transform: none; }
-  #register-page #register-form .form-row {
-    text-align: left;
-    font-size: 15px;
-    color: #737373;
-    font-weight: bolder;
-    width: 100%; }
-    #register-page #register-form .form-row .column {
-      justify-content: left;
+  #register-page #register-form {
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%; }
+    #register-page #register-form .title {
       align-items: left;
-      width: 100%; }
-      #register-page #register-form .form-row .column .label-container {
-        font-size: 20px; }
-      #register-page #register-form .form-row .column input {
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1px solid #d93943;
+      margin-bottom: 10%;
+      width: 100%;
+      font-size: 20px;
+      text-transform: none; }
+    #register-page #register-form .register-grid {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 50% 50%; }
+    #register-page #register-form .register-grid-item {
+      width: 100%;
+      text-align: left;
+      font-size: 15px;
+      margin-bottom: 5%; }
+      #register-page #register-form .register-grid-item .label-container {
+        font-size: 16px;
+        font-weight: 600; }
+      #register-page #register-form .register-grid-item input {
         width: 100%; }
-      #register-page #register-form .form-row .column.controls {
-        display: flex;
-        flex-direction: row;
-        margin-top: 15px; }
-        #register-page #register-form .form-row .column.controls .btn {
-          margin: 5px 10px; }
-      #register-page #register-form .form-row .column.not-a-member {
-        display: flex;
+    #register-page #register-form .form-row {
+      text-align: left;
+      font-size: 15px;
+      color: #737373;
+      font-weight: bolder;
+      width: 100%; }
+      #register-page #register-form .form-row .column {
         justify-content: left;
-        flex-direction: row;
-        margin-top: 15px; }
-        #register-page #register-form .form-row .column.not-a-member .space {
-          margin: 0 5px; }
-      #register-page #register-form .form-row .column .forget-link {
-        margin-top: 15px; }
-  #register-page #login-with-buttons {
+        align-items: left;
+        width: 100%; }
+        #register-page #register-form .form-row .column.controls {
+          display: flex;
+          flex-direction: row;
+          margin-top: 15px; }
+          #register-page #register-form .form-row .column.controls .btn {
+            margin: 5px 10px; }
+  #register-page #register-with-buttons {
     /* Responsive layout - when the screen is less than 1200px wide */ }
-    #register-page #login-with-buttons .title {
+    #register-page #register-with-buttons .title {
       text-transform: none;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 500;
       align-items: left;
       text-align: left;
-      margin-bottom: 1%; }
-    #register-page #login-with-buttons .row {
+      margin-bottom: 1%;
+      width: 300px; }
+    #register-page #register-with-buttons .row {
       text-align: left;
       color: white; }
-      #register-page #login-with-buttons .row .btn {
+      #register-page #register-with-buttons .row .btn {
         position: relative;
         width: 40%;
         height: 35px;
@@ -795,23 +807,23 @@ select {
         line-height: 20px;
         text-decoration: none;
         /* remove underline from anchors */ }
-        #register-page #login-with-buttons .row .btn .i {
+        #register-page #register-with-buttons .row .btn .i {
           position: absolute;
           left: 10%;
           font-size: 30px; }
-      #register-page #login-with-buttons .row .btn:hover {
+      #register-page #register-with-buttons .row .btn:hover {
         opacity: 0.85; }
-      #register-page #login-with-buttons .row .fb {
+      #register-page #register-with-buttons .row .fb {
         background-color: #3b5998;
         color: white; }
-      #register-page #login-with-buttons .row .twitter {
+      #register-page #register-with-buttons .row .twitter {
         background-color: #55acee;
         color: white; }
-      #register-page #login-with-buttons .row .google {
+      #register-page #register-with-buttons .row .google {
         background-color: #dd4b39;
         color: white; }
     @media screen and (max-width: 1200px) {
-      #register-page #login-with-buttons {
+      #register-page #register-with-buttons {
         /* hide the symbol */ }
-        #register-page #login-with-buttons .i {
+        #register-page #register-with-buttons .i {
           display: none; } }

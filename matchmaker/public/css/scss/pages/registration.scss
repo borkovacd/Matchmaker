@@ -18,6 +18,9 @@
   }
 
   #register-form {
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
     .title {
       align-items: left;
       text-align: left;
@@ -27,6 +30,29 @@
       width: 100%;
       font-size: 20px;
       text-transform: none;
+    }
+
+    .register-grid {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 50% 50%;
+    }
+
+    .register-grid-item {
+      width: 100%;
+      text-align: left;
+      font-size: 15px;
+      margin-bottom: 5%;
+
+      .label-container {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+      }
     }
 
     .form-row {
@@ -41,14 +67,6 @@
         align-items: left;
         width: 100%;
 
-        .label-container {
-          font-size: 20px;
-        }
-
-        input {
-          width: 100%;
-        }
-
         &.controls {
           display: flex;
           flex-direction: row;
@@ -58,33 +76,19 @@
             margin: 5px 10px;
           }
         }
-
-        &.not-a-member {
-          display: flex;
-          justify-content: left;
-          flex-direction: row;
-          margin-top: 15px;
-
-          .space {
-            margin: 0 5px;
-          }
-        }
-
-        .forget-link {
-          margin-top: 15px;
-        }
       }
     }
   }
 
-  #login-with-buttons {
+  #register-with-buttons {
     .title {
       text-transform: none;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 500;
       align-items: left;
       text-align: left;
       margin-bottom: 1%;
+      width: 300px;
     }
     .row {
       text-align: left;

@@ -6,7 +6,7 @@ import ErrorViewer from "../../ErrorViewer";
 import CheckBox from "../../controls/CheckBox";
 
 const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
-  <form id="login-form" onSubmit={event => onSubmit(event)}>
+  <form id="login-form" onSubmit={(event) => onSubmit(event)}>
     <div className="form-row">
       <div className="column">
         <div className=" title">{strings.loginForm.title}</div>
@@ -69,7 +69,10 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
 
     <div className="form-row">
       <div className="column controls">
-        <a onClick={event => onSubmit(event)} className="btn btn-red uppercase">
+        <a
+          onClick={(event) => onSubmit(event)}
+          className="btn btn-red uppercase"
+        >
           {strings.loginForm.continue}
         </a>
       </div>
