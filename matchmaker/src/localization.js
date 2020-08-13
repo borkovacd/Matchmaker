@@ -12,6 +12,65 @@ let strings = new LocalizedStrings({
       LanguageSwitch: "Change language"
     },
 
+    loginForm: {
+      title: "Members Login",
+      username: "Username",
+      email: "Email",
+      password: "Password",
+      login: "Login",
+      forgotYourPassword: "Forgot your password?",
+      register: "Register",
+      rememberMe: "Remember me",
+      continue: "Continue",
+      notMember: "Not a member?",
+      signUpNow: "Sign Up Now",
+      loginWith: "Login with: ",
+      continueWith: "Continue with"
+    },
+
+    registrationForm: {
+      title: "Personal Info",
+      firstName: "First name",
+      lastName: "Last name",
+      middleName: "Middle name",
+      email: "Email",
+      password: "Password",
+      repeatPassword: "Repeat password",
+      gender: "Gender",
+      weight: "Weight",
+      height: "Height",
+      position: "Position",
+      dateOfBirth: "Date of birth",
+      nationality: "Nationality",
+      placeOfBirth: "Place of birth",
+      playerPhoto: "Player photo",
+      uploadPhoto: "Upload photo",
+      youtubeVideo: "Youtube video",
+      otherLinks: "Other links",
+      languages: "Languages",
+      euPassport: "EU passport",
+      clubs: "Club",
+      country: "Country",
+      league: "League",
+      club: "Club",
+      year: "Year",
+      successMessage:
+        "You have registered successfully. We need some more details about you, so people could find you easier.",
+      doItLater: "I want to fill these data later.",
+      awardsWithClubs: "Awards with club",
+      honorsWithClubs: "Honors with club",
+      awardsWithNationalTeam: "Awards with national team",
+      honorsWithNationalTeam: "Honors with national team",
+      notes: "Notes",
+      nationalTeams: "National team",
+      passwordNotMatch: "Passwords do not match",
+      emailExists: "Email exists",
+      positionNote:
+        "If you play more positions (in defense and attack), please state it in the field Note, located at the next registration step.",
+      clubsNotice:
+        "Please fill in all required fields regarding the club you are currently playing for, or you played for before (country, club name, league, month and year), so that the system can correctly register your current and previous engagement."
+    },
+
     forgotPassword: {
       text: "Reset password",
       resetPassword: "Reset password",
@@ -126,22 +185,6 @@ let strings = new LocalizedStrings({
       wrongCredentials: "Wrong login data"
     },
 
-    loginForm: {
-      title: "Members Login",
-      username: "Username",
-      email: "Email",
-      password: "Password",
-      login: "Login",
-      forgotYourPassword: "Forgot your password?",
-      register: "Register",
-      rememberMe: "Remember me",
-      continue: "Continue",
-      notMember: "Not a member?",
-      signUpNow: "Sign Up Now",
-      loginWith: "Login with: ",
-      continueWith: "Continue with"
-    },
-
     about: {
       weAre: "About",
       hunters: "Us",
@@ -206,48 +249,6 @@ let strings = new LocalizedStrings({
       whatsapp: "whatsapp",
       viber: "viber",
       copy: "copy"
-    },
-
-    registrationForm: {
-      firstName: "First name",
-      lastName: "Last name",
-      middleName: "Middle name",
-      email: "Email",
-      password: "Password",
-      repeatPassword: "Repeat password",
-      gender: "Gender",
-      weight: "Weight",
-      height: "Height",
-      position: "Position",
-      dateOfBirth: "Date of birth",
-      nationality: "Nationality",
-      placeOfBirth: "Place of birth",
-      playerPhoto: "Player photo",
-      uploadPhoto: "Upload photo",
-      youtubeVideo: "Youtube video",
-      otherLinks: "Other links",
-      languages: "Languages",
-      euPassport: "EU passport",
-      clubs: "Club",
-      country: "Country",
-      league: "League",
-      club: "Club",
-      year: "Year",
-      successMessage:
-        "You have registered successfully. We need some more details about you, so people could find you easier.",
-      doItLater: "I want to fill these data later.",
-      awardsWithClubs: "Awards with club",
-      honorsWithClubs: "Honors with club",
-      awardsWithNationalTeam: "Awards with national team",
-      honorsWithNationalTeam: "Honors with national team",
-      notes: "Notes",
-      nationalTeams: "National team",
-      passwordNotMatch: "Passwords do not match",
-      emailExists: "Email exists",
-      positionNote:
-        "If you play more positions (in defense and attack), please state it in the field Note, located at the next registration step.",
-      clubsNotice:
-        "Please fill in all required fields regarding the club you are currently playing for, or you played for before (country, club name, league, month and year), so that the system can correctly register your current and previous engagement."
     },
 
     validation: {
@@ -351,6 +352,67 @@ let strings = new LocalizedStrings({
       Profile: "Profil",
       Logout: "Abmelden",
       LanguageSwitch: "Sprache ändern"
+    },
+
+    loginForm: {
+      title: "Mitglieder Login",
+      username: "Nutzername",
+      email: "E-Mail",
+      password: "Passwort",
+      login: "Anmelden",
+      forgotYourPassword: "Passwort vergessen?",
+      register: "Registrieren",
+      rememberMe: "Erinnere dich an mich",
+      continue: "Fortsetzen",
+      notMember: "Kein Mitglied?",
+      signUpNow: "Jetzt registrieren",
+      loginWith: "Einloggen mit",
+      continueWith: "Fortsetzen mit"
+    },
+
+    registrationForm: {
+      title: "Persönliche Informationen",
+      firstName: "Vorname",
+      lastName: "Name",
+      middleName: "Zweitname",
+      email: "E-Mail",
+      password: "Passwort",
+      repeatPassword: "Passwort wiederholen",
+      gender: "Geschlecht",
+      weight: "Gewicht",
+      height: "Grösse",
+      position: "Position",
+      dateOfBirth: "Geburtsdatum",
+      nationality: "Nationalität",
+      placeOfBirth: "Geburtsort",
+      playerPhoto: "Spielerfoto",
+      uploadPhoto: "Foto hochladen",
+      youtubeVideo: "Youtube video",
+      otherLinks: "Andere Links",
+      languages: "Sprachen",
+      euPassport: "EU pass",
+      clubs: "Vereine",
+      country: "Land",
+      league: "Liga",
+      club: "Verein",
+      year: "Jahr",
+      successMessage:
+        "Du hast dich erfolgreich angemeldet. Wir brauchen noch mehr Informationen über dich, damit man dich einfacher finden kann.",
+      doItLater: "Ich möchte dieses Datenblatt ausfüllen. ",
+      awardsWithClubs: "Persönliche Auszeichnungen und Erfolge (mit Vereinen)",
+      honorsWithClubs: "Gruppen Auszeichnungen und Erfolge (mit Vereinen)",
+      awardsWithNationalTeam:
+        "Persönliche Auszeichnungen und Erfolge (mit Nationalmannschaft)",
+      honorsWithNationalTeam:
+        "Gruppen Auszeichnungen und Erfolge (mit Nationalmannschaft)",
+      notes: "Anmerkungen",
+      nationalTeams: "Nationalmannschaft",
+      passwordNotMatch: "Passwörter stimmen nicht überein",
+      emailExists: "Email existiert",
+      positionNote:
+        "Wenn Sie auf mehreren Positionen (in der Verteidigung und im Angriff) spielen, geben Sie dies bitte im Hinweisfeld an, das in dem nächsten Schritt findet.",
+      clubsNotice:
+        "Bitte geben Sie alle Informationen ein, die sich auf den Verein beziehen, in welchem Sie spielen oder gespielt haben (Land, Name des Vereins, Liga, Monat und Jahr), damit das System die korrekte Registrierung Ihrer aktuellen und vorigen Anmeldung vornehmen kann."
     },
 
     forgotPassword: {
@@ -467,22 +529,6 @@ let strings = new LocalizedStrings({
       wrongCredentials: "Falsche Zugangsdaten"
     },
 
-    loginForm: {
-      title: "Mitglieder Login",
-      username: "Nutzername",
-      email: "E-Mail",
-      password: "Passwort",
-      login: "Anmelden",
-      forgotYourPassword: "Passwort vergessen?",
-      register: "Registrieren",
-      rememberMe: "Erinnere dich an mich",
-      continue: "Fortsetzen",
-      notMember: "Kein Mitglied?",
-      signUpNow: "Jetzt registrieren",
-      loginWith: "Einloggen mit",
-      continueWith: "Fortsetzen mit"
-    },
-
     about: {
       weAre: "Über",
       hunters: "Uns.",
@@ -546,50 +592,6 @@ let strings = new LocalizedStrings({
       whatsapp: "whatsapp",
       viber: "viber",
       copy: "copy"
-    },
-
-    registrationForm: {
-      firstName: "Vorname",
-      lastName: "Name",
-      middleName: "Zweitname",
-      email: "E-Mail",
-      password: "Passwort",
-      repeatPassword: "Passwort wiederholen",
-      gender: "Geschlecht",
-      weight: "Gewicht",
-      height: "Grösse",
-      position: "Position",
-      dateOfBirth: "Geburtsdatum",
-      nationality: "Nationalität",
-      placeOfBirth: "Geburtsort",
-      playerPhoto: "Spielerfoto",
-      uploadPhoto: "Foto hochladen",
-      youtubeVideo: "Youtube video",
-      otherLinks: "Andere Links",
-      languages: "Sprachen",
-      euPassport: "EU pass",
-      clubs: "Vereine",
-      country: "Land",
-      league: "Liga",
-      club: "Verein",
-      year: "Jahr",
-      successMessage:
-        "Du hast dich erfolgreich angemeldet. Wir brauchen noch mehr Informationen über dich, damit man dich einfacher finden kann.",
-      doItLater: "Ich möchte dieses Datenblatt ausfüllen. ",
-      awardsWithClubs: "Persönliche Auszeichnungen und Erfolge (mit Vereinen)",
-      honorsWithClubs: "Gruppen Auszeichnungen und Erfolge (mit Vereinen)",
-      awardsWithNationalTeam:
-        "Persönliche Auszeichnungen und Erfolge (mit Nationalmannschaft)",
-      honorsWithNationalTeam:
-        "Gruppen Auszeichnungen und Erfolge (mit Nationalmannschaft)",
-      notes: "Anmerkungen",
-      nationalTeams: "Nationalmannschaft",
-      passwordNotMatch: "Passwörter stimmen nicht überein",
-      emailExists: "Email existiert",
-      positionNote:
-        "Wenn Sie auf mehreren Positionen (in der Verteidigung und im Angriff) spielen, geben Sie dies bitte im Hinweisfeld an, das in dem nächsten Schritt findet.",
-      clubsNotice:
-        "Bitte geben Sie alle Informationen ein, die sich auf den Verein beziehen, in welchem Sie spielen oder gespielt haben (Land, Name des Vereins, Liga, Monat und Jahr), damit das System die korrekte Registrierung Ihrer aktuellen und vorigen Anmeldung vornehmen kann."
     },
 
     validation: {
@@ -697,6 +699,65 @@ let strings = new LocalizedStrings({
       Profile: "Profil",
       Logout: "Odjavite se",
       LanguageSwitch: "Promenite jezik"
+    },
+
+    loginForm: {
+      title: "Korisnička prijava",
+      username: "Korisničko ime",
+      email: "E-mail",
+      password: "Lozinka",
+      login: "Prijavite se",
+      forgotYourPassword: "Zaboravili ste lozinku?",
+      register: "Registrujte se",
+      rememberMe: "Zapamti me",
+      continue: "Nastavi",
+      notMember: "Niste korisnik?",
+      signUpNow: "Registrujte se sada",
+      loginWith: "Prijavite se sa:",
+      continueWith: "Nastavite koristeći"
+    },
+
+    registrationForm: {
+      title: "Lični podaci",
+      firstName: "Ime",
+      lastName: "Prezime",
+      middleName: "Srednje ime",
+      email: "Email",
+      password: "Lozinka",
+      repeatPassword: "Ponovite lozinku",
+      gender: "Pol",
+      weight: "Težina",
+      height: "Visina",
+      position: "Pozicija",
+      dateOfBirth: "Datum rođenja",
+      nationality: "Nacionalnost",
+      placeOfBirth: "Mesto rođenja",
+      playerPhoto: "Slika",
+      uploadPhoto: "Učitajte sliku",
+      youtubeVideo: "Youtube video",
+      otherLinks: "Drugi linkovi",
+      languages: "Jezici",
+      euPassport: "EU pasoš",
+      clubs: "Klubovi",
+      country: "Država",
+      league: "Liga",
+      club: "Klub",
+      year: "Godina",
+      successMessage:
+        "Uspešno ste se registrovali. Unesite još podataka o sebi, kako bi svi mogli lakše da vas pronađu.",
+      doItLater: "Želim da popunim ove podatke kasnije.",
+      awardsWithClubs: "Lične nagrade i dostignuća (sa klubom)",
+      honorsWithClubs: "Nagrade i dostignuća tima (sa klubom)",
+      awardsWithNationalTeam: "Lične nagrade i dostignuća (sa reprezentacijom)",
+      honorsWithNationalTeam: "Nagrade i dostignuća tima (sa reprezentacijom)",
+      notes: "Napomena",
+      nationalTeams: "Reprezentacija",
+      passwordNotMatch: "Lozinke se ne podudaraju",
+      emailExists: "Email već postoji",
+      positionNote:
+        " Ukoliko igrate na vise pozicija (u odbrani i napadu), molimo vas da to navedete u polje ‘Napomena’, koje se nalazi na sledecem koraku registracije.",
+      clubsNotice:
+        "Molimo unesite sve podatke vezano za klub u kome igrate ili ste igrali (drzavu, naziv kluba, lige, mesec i godinu), kako bi sistem mogao validno da registruje vase trenutno i prethodno angazovanje."
     },
 
     forgotPassword: {
@@ -811,22 +872,6 @@ let strings = new LocalizedStrings({
       wrongCredentials: "Pogrešni podaci za prijavu"
     },
 
-    loginForm: {
-      title: "Korisnička prijava",
-      username: "Korisničko ime",
-      email: "E-mail",
-      password: "Lozinka",
-      login: "Prijavite se",
-      forgotYourPassword: "Zaboravili ste lozinku?",
-      register: "Registrujte se",
-      rememberMe: "Zapamti me",
-      continue: "Nastavi",
-      notMember: "Niste korisnik?",
-      signUpNow: "Registrujte se sada",
-      loginWith: "Prijavite se sa:",
-      continueWith: "Nastavite koristeći"
-    },
-
     about: {
       weAre: "O",
       hunters: "Nama.",
@@ -891,48 +936,6 @@ let strings = new LocalizedStrings({
       whatsapp: "whatsapp",
       viber: "viber",
       copy: "copy"
-    },
-
-    registrationForm: {
-      firstName: "Ime",
-      lastName: "Prezime",
-      middleName: "Srednje ime",
-      email: "Email",
-      password: "Lozinka",
-      repeatPassword: "Ponovite lozinku",
-      gender: "Pol",
-      weight: "Težina",
-      height: "Visina",
-      position: "Pozicija",
-      dateOfBirth: "Datum rođenja",
-      nationality: "Nacionalnost",
-      placeOfBirth: "Mesto rođenja",
-      playerPhoto: "Slika",
-      uploadPhoto: "Učitajte sliku",
-      youtubeVideo: "Youtube video",
-      otherLinks: "Drugi linkovi",
-      languages: "Jezici",
-      euPassport: "EU pasoš",
-      clubs: "Klubovi",
-      country: "Država",
-      league: "Liga",
-      club: "Klub",
-      year: "Godina",
-      successMessage:
-        "Uspešno ste se registrovali. Unesite još podataka o sebi, kako bi svi mogli lakše da vas pronađu.",
-      doItLater: "Želim da popunim ove podatke kasnije.",
-      awardsWithClubs: "Lične nagrade i dostignuća (sa klubom)",
-      honorsWithClubs: "Nagrade i dostignuća tima (sa klubom)",
-      awardsWithNationalTeam: "Lične nagrade i dostignuća (sa reprezentacijom)",
-      honorsWithNationalTeam: "Nagrade i dostignuća tima (sa reprezentacijom)",
-      notes: "Napomena",
-      nationalTeams: "Reprezentacija",
-      passwordNotMatch: "Lozinke se ne podudaraju",
-      emailExists: "Email već postoji",
-      positionNote:
-        " Ukoliko igrate na vise pozicija (u odbrani i napadu), molimo vas da to navedete u polje ‘Napomena’, koje se nalazi na sledecem koraku registracije.",
-      clubsNotice:
-        "Molimo unesite sve podatke vezano za klub u kome igrate ili ste igrali (drzavu, naziv kluba, lige, mesec i godinu), kako bi sistem mogao validno da registruje vase trenutno i prethodno angazovanje."
     },
 
     validation: {

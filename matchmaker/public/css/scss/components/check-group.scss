@@ -1,0 +1,41 @@
+.check-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+
+        display: flex;
+        align-items: center;
+        width: 50%;
+        cursor: pointer;
+        font-weight: 600;
+
+        @media screen and (min-width: $break-md) {
+            width: 25%;
+        }
+
+        span {
+
+            width: 17px;
+            height: 17px;
+            background: white;
+            margin-right: 10px;
+            border-radius: 50%;
+
+            &.active {
+                background: $orange;
+
+                &:before {
+                    font-family: 'Font Awesome\ 5 Free';
+                    content: '\f00c';
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 17px;
+                    font-size: 13px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

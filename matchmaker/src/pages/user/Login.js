@@ -3,8 +3,11 @@ import Page from "../../common/Page";
 import Validators from "../../constants/ValidatorTypes";
 import { login } from "../../base/OAuth";
 import strings from "../../localization";
-import { Link, withRouter } from "react-router-dom";
-import LanguageSwitcher from "../../components/LanguageSwitcher";
+import { withRouter } from "react-router-dom";
+import * as Actions from "../../actions/Actions";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
 import LoginForm from "../../components/forms/user/LoginForm";
 
 class Login extends Page {
@@ -20,9 +23,6 @@ class Login extends Page {
       data: {},
       errors: {}
     };
-
-    //this.props.toggleLogo(false);
-    //this.props.toggleMenu(false);
 
     this.keyPress = this.keyPress.bind(this);
   }
@@ -72,21 +72,21 @@ class Login extends Page {
             <div className="title">{strings.loginForm.loginWith}</div>
 
             <div className="row">
-              <a href="#" class="fb btn">
-                <i class="fab fa-facebook-f i"></i>{" "}
+              <a href="#" className="fb btn">
+                <i className="fab fa-facebook-f i"></i>{" "}
                 {strings.loginForm.continueWith} Facebook
               </a>
             </div>
 
             <div className="row">
-              <a href="#" class="twitter btn">
-                <i class="fab fa-twitter i"></i>{" "}
+              <a href="#" className="twitter btn">
+                <i className="fab fa-twitter i"></i>{" "}
                 {strings.loginForm.continueWith} Twitter
               </a>
             </div>
             <div className="row">
-              <a href="#" class="google btn">
-                <i class="fab fa-google-plus-g i"></i>{" "}
+              <a href="#" className="google btn">
+                <i className="fab fa-google-plus-g i"></i>{" "}
                 {strings.loginForm.continueWith} Google
               </a>
             </div>
@@ -97,4 +97,17 @@ class Login extends Page {
   }
 }
 
-export default Login;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      login: Actions.login
+    },
+    dispatch
+  );
+}
+
+function mapStateToProps({ authReducers }) {
+  return authReducers;
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

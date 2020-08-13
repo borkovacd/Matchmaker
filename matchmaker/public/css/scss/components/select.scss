@@ -1,0 +1,103 @@
+.select {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    max-width: 320px;
+    background: $inputBackground;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 0 15px;
+    color: white;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    cursor: pointer;
+
+    &.disabled {
+        opacity: .8;
+        pointer-events: none;
+    }
+
+    p {
+        margin: 0;
+        width: 100%;
+        line-height: 30px;
+    }
+
+    i {
+        position: absolute;
+        right: 15px;
+        color: $orange;
+        font-size: 22px;
+    }
+
+    .search {
+        margin: 0;
+        border-bottom: 1px solid $btnBlue;
+        width: 100%;
+    }
+
+    .options {
+
+        position: absolute;
+        display: none;
+        background: $inputBackground;
+        width: 100%;
+        top: 40px;
+        left: 0;
+        border-radius: 10px;
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 5;
+
+        &.active {
+            display: block;
+        }
+
+        p {
+            padding: 15px;
+            width: calc(100% - 30px);
+            border-bottom: 1px solid $btnBlue;
+            cursor: pointer;
+            margin: 0;
+            transition: .15s;
+
+            &:hover {
+                background: $pageBackground;
+                transition: .15s;
+            }
+        }
+    }
+
+    .add-container {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        input {
+            width: calc(100% - 30px);
+        }
+
+        span {
+            width: 30px;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: .15s;
+            cursor: pointer;
+
+            &.disabled {
+                opacity: .6;
+                pointer-events: none;
+                transition: .15s;
+            }
+        }
+    }
+
+}

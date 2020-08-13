@@ -1,0 +1,146 @@
+.filter {
+  position: absolute;
+  left: -300px;
+  top: 100px;
+  width: 300px;
+  height: calc(100% - 150px);
+  //background: $filter;
+  z-index: 5000;
+  padding-top: 50px;
+  transition: 0.3s;
+  overflow: hidden;
+
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position-x: center !important;
+  background-position-y: center !important;
+
+  &.active {
+    left: 0;
+    transition: 0.3s;
+  }
+
+  .filter-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position-x: center !important;
+    background-position-y: center !important;
+    z-index: -1;
+    opacity: 0.98;
+  }
+
+  .filter-item {
+    z-index: 1;
+
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    label {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &.last {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .check-group {
+      padding-left: 20px;
+
+      .item {
+        width: 100%;
+
+        span {
+          &.active {
+            background: $btnBlue;
+          }
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 10px;
+        }
+      }
+    }
+
+    .select {
+      background: white;
+      color: $btnBlue;
+
+      .item {
+        background: white;
+      }
+
+      input {
+        background: white;
+        border-radius: 0;
+        color: $btnBlue;
+      }
+    }
+
+    &.gender {
+      .check-group {
+        .item {
+          width: 50%;
+        }
+      }
+    }
+
+    &.eu-passport {
+      .check-group {
+        .item {
+          width: calc(25%);
+
+          &:last-child {
+            width: calc(50%);
+          }
+        }
+      }
+    }
+
+    .slider-container {
+      display: flex;
+      flex-direction: row;
+      margin: 15px 0;
+      align-items: center;
+
+      .rc-slider {
+        margin: 0 10px;
+
+        .handle-wrapper {
+          span {
+            position: absolute;
+            left: 0;
+          }
+        }
+
+        .rc-slider-handle {
+          width: 30px;
+          height: 30px;
+          margin-top: -15px;
+          border: none;
+          background: $btnBlue;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .button-container {
+    text-align: center;
+    padding: 20px 0;
+
+    .btn {
+      background: white;
+      color: $btnBlue;
+    }
+  }
+}

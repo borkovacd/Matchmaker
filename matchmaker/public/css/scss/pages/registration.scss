@@ -1,0 +1,237 @@
+#registration-page {
+  .registration-step-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    input {
+      width: 80%;
+    }
+  }
+
+  .registration-form-container {
+    #registration-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media screen and (min-width: $break-md) {
+        flex-direction: row;
+      }
+
+      input {
+        width: calc(100% - 30px);
+      }
+
+      .column {
+        a {
+          margin-bottom: 25px;
+          display: inline-block;
+        }
+      }
+
+      .main-data {
+        width: calc(100% - 15px);
+
+        @media screen and (min-width: $break-md) {
+          width: calc(70% - 15px);
+        }
+      }
+
+      .profile-data {
+        width: calc(100% - 15px);
+        margin-top: 30px;
+
+        @media screen and (min-width: $break-md) {
+          width: calc(30% - 15px);
+          margin-top: 0;
+        }
+      }
+
+      .canvas-container {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0;
+
+        .slider-container {
+          margin-top: 20px;
+          padding: 0 20px;
+          width: calc(100% - 40px);
+
+          .rc-slider-track {
+            background-color: $inputBackground !important;
+          }
+
+          .rc-slider-handle {
+            border-color: $inputBackground;
+          }
+        }
+      }
+
+      .photo-placeholder {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 0;
+        width: 100%;
+        padding-bottom: 100%;
+        background: $inputBackground;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        .file-input {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 500000;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          background: transparent;
+          opacity: 0;
+        }
+
+        .upload-placeholder {
+          position: absolute;
+          left: 10%;
+          top: 10%;
+          width: 80%;
+          height: 80%;
+          background: url("../images/upload-placeholder.png");
+          background-size: contain;
+        }
+      }
+
+      .choose-image {
+        position: relative;
+        background: $inputBackground;
+        margin-bottom: 15px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        p {
+          cursor: pointer;
+          z-index: 1;
+          opacity: 0.8;
+          transition: 0.15s;
+        }
+
+        &:hover {
+          p {
+            opacity: 1;
+            transition: 0.15s;
+          }
+        }
+
+        input {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          left: 0;
+          top: 0;
+          cursor: pointer;
+          z-index: 999999999999;
+        }
+      }
+
+      .link-input-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+
+        input {
+          width: calc(100% - 64px);
+        }
+      }
+
+      .rotate-container {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+
+        span {
+          display: flex;
+          width: 50%;
+          height: 50px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.15s;
+
+          &:hover {
+            color: $orange;
+            transition: 0.15s;
+          }
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+
+      .navigation-element {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px;
+        cursor: pointer;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        span {
+          margin: 5px;
+          font-weight: 600;
+        }
+
+        img {
+          margin: 5px;
+        }
+
+        .disabled-arrow {
+          display: none;
+        }
+
+        .regular-arrow {
+          display: block;
+        }
+
+        &.disabled {
+          pointer-events: none;
+
+          .disabled-arrow {
+            display: block;
+          }
+
+          .regular-arrow {
+            display: none;
+          }
+
+          span {
+            opacity: 0.15;
+          }
+        }
+      }
+    }
+  }
+}
