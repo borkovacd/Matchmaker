@@ -70,14 +70,25 @@ class Login extends Page {
 
           <div id="login-with-buttons">
             <div className="title">{strings.loginForm.loginWith}</div>
+
             <div className="row">
-              <div className="btn btn-blue">Facebook</div>
+              <a href="#" class="fb btn">
+                <i class="fab fa-facebook-f i"></i>{" "}
+                {strings.loginForm.continueWith} Facebook
+              </a>
+            </div>
+
+            <div className="row">
+              <a href="#" class="twitter btn">
+                <i class="fab fa-twitter i"></i>{" "}
+                {strings.loginForm.continueWith} Twitter
+              </a>
             </div>
             <div className="row">
-              <div className="btn btn-blue">Twitter</div>
-            </div>
-            <div className="row">
-              <div className="btn btn-orange">Google</div>
+              <a href="#" class="google btn">
+                <i class="fab fa-google-plus-g i"></i>{" "}
+                {strings.loginForm.continueWith} Google
+              </a>
             </div>
           </div>
         </div>

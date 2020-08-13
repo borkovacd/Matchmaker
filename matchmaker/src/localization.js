@@ -138,7 +138,8 @@ let strings = new LocalizedStrings({
       continue: "Continue",
       notMember: "Not a member?",
       signUpNow: "Sign Up Now",
-      loginWith: "Login with: "
+      loginWith: "Login with: ",
+      continueWith: "Continue with"
     },
 
     about: {
@@ -478,7 +479,8 @@ let strings = new LocalizedStrings({
       continue: "Fortsetzen",
       notMember: "Kein Mitglied?",
       signUpNow: "Jetzt registrieren",
-      loginWith: "Einloggen mit"
+      loginWith: "Einloggen mit",
+      continueWith: "Fortsetzen mit"
     },
 
     about: {
@@ -821,7 +823,8 @@ let strings = new LocalizedStrings({
       continue: "Nastavi",
       notMember: "Niste korisnik?",
       signUpNow: "Registrujte se sada",
-      loginWith: "Prijavite se sa:"
+      loginWith: "Prijavite se sa:",
+      continueWith: "Nastavite koristeći"
     },
 
     about: {
