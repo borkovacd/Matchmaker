@@ -1,21 +1,44 @@
 #login-page {
+  margin: 10% auto;
   text-align: center;
+  color: $grayText;
 
-  img {
-    max-width: 300px;
-
-    @media screen and (min-width: $break-md) {
-      max-width: 400px;
-    }
+  .title {
+    color: $grayText;
+    font-weight: 600;
+    font-size: 25px;
+    font-style: initial;
+    line-height: 40px;
+    text-decoration: none;
+    width: 100%;
   }
 
   #login-form {
-    margin-top: 50px;
+    .title {
+      align-items: left;
+      text-align: left;
+      font-weight: 500;
+      border-bottom: 0.5px ridge $borderRed;
+      margin-bottom: 10%;
+      width: 100%;
+      font-size: 15px;
+    }
 
     .form-row {
+      text-align: left;
+      font-size: 15px;
+      color: $grayText;
+      font-weight: bolder;
+      width: 100%;
+
       .column {
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
+        width: 100%;
+
+        .label-container {
+          font-size: 20px;
+        }
 
         input {
           width: 100%;
@@ -31,10 +54,34 @@
           }
         }
 
+        &.not-a-member {
+          display: flex;
+          justify-content: left;
+          flex-direction: row;
+          margin-top: 15px;
+
+          .space {
+            margin: 0 5px;
+          }
+        }
+
         .forget-link {
-          margin-top: 20px;
+          margin-top: 15px;
         }
       }
+    }
+  }
+
+  #login-with-buttons {
+    .title {
+      font-weight: 500;
+      align-items: left;
+      text-align: left;
+      margin-bottom: 1%;
+    }
+    .row {
+      text-align: left;
+      color: white;
     }
   }
 }

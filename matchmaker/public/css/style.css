@@ -23,7 +23,7 @@ p {
   word-spacing: 2px; }
 
 a {
-  color: #f55323;
+  color: #686868;
   font-size: 15px;
   opacity: 0.9;
   transition: 0.15s; }
@@ -50,7 +50,7 @@ input:disabled {
   width: calc(100% - 30px);
   padding: 140px 15px;
   min-height: 60vh;
-  background: rgba(5, 15, 55, 0.25); }
+  background: white; }
   @media screen and (min-width: 992px) {
     .page-container {
       width: calc(90% - 200px);
@@ -67,13 +67,15 @@ input:disabled {
 input,
 textarea,
 select {
-  height: 35px;
+  height: 30px;
   max-width: 320px;
-  background: #0c2a98;
-  border: 1px solid transparent;
-  border-radius: 10px;
+  background: white;
+  border: none;
+  border-bottom: 0.5px ridge #cacaca;
+  border-left: 0.5px ridge #cacaca;
+  border-right: 0.5px ridge #cacaca;
   padding: 0 15px;
-  color: white;
+  color: #686868;
   letter-spacing: 1px;
   margin: 15px 0; }
 
@@ -88,8 +90,7 @@ select {
   border: 2px solid transparent;
   margin: 5px;
   background: transparent;
-  color: white;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   text-decoration: unset;
@@ -109,9 +110,18 @@ select {
   background: #031856;
   transition: 0.15s; }
   .btn-blue:hover {
-    border-color: #031856;
-    background: transparent;
+    opacity: 1;
     transition: 0.15s; }
+
+.btn-red {
+  color: white;
+  background: red; }
+  .btn-red:hover {
+    opacity: 1;
+    transition: 0.15s; }
+
+.uppercase {
+  text-transform: uppercase; }
 
 .add-button {
   color: #f55323;
@@ -137,6 +147,25 @@ select {
 
 .black-text {
   color: #686868; }
+
+.required:after {
+  content: " *";
+  color: red; }
+
+.form-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 5%; }
+
+.form-grid-item {
+  width: 50%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #cacaca;
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 30%; }
 
 .form-button {
   color: #f55323;
@@ -179,7 +208,7 @@ select {
     .form-row {
       flex-direction: row; } }
   .form-row label {
-    font-weight: 600; }
+    font-weight: 500; }
   .form-row .placeholder-input {
     position: relative; }
     .form-row .placeholder-input p {
@@ -207,7 +236,7 @@ select {
   height: 1px;
   margin: 10px 0;
   margin-bottom: 20px;
-  background: #0c2a98; }
+  background: red; }
 
 .navigation {
   display: flex;
@@ -254,9 +283,10 @@ select {
   display: flex;
   position: fixed;
   height: 100px;
+  top: 0;
   transition: 0.25s;
   background: white;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px ridge #cacaca;
   width: 100%; }
   #header.active {
     background: rgba(3, 24, 86, 0.95);
@@ -267,11 +297,11 @@ select {
     left: 0;
     height: 100px; }
   #header .title {
-    width: 220px;
+    width: 210px;
     float: right;
     color: #1d348a;
     font-weight: 600;
-    font-size: 42px;
+    font-size: 41px;
     font-style: oblique;
     transition: 0.3s;
     cursor: pointer;
@@ -332,11 +362,6 @@ select {
       width: 30px;
       height: 30px; }
 
-.hamburger-box .hamburger-inner {
-  background-color: white !important; }
-  .hamburger-box .hamburger-inner:before, .hamburger-box .hamburger-inner:after {
-    background-color: white !important; }
-
 .language-container {
   display: flex;
   flex-direction: row;
@@ -359,18 +384,67 @@ select {
       .language-container .language img.active {
         border: 2px solid rgba(3, 24, 86, 0.95); }
 
+.check-box-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 15px; }
+  .check-box-container label {
+    cursor: pointer;
+    font-size: 15px; }
+  .check-box-container span {
+    width: 11px;
+    height: 11px;
+    border: 1px ridge #cacaca;
+    background: white;
+    margin-right: 10px;
+    font-weight: 600; }
+    .check-box-container span.active {
+      background: red; }
+      .check-box-container span.active:before {
+        font-family: "Font Awesome\ 5 Free";
+        content: "\f00c";
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 10px;
+        font-size: 10px;
+        text-align: center; }
+
 #login-page {
-  text-align: center; }
-  #login-page img {
-    max-width: 300px; }
-    @media screen and (min-width: 992px) {
-      #login-page img {
-        max-width: 400px; } }
-  #login-page #login-form {
-    margin-top: 50px; }
+  margin: 10% auto;
+  text-align: center;
+  color: #686868; }
+  #login-page .title {
+    color: #686868;
+    font-weight: 600;
+    font-size: 25px;
+    font-style: initial;
+    line-height: 40px;
+    text-decoration: none;
+    width: 100%; }
+  #login-page #login-form .title {
+    align-items: left;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 0.5px ridge #e61010;
+    margin-bottom: 10%;
+    width: 100%;
+    font-size: 15px; }
+  #login-page #login-form .form-row {
+    text-align: left;
+    font-size: 15px;
+    color: #686868;
+    font-weight: bolder;
+    width: 100%; }
     #login-page #login-form .form-row .column {
-      justify-content: center;
-      align-items: center; }
+      justify-content: left;
+      align-items: left;
+      width: 100%; }
+      #login-page #login-form .form-row .column .label-container {
+        font-size: 20px; }
       #login-page #login-form .form-row .column input {
         width: 100%; }
       #login-page #login-form .form-row .column.controls {
@@ -379,5 +453,20 @@ select {
         margin-top: 40px; }
         #login-page #login-form .form-row .column.controls .btn {
           margin: 5px 10px; }
+      #login-page #login-form .form-row .column.not-a-member {
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+        margin-top: 15px; }
+        #login-page #login-form .form-row .column.not-a-member .space {
+          margin: 0 5px; }
       #login-page #login-form .form-row .column .forget-link {
-        margin-top: 20px; }
+        margin-top: 15px; }
+  #login-page #login-with-buttons .title {
+    font-weight: 500;
+    align-items: left;
+    text-align: left;
+    margin-bottom: 1%; }
+  #login-page #login-with-buttons .row {
+    text-align: left;
+    color: white; }

@@ -54,24 +54,33 @@ class Login extends Page {
 
   render() {
     return (
-      <div id="login-page" className="page-container">
-        <Link to={"/"}>
-          <img src={"images/logo.png"} />
-        </Link>
+      <div id="login-page">
+        <div className="title">{strings.menu.Login}</div>
 
-        <div id="language-switcher">
-          <LanguageSwitcher />
+        <div className="form-grid-container">
+          <div className="form-grid-item">
+            <LoginForm
+              errors={this.state.errors}
+              data={this.state.data}
+              keyPress={this.keyPress}
+              onChange={this.changeData}
+              onSubmit={() => this.login()}
+            />
+          </div>
+
+          <div id="login-with-buttons">
+            <div className="title">{strings.loginForm.loginWith}</div>
+            <div className="row">
+              <div className="btn btn-blue">Facebook</div>
+            </div>
+            <div className="row">
+              <div className="btn btn-blue">Twitter</div>
+            </div>
+            <div className="row">
+              <div className="btn btn-orange">Google</div>
+            </div>
+          </div>
         </div>
-
-        <p>{/*{ strings.login.text }*/}</p>
-
-        <LoginForm
-          errors={this.state.errors}
-          data={this.state.data}
-          keyPress={this.keyPress}
-          onChange={this.changeData}
-          onSubmit={() => this.login()}
-        />
       </div>
     );
   }

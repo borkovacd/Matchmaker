@@ -136,7 +136,9 @@ let strings = new LocalizedStrings({
       register: "Register",
       rememberMe: "Remember me",
       continue: "Continue",
-      notMember: "Not a member?"
+      notMember: "Not a member?",
+      signUpNow: "Sign Up Now",
+      loginWith: "Login with: "
     },
 
     about: {
@@ -471,10 +473,12 @@ let strings = new LocalizedStrings({
       password: "Passwort",
       login: "Anmelden",
       forgotYourPassword: "Passwort vergessen?",
-      register: "Anmelden",
+      register: "Registrieren",
       rememberMe: "Erinnere dich an mich",
       continue: "Fortsetzen",
-      notMember: "Kein Mitglied?"
+      notMember: "Kein Mitglied?",
+      signUpNow: "Jetzt registrieren",
+      loginWith: "Einloggen mit"
     },
 
     about: {
@@ -815,7 +819,9 @@ let strings = new LocalizedStrings({
       register: "Registrujte se",
       rememberMe: "Zapamti me",
       continue: "Nastavi",
-      notMember: "Niste korisnik?"
+      notMember: "Niste korisnik?",
+      signUpNow: "Registrujte se sada",
+      loginWith: "Prijavite se sa:"
     },
 
     about: {

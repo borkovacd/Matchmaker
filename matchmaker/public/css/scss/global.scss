@@ -38,7 +38,7 @@ p {
 }
 
 a {
-  color: $orange;
+  color: $grayText;
   font-size: 15px;
   opacity: 0.9;
   transition: 0.15s;
@@ -72,7 +72,7 @@ input:disabled {
   padding: 140px 15px;
   min-height: 60vh;
 
-  background: $pageBackground;
+  background: $formBackground;
 
   @media screen and (min-width: $break-md) {
     width: calc(90% - 200px);
@@ -93,13 +93,15 @@ input:disabled {
 input,
 textarea,
 select {
-  height: 35px;
+  height: 30px;
   max-width: 320px;
-  background: $inputBackground;
-  border: 1px solid transparent;
-  border-radius: 10px;
+  background: white;
+  border: none;
+  border-bottom: 0.5px ridge $lightGrayBorder;
+  border-left: 0.5px ridge $lightGrayBorder;
+  border-right: 0.5px ridge $lightGrayBorder;
   padding: 0 15px;
-  color: white;
+  color: $grayText;
   letter-spacing: 1px;
   margin: 15px 0;
 }
@@ -115,8 +117,8 @@ select {
   border: 2px solid transparent;
   margin: 5px;
   background: transparent;
-  color: white;
-  font-size: 14px;
+
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   text-decoration: unset;
@@ -125,7 +127,6 @@ select {
 
   &:hover {
     opacity: 1;
-
     transition: 0.15s;
   }
 }
@@ -135,7 +136,6 @@ select {
 
   &:hover {
     opacity: 1;
-
     transition: 0.15s;
   }
 }
@@ -145,11 +145,23 @@ select {
   transition: 0.15s;
 
   &:hover {
-    border-color: $btnBlue;
-    background: transparent;
-
+    opacity: 1;
     transition: 0.15s;
   }
+}
+
+.btn-red {
+  color: white;
+  background: $btnRed;
+
+  &:hover {
+    opacity: 1;
+    transition: 0.15s;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .add-button {
@@ -183,4 +195,9 @@ select {
 
 .black-text {
   color: $grayText;
+}
+
+.required:after {
+  content: " *";
+  color: red;
 }

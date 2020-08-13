@@ -1,3 +1,20 @@
+.form-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 5%;
+}
+
+.form-grid-item {
+  width: 50%;
+  border-radius: 10px;
+  background-color: $formBackground;
+  border: 1px solid $lightGrayBorder;
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 30%;
+}
+
 .form-button {
   color: $orange;
   font-size: 15px;
@@ -19,7 +36,6 @@
   justify-content: center;
   cursor: pointer;
   color: $orange;
-  //border: 1px solid $orange;
   margin-left: 10px;
   border-radius: 50%;
   width: 20px;
@@ -49,7 +65,7 @@
   }
 
   label {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .placeholder-input {
@@ -90,7 +106,7 @@
   height: 1px;
   margin: 10px 0;
   margin-bottom: 20px;
-  background: $inputBackground;
+  background: $red;
 }
 
 .navigation {
