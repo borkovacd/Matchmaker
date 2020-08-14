@@ -125,7 +125,7 @@
   height: 105px;
   background: $white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  background: black;
+  background: $white;
 }
 
 .brand {
@@ -160,9 +160,11 @@
   display: flex;
   justify-content: space-evenly; //verovatno ce se menjati
   align-items: center;
+  margin-right: 5%;
 }
 
 .btn-login {
+  margin-right: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +173,7 @@
   width: 127px;
   background: $red;
   border-radius: 4px;
-  border: 0.5px solid #979797;
+  border: 0.5px solid $lightGrayBorder;
 
   &:hover {
     background: $blue;
@@ -194,15 +196,19 @@
 }
 
 .btn-register {
+  margin-right: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 35px;
   width: 127px;
+  background: $blue;
+  border-radius: 4px;
+  border: 0.5px solid $lightGrayBorder;
 
   &:hover {
-    background: $blue;
+    background: $red;
     color: white;
   }
 
@@ -212,7 +218,7 @@
     height: 25px;
     width: 58.46px;
     border-radius: 4px;
-    color: #737373;
+    color: $white;
     font-family: "Futura Md BT";
     font-size: 18px;
     font-weight: 500;

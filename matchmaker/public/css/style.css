@@ -393,7 +393,7 @@ select {
   height: 105px;
   background: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  background: black; }
+  background: #fff; }
 
 .brand {
   display: flex;
@@ -421,9 +421,11 @@ select {
 .menu {
   display: flex;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  margin-right: 5%; }
 
 .btn-login {
+  margin-right: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,7 +434,7 @@ select {
   width: 127px;
   background: #d93943;
   border-radius: 4px;
-  border: 0.5px solid #979797; }
+  border: 0.5px solid #cacaca; }
   .btn-login:hover {
     background: #00498e;
     color: white; }
@@ -450,14 +452,18 @@ select {
     text-align: center; }
 
 .btn-register {
+  margin-right: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 35px;
-  width: 127px; }
+  width: 127px;
+  background: #00498e;
+  border-radius: 4px;
+  border: 0.5px solid #cacaca; }
   .btn-register:hover {
-    background: #00498e;
+    background: #d93943;
     color: white; }
   .btn-register a {
     text-decoration: none;
@@ -465,32 +471,80 @@ select {
     height: 25px;
     width: 58.46px;
     border-radius: 4px;
-    color: #737373;
+    color: #fff;
     font-family: "Futura Md BT";
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
     text-align: center; }
 
-.language-container {
+/*.language-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 10px 0; }
-  .language-container .language {
-    margin: 0 10px; }
-    .language-container .language img {
+  margin: 10px 0;
+
+  .language {
+    margin: 0 10px;
+
+    img {
       width: 35px;
       height: 35px;
       border-radius: 50%;
       opacity: 0.9;
-      border: 2px solid transparent; }
-      .language-container .language img:hover {
+      border: 2px solid transparent;
+
+      &:hover {
         cursor: pointer;
-        opacity: 1; }
-      .language-container .language img.active {
-        border: 2px solid rgba(3, 24, 86, 0.95); }
+        opacity: 1;
+      }
+
+      &.active {
+        border: 2px solid $header;
+      }
+    }
+  }
+}*/
+.language-switcher {
+  display: flex; }
+  .language-switcher .select {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 35px;
+    width: 127px;
+    background: #f3f3f3;
+    border-radius: 4px;
+    border: 0.5px solid #cacaca; }
+    .language-switcher .select:hover {
+      background: #fff;
+      opacity: 1; }
+    .language-switcher .select i {
+      position: absolute;
+      right: 5px;
+      color: #737373;
+      font-size: 22px; }
+    .language-switcher .select .options {
+      position: absolute;
+      display: none;
+      background: #fff;
+      text-align: center;
+      color: #bbb; }
+      .language-switcher .select .options.active {
+        display: block; }
+      .language-switcher .select .options p {
+        padding: 15px;
+        width: calc(100% - 30px);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin: 0;
+        transition: 0.15s; }
+        .language-switcher .select .options p:hover {
+          background: rgba(5, 15, 55, 0.25);
+          transition: 0.15s; }
+        .language-switcher .select .options p .scroll {
+          background: rgba(5, 15, 55, 0.25); }
 
 .check-box-container {
   display: flex;

@@ -19,14 +19,12 @@ class LanguageSwitcher extends Component {
 
   render() {
     return (
-      <div className="date-select">
+      <div class="language-switcher">
         <Select
-          items={this.props.languages}
           placeholder={this.props.language}
-          name={"language"}
-          displayKey={"language"}
-          valueKey={"value"}
-          onChange={this.changeLanguage()}
+          items={this.props.languages}
+          onChange={this.changeLanguage}
+          selectedItem={this.props.language}
         />
       </div>
     );

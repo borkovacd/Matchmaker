@@ -50,9 +50,8 @@ class Header extends Component {
               </div>
             </React.Fragment>
           )}
-          <div className="btn-language-switcher" id="language-switcher">
-            <LanguageSwitcher />
-          </div>
+
+          <LanguageSwitcher />
         </div>
       </div>
     );
