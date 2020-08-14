@@ -1,9 +1,6 @@
 {
   "home":
-    {"languages": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
-      ]
-    },
+    {"languages": [ "en", "rs", "de"] },
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],

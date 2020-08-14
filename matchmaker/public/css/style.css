@@ -267,42 +267,51 @@ select {
 .horizontal-form-container .error-container {
   padding-left: 0; }
 
-#header {
+/*#header {
   display: flex;
   position: fixed;
   height: 104px;
   top: 0;
   background: white;
-  border-bottom: 1px ridge #cacaca;
+  border-bottom: 1px ridge $lightGrayBorder;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
-  #header.active {
-    background: #00498e;
-    opacity: 0.9; }
-  #header .logo img {
-    top: 0;
-    left: 0;
-    height: 105px;
-    width: 174px; }
-  #header .title {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+  &.active {
+    background: $blue;
+    opacity: 0.9;
+  }
+
+  .logo {
+    img {
+      top: 0;
+      left: 0;
+      height: 105px;
+      width: 174px;
+    }
+  }
+
+  .title {
     float: right;
     margin-top: 14px;
     margin-left: 100px;
     height: 57px;
     width: 346px;
-    color: #00498e;
+    color: $blue;
     font-family: "Times Cirilica";
     font-size: 40px;
     font-style: italic;
     font-weight: 700;
     line-height: 36px;
-    cursor: pointer; }
-  #header .header-btn-left {
+    cursor: pointer;
+  }
+
+  .header-btn-left {
     position: fixed;
     top: 5%;
     left: calc(100% - 27%);
-    background: #d93943;
+    background: $red;
     display: flex;
     justify-content: center;
     height: 35px;
@@ -310,11 +319,14 @@ select {
     align-items: center;
     text-align: center;
     border-radius: 4px;
-    border: 0.5px solid #979797; }
-    #header .header-btn-left:hover {
-      background: #00498e;
-      color: white; }
-    #header .header-btn-left a {
+    border: 0.5px solid #979797;
+
+    &:hover {
+      background: $blue;
+      color: white;
+    }
+
+    a {
       text-decoration: none;
       cursor: pointer;
       border-radius: 4px;
@@ -325,19 +337,25 @@ select {
       font-size: 18px;
       font-weight: 500;
       line-height: 22px;
-      text-align: center; }
-  #header .header-btn-right {
+      text-align: center;
+    }
+  }
+
+  .header-btn-right {
     height: 35px;
     width: 127px;
     position: fixed;
     top: 5%;
     left: calc(100% - 19%);
     display: flex;
-    justify-content: center; }
-    #header .header-btn-right:hover {
-      background: #00498e;
-      color: white; }
-    #header .header-btn-right a {
+    justify-content: center;
+
+    &:hover {
+      background: $blue;
+      color: white;
+    }
+
+    a {
       margin: 5%;
       text-decoration: none;
       cursor: pointer;
@@ -348,15 +366,111 @@ select {
       font-size: 18px;
       font-weight: 500;
       line-height: 22px;
-      text-align: center; }
-  #header .language-container {
+      text-align: center;
+    }
+  }
+
+  .language-container {
     position: fixed;
     top: 4%;
     left: calc(100% - 11%);
-    display: flex; }
-    #header .language-container .language img {
-      width: 30px;
-      height: 30px; }
+
+    display: flex;
+    .language {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}*/
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 105px;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  background: black; }
+
+.brand {
+  display: flex;
+  justify-content: left; }
+
+.logo img {
+  top: 0;
+  left: 0;
+  height: 105px;
+  width: 174px; }
+
+.title {
+  margin-top: 14px;
+  margin-left: 75px;
+  height: 57px;
+  width: 280px;
+  color: #00498e;
+  font-family: "Times Cirilica";
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 36px;
+  cursor: pointer; }
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.btn-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 35px;
+  width: 127px;
+  background: #d93943;
+  border-radius: 4px;
+  border: 0.5px solid #979797; }
+  .btn-login:hover {
+    background: #00498e;
+    color: white; }
+  .btn-login a {
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 23px;
+    width: 58.46px;
+    color: #fff;
+    font-family: "Futura Md BT";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center; }
+
+.btn-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 35px;
+  width: 127px; }
+  .btn-register:hover {
+    background: #00498e;
+    color: white; }
+  .btn-register a {
+    text-decoration: none;
+    cursor: pointer;
+    height: 25px;
+    width: 58.46px;
+    border-radius: 4px;
+    color: #737373;
+    font-family: "Futura Md BT";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center; }
 
 .language-container {
   display: flex;

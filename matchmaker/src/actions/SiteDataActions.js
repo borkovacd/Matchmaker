@@ -23,10 +23,10 @@ export function hideLoader() {
   };
 }
 
-export function loadData(blogs) {
+export function loadData(languages) {
   return {
     type: LOAD_DATA,
-    blogs: blogs
+    languages: languages
   };
 }
 

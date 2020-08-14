@@ -20,36 +20,37 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
-        <div id="header">
+      <div id="header">
+        <div className="brand">
           <div className="logo">
             <Link to={"/"}>
               <img src={"images/logo.png"} />
             </Link>
-            <div className="title">{strings.menu.Home}</div>
           </div>
-
+          <div className="title">{strings.menu.Home}</div>
+        </div>
+        <div className="menu">
           {!isUserLoggedIn() && (
-            <div>
-              <div className="header-btn-left">
+            <React.Fragment>
+              <div className="btn-login">
                 <Link to={"/login"}>{strings.menu.Login}</Link>
               </div>
-              <div className="header-btn-right">
+              <div className="btn-register">
                 <Link to={"/registration"}>{strings.menu.Register}</Link>
               </div>
-            </div>
+            </React.Fragment>
           )}
           {isUserLoggedIn() && (
-            <div>
-              <div className="header-btn-left">
+            <React.Fragment>
+              <div>
                 <Link to={"/profile"}>{strings.menu.Profile}</Link>
               </div>
-              <div className="header-btn-right" onClick={this.logout}>
+              <div onClick={this.logout}>
                 <a href="#">{strings.menu.Logout}</a>
               </div>
-            </div>
+            </React.Fragment>
           )}
-          <div id="language-switcher">
+          <div className="btn-language-switcher" id="language-switcher">
             <LanguageSwitcher />
           </div>
         </div>
@@ -69,7 +70,8 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps({ siteDataReducers }) {
   return {
-    language: siteDataReducers.language
+    language: siteDataReducers.language,
+    languages: siteDataReducers.languages
   };
 }
 

@@ -19,8 +19,9 @@ class BaseLayout extends Component {
         {this.props.loader && <Loader />}
 
         <Header />
-        {children}
         <Footer />
+
+        {children}
       </React.Fragment>
     );
   }
@@ -33,7 +34,8 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ authReducers, siteDataReducers }) {
   return {
     loader: siteDataReducers.loader,
-    language: siteDataReducers.language
+    language: siteDataReducers.language,
+    languages: siteDataReducers.languages
   };
 }
 
