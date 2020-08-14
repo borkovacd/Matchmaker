@@ -1,41 +1,39 @@
 .check-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  .item {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
 
-    .item {
+    span {
+      width: 12px;
+      height: 12px;
+      background: white;
+      left: 0;
+      margin-right: 5%;
+      border-radius: 100%;
+      border: 1px solid $red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-        display: flex;
-        align-items: center;
-        width: 50%;
-        cursor: pointer;
-        font-weight: 600;
+      &.active {
+        background: $white;
 
-        @media screen and (min-width: $break-md) {
-            width: 25%;
+        &:before {
+          font-family: "Font Awesome\ 5 Free";
+          content: "\f111";
+          display: flex;
+          line-height: 9px;
+          font-size: 9px;
+          color: $red;
         }
-
-        span {
-
-            width: 17px;
-            height: 17px;
-            background: white;
-            margin-right: 10px;
-            border-radius: 50%;
-
-            &.active {
-                background: $orange;
-
-                &:before {
-                    font-family: 'Font Awesome\ 5 Free';
-                    content: '\f00c';
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    line-height: 17px;
-                    font-size: 13px;
-                    text-align: center;
-                }
-            }
-        }
+      }
     }
+  }
 }

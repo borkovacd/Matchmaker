@@ -7,6 +7,7 @@ import { getGenderList } from "../../../constants/Gender";
 import CheckGroup from "../../controls/CheckGroup";
 import DateSelect from "../../controls/DateSelect";
 import "rc-slider/assets/index.css";
+import Range from "rc-slider";
 
 const RegistrationForm = ({
   onChange,
@@ -15,6 +16,7 @@ const RegistrationForm = ({
   countries,
   edit,
   onSubmit,
+  ageChange
 }) => (
   <form id="register-form">
     <div className="title">{strings.registrationForm.title}</div>
@@ -86,13 +88,12 @@ const RegistrationForm = ({
         </div>
       </div>
       <div className="register-grid-item">
-        <input
-          placeholder={strings.registrationForm.birthday}
-          type="date"
-          name="birthday"
-          className={getErrorClass(errors, "birthday")}
-          value={data.birthday}
+        <DateSelect
+          name={"birthday"}
           onChange={onChange}
+          date={data.birthday}
+          displayKey={"name"}
+          valueKey={"value"}
         />
       </div>
     </div>
@@ -104,11 +105,12 @@ const RegistrationForm = ({
         </div>
       </div>
       <div className="register-grid-item">
-        <Select
+        <CheckGroup
+          name="gender"
           items={getGenderList()}
           onChange={onChange}
-          selectedItem={data.gender}
-          name={"gender"}
+          onlyOne={true}
+          selectedItem={{ value: data.gender }}
           displayKey={"name"}
           valueKey={"value"}
         />
@@ -124,12 +126,13 @@ const RegistrationForm = ({
         </div>
       </div>
       <div className="register-grid-item">
-        <Select
+        <CheckGroup
+          name="intrestedInGender"
           items={getGenderList()}
           onChange={onChange}
-          selectedItem={data.intrestedInGender}
-          name={"intrestedInGender"}
-          displayKey={"intrestedInGender"}
+          onlyOne={true}
+          selectedItem={{ value: data.intrestedInGender }}
+          displayKey={"name"}
           valueKey={"value"}
         />
       </div>
@@ -144,14 +147,15 @@ const RegistrationForm = ({
         </div>
       </div>
       <div className="register-grid-item">
-        <input
-          placeholder={strings.registrationForm.intrestedInAge}
-          type="text"
-          name="intrestedInAge"
-          className={getErrorClass(errors, "intrestedInAge")}
-          value={data.intrestedInAge}
-          onChange={onChange}
-        />
+        <div className="slider-container">
+          <label>{data.intrestedInAge}</label>
+          <Range
+            min={0}
+            max={1000}
+            onChange={this.handleChange}
+            defaultValue={[500, 600]}
+          />
+        </div>
       </div>
     </div>
     <div className="register-grid">
@@ -176,10 +180,7 @@ const RegistrationForm = ({
     </div>
     <div className="form-row">
       <div className="column controls">
-        <a
-          onClick={(event) => onSubmit(event)}
-          className="btn btn-red uppercase"
-        >
+        <a onClick={event => onSubmit(event)} className="btn btn-red uppercase">
           {strings.loginForm.continue}
         </a>
       </div>
