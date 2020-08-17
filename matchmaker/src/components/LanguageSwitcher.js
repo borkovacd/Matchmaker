@@ -12,19 +12,22 @@ class LanguageSwitcher extends Component {
     super(props);
   }
 
-  changeLanguage() {
-    console.log("Language switched to: ");
-    //this.props.changeLanguage(language);
+  changeLanguage(selectedItem) {
+    console.log("Language switched to: " + selectedItem.target.value);
+    this.props.changeLanguage(selectedItem.target.value);
+    //this.props.changeLanguage("rs");
   }
 
   render() {
     return (
-      <div class="language-switcher">
+      <div className="language-switcher">
         <Select
           placeholder={this.props.language}
           items={this.props.languages}
-          onChange={this.changeLanguage}
           selectedItem={this.props.language}
+          onChange={this.changeLanguage}
+          displayKey={"name"}
+          valueKey={"name"}
         />
       </div>
     );
@@ -58,7 +61,7 @@ class LanguageSwitcher extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      changeLanguage: Actions.changeLanguage
+      changeLanguage: Actions.changeLanguage,
     },
     dispatch
   );
@@ -67,7 +70,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ siteDataReducers }) {
   return {
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages
+    languages: siteDataReducers.languages,
   };
 }
 

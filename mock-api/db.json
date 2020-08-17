@@ -1,8 +1,11 @@
 {
-  "home":
-    {"languages": [ "en", "rs", "de"] },
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
+  "home": {
+    "languages": [
+      { "id": 1, "name": "en" },
+      { "id": 2, "name": "rs" },
+      { "id": 3, "name": "de" }
+    ]
+  },
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
   "profile": { "name": "typicode" }
 }

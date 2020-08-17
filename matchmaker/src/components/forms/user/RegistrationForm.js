@@ -16,7 +16,7 @@ const RegistrationForm = ({
   countries,
   edit,
   onSubmit,
-  ageChange
+  ageChange,
 }) => (
   <form id="register-form">
     <div className="title">{strings.registrationForm.title}</div>
@@ -149,12 +149,7 @@ const RegistrationForm = ({
       <div className="register-grid-item">
         <div className="slider-container">
           <label>{data.intrestedInAge}</label>
-          <Range
-            min={0}
-            max={1000}
-            onChange={this.handleChange}
-            defaultValue={[500, 600]}
-          />
+          <Range min={0} max={1000} defaultValue={[500, 600]} />
         </div>
       </div>
     </div>
@@ -180,7 +175,10 @@ const RegistrationForm = ({
     </div>
     <div className="form-row">
       <div className="column controls">
-        <a onClick={event => onSubmit(event)} className="btn btn-red uppercase">
+        <a
+          onClick={(event) => onSubmit(event)}
+          className="btn btn-red uppercase"
+        >
           {strings.loginForm.continue}
         </a>
       </div>
