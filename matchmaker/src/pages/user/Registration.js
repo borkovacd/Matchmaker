@@ -3,7 +3,7 @@ import Page from "../../common/Page";
 import {
   login,
   setTokenToLocalStorage,
-  setUserToLocalStorage,
+  setUserToLocalStorage
 } from "../../base/OAuth";
 import Validators from "../../constants/ValidatorTypes";
 import { withRouter } from "react-router-dom";
@@ -15,7 +15,7 @@ import {
   editUser,
   getUserRegistrationDetailsData,
   register,
-  uploadProfileImage,
+  uploadProfileImage
 } from "../../services/UserService";
 import { dateToString, stringToDate } from "../../util/DateUtil";
 import strings from "../../localization";
@@ -33,7 +33,7 @@ class Registration extends Page {
     gender: [{ type: Validators.REQUIRED }],
     dateOfBirth: [{ type: Validators.REQUIRED }],
     countryId: [{ type: Validators.REQUIRED }],
-    profileImage: [{ type: Validators.REQUIRED }],
+    profileImage: [{ type: Validators.REQUIRED }]
   };
 
   editValidationList = {
@@ -46,7 +46,7 @@ class Registration extends Page {
     gender: [{ type: Validators.REQUIRED }],
     dateOfBirth: [{ type: Validators.REQUIRED }],
     countryId: [{ type: Validators.REQUIRED }],
-    profileImage: [{ type: Validators.REQUIRED }],
+    profileImage: [{ type: Validators.REQUIRED }]
   };
 
   constructor(props) {
@@ -63,8 +63,8 @@ class Registration extends Page {
       profileImageChanged: false,
       refs: {
         ytLinks: React.createRef(),
-        otherLinks: React.createRef(),
-      },
+        otherLinks: React.createRef()
+      }
     };
     this.submit = this.submit.bind(this);
 
@@ -80,7 +80,7 @@ class Registration extends Page {
 
     this.props.showLoader();
 
-    getUserRegistrationDetailsData().then((response) => {
+    getUserRegistrationDetailsData().then(response => {
       this.props.hideLoader();
 
       if (!response || !response.ok) {
@@ -109,14 +109,14 @@ class Registration extends Page {
           day: dateOfBirth.day(),
           month: dateOfBirth.month(),
           year: dateOfBirth.year(),
-          profileImage: "test",
+          profileImage: "test"
         },
-        file: response.data.imageData,
+        file: response.data.imageData
       });
     });
   }
 
-  setEditorRef = (editor) => (this.editor = editor);
+  setEditorRef = editor => (this.editor = editor);
 
   checkPassword() {
     return this.state.data.password === this.state.data.repeatPassword;
@@ -147,15 +147,15 @@ class Registration extends Page {
     if (this.props.edit) {
       if (this.state.profileImageChanged) {
         uploadProfileImage({
-          profileImage: image.toDataURL("image/jpeg", 0.8),
-        }).then((response) => {});
+          profileImage: image.toDataURL("image/jpeg", 0.8)
+        }).then(response => {});
       }
 
-      editUser(this.state.data).then((response) => {
+      editUser(this.state.data).then(response => {
         this.props.history.push("/edit-profile-details");
       });
     } else {
-      register(this.state.data).then((response) => {
+      register(this.state.data).then(response => {
         if (!response || !response.ok) {
           this.setError("email", strings.registrationForm.emailExists);
           this.props.hideLoader();
@@ -169,8 +169,8 @@ class Registration extends Page {
         setUserToLocalStorage(response.data.user);
 
         uploadProfileImage({
-          profileImage: image.toDataURL("image/jpeg", 0.8),
-        }).then((response) => {
+          profileImage: image.toDataURL("image/jpeg", 0.8)
+        }).then(response => {
           this.props.history.push("/registration-details");
         });
       });
@@ -179,47 +179,45 @@ class Registration extends Page {
 
   render() {
     return (
-      <div id="register-page">
-        <div className="title">{strings.menu.Register}</div>
+      <div className="login-registration-page">
+        <div className="lrp-title">{strings.menu.Register}</div>
 
-        <div className="form-grid-container">
-          <div className="form-grid-item">
-            <RegistrationForm
-              data={this.state.data}
-              errors={this.state.errors}
-              onFileChanged={this.onFileChanged}
-              file={this.state.file}
-              profileImageZoomChange={this.profileImageZoomChange}
-              profileImageZoom={this.state.profileImageZoom}
-              rotateImage={this.rotateImage}
-              setEditorRef={this.setEditorRef}
-              edit={this.props.edit}
-              onSubmit={this.submit}
-              onChange={this.changeData}
-              refs={this.state.refs}
-            />
-          </div>
+        <div className="lrp-grid-container">
+          <RegistrationForm
+            data={this.state.data}
+            errors={this.state.errors}
+            onFileChanged={this.onFileChanged}
+            file={this.state.file}
+            profileImageZoomChange={this.profileImageZoomChange}
+            profileImageZoom={this.state.profileImageZoom}
+            rotateImage={this.rotateImage}
+            setEditorRef={this.setEditorRef}
+            edit={this.props.edit}
+            onSubmit={this.submit}
+            onChange={this.changeData}
+            refs={this.state.refs}
+          />
 
-          <div id="register-with-buttons">
-            <div className="title">
+          <div className="lrp-social-buttons">
+            <div className="lrp-social-buttons-title longer">
               {strings.registrationForm.continueWithDescription}
             </div>
 
             <div className="row">
-              <a href="#" className="fb btn">
+              <a href="#" className="fb social-btn">
                 <i className="fab fa-facebook-f i"></i>{" "}
                 {strings.registrationForm.continueWith} Facebook
               </a>
             </div>
 
             <div className="row">
-              <a href="#" className="twitter btn">
+              <a href="#" className="twitter social-btn">
                 <i className="fab fa-twitter i"></i>{" "}
                 {strings.registrationForm.continueWith} Twitter
               </a>
             </div>
             <div className="row">
-              <a href="#" className="google btn">
+              <a href="#" className="google social-btn">
                 <i className="fab fa-google-plus-g i"></i>{" "}
                 {strings.registrationForm.continueWith} Google
               </a>
@@ -235,7 +233,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

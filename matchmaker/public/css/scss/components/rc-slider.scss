@@ -6,3 +6,32 @@
   border: solid 1px $red !important;
   background-color: $white !important;
 }
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: center;
+
+  .rc-slider {
+    margin: 0 10px;
+
+    .handle-wrapper {
+      span {
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    /*.rc-slider-handle {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+      border: none;
+      background: $btnBlue;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }*/
+  }
+}

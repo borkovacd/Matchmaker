@@ -112,7 +112,7 @@ class DateSelect extends BaseControl {
 
   render() {
     return (
-      <div className="date-select">
+      <div className="date-select center">
         <Select
           items={this.getDaysObjects()}
           placeholder={strings.select.day}

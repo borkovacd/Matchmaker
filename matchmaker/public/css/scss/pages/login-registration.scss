@@ -17,14 +17,14 @@
 
 .lrp-grid-container {
   display: grid;
-  grid-template-columns: 35% 35%;
+  grid-template-columns: 40% 40%;
   justify-content: center;
   margin-top: 5%;
   //background-color: black;
 }
 
 .lrp-form-container {
-  padding: 5% 15%;
+  padding: 5% 12%;
   text-align: left;
   background-color: $white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
@@ -63,14 +63,21 @@
   text-decoration: none;
   font-family: "Futura Md BT";
   font-size: x-large;
-  font-weight: 600;
+  font-weight: 500;
+
+  &.longer {
+    font-weight: 500;
+    font-size: large;
+    max-width: 320px;
+    margin-bottom: 10%;
+  }
 }
 
 .social-btn {
   position: relative;
   font-weight: 600;
   min-height: 40px;
-  min-width: 180px;
+  min-width: 260px;
   padding-top: 3%;
   padding-left: 15%;
   padding-right: 5%;

@@ -37,3 +37,36 @@
     }
   }
 }
+
+.fo-columns {
+  .check-group {
+    flex-direction: column;
+
+    .item {
+      span {
+        width: 10px;
+        height: 10px;
+
+        margin-right: 10px;
+        border-radius: 0;
+        border: 1px solid $red;
+
+        &.active {
+          background: $red;
+
+          &:before {
+            font-family: "Font Awesome\ 5 Free";
+            content: "\f00c";
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 10px;
+            font-size: 10px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

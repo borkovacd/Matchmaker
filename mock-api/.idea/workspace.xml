@@ -26,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/../matchmaker/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/src/components/forms/user/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/components/forms/user/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/src/pages/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/pages/user/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <workItem from="1597212383068" duration="7667000" />
       <workItem from="1597298640387" duration="1355000" />
       <workItem from="1597385343272" duration="4229000" />
-      <workItem from="1597644173718" duration="3609000" />
+      <workItem from="1597644173718" duration="4421000" />
     </task>
     <servers />
   </component>

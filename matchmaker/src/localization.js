@@ -9,7 +9,7 @@ let strings = new LocalizedStrings({
       Login: "Login",
       Profile: "Profile",
       Logout: "Logout",
-      LanguageSwitch: "Change language",
+      LanguageSwitch: "Change language"
     },
 
     loginForm: {
@@ -25,7 +25,7 @@ let strings = new LocalizedStrings({
       notMember: "Not a member?",
       signUpNow: "Sign Up Now",
       loginWith: "Login with: ",
-      continueWith: "Continue with",
+      continueWith: "Continue with"
     },
 
     registrationForm: {
@@ -77,14 +77,26 @@ let strings = new LocalizedStrings({
       positionNote:
         "If you play more positions (in defense and attack), please state it in the field Note, located at the next registration step.",
       clubsNotice:
-        "Please fill in all required fields regarding the club you are currently playing for, or you played for before (country, club name, league, month and year), so that the system can correctly register your current and previous engagement.",
+        "Please fill in all required fields regarding the club you are currently playing for, or you played for before (country, club name, league, month and year), so that the system can correctly register your current and previous engagement."
+    },
+
+    gender: {
+      female: "Female",
+      male: "Male"
+    },
+
+    relationship: {
+      friendship: "Friendship",
+      marriage: "Marriage",
+      romance: "Romance",
+      relationship: "Relationship"
     },
 
     forgotPassword: {
       text: "Reset password",
       resetPassword: "Reset password",
       requested: "Reset password already requested",
-      sentText: "Reset password requested. Please check your email.",
+      sentText: "Reset password requested. Please check your email."
     },
 
     resetPassword: {
@@ -93,16 +105,16 @@ let strings = new LocalizedStrings({
       passwordDoNotMatch: "Passwords do not match",
       text: "Enter new password",
       doneText: "Your password has changed, please go to ",
-      login: "login",
+      login: "login"
     },
 
     countries: {
-      all: "All",
+      all: "All"
     },
 
     search: {
       resultPart1: "You have found ",
-      resultPart2: "players",
+      resultPart2: "players"
     },
 
     playerPreview: {
@@ -112,7 +124,7 @@ let strings = new LocalizedStrings({
       height: "Height",
       placeOfBirth: "Place of birth",
       dateOfBirth: "Date of birth",
-      years: "Years",
+      years: "Years"
     },
 
     home: {
@@ -138,7 +150,7 @@ let strings = new LocalizedStrings({
       ones: "Registered.",
       instagram: "Instagram",
       feed: "Feed.",
-      follow: "Follow",
+      follow: "Follow"
     },
 
     privacyPolicy: {
@@ -146,7 +158,7 @@ let strings = new LocalizedStrings({
       content:
         "<p>This website does not share personal information with third parties nor do we store any information about your visit to this blog other than to analyze and optimize your content and reading experience through the use of cookies.</p>" +
         "<p>You can turn off the use of cookies at anytime by changing your specific browser settings. We are not responsible for republished content from this blog on other blogs or websites without our permission.</p>" +
-        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>",
+        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>"
     },
 
     termsOfUse: {
@@ -174,7 +186,7 @@ let strings = new LocalizedStrings({
         "<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>" +
         "<h3>Changes</h3>" +
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
-        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>",
+        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
     },
 
     filter: {
@@ -185,13 +197,13 @@ let strings = new LocalizedStrings({
       weight: "Weight (kg)",
       euPassport: "EU Passport",
       nationality: "Nationality",
-      search: "Search",
+      search: "Search"
     },
 
     login: {
       text:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      wrongCredentials: "Wrong login data",
+      wrongCredentials: "Wrong login data"
     },
 
     about: {
@@ -202,7 +214,7 @@ let strings = new LocalizedStrings({
         "<p>Registration on our web site is completely free. With the simple registration, you will get an opportunity to be transparent and noticed by all clubs and managers in the world. We are giving you the opportunity to come out from handball anonymity and to become a professional player. </p>" +
         "<p>Handball Hunter is an idea, that came from professional handball players and managers that have started their careers from small areas and environments, and that know how hard is it to be noticed and found as a talent.</p>" +
         "<p>We are there to help you. Handball Hunter is what we were waiting for a long time, managers, coaches and handball players, all at the same place.</p>" +
-        "<p>Handball is the game, which is played not only in the handball court, but out of the court as well. Win with us. </p>",
+        "<p>Handball is the game, which is played not only in the handball court, but out of the court as well. Win with us. </p>"
     },
 
     premium: {
@@ -217,22 +229,22 @@ let strings = new LocalizedStrings({
         title: "Home page",
         price: "10$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
       },
 
       option2: {
         title: "Search results",
         price: "15$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
       },
 
       option3: {
         title: "Most visible player",
         price: "25$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
-      },
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
+      }
     },
 
     userInfo: {
@@ -250,14 +262,14 @@ let strings = new LocalizedStrings({
       activate: "Activate",
       yes: "Yes",
       no: "No",
-      confirmAction: "Confirm Action",
+      confirmAction: "Confirm Action"
     },
 
     socialShare: {
       facebook: "facebook",
       whatsapp: "whatsapp",
       viber: "viber",
-      copy: "copy",
+      copy: "copy"
     },
 
     validation: {
@@ -270,7 +282,7 @@ let strings = new LocalizedStrings({
       UserExistsErrorMessage: "User with this email address already exists",
       OldPasswordDidNotMatch: "Old password did not match",
       PasswordsNotEqual: "Passwords do not match",
-      notNumber: "Not number",
+      notNumber: "Not number"
     },
     footer: {
       copyright: "Copyright",
@@ -280,15 +292,10 @@ let strings = new LocalizedStrings({
       phone1: "+ 378 055 232 300",
       phone2: "+ 378 055 232 300",
       email: "office@handballhunter.com",
-      site: "www.handballhunter.com",
+      site: "www.handballhunter.com"
     },
     registrationStep: {
-      step: "Step",
-    },
-
-    gender: {
-      female: "Female",
-      male: "Male",
+      step: "Step"
     },
 
     position: {
@@ -299,7 +306,7 @@ let strings = new LocalizedStrings({
       pivot: "Pivot",
       leftBackcourt: "Left Back",
       rightBackcourt: "Right Back",
-      centerBackcourt: "Center Back",
+      centerBackcourt: "Center Back"
     },
 
     months: {
@@ -314,7 +321,7 @@ let strings = new LocalizedStrings({
       september: "September",
       october: "October",
       november: "November",
-      december: "December",
+      december: "December"
     },
 
     select: {
@@ -322,13 +329,13 @@ let strings = new LocalizedStrings({
       day: "Day",
       month: "Month",
       year: "Year",
-      search: "Search...",
+      search: "Search..."
     },
 
     euPassport: {
       yes: "Yes",
       no: "No",
-      nevermind: "Nevermind",
+      nevermind: "Nevermind"
     },
 
     profile: {
@@ -340,7 +347,7 @@ let strings = new LocalizedStrings({
       nationalTeamAwards: "National team awards",
       nationalTeamHonors: "National team honors",
       youtube: "YouTube",
-      otherLinks: "Other links",
+      otherLinks: "Other links"
     },
 
     addMore: "+ Add",
@@ -350,7 +357,7 @@ let strings = new LocalizedStrings({
     checkYourProfile: "Check your profile",
     goToHomePage: "Go to home page",
 
-    dateFormatString: "DD-MM-YYYY",
+    dateFormatString: "DD-MM-YYYY"
   },
   de: {
     menu: {
@@ -360,7 +367,7 @@ let strings = new LocalizedStrings({
       Login: "Anmelden",
       Profile: "Profil",
       Logout: "Abmelden",
-      LanguageSwitch: "Sprache ändern",
+      LanguageSwitch: "Sprache ändern"
     },
 
     loginForm: {
@@ -376,7 +383,7 @@ let strings = new LocalizedStrings({
       notMember: "Kein Mitglied?",
       signUpNow: "Jetzt registrieren",
       loginWith: "Einloggen mit",
-      continueWith: "Fortsetzen mit",
+      continueWith: "Fortsetzen mit"
     },
 
     registrationForm: {
@@ -430,14 +437,21 @@ let strings = new LocalizedStrings({
       positionNote:
         "Wenn Sie auf mehreren Positionen (in der Verteidigung und im Angriff) spielen, geben Sie dies bitte im Hinweisfeld an, das in dem nächsten Schritt findet.",
       clubsNotice:
-        "Bitte geben Sie alle Informationen ein, die sich auf den Verein beziehen, in welchem Sie spielen oder gespielt haben (Land, Name des Vereins, Liga, Monat und Jahr), damit das System die korrekte Registrierung Ihrer aktuellen und vorigen Anmeldung vornehmen kann.",
+        "Bitte geben Sie alle Informationen ein, die sich auf den Verein beziehen, in welchem Sie spielen oder gespielt haben (Land, Name des Vereins, Liga, Monat und Jahr), damit das System die korrekte Registrierung Ihrer aktuellen und vorigen Anmeldung vornehmen kann."
+    },
+
+    relationship: {
+      friendship: "Freundschaft",
+      marriage: "Ehe",
+      romance: "Romanze",
+      relationship: "Beziehung"
     },
 
     forgotPassword: {
       text: "Passwort zurücksetzen",
       resetPassword: "Passwort zurücksetzen",
       requested: "Reset already requested",
-      sentText: "Passwort zurücksetzen angefordert. Bitte prüfe deine E-Mails.",
+      sentText: "Passwort zurücksetzen angefordert. Bitte prüfe deine E-Mails."
     },
 
     resetPassword: {
@@ -446,16 +460,16 @@ let strings = new LocalizedStrings({
       passwordDoNotMatch: "Passwörter stimmen nicht überein",
       text: "Neues Passwort eingeben",
       doneText: "Dein Passwort hat sich geändert, gehe zu ",
-      login: "Anmelden",
+      login: "Anmelden"
     },
 
     countries: {
-      all: "Alle",
+      all: "Alle"
     },
 
     search: {
       resultPart1: "Du hast",
-      resultPart2: "Mitspieler gefunden",
+      resultPart2: "Mitspieler gefunden"
     },
 
     playerPreview: {
@@ -465,7 +479,7 @@ let strings = new LocalizedStrings({
       height: "Grösse",
       placeOfBirth: "Geburtsort",
       dateOfBirth: "Geburtsdatum",
-      years: "Alter",
+      years: "Alter"
     },
 
     home: {
@@ -491,7 +505,7 @@ let strings = new LocalizedStrings({
       ones: "Angemeldet.",
       instagram: "Instagram",
       feed: "Feed.",
-      follow: "Folgen",
+      follow: "Folgen"
     },
 
     privacyPolicy: {
@@ -499,7 +513,7 @@ let strings = new LocalizedStrings({
       content:
         "<p>This website does not share personal information with third parties nor do we store any information about your visit to this blog other than to analyze and optimize your content and reading experience through the use of cookies.</p>" +
         "<p>You can turn off the use of cookies at anytime by changing your specific browser settings. We are not responsible for republished content from this blog on other blogs or websites without our permission.</p>" +
-        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>",
+        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>"
     },
 
     termsOfUse: {
@@ -527,7 +541,7 @@ let strings = new LocalizedStrings({
         "<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>" +
         "<h3>Changes</h3>" +
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
-        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>",
+        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
     },
 
     filter: {
@@ -538,13 +552,13 @@ let strings = new LocalizedStrings({
       weight: "Gewicht (kg)",
       euPassport: "EU Pass",
       nationality: "Nationalität",
-      search: "Suchen",
+      search: "Suchen"
     },
 
     login: {
       text:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      wrongCredentials: "Falsche Zugangsdaten",
+      wrongCredentials: "Falsche Zugangsdaten"
     },
 
     about: {
@@ -555,7 +569,7 @@ let strings = new LocalizedStrings({
         "<p>Die Anmeldung auf unserer Homepage ist komplett kostenlos. Mit der einfachen Anmeldung wirst du die Chance kriegen, von allen Vereinen und Spielerberatern / Spielerberaterinnen der Welt entdeckt zu werden. Wir ermöglichen dir, aus der Handball - Anonymität rauszukommen und ein Profi zu werden. </p>" +
         "<p>Handball Hunter ist eine Idee, geschaffen von Profihandballern und Spielerberatern, die ihre Karrieren in kleinen Gebieten starteten und somit wissen, wie hart es ist, entdeckt zu werden.</p>" +
         "<p>Wir sind hier, um dir zu helfen. Auf Handball Hunter haben wir lange gewartet – Spielerberater, Trainer und Handballspieler / Handballspielerinnen - alle am gleichen Ort. </p>" +
-        "<p>Handball ist das Spiel, das nicht nur auf dem Feld gespielt wird, sondern auch neben dem Feld. Gewinne mit uns. </p>",
+        "<p>Handball ist das Spiel, das nicht nur auf dem Feld gespielt wird, sondern auch neben dem Feld. Gewinne mit uns. </p>"
     },
 
     premium: {
@@ -569,22 +583,22 @@ let strings = new LocalizedStrings({
         title: "Home page",
         price: "10$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
       },
 
       option2: {
         title: "Search results",
         price: "15$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
       },
 
       option3: {
         title: "Most visible player",
         price: "25$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
-      },
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
+      }
     },
 
     userInfo: {
@@ -602,14 +616,14 @@ let strings = new LocalizedStrings({
       activate: "Aktivieren",
       yes: "Ja",
       no: "Nein",
-      confirmAction: "Bestätige die Handlung",
+      confirmAction: "Bestätige die Handlung"
     },
 
     socialShare: {
       facebook: "facebook",
       whatsapp: "whatsapp",
       viber: "viber",
-      copy: "copy",
+      copy: "copy"
     },
 
     validation: {
@@ -623,7 +637,7 @@ let strings = new LocalizedStrings({
         "Benutzer mit dieser E-Mail-Adresse ist bereits vorhanden",
       OldPasswordDidNotMatch: "Das alte Passwort stimmt nicht überein",
       PasswordsNotEqual: "Passwörter stimmen nicht überein",
-      notNumber: "Nicht nummer",
+      notNumber: "Nicht nummer"
     },
     footer: {
       copyright: "Copyright",
@@ -633,16 +647,16 @@ let strings = new LocalizedStrings({
       phone1: "+ 378 055 232 300",
       phone2: "+ 378 055 232 300",
       email: "office@handballhunter.com",
-      site: "www.handballhunter.com",
+      site: "www.handballhunter.com"
     },
 
     registrationStep: {
-      step: "Schritt",
+      step: "Schritt"
     },
 
     gender: {
       female: "Weiblich",
-      male: "Männlich",
+      male: "Männlich"
     },
 
     position: {
@@ -653,7 +667,7 @@ let strings = new LocalizedStrings({
       pivot: "Kreisläufer",
       leftBackcourt: "Rückraum Links",
       rightBackcourt: "Rückraum Rechts",
-      centerBackcourt: "Rückraum Mitte",
+      centerBackcourt: "Rückraum Mitte"
     },
 
     months: {
@@ -668,7 +682,7 @@ let strings = new LocalizedStrings({
       september: "September",
       october: "Oktober",
       november: "November",
-      december: "Dezember",
+      december: "Dezember"
     },
 
     select: {
@@ -676,13 +690,13 @@ let strings = new LocalizedStrings({
       day: "Tag",
       month: "Monat",
       year: "Jahr",
-      search: "Suchen...",
+      search: "Suchen..."
     },
 
     euPassport: {
       yes: "Ja",
       no: "Nein",
-      nevermind: "Egal",
+      nevermind: "Egal"
     },
 
     profile: {
@@ -696,7 +710,7 @@ let strings = new LocalizedStrings({
       nationalTeamHonors:
         "Gruppen Auszeichnungen und Erfolge (mit Nationalmannschaft)",
       youtube: "YouTube",
-      otherLinks: "Andere Links",
+      otherLinks: "Andere Links"
     },
 
     addMore: "+ Hinzufügen",
@@ -705,7 +719,7 @@ let strings = new LocalizedStrings({
     next: "Next",
     checkYourProfile: "Überprüfe dein Profil",
     goToHomePage: "Gehe zur Startseite",
-    dateFormatString: "DD-MM-YYYY",
+    dateFormatString: "DD-MM-YYYY"
   },
 
   rs: {
@@ -716,7 +730,7 @@ let strings = new LocalizedStrings({
       Login: "Prijavite se",
       Profile: "Profil",
       Logout: "Odjavite se",
-      LanguageSwitch: "Promenite jezik",
+      LanguageSwitch: "Promenite jezik"
     },
 
     loginForm: {
@@ -732,7 +746,7 @@ let strings = new LocalizedStrings({
       notMember: "Niste korisnik?",
       signUpNow: "Registrujte se sada",
       loginWith: "Prijavite se sa:",
-      continueWith: "Nastavite koristeći",
+      continueWith: "Nastavite koristeći"
     },
 
     registrationForm: {
@@ -785,14 +799,21 @@ let strings = new LocalizedStrings({
       positionNote:
         " Ukoliko igrate na vise pozicija (u odbrani i napadu), molimo vas da to navedete u polje ‘Napomena’, koje se nalazi na sledecem koraku registracije.",
       clubsNotice:
-        "Molimo unesite sve podatke vezano za klub u kome igrate ili ste igrali (drzavu, naziv kluba, lige, mesec i godinu), kako bi sistem mogao validno da registruje vase trenutno i prethodno angazovanje.",
+        "Molimo unesite sve podatke vezano za klub u kome igrate ili ste igrali (drzavu, naziv kluba, lige, mesec i godinu), kako bi sistem mogao validno da registruje vase trenutno i prethodno angazovanje."
+    },
+
+    relationship: {
+      friendship: "Prijateljstvo",
+      marriage: "Brak",
+      romance: "Romansa",
+      relationship: "Veza"
     },
 
     forgotPassword: {
       text: "Resetujte lozinku",
       resetPassword: "Resetujte lozinku",
       requested: "Resetovanje već zahtevano",
-      sentText: "Resetovanje lozinke zahtevano. Molimo proverite vaš e-mail.",
+      sentText: "Resetovanje lozinke zahtevano. Molimo proverite vaš e-mail."
     },
 
     resetPassword: {
@@ -801,16 +822,16 @@ let strings = new LocalizedStrings({
       passwordDoNotMatch: "Lozinke se ne podudaraju",
       text: "Upišite lozinku",
       doneText: "Vaša lozinka je promenjena, idite na ",
-      login: "prijava",
+      login: "prijava"
     },
 
     countries: {
-      all: "Sve",
+      all: "Sve"
     },
 
     search: {
       resultPart1: "Pronašli ste",
-      resultPart2: "igrača",
+      resultPart2: "igrača"
     },
 
     playerPreview: {
@@ -820,7 +841,7 @@ let strings = new LocalizedStrings({
       height: "Visina",
       placeOfBirth: "Mesto rođenja",
       dateOfBirth: "Datum rođenja",
-      years: "Godine",
+      years: "Godine"
     },
 
     home: {
@@ -846,7 +867,7 @@ let strings = new LocalizedStrings({
       ones: "Registovani.",
       instagram: "Instagram",
       feed: "Profil.",
-      follow: "Pratite",
+      follow: "Pratite"
     },
 
     privacyPolicy: {
@@ -854,7 +875,7 @@ let strings = new LocalizedStrings({
       content:
         "<p>This website does not share personal information with third parties nor do we store any information about your visit to this blog other than to analyze and optimize your content and reading experience through the use of cookies.</p>" +
         "<p>You can turn off the use of cookies at anytime by changing your specific browser settings. We are not responsible for republished content from this blog on other blogs or websites without our permission.</p>" +
-        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>",
+        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>"
     },
 
     termsOfUse: {
@@ -882,7 +903,7 @@ let strings = new LocalizedStrings({
         "<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>" +
         "<h3>Changes</h3>" +
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
-        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>",
+        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
     },
 
     filter: {
@@ -893,11 +914,11 @@ let strings = new LocalizedStrings({
       weight: "Težina (kg)",
       euPassport: "EU Pasoš",
       nationality: "Nacionalnost",
-      search: "Pretraga",
+      search: "Pretraga"
     },
 
     login: {
-      wrongCredentials: "Pogrešni podaci za prijavu",
+      wrongCredentials: "Pogrešni podaci za prijavu"
     },
 
     about: {
@@ -908,7 +929,7 @@ let strings = new LocalizedStrings({
         "<p>Registracija na našem sajtu je potpuno besplatna. Uz jednostavnu registraciju, dobićete mogućnost da budete transparentni i primećeni od strane svih klubova i menadžera na svetu. Dajemo vam mogućnost da izađete iz rukometne anonimnosti i da postanete profesionalni igrač. </p>" +
         "<p>Handball Hunter je ideja, koja je potekla od profesionalnih rukometaša i menadžera koji su započeli svoje karijere u malim sredinama i okruženjima, koji znaju koliko je teško biti primećen i prepoznat kao talenat.</p>" +
         "<p>Tu smo da vam pomognemo. Handball Hunter je nešto što smo svi dugo čekali - igrači. treneri. menadžeri, i to svi na istom mestu.</p>" +
-        "<p>Rukomet je igra koja se ne igra samo na terenu, već i izvan njega. Pobedite sa nama. </p>",
+        "<p>Rukomet je igra koja se ne igra samo na terenu, već i izvan njega. Pobedite sa nama. </p>"
     },
 
     premium: {
@@ -923,22 +944,22 @@ let strings = new LocalizedStrings({
         title: "Home page",
         price: "10$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
       },
 
       option2: {
         title: "Search results",
         price: "15$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
       },
 
       option3: {
         title: "Most visible player",
         price: "25$/mo",
         description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia.",
-      },
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
+      }
     },
 
     userInfo: {
@@ -956,14 +977,14 @@ let strings = new LocalizedStrings({
       activate: "Aktivirajte porofil",
       yes: "Da",
       no: "Ne",
-      confirmAction: "Da li ste sigurni?",
+      confirmAction: "Da li ste sigurni?"
     },
 
     socialShare: {
       facebook: "facebook",
       whatsapp: "whatsapp",
       viber: "viber",
-      copy: "copy",
+      copy: "copy"
     },
 
     validation: {
@@ -976,7 +997,7 @@ let strings = new LocalizedStrings({
       UserExistsErrorMessage: "Korisnik sa upisanim e-mailom već postoji.",
       OldPasswordDidNotMatch: "Stara lozinka se ne podudara",
       PasswordsNotEqual: "Lozinke se ne podudaraju",
-      notNumber: "Unesite broj",
+      notNumber: "Unesite broj"
     },
 
     footer: {
@@ -987,16 +1008,16 @@ let strings = new LocalizedStrings({
       phone1: "+ 378 055 232 300",
       phone2: "+ 378 055 232 300",
       email: "office@handballhunter.com",
-      site: "www.handballhunter.com",
+      site: "www.handballhunter.com"
     },
 
     registrationStep: {
-      step: "Korak",
+      step: "Korak"
     },
 
     gender: {
       female: "Žena",
-      male: "Muškarac",
+      male: "Muškarac"
     },
 
     position: {
@@ -1007,7 +1028,7 @@ let strings = new LocalizedStrings({
       pivot: "Pivot",
       leftBackcourt: "Levi bek",
       rightBackcourt: "Desni bek",
-      centerBackcourt: "Srednji bek",
+      centerBackcourt: "Srednji bek"
     },
 
     months: {
@@ -1022,7 +1043,7 @@ let strings = new LocalizedStrings({
       september: "Septembar",
       october: "Octobar",
       november: "Novembar",
-      december: "Decembar",
+      december: "Decembar"
     },
 
     select: {
@@ -1030,13 +1051,13 @@ let strings = new LocalizedStrings({
       day: "Dan",
       month: "Mesec",
       year: "Godina",
-      search: "Pretraga...",
+      search: "Pretraga..."
     },
 
     euPassport: {
       yes: "Da",
       no: "Ne",
-      nevermind: "Nije bitno",
+      nevermind: "Nije bitno"
     },
 
     profile: {
@@ -1048,7 +1069,7 @@ let strings = new LocalizedStrings({
       nationalTeamAwards: "Lične nagrade i dostignuća (sa reprezentacijom)",
       nationalTeamHonors: "Nagrade i dostignuća tima (sa reprezentacijom)",
       youtube: "YouTube",
-      otherLinks: "Ostali linkovi",
+      otherLinks: "Ostali linkovi"
     },
 
     addMore: "+ Dodajte",
@@ -1058,8 +1079,8 @@ let strings = new LocalizedStrings({
     checkYourProfile: "Proverite profil",
     goToHomePage: "Idite na početnu stranicu",
 
-    dateFormatString: "DD-MM-YYYY",
-  },
+    dateFormatString: "DD-MM-YYYY"
+  }
 });
 
 export default strings;

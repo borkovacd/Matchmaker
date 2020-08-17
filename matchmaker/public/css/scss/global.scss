@@ -91,12 +91,9 @@ input:disabled {
 input,
 textarea,
 select {
-  max-width: 320px;
   background: white;
   border: none;
   letter-spacing: 1px;
-  height: 39.96px;
-  width: 367px;
   border-radius: 5px;
   background-color: $white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -191,6 +188,14 @@ select {
 
 .black-text {
   color: $grayText;
+}
+
+.center {
+  text-align: center;
+}
+
+.mb-5 {
+  margin-bottom: 5%;
 }
 
 .required:after {
