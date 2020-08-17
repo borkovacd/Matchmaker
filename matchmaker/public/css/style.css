@@ -370,19 +370,7 @@ select {
     }
   }
 
-  .language-container {
-    position: fixed;
-    top: 4%;
-    left: calc(100% - 11%);
-
-    display: flex;
-    .language {
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
+  
 }*/
 #header {
   position: fixed;
@@ -426,7 +414,6 @@ select {
 
 .btn-login {
   margin-right: 2%;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -434,7 +421,8 @@ select {
   width: 127px;
   background: #d93943;
   border-radius: 4px;
-  border: 0.5px solid #cacaca; }
+  border: 0.5px solid #cacaca;
+  display: flex; }
   .btn-login:hover {
     background: #00498e;
     color: white; }
@@ -449,11 +437,11 @@ select {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
-    text-align: center; }
+    text-align: center;
+    display: flex; }
 
 .btn-register {
   margin-right: 2%;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -461,7 +449,8 @@ select {
   width: 127px;
   background: #00498e;
   border-radius: 4px;
-  border: 0.5px solid #cacaca; }
+  border: 0.5px solid #cacaca;
+  display: flex; }
   .btn-register:hover {
     background: #d93943;
     color: white; }
@@ -476,36 +465,50 @@ select {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
-    text-align: center; }
+    text-align: center;
+    display: flex; }
 
-/*.language-container {
+.language-container {
+  display: flex; }
+  .language-container .language img {
+    width: 50px;
+    height: 30px; }
+
+@media screen and (max-width: 992px) {
+  .menu {
+    flex-direction: column; } }
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    top: 105px;
+    width: 174px; }
+  .btn-login {
+    width: 174px; }
+  .btn-register {
+    width: 174px; } }
+
+language-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 10px 0;
-
-  .language {
-    margin: 0 10px;
-
-    img {
+  margin: 10px 0; }
+  language-container .language {
+    margin: 0 10px; }
+    language-container .language img {
       width: 35px;
       height: 35px;
       border-radius: 50%;
       opacity: 0.9;
-      border: 2px solid transparent;
-
-      &:hover {
+      border: 2px solid transparent; }
+      language-container .language img:hover {
         cursor: pointer;
-        opacity: 1;
-      }
+        opacity: 1; }
+      language-container .language img.active {
+        border: 2px solid rgba(3, 24, 86, 0.95); }
 
-      &.active {
-        border: 2px solid $header;
-      }
-    }
-  }
-}*/
 .language-switcher {
   display: flex; }
   .language-switcher .select {
