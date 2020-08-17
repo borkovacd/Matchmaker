@@ -12,7 +12,7 @@ import LoginForm from "../../components/forms/user/LoginForm";
 
 class Login extends Page {
   validationList = {
-    email: [{ type: Validators.EMAIL }],
+    username: [{ type: Validators.REQUIRED }],
     password: [{ type: Validators.REQUIRED }]
   };
 
@@ -21,7 +21,8 @@ class Login extends Page {
 
     this.state = {
       data: {},
-      errors: {}
+      errors: {},
+      redirectUrl: props.location.state ? props.location.state.redirectUrl : "/"
     };
 
     this.keyPress = this.keyPress.bind(this);
@@ -38,9 +39,9 @@ class Login extends Page {
       return;
     }
 
-    login(this.state.data.email, this.state.data.password).then(response => {
+    login(this.state.data.username, this.state.data.password).then(response => {
       if (!response || !response.ok) {
-        this.setError("email", strings.login.wrongCredentials);
+        this.setError("username", strings.login.wrongCredentials);
         return;
       }
 

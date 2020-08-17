@@ -1,70 +1,69 @@
-import React, {Component} from 'react'
-import {validate, isFormValid} from '../functions/Validation';
+import React, { Component } from "react";
+import { validate, isFormValid } from "../functions/Validation";
 import BaseComponent from "../common/BaseComponent";
-import update from 'immutability-helper';
+import update from "immutability-helper";
 
 class FormComponent extends BaseComponent {
+  validationList = {};
 
-    validationList = {};
+  constructor(props) {
+    super(props);
 
-    constructor(props) {
-        super(props);
+    this.state = {
+      data: {},
+      errors: {}
+    };
 
-        this.state = {
-            data: {},
-            errors: {}
+    this.changeData = this.changeData.bind(this);
+    this.changeCheckBox = this.changeCheckBox.bind(this);
+    this.validate = this.validate.bind(this);
+  }
 
-        };
+  changeData(event) {
+    this.setState({
+      data: update(this.state.data, {
+        [event.target.name]: { $set: event.target.value }
+      })
+    });
+  }
 
-        this.changeData = this.changeData.bind(this);
-        this.changeCheckBox = this.changeCheckBox.bind(this);
-        this.validate = this.validate.bind(this);
-    }
+  changeCheckBox(event) {
+    const field = event.target.name;
+    const data = this.state.data;
+    data[field] = !data[field];
 
-    changeData(event) {
+    this.setState({
+      data
+    });
+  }
 
-        this.setState({
-            data: update(this.state.data, { [event.target.name]: {$set: event.target.value} })
-        });
-    }
+  isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
 
-    changeCheckBox(event) {
+  isFloat(n) {
+    return !isNaN(parseFloat(n));
+  }
 
-        const field = event.target.name;
-        const data = this.state.data;
-        data[field] = !data[field];
+  isInt(n) {
+    return isFinite(n);
+  }
 
-        this.setState({
-            data
-        });
-    }
+  validate() {
+    let errors = validate(this.state.data, this.validationList);
 
-    isNumeric(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
+    this.setState({ errors });
 
-    isFloat(n) {
-        return !isNaN(parseFloat(n));
-    }
+    return isFormValid(errors);
+  }
 
-    isInt(n) {
-        return isFinite(n)
-    }
-
-    validate () {
-
-        let errors = validate(this.state.data, this.validationList);
-
-        this.setState({errors});
-
-        return isFormValid(errors);
-    }
-
-    setError(key, value) {
-        this.setState({
-            errors: update(this.state.errors, { [key]: {$set: [ { message: value} ]} })
-        });
-    }
+  setError(key, value) {
+    this.setState({
+      errors: update(this.state.errors, {
+        [key]: { $set: [{ message: value }] }
+      })
+    });
+  }
 }
 
 export default FormComponent;

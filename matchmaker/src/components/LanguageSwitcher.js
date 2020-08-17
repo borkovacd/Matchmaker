@@ -13,52 +13,53 @@ class LanguageSwitcher extends Component {
     super(props);
   }
 
-  changeLanguage(language) {
+  handleChange(e) {
+    console.log(e.target.value);
+    this.props.changeLanguage(e.target.value);
+  }
+
+  changeLanguage1(language) {
+    console.log("HEJ");
+    console.log("hej " + language);
+    //console.log("Language switched to: " + selectedItem.target.value);
     this.props.changeLanguage(language);
   }
 
-  /*changeLanguageDD(selectedItem) {
-    console.log("Language switched to: " + selectedItem.target.value);
-    //console.log("Language -> " + selectedItem);
-    //this.props.changeLanguage(selectedItem.target.value);
-    changeLanguage("rs");
-  }*/
-
   render() {
     return (
-      <div className="language-container">
-        <div className="language" onClick={() => this.changeLanguage("rs")}>
-          <img
-            className={this.props.language === "rs" ? "active" : ""}
-            src={"images/flags/rs.png"}
-          />
-        </div>
-        <div className="language" onClick={() => this.changeLanguage("en")}>
-          <img
-            className={this.props.language === "en" ? "active" : ""}
-            src={"images/flags/gb.png"}
-          />
-        </div>
-
-        <div className="language" onClick={() => this.changeLanguage("de")}>
-          <img
-            className={this.props.language === "de" ? "active" : ""}
-            src={"images/flags/de.png"}
-          />
-        </div>
-      </div>
-    );
-    {
-      /*<div className="language-switcher">
+      <div className="language-switcher">
         <Select
           placeholder={this.props.language}
           items={this.props.languages}
           selectedItem={this.props.language}
-          onChange={this.changeLanguageDD}
+          onChange={this.handleChange}
           displayKey={"name"}
           valueKey={"name"}
         />
-    </div>*/
+      </div>
+    );
+    {
+      /*<div className="language-container">
+      <div className="language" onClick={() => this.changeLanguage("rs")}>
+        <img
+          className={this.props.language === "rs" ? "active" : ""}
+          src={"images/flags/rs.png"}
+        />
+      </div>
+      <div className="language" onClick={() => this.changeLanguage("en")}>
+        <img
+          className={this.props.language === "en" ? "active" : ""}
+          src={"images/flags/gb.png"}
+        />
+      </div>
+
+      <div className="language" onClick={() => this.changeLanguage("de")}>
+        <img
+          className={this.props.language === "de" ? "active" : ""}
+          src={"images/flags/de.png"}
+        />
+      </div>
+    </div> */
     }
   }
 }
