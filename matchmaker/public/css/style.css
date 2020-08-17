@@ -414,15 +414,15 @@ select {
 
 .btn-login {
   margin-right: 2%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   height: 35px;
   width: 127px;
   background: #d93943;
   border-radius: 4px;
   border: 0.5px solid #cacaca;
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
   .btn-login:hover {
     background: #00498e;
     color: white; }
@@ -431,40 +431,34 @@ select {
     cursor: pointer;
     border-radius: 4px;
     height: 23px;
-    width: 58.46px;
     color: #fff;
     font-family: "Futura Md BT";
-    font-size: 18px;
     font-weight: 500;
-    line-height: 22px;
     text-align: center;
     display: flex; }
 
 .btn-register {
   margin-right: 2%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   height: 35px;
   width: 127px;
   background: #00498e;
   border-radius: 4px;
   border: 0.5px solid #cacaca;
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
   .btn-register:hover {
     background: #d93943;
     color: white; }
   .btn-register a {
     text-decoration: none;
     cursor: pointer;
-    height: 25px;
-    width: 58.46px;
+    height: 23px;
     border-radius: 4px;
     color: #fff;
     font-family: "Futura Md BT";
-    font-size: 18px;
     font-weight: 500;
-    line-height: 22px;
     text-align: center;
     display: flex; }
 
