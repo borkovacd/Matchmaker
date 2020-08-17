@@ -4,7 +4,8 @@ import Error from "./pages/Error";
 import Forbidden from "./pages/Forbidden";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/user/Login";
-import Registration from "./pages/user/Registration";
+import RegistrationFirstStep from "./pages/user/RegistrationFirstStep";
+import RegistrationSecondStep from "./pages/user/RegistrationSecondStep";
 
 import { Route } from "react-router-dom";
 import { isUserLoggedIn } from "./base/OAuth";
@@ -13,33 +14,38 @@ let ROUTES = {
   Home: {
     path: "/",
     component: <Home />,
-    auth: false
+    auth: false,
   },
   Error: {
     path: "/error",
     component: <Error />,
-    auth: false
+    auth: false,
   },
   Forbidden: {
     path: "/forbidden",
     component: <Forbidden />,
-    auth: false
+    auth: false,
   },
   NotFound: {
     path: "/not-found",
     component: <NotFound />,
-    auth: false
+    auth: false,
   },
   Login: {
     path: "/login",
     component: <Login />,
-    auth: false
+    auth: false,
   },
   Registration: {
     path: "/registration",
-    component: <Registration edit={false} />,
-    auth: false
-  }
+    component: <RegistrationFirstStep edit={false} />,
+    auth: false,
+  },
+  Registration2: {
+    path: "/registration2",
+    component: <RegistrationSecondStep edit={false} />,
+    auth: false,
+  },
 };
 
 export default ROUTES;

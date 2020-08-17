@@ -21,6 +21,16 @@
   justify-content: center;
   margin-top: 5%;
   //background-color: black;
+
+  &.second-step {
+    display: grid;
+    grid-template-columns: 40%;
+    justify-content: center;
+    margin-top: 5%;
+    background-color: black;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .lrp-form-container {

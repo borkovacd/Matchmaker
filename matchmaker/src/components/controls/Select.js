@@ -18,7 +18,7 @@ class Select extends BaseControl {
         ? props.placeholder
         : strings.select.placeholder,
       disabled: props.disabled,
-      searchText: ""
+      searchText: "",
     };
 
     this.customAdd = this.customAdd.bind(this);
@@ -50,13 +50,13 @@ class Select extends BaseControl {
     }
 
     this.setState({
-      open: !this.state.open
+      open: !this.state.open,
     });
   }
 
   handleClickOutside() {
     this.setState({
-      open: false
+      open: false,
     });
   }
 
@@ -67,7 +67,7 @@ class Select extends BaseControl {
 
     this.setState({
       selectedItem: item,
-      open: false
+      open: false,
     });
   }
 
@@ -78,7 +78,7 @@ class Select extends BaseControl {
   customAdd() {
     let item = {
       text: this.state.searchText,
-      [this.state.displayKey]: this.state.searchText
+      [this.state.displayKey]: this.state.searchText,
     };
 
     this.selectItem(item);
@@ -92,7 +92,7 @@ class Select extends BaseControl {
         <input
           className="search"
           type="text"
-          onChange={event => this.onChange(event)}
+          onChange={(event) => this.onChange(event)}
           placeholder={strings.select.search}
           value={this.state.searchText}
         />
@@ -105,7 +105,7 @@ class Select extends BaseControl {
           <input
             className="search"
             type="text"
-            onChange={event => this.onChange(event)}
+            onChange={(event) => this.onChange(event)}
             placeholder={strings.select.search}
             value={this.state.searchText}
           />
@@ -156,7 +156,7 @@ class Select extends BaseControl {
 
   onChange(event) {
     this.setState({
-      searchText: event.target.value
+      searchText: event.target.value,
     });
   }
 
