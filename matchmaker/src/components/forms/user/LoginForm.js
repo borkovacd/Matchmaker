@@ -6,16 +6,16 @@ import ErrorViewer from "../../ErrorViewer";
 import CheckBox from "../../controls/CheckBox";
 
 const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
-  <form id="login-form" onSubmit={(event) => onSubmit(event)}>
-    <div className="form-row">
-      <div className="column">
-        <div className=" title">{strings.loginForm.title}</div>
-      </div>
-    </div>
+  <form
+    id="login-form"
+    className="lrp-form-container"
+    onSubmit={event => onSubmit(event)}
+  >
+    <div className="lrp-form-title">{strings.loginForm.title}</div>
 
     <div className="form-row">
       <div className="column">
-        <div className="label-container">
+        <div className="label">
           <label className="required" htmlFor="username">
             {strings.loginForm.username}
           </label>
@@ -26,7 +26,7 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
           type="text"
           name="username"
           onKeyPress={keyPress}
-          className={getErrorClass(errors, "username")}
+          className={getErrorClass(errors, "username") + "placeholder-input"}
           value={data.username}
           onChange={onChange}
         />
@@ -34,7 +34,7 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
     </div>
     <div className="form-row">
       <div className="column">
-        <div className="label-container">
+        <div className="label">
           <label className="required" htmlFor="password">
             {strings.loginForm.password}
           </label>
@@ -44,7 +44,7 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
           placeholder={strings.loginForm.password}
           type="password"
           name="password"
-          className={getErrorClass(errors, "password")}
+          className={getErrorClass(errors, "password") + "placeholder-input"}
           value={data.password}
           onChange={onChange}
           onKeyPress={keyPress}
@@ -61,7 +61,7 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
         ></CheckBox>
       </div>
       <div className="column">
-        <Link to={"/forgot-password"} className="forget-link">
+        <Link to={"/forgot-password"}>
           {strings.loginForm.forgotYourPassword}
         </Link>
       </div>
@@ -70,8 +70,8 @@ const LoginForm = ({ onSubmit, onChange, errors, data, keyPress }) => (
     <div className="form-row">
       <div className="column controls">
         <a
-          onClick={(event) => onSubmit(event)}
-          className="btn btn-red uppercase"
+          onClick={event => onSubmit(event)}
+          className="btn lrp-btn btn-red uppercase"
         >
           {strings.loginForm.continue}
         </a>

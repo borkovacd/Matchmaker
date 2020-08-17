@@ -54,38 +54,38 @@ class Login extends Page {
 
   render() {
     return (
-      <div id="login-page">
-        <div className="title">{strings.menu.Login}</div>
+      <div className="login-registration-page">
+        <div className="lrp-title">{strings.menu.Login}</div>
 
-        <div className="form-grid-container">
-          <div className="form-grid-item">
-            <LoginForm
-              errors={this.state.errors}
-              data={this.state.data}
-              keyPress={this.keyPress}
-              onChange={this.changeData}
-              onSubmit={() => this.login()}
-            />
-          </div>
+        <div className="lrp-grid-container">
+          <LoginForm
+            errors={this.state.errors}
+            data={this.state.data}
+            keyPress={this.keyPress}
+            onChange={this.changeData}
+            onSubmit={() => this.login()}
+          />
 
-          <div id="login-with-buttons">
-            <div className="title">{strings.loginForm.loginWith}</div>
+          <div className="lrp-social-buttons">
+            <div className="lrp-social-buttons-title">
+              {strings.loginForm.loginWith}
+            </div>
 
             <div className="row">
-              <a href="#" className="fb btn">
+              <a href="#" className="fb social-btn">
                 <i className="fab fa-facebook-f i"></i>{" "}
                 {strings.loginForm.continueWith} Facebook
               </a>
             </div>
 
             <div className="row">
-              <a href="#" className="twitter btn">
+              <a href="#" className="twitter social-btn">
                 <i className="fab fa-twitter i"></i>{" "}
                 {strings.loginForm.continueWith} Twitter
               </a>
             </div>
             <div className="row">
-              <a href="#" className="google btn">
+              <a href="#" className="google social-btn">
                 <i className="fab fa-google-plus-g i"></i>{" "}
                 {strings.loginForm.continueWith} Google
               </a>

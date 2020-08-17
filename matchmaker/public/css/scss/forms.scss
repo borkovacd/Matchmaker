@@ -6,7 +6,6 @@
 
 .form-grid-item {
   width: 50%;
-
   padding: 30px;
   font-size: 30px;
   text-align: center;
@@ -59,19 +58,19 @@
     flex-direction: row;
   }
 
-  label {
-    font-weight: 500;
+  .label {
+    font-weight: 600;
+    font-size: larger;
+    margin-bottom: 3%;
+  }
+
+  input {
+    margin-bottom: 5%;
   }
 
   .placeholder-input {
-    position: relative;
-
-    p {
-      position: absolute;
-      right: 5px;
-      top: 30px;
-      color: $orange;
-    }
+    color: $placeholder-text;
+    padding-left: 5%;
   }
 
   .column {

@@ -1,109 +1,3 @@
-/*#header {
-  display: flex;
-  position: fixed;
-  height: 104px;
-  top: 0;
-  background: white;
-  border-bottom: 1px ridge $lightGrayBorder;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-
-  &.active {
-    background: $blue;
-    opacity: 0.9;
-  }
-
-  .logo {
-    img {
-      top: 0;
-      left: 0;
-      height: 105px;
-      width: 174px;
-    }
-  }
-
-  .title {
-    float: right;
-    margin-top: 14px;
-    margin-left: 100px;
-    height: 57px;
-    width: 346px;
-    color: $blue;
-    font-family: "Times Cirilica";
-    font-size: 40px;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 36px;
-    cursor: pointer;
-  }
-
-  .header-btn-left {
-    position: fixed;
-    top: 5%;
-    left: calc(100% - 27%);
-    background: $red;
-    display: flex;
-    justify-content: center;
-    height: 35px;
-    width: 127px;
-    align-items: center;
-    text-align: center;
-    border-radius: 4px;
-    border: 0.5px solid #979797;
-
-    &:hover {
-      background: $blue;
-      color: white;
-    }
-
-    a {
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 4px;
-      height: 23px;
-      width: 58.46px;
-      color: #fff;
-      font-family: "Futura Md BT";
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 22px;
-      text-align: center;
-    }
-  }
-
-  .header-btn-right {
-    height: 35px;
-    width: 127px;
-    position: fixed;
-    top: 5%;
-    left: calc(100% - 19%);
-    display: flex;
-    justify-content: center;
-
-    &:hover {
-      background: $blue;
-      color: white;
-    }
-
-    a {
-      margin: 5%;
-      text-decoration: none;
-      cursor: pointer;
-      height: 25px;
-      width: 67.68px;
-      color: #737373;
-      font-family: "Futura Md BT";
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 22px;
-      text-align: center;
-    }
-  }
-
-  
-}*/
-
 #header {
   position: fixed;
   top: 0;
@@ -158,7 +52,6 @@
   background: $red;
   border-radius: 4px;
   border: 0.5px solid $lightGrayBorder;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,10 +66,10 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 4px;
-    height: 23px;
     color: #fff;
     font-family: "Futura Md BT";
     font-weight: 500;
+    font-size: large;
     text-align: center;
     display: flex;
   }
@@ -202,14 +95,11 @@
   a {
     text-decoration: none;
     cursor: pointer;
-    height: 23px;
-
     border-radius: 4px;
     color: $white;
     font-family: "Futura Md BT";
-
     font-weight: 500;
-
+    font-size: large;
     text-align: center;
     display: flex;
   }
