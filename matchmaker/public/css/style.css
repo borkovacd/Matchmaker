@@ -326,7 +326,7 @@ select {
   align-items: center;
   text-align: center; }
   .btn-login:hover {
-    background: #00498e;
+    opacity: 0.85;
     color: white; }
   .btn-login a {
     text-decoration: none;
@@ -351,7 +351,7 @@ select {
   align-items: center;
   text-align: center; }
   .btn-register:hover {
-    background: #d93943;
+    opacity: 0.85;
     color: white; }
   .btn-register a {
     text-decoration: none;
@@ -440,10 +440,14 @@ language-container {
         margin: 0;
         transition: 0.15s; }
         .language-switcher .select .options p:hover {
-          background: rgba(5, 15, 55, 0.25);
+          background: #f3f3f3;
           transition: 0.15s; }
         .language-switcher .select .options p .scroll {
-          background: rgba(5, 15, 55, 0.25); }
+          background: #f3f3f3; }
+
+@media screen and (max-width: 768px) {
+  .language-switcher .select {
+    width: 173px; } }
 
 .check-box-container {
   display: flex;

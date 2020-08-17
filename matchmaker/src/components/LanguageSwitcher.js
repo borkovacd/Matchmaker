@@ -11,18 +11,12 @@ import { changeLanguage } from "../actions/Actions";
 class LanguageSwitcher extends Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
-    console.log(e.target.value);
+    console.log("Switching language to: " + e.target.value);
     this.props.changeLanguage(e.target.value);
-  }
-
-  changeLanguage1(language) {
-    console.log("HEJ");
-    console.log("hej " + language);
-    //console.log("Language switched to: " + selectedItem.target.value);
-    this.props.changeLanguage(language);
   }
 
   render() {
@@ -67,7 +61,7 @@ class LanguageSwitcher extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      changeLanguage: Actions.changeLanguage
+      changeLanguage: Actions.changeLanguage,
     },
     dispatch
   );
@@ -76,7 +70,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ siteDataReducers }) {
   return {
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages
+    languages: siteDataReducers.languages,
   };
 }
 

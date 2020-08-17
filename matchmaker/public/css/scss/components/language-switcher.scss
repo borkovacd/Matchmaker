@@ -72,14 +72,22 @@ language-container {
         transition: 0.15s;
 
         &:hover {
-          background: $pageBackground;
+          background: $language-switcher;
           transition: 0.15s;
         }
 
         .scroll {
-          background: $pageBackground;
+          background: $language-switcher;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $break-sm) {
+  .language-switcher {
+    .select {
+      width: 173px;
     }
   }
 }
