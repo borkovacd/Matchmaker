@@ -55,9 +55,9 @@ class RegistrationFirstStep extends Page {
       return;
     }*/
 
-    this.props.showLoader();
+    //this.props.showLoader();
 
-    register(this.state.data).then(response => {
+    /*register(this.state.data).then(response => {
       if (!response || !response.ok) {
         this.setError("email", strings.registrationForm.emailExists);
         this.props.hideLoader();
@@ -71,7 +71,9 @@ class RegistrationFirstStep extends Page {
       setUserToLocalStorage(response.data.user);
 
       this.props.history.push("/registration-details");
-    });
+    });*/
+
+    this.props.history.push("/registration2");
   }
 
   render() {
