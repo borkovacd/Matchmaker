@@ -39,6 +39,7 @@
 }
 
 .menu {
+  position: relative;
   display: flex;
   justify-content: space-evenly; //verovatno ce se menjati
   align-items: center;
@@ -106,6 +107,7 @@
 }
 
 .language-container {
+  position: fixed;
   display: flex;
   .language {
     img {

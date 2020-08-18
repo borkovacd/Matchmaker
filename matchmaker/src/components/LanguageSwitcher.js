@@ -32,36 +32,13 @@ class LanguageSwitcher extends Component {
         />
       </div>
     );
-    {
-      /*<div className="language-container">
-      <div className="language" onClick={() => this.changeLanguage("rs")}>
-        <img
-          className={this.props.language === "rs" ? "active" : ""}
-          src={"images/flags/rs.png"}
-        />
-      </div>
-      <div className="language" onClick={() => this.changeLanguage("en")}>
-        <img
-          className={this.props.language === "en" ? "active" : ""}
-          src={"images/flags/gb.png"}
-        />
-      </div>
-
-      <div className="language" onClick={() => this.changeLanguage("de")}>
-        <img
-          className={this.props.language === "de" ? "active" : ""}
-          src={"images/flags/de.png"}
-        />
-      </div>
-    </div> */
-    }
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      changeLanguage: Actions.changeLanguage,
+      changeLanguage: Actions.changeLanguage
     },
     dispatch
   );
@@ -70,7 +47,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ siteDataReducers }) {
   return {
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages,
+    languages: siteDataReducers.languages
   };
 }
 

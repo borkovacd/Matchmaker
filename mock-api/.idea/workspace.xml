@@ -20,11 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd60a36e-86f9-45d1-8b28-4a801836b537" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/base/BaseLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/base/BaseLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/common/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/common/Page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/components/controls/CheckGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/components/controls/CheckGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../matchmaker/src/components/forms/user/RegistrationFirstStepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/components/forms/user/RegistrationFirstStepForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../matchmaker/src/pages/user/RegistrationFirstStep.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/pages/user/RegistrationFirstStep.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
@@ -67,7 +62,7 @@
       <workItem from="1597298640387" duration="1355000" />
       <workItem from="1597385343272" duration="4229000" />
       <workItem from="1597644173718" duration="7586000" />
-      <workItem from="1597730751283" duration="1646000" />
+      <workItem from="1597730751283" duration="7841000" />
     </task>
     <servers />
   </component>

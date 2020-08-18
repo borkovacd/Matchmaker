@@ -65,12 +65,12 @@ input:disabled {
 }
 
 .page-container {
-  margin: 0 auto;
-  width: calc(100% - 30px);
-  padding: 140px 15px;
+  margin-top: 107px;
+  width: 90%;
+  //padding: 140px 15px;
   min-height: 60vh;
-
-  background: $white;
+  background-color: black;
+  color: $grayText;
 
   @media screen and (min-width: $break-md) {
     width: calc(90% - 200px);
@@ -196,6 +196,10 @@ select {
 
 .mb-5 {
   margin-bottom: 5%;
+}
+
+.blue-link {
+  color: $blue;
 }
 
 .required:after {

@@ -11,13 +11,7 @@ import * as Actions from "../../actions/Actions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import RegistrationFirstStepForm from "../../components/forms/user/RegistrationFirstStepForm";
-import {
-  editUser,
-  getUserRegistrationDetailsData,
-  register,
-  uploadProfileImage
-} from "../../services/UserService";
-import { dateToString, stringToDate } from "../../util/DateUtil";
+import { register } from "../../services/UserService";
 import strings from "../../localization";
 
 class RegistrationFirstStep extends Page {
