@@ -78,6 +78,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    &.center {
+      align-items: center;
+    }
   }
   .column-half {
     width: calc(100%);

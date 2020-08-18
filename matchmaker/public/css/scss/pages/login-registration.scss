@@ -27,7 +27,7 @@
     grid-template-columns: 40%;
     justify-content: center;
     margin-top: 5%;
-    background-color: black;
+    //background-color: black;
     align-items: center;
     text-align: center;
   }
@@ -38,6 +38,10 @@
   text-align: left;
   background-color: $white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+  &.padding-2 {
+    padding: 5% 20%;
+  }
 }
 
 .lrp-form-title {
@@ -55,6 +59,10 @@
     justify-content: left;
     flex-direction: row;
     margin-top: 15px;
+
+    &.center {
+      justify-content: center;
+    }
 
     .space {
       margin: 0 5px;
@@ -133,9 +141,101 @@
   }
 }
 
+@media screen and (max-width: $break-lg) {
+  .lrp-grid-container {
+    &.second-step {
+      grid-template-columns: 70%;
+    }
+  }
+}
+
 @media screen and (max-width: $break-sm) {
   .lrp-grid-container {
     display: flex;
     flex-direction: column;
+
+    &.second-step {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+.canvas-container {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.photo-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  background: $photo-placeholder-bg;
+  border: 1px solid $photo-placeholder-border;
+  overflow: hidden;
+
+  .file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 500000;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    opacity: 0;
+  }
+
+  .upload-placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 7%;
+    background: url("../images/upload-placeholder.png");
+    background-size: contain;
+  }
+}
+
+.choose-image {
+  position: relative;
+  margin-bottom: 5%;
+  text-align: center;
+
+  cursor: pointer;
+
+  p {
+    cursor: pointer;
+    font-size: larger;
+    font-weight: 600px;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.15s;
+  }
+
+  &:hover {
+    p {
+      opacity: 0.8;
+      transition: 0.15s;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 999999999999;
   }
 }
