@@ -2,7 +2,7 @@ import { request } from "../base/HTTP";
 import HttpMethod from "../constants/HttpMethod";
 
 export async function register(user) {
-  return await request("/users/", user, HttpMethod.POST);
+  return await request("/auth/signup", user, HttpMethod.POST);
 }
 
 export async function editUser(user) {
