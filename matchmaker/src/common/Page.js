@@ -1,4 +1,3 @@
-import React from "react";
 import FormComponent from "./FormComponent";
 
 class Page extends FormComponent {

@@ -10,16 +10,7 @@ import DateSelect from "../../controls/DateSelect";
 import "rc-slider/assets/index.css";
 import Range from "rc-slider";
 
-const RegistrationFirstStepForm = ({
-  onChange,
-  errors,
-  data,
-  countries,
-  edit,
-  onSubmit,
-  ageChange,
-  rangeChange,
-}) => (
+const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
   <form id="register-form" className="lrp-form-container">
     <div className="lrp-form-title">{strings.registrationForm.title}</div>
     <div className="form-row mb-5">
@@ -186,10 +177,7 @@ const RegistrationFirstStepForm = ({
     </div>
     <div className="form-row">
       <div className="column controls">
-        <a
-          onClick={(event) => onSubmit(event)}
-          className="btn lrp-btn btn-red uppercase"
-        >
+        <a onClick={onSubmit} className="btn lrp-btn btn-red uppercase">
           {strings.loginForm.continue}
         </a>
       </div>

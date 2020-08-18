@@ -7,11 +7,11 @@ import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
 
 class Header extends Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
     //this.toggleFilter = this.toggleFilter.bind(this);
     //this.toggleMenu = this.toggleMenu.bind(this);
-  }
+  }*/
 
   logout() {
     logout();

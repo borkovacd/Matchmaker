@@ -6,6 +6,9 @@
       { "id": 3, "name": "de" }
     ]
   },
+  "users" : [
+    {"username" :  "pera", "email":  "pera@gmail.com", "name" : "Pera Peric"}
+  ],
   "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
   "profile": { "name": "typicode" }
 }

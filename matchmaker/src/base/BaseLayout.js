@@ -7,10 +7,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 class BaseLayout extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { children } = this.props;
 
