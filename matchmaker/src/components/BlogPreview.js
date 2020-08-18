@@ -25,7 +25,12 @@ class BlogPreview extends Component {
 
     return (
       <div className="blog-preview-container">
-        <div className="header"></div>
+        <div
+          className="header"
+          style={{
+            background: "url(" + this.state.blog.image + ")"
+          }}
+        ></div>
         <div className="content">
           <div className="content-title-buttons">
             <div className="content-title">{this.state.blog.title}</div>
