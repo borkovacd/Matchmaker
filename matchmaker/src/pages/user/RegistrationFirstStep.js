@@ -3,7 +3,7 @@ import Page from "../../common/Page";
 import {
   login,
   setTokenToLocalStorage,
-  setUserToLocalStorage
+  setUserToLocalStorage,
 } from "../../base/OAuth";
 import Validators from "../../constants/ValidatorTypes";
 import { withRouter } from "react-router-dom";
@@ -18,7 +18,7 @@ class RegistrationFirstStep extends Page {
   registerValidationList = {
     username: [{ type: Validators.REQUIRED }],
     name: [{ type: Validators.REQUIRED }],
-    email: [{ type: Validators.EMAIL }]
+    email: [{ type: Validators.EMAIL }],
   };
 
   constructor(props) {
@@ -27,7 +27,9 @@ class RegistrationFirstStep extends Page {
     this.state = {
       data: {},
       errors: {},
-      redirectUrl: props.location.state ? props.location.state.redirectUrl : "/"
+      redirectUrl: props.location.state
+        ? props.location.state.redirectUrl
+        : "/",
     };
 
     this.submit = this.submit.bind(this);
@@ -51,12 +53,12 @@ class RegistrationFirstStep extends Page {
 
     //this.props.showLoader();
 
-    /*register(this.state.data).then(response => {
-      if (!response || !response.ok) {
+    register(this.state.data).then((response) => {
+      /*if (!response || !response.ok) {
         this.setError("email", strings.registrationForm.emailExists);
         this.props.hideLoader();
         return;
-      }
+      }*/
 
       setTokenToLocalStorage(
         response.data.token.access_token,
@@ -64,10 +66,10 @@ class RegistrationFirstStep extends Page {
       );
       setUserToLocalStorage(response.data.user);
 
-      this.props.history.push("/registration-details");
-    });*/
+      this.props.history.push("/registration2");
+    });
 
-    this.props.history.push("/registration2");
+    //this.props.history.push("/registration2");
   }
 
   render() {
@@ -119,7 +121,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );
