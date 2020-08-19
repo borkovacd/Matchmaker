@@ -33,7 +33,7 @@
         font-size: large;
         font-weight: 600;
         color: $blue;
-        border-bottom: 1px solid $blue;
+
         margin-bottom: 5%;
       }
 
@@ -66,6 +66,36 @@
     .content-read-more {
       margin-top: 5%;
       font-weight: 500;
+    }
+  }
+
+  .related-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      min-height: 350px;
+      width: 100%;
+      border-radius: 5%;
+      background-size: cover !important;
+      background-position-x: center !important;
+      background-position-y: center !important;
+      background-repeat: no-repeat !important;
+      outline: none;
+    }
+
+    .title {
+      display: flex;
+
+      font-weight: 500;
+      color: $blue;
+      cursor: pointer;
+      font-size: large;
+      text-decoration: none;
+      font-style: normal;
+
+      overflow: hidden;
     }
   }
 }

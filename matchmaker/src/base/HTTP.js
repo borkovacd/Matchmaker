@@ -35,6 +35,7 @@ let refreshing = false;
 Axios.getInstance().interceptors.response.use(
   response => {
     response.ok = response.status >= 200 && response.status < 300;
+    //console.log("Response status here: " + response.status);
 
     return response;
   },

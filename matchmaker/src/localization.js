@@ -88,7 +88,8 @@ let strings = new LocalizedStrings({
 
     blogs: {
       blogPage: "Blog Page",
-      readMore: "Read more.."
+      readMore: "Read more..",
+      relatedPosts: "Related Posts"
     },
 
     home: {
@@ -404,7 +405,8 @@ let strings = new LocalizedStrings({
 
     blogs: {
       blogPage: "Blog-Seite",
-      readMore: "Weiterlesen.."
+      readMore: "Weiterlesen..",
+      relatedPosts: "Zusammenhängende Posts"
     },
 
     home: {
@@ -729,7 +731,8 @@ let strings = new LocalizedStrings({
 
     blogs: {
       blogPage: "Blog stranica",
-      readMore: "Pročitajte više.."
+      readMore: "Pročitajte više..",
+      relatedPosts: "Povezane objave"
     },
 
     home: {

@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd60a36e-86f9-45d1-8b28-4a801836b537" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../matchmaker/public/css/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/public/css/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchmaker/src/pages/BlogDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/pages/BlogDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchmaker/src/services/BlogService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../matchmaker/src/services/BlogService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
     </list>
@@ -62,7 +65,7 @@
       <workItem from="1597385343272" duration="4229000" />
       <workItem from="1597644173718" duration="7586000" />
       <workItem from="1597730751283" duration="10645000" />
-      <workItem from="1597817075793" duration="2561000" />
+      <workItem from="1597817075793" duration="10947000" />
     </task>
     <servers />
   </component>
@@ -86,5 +89,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1597731272828" />
+    <state x="657" y="253" key="run.anything.popup" timestamp="1597830595820">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1597830595820" />
   </component>
 </project>

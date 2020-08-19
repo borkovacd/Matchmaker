@@ -5,10 +5,8 @@ import * as Actions from "../actions/Actions";
 import { withRouter } from "react-router-dom";
 import connect from "react-redux/es/connect/connect";
 import { getBlogs } from "../services/BlogService";
-import { stringToDate } from "../util/DateUtil";
 import strings from "../localization";
 import BlogPreview from "../components/BlogPreview";
-import Pagination from "../components/Pagination";
 
 class Blogs extends Page {
   constructor(props) {
@@ -55,7 +53,7 @@ class Blogs extends Page {
 
     {
       this.state.blogs.slice(0, this.state.visible).map((item, index) => {
-        result.push(<BlogPreview blog={item} />);
+        result.push(<BlogPreview blog={item} id={item.id} />);
       });
     }
 
@@ -77,7 +75,7 @@ class Blogs extends Page {
           {this.state.visible < this.state.blogs.length && (
             <React.Fragment>
               <div className="load-more-dots">
-                <i class="fas fa-ellipsis-h"></i>
+                <i className="fas fa-ellipsis-h"></i>
               </div>
               <div>
                 <button onClick={this.loadMore} className="load-more-text">
