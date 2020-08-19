@@ -22,24 +22,24 @@ class Blogs extends Page {
   loadBlogs() {
     this.props.showLoader();
 
-    getBlogs().then(response => {
+    getBlogs().then((response) => {
       this.props.hideLoader();
 
-      if (!response || !response.ok) {
-        console.log("Nema odgovora ili je status razlicit od OK"); //
+      /*if (!response || !response.ok) {
+        console.log("Nema odgovora ili je status razlicit od OK"); 
         return;
-      }
+      }*/
 
       console.log(response.data); //
       this.setState({
         blogs: response.data,
-        visible: 3
+        visible: 3,
       });
     });
   }
 
   loadMore() {
-    this.setState(prev => {
+    this.setState((prev) => {
       return { visible: prev.visible + 3 };
     });
   }
@@ -94,7 +94,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );

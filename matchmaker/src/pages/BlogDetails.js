@@ -25,25 +25,15 @@ class BlogDetails extends Page {
 
     this.props.showLoader();
 
-    getBlogDetails(this.state.searchData.blog).then(response => {
+    getBlogDetails(this.state.searchData.blog).then((response) => {
       this.props.hideLoader();
 
-      console.log("RESPONSE STATUS: " + response.status);
-      console.log("Response data: " + response.data.title);
-
-      if (!response || !response.ok) {
-        console.log("HERE");
-        if (!response) {
-          console.log("HERE !response");
-        }
-        if (!response.ok) {
-          console.log("HERE !response.ok");
-        }
+      /*if (!response || !response.ok) {
         return;
-      }
+      }*/
 
       this.setState({
-        blogDetails: response.data
+        blogDetails: response.data,
       });
     });
   }
@@ -51,18 +41,17 @@ class BlogDetails extends Page {
   loadRelatedPosts() {
     this.props.showLoader();
 
-    getRelatedPosts().then(response => {
+    getRelatedPosts().then((response) => {
       this.props.hideLoader();
 
-      if (!response || !response.ok) {
-        //console.log("Nema odgovora ili je status razlicit od OK"); //
+      /*if (!response || !response.ok) {
+        console.log("Nema odgovora ili je status razlicit od OK");
         return;
-      }
+      }*/
 
-      console.log(response.data); //
       this.setState({
         relatedPosts: response.data,
-        visible: 3
+        visible: 3,
       });
     });
   }
@@ -102,7 +91,7 @@ class BlogDetails extends Page {
             <div
               className="header"
               style={{
-                background: "url(" + this.state.blogDetails.image + ")"
+                background: "url(" + this.state.blogDetails.image + ")",
               }}
             ></div>
             <div className="content">
@@ -142,7 +131,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );
