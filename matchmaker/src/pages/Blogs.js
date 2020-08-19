@@ -8,10 +8,13 @@ import { getBlogs } from "../services/BlogService";
 import { stringToDate } from "../util/DateUtil";
 import strings from "../localization";
 import BlogPreview from "../components/BlogPreview";
+import Pagination from "../components/Pagination";
 
 class Blogs extends Page {
   constructor(props) {
     super(props);
+
+    this.loadMore = this.loadMore.bind(this);
   }
 
   componentDidMount() {
@@ -31,8 +34,15 @@ class Blogs extends Page {
 
       console.log(response.data); //
       this.setState({
-        blogs: response.data
+        blogs: response.data,
+        visible: 3
       });
+    });
+  }
+
+  loadMore() {
+    this.setState(prev => {
+      return { visible: prev.visible + 3 };
     });
   }
 
@@ -43,8 +53,10 @@ class Blogs extends Page {
       return result;
     }
 
-    for (let blog of this.state.blogs) {
-      result.push(<BlogPreview blog={blog} />);
+    {
+      this.state.blogs.slice(0, this.state.visible).map((item, index) => {
+        result.push(<BlogPreview blog={item} />);
+      });
     }
 
     return result;
@@ -61,6 +73,20 @@ class Blogs extends Page {
         <div className="blogs-page-header">SERBIA</div>
         <div className="blogs-page-title">{strings.blogs.blogPage}</div>
         <div className="blogs-grid-container">{this.renderBlogs()}</div>
+        <div className="center">
+          {this.state.visible < this.state.blogs.length && (
+            <React.Fragment>
+              <div className="load-more-dots">
+                <i class="fas fa-ellipsis-h"></i>
+              </div>
+              <div>
+                <button onClick={this.loadMore} className="load-more-text">
+                  Load more
+                </button>
+              </div>
+            </React.Fragment>
+          )}
+        </div>
       </div>
     );
   }

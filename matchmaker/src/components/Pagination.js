@@ -69,7 +69,7 @@ class Pagination extends Component {
           }
         >
           <a onClick={() => this.props.setPage(1)}>
-            <img src={"images/icons/left-arrow.png"} />
+            <img src={"images/arrows/arrow-left.png"} />
           </a>
         </div>
         <div className="pages">{this.renderPages()}</div>
@@ -81,7 +81,7 @@ class Pagination extends Component {
           }
         >
           <a onClick={() => this.props.setPage(this.state.pageNumber)}>
-            <img src={"images/icons/right-arrow.png"} />
+            <img src={"images/arrows/arrow-right.png"} />
           </a>
         </div>
       </div>

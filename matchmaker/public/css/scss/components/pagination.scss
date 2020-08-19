@@ -1,0 +1,22 @@
+.load-more-dots {
+  color: $grayText;
+  margin-top: 2%;
+  font-size: xx-large;
+  opacity: 0.8;
+}
+
+.load-more-text {
+  color: $grayText;
+
+  font-weight: 500;
+  font-size: larger;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}

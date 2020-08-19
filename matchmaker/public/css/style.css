@@ -708,6 +708,24 @@ select {
       margin-top: 5%;
       font-weight: 500; }
 
+.load-more-dots {
+  color: #737373;
+  margin-top: 2%;
+  font-size: xx-large;
+  opacity: 0.8; }
+
+.load-more-text {
+  color: #737373;
+  font-weight: 500;
+  font-size: larger;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.8; }
+  .load-more-text:hover {
+    opacity: 1; }
+
 .login-registration-page {
   margin-top: 200px;
   text-align: center;
