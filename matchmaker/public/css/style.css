@@ -903,6 +903,63 @@ select {
 .slider-arrow {
   color: #707070; }
 
+#footer {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #d0d0d0;
+  font-family: "Futura Lt BT";
+  color: #737373;
+  margin: 0;
+  padding: 0; }
+  #footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%; }
+    #footer .container .row {
+      margin-top: 2%; }
+      #footer .container .row .footer-title {
+        font-weight: medium;
+        font-size: larger;
+        text-transform: uppercase; }
+      #footer .container .row .img {
+        margin: auto; }
+      #footer .container .row .content-buttons-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        justify-content: space-between; }
+        #footer .container .row .content-buttons-container .button-round-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          width: 40px;
+          background-color: #737373;
+          border-radius: 50%;
+          color: #fff;
+          text-decoration: none; }
+          #footer .container .row .content-buttons-container .button-round-container .i {
+            font-size: x-large;
+            color: #fff; }
+      #footer .container .row .links-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; }
+        #footer .container .row .links-container .link-container {
+          margin-right: 15px;
+          font-size: 14px;
+          display: flex;
+          flex-direction: row;
+          text-decoration: none;
+          color: #737373; }
+    #footer .container .last-row {
+      margin-top: 1%;
+      margin-bottom: 2%;
+      opacity: 0.85; }
+
 .login-registration-page {
   margin-top: 200px;
   text-align: center;

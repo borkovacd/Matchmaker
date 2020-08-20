@@ -15,9 +15,10 @@ class BaseLayout extends Component {
         {this.props.loader && <Loader />}
 
         <Header />
-        <Footer />
 
         {children}
+
+        <Footer />
       </React.Fragment>
     );
   }

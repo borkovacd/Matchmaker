@@ -103,6 +103,14 @@ let strings = new LocalizedStrings({
       relatedPosts: "Related Posts"
     },
 
+    footer: {
+      partners: "Technical partners",
+      copyright: "Copyright Lilly021. All rights reserved.",
+      privacyPolicy: "Privacy Policy",
+      termsAndConditions: "Terms & Conditions",
+      helpCenter: "Help Center"
+    },
+
     home: {
       search: "Search...",
       text1:
@@ -260,16 +268,7 @@ let strings = new LocalizedStrings({
       PasswordsNotEqual: "Passwords do not match",
       notNumber: "Not number"
     },
-    footer: {
-      copyright: "Copyright",
-      privacyPolicy: "Privacy policy",
-      payment: "Payment",
-      termsOfUse: "Terms of use",
-      phone1: "+ 378 055 232 300",
-      phone2: "+ 378 055 232 300",
-      email: "office@handballhunter.com",
-      site: "www.handballhunter.com"
-    },
+
     registrationStep: {
       step: "Step"
     },
@@ -431,6 +430,14 @@ let strings = new LocalizedStrings({
       relatedPosts: "Zusammenhängende Posts"
     },
 
+    footer: {
+      partners: "Technische Partner",
+      copyright: "Urheberrechte Lilly021. Alle Rechte vorbehalten.",
+      privacyPolicy: "Datenschutz-Bestimmungen",
+      termsAndConditions: "Geschäftsbedingungen",
+      helpCenter: "Hilfezentrum"
+    },
+
     home: {
       search: "Suchen...",
       text1:
@@ -587,16 +594,6 @@ let strings = new LocalizedStrings({
       OldPasswordDidNotMatch: "Das alte Passwort stimmt nicht überein",
       PasswordsNotEqual: "Passwörter stimmen nicht überein",
       notNumber: "Nicht nummer"
-    },
-    footer: {
-      copyright: "Copyright",
-      privacyPolicy: "Privacy policy",
-      payment: "Payment",
-      termsOfUse: "Terms of use",
-      phone1: "+ 378 055 232 300",
-      phone2: "+ 378 055 232 300",
-      email: "office@handballhunter.com",
-      site: "www.handballhunter.com"
     },
 
     registrationStep: {
@@ -925,14 +922,11 @@ let strings = new LocalizedStrings({
     },
 
     footer: {
-      copyright: "Copyright",
+      partners: "Tehnički partneri",
+      copyright: "Autorska prava Lilly021. Sva prava zadržana.",
       privacyPolicy: "Politika privatnosti",
-      payment: "Plaćanje",
-      termsOfUse: "Uslovi korišćenja",
-      phone1: "+ 378 055 232 300",
-      phone2: "+ 378 055 232 300",
-      email: "office@handballhunter.com",
-      site: "www.handballhunter.com"
+      helpCenter: "Centar za pomoć",
+      termsAndConditions: "Uslovi korišćenja"
     },
 
     registrationStep: {
