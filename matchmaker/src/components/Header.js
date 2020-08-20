@@ -42,10 +42,10 @@ class Header extends Component {
           )}
           {isUserLoggedIn() && (
             <React.Fragment>
-              <div>
+              <div className="btn-login">
                 <Link to={"/profile"}>{strings.menu.Profile}</Link>
               </div>
-              <div onClick={this.logout}>
+              <div className="btn-register" onClick={this.logout}>
                 <a href="#">{strings.menu.Logout}</a>
               </div>
             </React.Fragment>
