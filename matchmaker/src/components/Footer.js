@@ -30,17 +30,17 @@ class Footer extends Component {
           <div className="row">
             <div className="links-container">
               <div>
-                <Link class="link-container" to={"/terms"}>
+                <Link className="link-container" to={"/terms"}>
                   {strings.footer.termsAndConditions}
                 </Link>
               </div>
               <div>
-                <Link class="link-container" to={"/privacy-policy"}>
+                <Link className="link-container" to={"/privacy-policy"}>
                   {strings.footer.privacyPolicy}
                 </Link>
               </div>
               <div>
-                <Link class="link-container" to={"/help-center"}>
+                <Link className="link-container" to={"/help-center"}>
                   {strings.footer.helpCenter}
                 </Link>
               </div>

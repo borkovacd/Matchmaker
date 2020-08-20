@@ -2,6 +2,7 @@ import CONFIG from "../config";
 import HttpMethod from "../constants/HttpMethod";
 import { request } from "./HTTP";
 import history from "../history";
+import { OK } from "http-status-codes";
 
 export async function login(username, password) {
   clearUserData();
@@ -11,21 +12,54 @@ export async function login(username, password) {
     client_secret: CONFIG.clientSecret,
     grant_type: "password",
     username: username,
-    password: password,
+    password: password
   };
 
-  return await request("/oauth/v2/token", data, HttpMethod.GET, false).then(
-    (response) => {
-      if (!response.ok) {
-        return response;
+  return {
+    response: OK,
+    data: {
+      user: {
+        username: "borkovac",
+        email: "borkovac.dragan@gmail.com"
+      },
+      token: {
+        access_token:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zS8VfSEv7h7nNVSkNhDIE783bVJTgPP9JlOHSDaIy1I",
+        refresh_token:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY"
       }
+    }
+  }.then(response => {
+    /*if (!response.ok) {
+        return response;
+      }*/
+
+    setTokenToLocalStorage(
+      response.data.access_token,
+      response.data.refresh_token
+    );
+
+    return request("/user/current").then(response => {
+      if (response.data.user) {
+        setUserToLocalStorage(response.data.user);
+      }
+
+      return response;
+    });
+  });
+
+  /*return await request("/oauth/v2/token", data, HttpMethod.GET, false).then(
+    response => {
+      //if (!response.ok) {
+      //  return response;
+      //}
 
       setTokenToLocalStorage(
         response.data.access_token,
         response.data.refresh_token
       );
 
-      return request("/user/current").then((response) => {
+      return request("/user/current").then(response => {
         if (response.data.user) {
           setUserToLocalStorage(response.data.user);
         }
@@ -33,7 +67,7 @@ export async function login(username, password) {
         return response;
       });
     }
-  );
+  );*/
 }
 
 export async function socialLogin(
@@ -52,18 +86,18 @@ export async function socialLogin(
     lastName: lastName ? lastName : "",
     socialId: socialId,
     accessToken: accessToken,
-    expiresAt: expiresAt,
+    expiresAt: expiresAt
   };
 
   return await request("/social/authenticate", data, HttpMethod.POST).then(
-    (response) => {
+    response => {
       if (!response.ok) {
         return;
       }
 
       setSocialTokenToLocalStorage(response.data.access_token);
 
-      return request("/user/current").then((response) => {
+      return request("/user/current").then(response => {
         if (response.data.user) {
           setUserToLocalStorage(response.data.user);
         }
@@ -79,11 +113,11 @@ export async function refreshToken(refreshToken) {
     client_id: CONFIG.clientId,
     client_secret: CONFIG.clientSecret,
     grant_type: "refresh_token",
-    refresh_token: refreshToken,
+    refresh_token: refreshToken
   };
 
   return await request("/oauth/v2/token", data, HttpMethod.GET, false).then(
-    (data) => {
+    data => {
       setTokenToLocalStorage(data.access_token, data.refresh_token);
 
       return data.access_token !== undefined;
