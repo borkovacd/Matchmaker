@@ -59,6 +59,11 @@
     flex-direction: row;
   }
 
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+
   .label {
     font-weight: 600;
     font-size: larger;
@@ -85,7 +90,6 @@
   }
   .column-half {
     width: calc(100%);
-
     @media screen and (min-width: $break-md) {
       width: calc(50% - 15px);
     }

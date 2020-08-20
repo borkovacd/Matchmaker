@@ -124,6 +124,10 @@ select {
   &:hover {
     opacity: 0.85;
   }
+
+  &.wide {
+    width: 100%;
+  }
 }
 
 .lrp-btn {
@@ -152,6 +156,17 @@ select {
 
   &:hover {
     opacity: 1;
+  }
+}
+
+.btn-gray {
+  background: none;
+  background-color: rgba(198, 198, 198, 0.6);
+  color: #444;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.85;
   }
 }
 
@@ -186,7 +201,7 @@ select {
   color: $red;
 }
 
-.black-text {
+.gray-text {
   color: $grayText;
 }
 

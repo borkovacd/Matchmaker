@@ -58,6 +58,17 @@ let strings = new LocalizedStrings({
       skip: "Skip"
     },
 
+    quickSearch: {
+      title: "Quick search:",
+      gender: "I am:",
+      intrestedInGender: "Seeking:",
+      intrestedInAge: "Between ages:",
+      and: "and",
+      search: "Search",
+      signUp: "Sign Up",
+      signUpWith: "Sign up with:"
+    },
+
     gender: {
       female: "Female",
       male: "Male"
@@ -378,6 +389,17 @@ let strings = new LocalizedStrings({
         "Die Fotogröße darf 10 MB nicht überschreiten und die Breite x Höhe darf 6000px x 6000px nicht überschreiten",
       upload: "Hochladen",
       skip: "Überspringen"
+    },
+
+    quickSearch: {
+      title: "Schnellsuche:",
+      gender: "Ich bin:",
+      intrestedInGender: "Suchen:",
+      intrestedInAge: "Zwischen Zeitaltern:",
+      and: "und",
+      search: "Suchen",
+      signUp: "Registrieren",
+      signUpWith: "Registrieren mit:"
     },
 
     relationship: {
@@ -704,6 +726,17 @@ let strings = new LocalizedStrings({
         "Veličina slike ne sme biti veća od 10MB i širina X visina ne sme biti veća od 6000px X 6000px",
       upload: "Otpremi",
       skip: "Preskoči"
+    },
+
+    quickSearch: {
+      title: "Brza pretraga:",
+      gender: "Ja sam:",
+      intrestedInGender: "Tražim:",
+      intrestedInAge: "Starosti između:",
+      and: "i",
+      search: "Traži",
+      signUp: "Registrujte se",
+      signUpWith: "Registrujte se sa:"
     },
 
     relationship: {

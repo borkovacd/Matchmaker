@@ -92,3 +92,60 @@
     }
   }
 }
+
+.between-ages {
+  display: flex;
+
+  .select {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 35px;
+    width: 55px;
+    background: $language-switcher;
+    border-radius: 4px;
+    border: 0.5px solid $lightGrayBorder;
+
+    &:hover {
+      background: $white;
+      opacity: 1;
+    }
+
+    i {
+      position: absolute;
+      right: 5px;
+      color: $grayText;
+      font-size: 15px;
+    }
+
+    .options {
+      position: absolute;
+      display: none;
+      background: $white;
+      text-align: center;
+      color: $placeholder-text;
+
+      &.active {
+        display: block;
+      }
+
+      p {
+        padding: 15px;
+        width: calc(100% - 30px);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin: 0;
+        transition: 0.15s;
+
+        &:hover {
+          background: $language-switcher;
+          transition: 0.15s;
+        }
+
+        .scroll {
+          background: $language-switcher;
+        }
+      }
+    }
+  }
+}
