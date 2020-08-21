@@ -8,6 +8,7 @@ import RegistrationFirstStep from "./pages/user/RegistrationFirstStep";
 import RegistrationSecondStep from "./pages/user/RegistrationSecondStep";
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
+import SearchResults from "./pages/SearchResults";
 
 import { Route } from "react-router-dom";
 import { isUserLoggedIn } from "./base/OAuth";
@@ -56,6 +57,11 @@ let ROUTES = {
   BlogDetails: {
     path: "/blog",
     component: <BlogDetails />,
+    auth: false
+  },
+  SearchResults: {
+    path: "/search",
+    component: <SearchResults />,
     auth: false
   }
 };

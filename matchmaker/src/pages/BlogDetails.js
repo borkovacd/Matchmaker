@@ -11,10 +11,6 @@ import BlogPreview from "../components/BlogPreview";
 class BlogDetails extends Page {
   params = [{ name: "blog", defaultValue: -1 }];
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.loadBlog();
     this.loadRelatedPosts();
@@ -25,7 +21,7 @@ class BlogDetails extends Page {
 
     this.props.showLoader();
 
-    getBlogDetails(this.state.searchData.blog).then((response) => {
+    getBlogDetails(this.state.searchData.blog).then(response => {
       this.props.hideLoader();
 
       /*if (!response || !response.ok) {
@@ -33,7 +29,7 @@ class BlogDetails extends Page {
       }*/
 
       this.setState({
-        blogDetails: response.data,
+        blogDetails: response.data
       });
     });
   }
@@ -41,7 +37,7 @@ class BlogDetails extends Page {
   loadRelatedPosts() {
     this.props.showLoader();
 
-    getRelatedPosts().then((response) => {
+    getRelatedPosts().then(response => {
       this.props.hideLoader();
 
       /*if (!response || !response.ok) {
@@ -51,7 +47,7 @@ class BlogDetails extends Page {
 
       this.setState({
         relatedPosts: response.data,
-        visible: 3,
+        visible: 3
       });
     });
   }
@@ -91,7 +87,7 @@ class BlogDetails extends Page {
             <div
               className="header"
               style={{
-                background: "url(" + this.state.blogDetails.image + ")",
+                background: "url(" + this.state.blogDetails.image + ")"
               }}
             ></div>
             <div className="content">
@@ -131,7 +127,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

@@ -15,8 +15,7 @@ class Home extends Component {
 
     this.state = {
       activeIndex: 0,
-      villages: [],
-      data: {}
+      villages: []
     };
   }
 
@@ -78,10 +77,7 @@ class Home extends Component {
           <LeftArrow goToPrevSlide={() => this.goToPrevSlide()} />
           <div className="slider-grid-container">
             <div className="search-form-container">
-              <QuickSearch
-                data={this.state.data}
-                onSubmit={() => this.search()}
-              />
+              <QuickSearch />
             </div>
             <div className="slider-village-container">
               <Slide
@@ -102,14 +98,19 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
+      setFilterData: Actions.setData
     },
     dispatch
   );
 }
 
-function mapStateToProps({ menuReducers, authReducers }) {
-  return { menu: menuReducers, user: authReducers.user };
+function mapStateToProps({ menuReducers, authReducers, filterReducers }) {
+  return {
+    menu: menuReducers,
+    user: authReducers.user,
+    filter: filterReducers
+  };
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

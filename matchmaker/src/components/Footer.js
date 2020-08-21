@@ -11,7 +11,7 @@ class Footer extends Component {
             <div className="footer-title">{strings.footer.partners}</div>
           </div>
           <div className="row">
-            <img src={"images/lilly021_logo.png"} />
+            <img alt="" src={"images/lilly021_logo.png"} />
           </div>
 
           <div className="row">

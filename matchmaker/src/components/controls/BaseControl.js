@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import strings from "../../localization";
+import { Component } from "react";
 
 class BaseControl extends Component {
   constructor(props) {
