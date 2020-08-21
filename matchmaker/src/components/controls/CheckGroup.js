@@ -27,7 +27,7 @@ class CheckGroup extends BaseControl {
 
   isItemSelected(item) {
     for (let listItem of this.state.selectedItems) {
-      if (item[this.state.valueKey] == listItem[this.state.valueKey]) {
+      if (item[this.state.valueKey] === listItem[this.state.valueKey]) {
         return true;
       }
     }

@@ -1,5 +1,5 @@
 import { getMonthString } from "../constants/Month";
-import moment from "moment";
+import moment, { now } from "moment";
 
 export function getYears(plusYears = 0) {
   let result = [];
@@ -49,4 +49,9 @@ export function stringToDate(date) {
 
 export function dateToString(date, format = "DD-MM-YYYY") {
   return moment(date).format(format);
+}
+
+export function calculateAge(date, format = "DD-MM-YYYY") {
+  var age = moment().diff(date, "years");
+  return age;
 }

@@ -5,7 +5,7 @@ let strings = new LocalizedStrings({
     menu: {
       Home: "Serb, get married!",
       About: "About",
-      Register: "Register",
+      Register: "Sign Up",
       Login: "Login",
       Profile: "Profile",
       Logout: "Logout",
@@ -67,6 +67,20 @@ let strings = new LocalizedStrings({
       search: "Search",
       signUp: "Sign Up",
       signUpWith: "Sign up with:"
+    },
+
+    searchResults: {
+      findMatch: "Finding your perfect match has never been easier!",
+      title: "Search Results",
+      searchResults: "Search results:",
+      membersOnline: "Members online:",
+      orderBy: "Order by:",
+      quickSearch: "Quick Search Filter"
+    },
+
+    user: {
+      lastActive: "Last active:",
+      yearsOld: " Jahre alt"
     },
 
     gender: {
@@ -401,6 +415,16 @@ let strings = new LocalizedStrings({
       signUpWith: "Registrieren mit:"
     },
 
+    searchResults: {
+      findMatch:
+        "Es war noch nie einfacher, die perfekte Übereinstimmung zu finden!",
+      title: "Suchergebnisse",
+      searchResults: "Suchergebnisse:",
+      membersOnline: "Mitglieder online:",
+      orderBy: "Sortieren nach:",
+      quickSearch: "Schnellsuchfilter"
+    },
+
     relationship: {
       friendship: "Freundschaft",
       marriage: "Ehe",
@@ -436,6 +460,11 @@ let strings = new LocalizedStrings({
       privacyPolicy: "Datenschutz-Bestimmungen",
       termsAndConditions: "Geschäftsbedingungen",
       helpCenter: "Hilfezentrum"
+    },
+
+    user: {
+      lastActive: "Zuletzt aktiv:",
+      yearsOld: " godina"
     },
 
     home: {
@@ -736,11 +765,25 @@ let strings = new LocalizedStrings({
       signUpWith: "Registrujte se sa:"
     },
 
+    searchResults: {
+      findMatch: "Nalaženje savršenog podudaranja nikada nije bilo lakše!",
+      title: "Rezultati pretrage",
+      searchResults: "Rezultati pretrage:",
+      membersOnline: "Korisnici na mreži:",
+      orderBy: "Sortiraj:",
+      quickSearch: "Filter za brzu pretragu"
+    },
+
     relationship: {
       friendship: "Prijateljstvo",
       marriage: "Brak",
       romance: "Romansa",
       relationship: "Veza"
+    },
+
+    user: {
+      lastActive: "Poslednji put aktivan:",
+      yearsOld: " years old"
     },
 
     forgotPassword: {

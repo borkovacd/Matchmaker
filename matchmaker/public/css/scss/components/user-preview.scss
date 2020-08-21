@@ -1,0 +1,58 @@
+.user-preview-container {
+  border-radius: 5%;
+  background-color: $white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 1% 1%;
+
+  .profile-photo {
+    min-height: 300px;
+    width: 250px;
+    border-radius: 5%;
+    background-size: cover !important;
+    background-position-x: center !important;
+    background-position-y: center !important;
+    background-repeat: no-repeat !important;
+    outline: none;
+  }
+
+  .content {
+    .first-second-row {
+      padding: 4% 4%;
+      padding-left: 10%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .name {
+        color: $blue;
+        font-size: x-large;
+        font-weight: 600;
+      }
+
+      .last-active {
+        text-decoration: underline;
+        color: $grayText;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: small;
+      }
+    }
+
+    .second-row {
+      padding-left: 10%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      .age {
+        color: $grayText;
+        font-weight: 500;
+        font-size: large;
+      }
+    }
+  }
+}
