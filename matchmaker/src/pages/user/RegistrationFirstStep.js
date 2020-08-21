@@ -66,8 +66,6 @@ class RegistrationFirstStep extends Page {
 
       this.props.history.push("/registration2");
     });
-
-    //this.props.history.push("/registration2");
   }
 
   render() {

@@ -15,59 +15,38 @@ export async function login(username, password) {
     password: password
   };
 
-  return {
-    response: OK,
+  let response = {
+    status: OK,
     data: {
       user: {
         username: "borkovac",
         email: "borkovac.dragan@gmail.com"
       },
-      token: {
-        access_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zS8VfSEv7h7nNVSkNhDIE783bVJTgPP9JlOHSDaIy1I",
-        refresh_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY"
-      }
+      access_token:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zS8VfSEv7h7nNVSkNhDIE783bVJTgPP9JlOHSDaIy1I",
+      refresh_token:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY"
     }
-  }.then(response => {
-    /*if (!response.ok) {
-        return response;
-      }*/
+  };
 
-    setTokenToLocalStorage(
-      response.data.access_token,
-      response.data.refresh_token
-    );
+  //return await request("/oauth/v2/token", data, HttpMethod.GET, false).then(
+  //response => {
+  //if (!response.ok) {
+  //  return response;
+  //}
 
-    return request("/user/current").then(response => {
-      if (response.data.user) {
-        setUserToLocalStorage(response.data.user);
-      }
+  setTokenToLocalStorage(
+    response.data.access_token,
+    response.data.refresh_token
+  );
 
-      return response;
-    });
-  });
+  //return request("/user/current").then(response => {
+  if (response.data.user) {
+    setUserToLocalStorage(response.data.user);
+  }
 
-  /*return await request("/oauth/v2/token", data, HttpMethod.GET, false).then(
-    response => {
-      //if (!response.ok) {
-      //  return response;
-      //}
-
-      setTokenToLocalStorage(
-        response.data.access_token,
-        response.data.refresh_token
-      );
-
-      return request("/user/current").then(response => {
-        if (response.data.user) {
-          setUserToLocalStorage(response.data.user);
-        }
-
-        return response;
-      });
-    }
-  );*/
+  return response;
+  //});
 }
 
 export async function socialLogin(

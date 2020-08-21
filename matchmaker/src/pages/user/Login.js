@@ -40,10 +40,10 @@ class Login extends Page {
     }
 
     login(this.state.data.username, this.state.data.password).then(response => {
-      if (!response || !response.ok) {
+      /*if (!response || !response.ok) {
         this.setError("username", strings.login.wrongCredentials);
         return;
-      }
+      }*/
 
       this.props.login(response.data.user);
 

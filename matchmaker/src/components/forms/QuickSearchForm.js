@@ -124,7 +124,7 @@ const QuickSearch = ({ onSubmit, data, keyPress }) => (
           <i className="fab fa-facebook-f i space gray-text"></i>
         </a>
         <a href="#">
-          <i class="fab fa-instagram space gray-text"></i>
+          <i className="fab fa-instagram space gray-text"></i>
         </a>
       </div>
     </div>
