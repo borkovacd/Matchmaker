@@ -38,7 +38,11 @@ function load() {
     }*/
 
     store.dispatch(
-      loadData(response.data.languages ? response.data.languages : [])
+      loadData(
+        response.data.languages ? response.data.languages : [],
+        response.data.villages ? response.data.villages : [],
+        response.data.users ? response.data.users : []
+      )
     );
   });
 }

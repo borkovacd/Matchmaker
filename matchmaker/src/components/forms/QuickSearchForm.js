@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import strings from "../../localization";
 import { getGenderList } from "../../constants/Gender";
-import CheckGroup from "../controls/CheckGroup";
 import Select from "../controls/Select";
-import { getAgeObject, getAgeObjects } from "../../util/AgeUtil";
+import { getAgeObjects } from "../../util/AgeUtil";
 
 const QuickSearch = ({ onSubmit, data, keyPress }) => (
   <form

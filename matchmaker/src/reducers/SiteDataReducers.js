@@ -5,6 +5,8 @@ const initialState = {
   loader: false,
   loaderCount: 0,
   languages: [],
+  villages: [],
+  users: [],
   language: "en"
 };
 
@@ -29,7 +31,9 @@ const siteDataReducers = (state = initialState, action) => {
     case Actions.LOAD_DATA:
       return {
         ...state,
-        languages: action.languages
+        languages: action.languages,
+        villages: action.villages,
+        users: action.users
       };
     case Actions.CHANGE_LANGUAGE:
       strings.setLanguage(action.language);

@@ -7,13 +7,14 @@ import { OK } from "http-status-codes";
 export async function login(username, password) {
   clearUserData();
 
-  let data = {
+  // --- Never Used ---
+  /*let data = {
     client_id: CONFIG.clientId,
     client_secret: CONFIG.clientSecret,
     grant_type: "password",
     username: username,
     password: password
-  };
+  };*/
 
   let response = {
     status: OK,

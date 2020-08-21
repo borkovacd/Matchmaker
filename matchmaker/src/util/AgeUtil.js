@@ -10,10 +10,3 @@ export function getAgeObjects(min, max) {
 
   return result;
 }
-
-export function getAgeObject(num) {
-  return {
-    name: num,
-    value: num
-  };
-}

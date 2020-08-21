@@ -166,10 +166,10 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
       </div>
       <div className="column column-half fo-columns">
         <CheckGroup
-          name="relationships"
+          name="intrestedFor"
           items={getRelationshipTypesList()}
           onChange={onChange}
-          selectedItem={{ value: data.relationships }}
+          selectedItem={{ value: data.intrestedFor }}
           displayKey={"name"}
           valueKey={"value"}
         />
