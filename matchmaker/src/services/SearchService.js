@@ -12,11 +12,13 @@ export async function searchUsers(data) {
         //email
         birthday: "05/05/1990",
         gender: 1,
-        intrestedInGender: 2,
-        intrestedInAgeMin: 25,
+        interestedInGender: 2,
+        interestedInAgeMin: 25,
         interestedInAgeMax: 35,
-        intrestedFor: [1, 2, 3, 4],
-        village: 1
+        interestedFor: [1, 2, 3, 4],
+        village: 1,
+        description:
+          "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
       },
       {
         id: 2,
@@ -24,11 +26,13 @@ export async function searchUsers(data) {
         name: "Nikola",
         birthday: "05/05/1955",
         gender: 1,
-        intrestedInGender: 2,
-        intrestedInAgeMin: 50,
+        interestedInGender: 2,
+        interestedInAgeMin: 50,
         interestedInAgeMax: 70,
-        intrestedFor: [1, 2, 4],
-        village: 2
+        interestedFor: [1, 2, 4],
+        village: 2,
+        description:
+          "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
       },
       {
         id: 3,
@@ -36,11 +40,13 @@ export async function searchUsers(data) {
         name: "Miloš",
         birthday: "05/05/1970",
         gender: 1,
-        intrestedInGender: 2,
-        intrestedInAgeMin: 50,
+        interestedInGender: 2,
+        interestedInAgeMin: 50,
         interestedInAgeMax: 60,
-        intrestedFor: [2],
-        village: 1
+        interestedFor: [2],
+        village: 1,
+        description:
+          "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
       },
       {
         id: 4,
@@ -48,13 +54,15 @@ export async function searchUsers(data) {
         name: "Petar",
         birthday: "05/05/1985",
         gender: 1,
-        intrestedInGender: 2,
-        intrestedInAgeMin: 30,
+        interestedInGender: 2,
+        interestedInAgeMin: 30,
         interestedInAgeMax: 45,
-        intrestedFor: [1, 3],
-        village: 2
-      }
+        interestedFor: [1, 3],
+        village: 2,
+        description:
+          "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
+      },
     ],
-    status: OK
+    status: OK,
   };
 }

@@ -8,6 +8,7 @@ import RegistrationFirstStep from "./pages/user/RegistrationFirstStep";
 import RegistrationSecondStep from "./pages/user/RegistrationSecondStep";
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
+import UserDetails from "./pages/UserDetails";
 import SearchResults from "./pages/SearchResults";
 
 import { Route } from "react-router-dom";
@@ -17,53 +18,58 @@ let ROUTES = {
   Home: {
     path: "/",
     component: <Home />,
-    auth: false
+    auth: false,
   },
   Error: {
     path: "/error",
     component: <Error />,
-    auth: false
+    auth: false,
   },
   Forbidden: {
     path: "/forbidden",
     component: <Forbidden />,
-    auth: false
+    auth: false,
   },
   NotFound: {
     path: "/not-found",
     component: <NotFound />,
-    auth: false
+    auth: false,
   },
   Login: {
     path: "/login",
     component: <Login />,
-    auth: false
+    auth: false,
   },
   Registration: {
     path: "/registration",
     component: <RegistrationFirstStep edit={false} />,
-    auth: false
+    auth: false,
   },
   Registration2: {
     path: "/registration2",
     component: <RegistrationSecondStep edit={false} />,
-    auth: false
+    auth: false,
   },
   Blogs: {
     path: "/blogs",
     component: <Blogs />,
-    auth: false
+    auth: false,
   },
   BlogDetails: {
     path: "/blog",
     component: <BlogDetails />,
-    auth: false
+    auth: false,
   },
   SearchResults: {
     path: "/search",
     component: <SearchResults />,
-    auth: false
-  }
+    auth: false,
+  },
+  UserDetails: {
+    path: "/user",
+    component: <UserDetails />,
+    auth: false,
+  },
 };
 
 export default ROUTES;

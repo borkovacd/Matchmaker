@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getVillages } from "../services/HomeService";
+import { getVillages } from "../services/VillageService";
 import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
@@ -15,14 +15,14 @@ class Home extends Component {
 
     this.state = {
       activeIndex: 0,
-      villages: []
+      villages: [],
     };
   }
 
   componentDidMount() {
     this.props.showLoader();
 
-    getVillages().then(response => {
+    getVillages().then((response) => {
       this.props.hideLoader();
 
       /* if (!response || !response.ok) {
@@ -30,7 +30,7 @@ class Home extends Component {
       } */
 
       this.setState({
-        villages: response.data.villages
+        villages: response.data.villages,
       });
     });
   }
@@ -46,7 +46,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index
+      activeIndex: index,
     });
   }
 
@@ -61,7 +61,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index
+      activeIndex: index,
     });
   }
 
@@ -71,7 +71,7 @@ class Home extends Component {
         <div
           className="slider-items-container"
           style={{
-            background: "url(../../images/slider-index.png)"
+            background: "url(../../images/slider-index.png)",
           }}
         >
           <LeftArrow goToPrevSlide={() => this.goToPrevSlide()} />
@@ -99,7 +99,7 @@ function mapDispatchToProps(dispatch) {
     {
       showLoader: Actions.showLoader,
       hideLoader: Actions.hideLoader,
-      setFilterData: Actions.setData
+      setFilterData: Actions.setData,
     },
     dispatch
   );
@@ -109,7 +109,7 @@ function mapStateToProps({ menuReducers, authReducers, filterReducers }) {
   return {
     menu: menuReducers,
     user: authReducers.user,
-    filter: filterReducers
+    filter: filterReducers,
   };
 }
 

@@ -19,7 +19,7 @@ class SearchResults extends Page {
     this.state = {
       search: "",
       result: undefined,
-      resultCount: 0
+      resultCount: 0,
     };
   }
 
@@ -32,12 +32,12 @@ class SearchResults extends Page {
 
     this.loadParams();
 
-    searchUsers(this.state.searchData).then(response => {
+    searchUsers(this.state.searchData).then((response) => {
       this.props.hideLoader();
 
       this.setState({
         result: response.data,
-        resultCount: response.data.length
+        resultCount: response.data.length,
       });
     });
   }
@@ -109,7 +109,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );
