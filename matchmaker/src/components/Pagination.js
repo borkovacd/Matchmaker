@@ -8,7 +8,7 @@ class Pagination extends Component {
     this.state = {
       page: props.page ? props.page : 1,
       perPage: props.perPage ? props.perPage : CONFIG.perPage,
-      total: props.total ? props.total : 0
+      total: props.total ? props.total : 0,
     };
 
     this.state.pageNumber = this.getPageNumber(

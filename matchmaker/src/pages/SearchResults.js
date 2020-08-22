@@ -9,6 +9,7 @@ import { getSearchDataParams } from "../constants/DefaultSearchData";
 import { searchUsers } from "../services/SearchService";
 import { Link } from "react-router-dom";
 import UserPreview from "../components/UserPreview";
+import Pagination from "../components/Pagination";
 
 class SearchResults extends Page {
   params = getSearchDataParams();
@@ -37,7 +38,7 @@ class SearchResults extends Page {
 
       this.setState({
         result: response.data,
-        resultCount: response.data.length,
+        resultCount: response.total,
       });
     });
   }
@@ -100,6 +101,14 @@ class SearchResults extends Page {
           </div>
         </div>
         <div className="users-grid-container">{this.renderUsers()}</div>
+        <div className="pagination-time">
+          <Pagination
+            page={this.state.searchData.page}
+            perPage={2}
+            total={this.state.resultCount}
+            setPage={this.setPage}
+          />
+        </div>
       </div>
     );
   }

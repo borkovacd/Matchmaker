@@ -130,8 +130,12 @@ class Page extends FormComponent {
   setPage(page) {
     this.state.searchData.page = page;
 
-    this.props.history.push(this.page.path + this.buildParams());
+    /* path is undefined */
+    //this.props.history.push(this.page.path + this.buildParams());
 
+    this.props.history.push(this.buildParams());
+
+    //this.setState();
     this.fetchData();
   }
 }

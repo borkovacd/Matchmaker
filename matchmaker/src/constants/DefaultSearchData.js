@@ -6,7 +6,7 @@ const DefaultSearchData = {
   ageMin: 20,
   ageMax: 30,
   page: 1,
-  perPage: 16
+  perPage: 2,
 };
 
 export function getSearchDataParams() {
@@ -14,13 +14,13 @@ export function getSearchDataParams() {
     { name: "gender", default: DefaultSearchData.gender },
     {
       name: "interestedInGender",
-      default: DefaultSearchData.interestedInGender
+      default: DefaultSearchData.interestedInGender,
     },
     { name: "ageMin", default: DefaultSearchData.ageMin },
     { name: "ageMax", default: DefaultSearchData.ageMax },
     { name: "page", default: DefaultSearchData.page },
     { name: "perPage", default: DefaultSearchData.perPage },
-    { name: "search", default: false }
+    { name: "search", default: false },
   ];
 }
 
