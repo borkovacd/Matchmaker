@@ -32,7 +32,7 @@ function mapStateToProps({ authReducers, siteDataReducers }) {
   return {
     loader: siteDataReducers.loader,
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages
+    languages: siteDataReducers.languages,
   };
 }
 

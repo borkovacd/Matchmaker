@@ -135,7 +135,6 @@ class Page extends FormComponent {
 
     this.props.history.push(this.buildParams());
 
-    //this.setState();
     this.fetchData();
   }
 }
