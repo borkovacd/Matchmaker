@@ -14,6 +14,7 @@ let users = [
     interestedInAgeMin: 25,
     interestedInAgeMax: 35,
     interestedFor: [1, 2, 3, 4],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -28,6 +29,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 70,
     interestedFor: [1, 2, 4],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -42,6 +44,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 60,
     interestedFor: [2],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -56,6 +59,7 @@ let users = [
     interestedInAgeMin: 30,
     interestedInAgeMax: 45,
     interestedFor: [1, 3],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -71,6 +75,7 @@ let users = [
     interestedInAgeMin: 25,
     interestedInAgeMax: 35,
     interestedFor: [1, 2, 3, 4],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -85,6 +90,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 70,
     interestedFor: [1, 2, 4],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -99,6 +105,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 60,
     interestedFor: [2],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -113,6 +120,7 @@ let users = [
     interestedInAgeMin: 30,
     interestedInAgeMax: 45,
     interestedFor: [1, 3],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -128,6 +136,7 @@ let users = [
     interestedInAgeMin: 25,
     interestedInAgeMax: 35,
     interestedFor: [1, 2, 3, 4],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -142,6 +151,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 70,
     interestedFor: [1, 2, 4],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -156,6 +166,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 60,
     interestedFor: [2],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -170,6 +181,7 @@ let users = [
     interestedInAgeMin: 30,
     interestedInAgeMax: 45,
     interestedFor: [1, 3],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -185,6 +197,7 @@ let users = [
     interestedInAgeMin: 25,
     interestedInAgeMax: 35,
     interestedFor: [1, 2, 3, 4],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -199,6 +212,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 70,
     interestedFor: [1, 2, 4],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -213,6 +227,7 @@ let users = [
     interestedInAgeMin: 50,
     interestedInAgeMax: 60,
     interestedFor: [2],
+    country: 1,
     village: 1,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -227,6 +242,7 @@ let users = [
     interestedInAgeMin: 30,
     interestedInAgeMax: 45,
     interestedFor: [1, 3],
+    country: 1,
     village: 2,
     description:
       "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
@@ -257,7 +273,17 @@ export async function editUser(user) {
 }
 
 export async function getUserDetails(user) {
-  return await request("/users/details/" + user);
+  //return await request("/users/details/" + user);
+  let requestedUser = null;
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].id === user) {
+      requestedUser = users[i];
+    }
+  }
+  return {
+    response: OK,
+    data: requestedUser
+  };
 }
 
 export async function getUserRegistrationDetailsData() {

@@ -23,10 +23,13 @@ export function hideLoader() {
   };
 }
 
-export function loadData(languages) {
+export function loadData(languages, countries, villages, users) {
   return {
     type: LOAD_DATA,
-    languages: languages
+    languages: languages,
+    countries: countries,
+    villages: villages,
+    users: users
   };
 }
 

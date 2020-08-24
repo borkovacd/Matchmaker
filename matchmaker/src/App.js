@@ -40,6 +40,7 @@ function load() {
     store.dispatch(
       loadData(
         response.data.languages ? response.data.languages : [],
+        response.data.countries ? response.data.countries : [],
         response.data.villages ? response.data.villages : [],
         response.data.users ? response.data.users : []
       )

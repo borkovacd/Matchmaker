@@ -5,6 +5,7 @@ const initialState = {
   loader: false,
   loaderCount: 0,
   languages: [],
+  countries: [],
   villages: [],
   users: [],
   language: "en"
@@ -32,6 +33,7 @@ const siteDataReducers = (state = initialState, action) => {
       return {
         ...state,
         languages: action.languages,
+        countries: action.countries,
         villages: action.villages,
         users: action.users
       };

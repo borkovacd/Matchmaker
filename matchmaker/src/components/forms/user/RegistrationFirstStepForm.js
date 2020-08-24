@@ -158,18 +158,18 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
     <div className="form-row">
       <div className="column column-half">
         <div className="label">
-          <label htmlFor="intrestedFor">
+          <label htmlFor="interestedFor">
             {strings.registrationForm.intrestedFor}
           </label>
-          <ErrorViewer data={data} errors={errors} type={"intrestedFor"} />
+          <ErrorViewer data={data} errors={errors} type={"interestedFor"} />
         </div>
       </div>
       <div className="column column-half fo-columns">
         <CheckGroup
-          name="intrestedFor"
+          name="interestedFor"
           items={getRelationshipTypesList()}
           onChange={onChange}
-          selectedItem={{ value: data.intrestedFor }}
+          selectedItem={{ value: data.interestedFor }}
           displayKey={"name"}
           valueKey={"value"}
         />

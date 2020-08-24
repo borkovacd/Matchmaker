@@ -7,22 +7,22 @@
   color: $grayText;
 
   .find-your-match {
-    margin-top: 10%;
+    margin-top: 15%;
     text-align: center;
     color: $blue;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 600;
   }
 
   @media screen and (max-width: $break-lg) {
     .find-your-match {
-      margin-top: 15%;
+      margin-top: 20%;
     }
   }
 
   @media screen and (max-width: $break-md) {
     .find-your-match {
-      margin-top: 20%;
+      margin-top: 25%;
     }
   }
 

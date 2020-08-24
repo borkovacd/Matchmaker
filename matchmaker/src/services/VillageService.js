@@ -1,5 +1,6 @@
 import { request } from "../base/HTTP";
 import { OK } from "http-status-codes";
+import strings from "../localization";
 
 export async function getVillages() {
   //return await request("/villages");
@@ -12,7 +13,7 @@ export async function getVillages() {
           description:
             "Near the mountain village of Divčibare, at 650 metres above sea level, tucked away in nature’s embrace hides a beautiful village called Mionica. And in it is the interesting household of Gostoljublje where recreation and relaxation are so much more than a regular outing.You must be wondering why? There are several reasons. We’ll just tell you that here you can relax in authentic little houses and try different specialties of traditional Serbian cuisine. We leave it to you to find the rest out for yourself!",
           image:
-            "https://r-cf.bstatic.com/images/hotel/max1024x768/439/43917426.jpg",
+            "https://r-cf.bstatic.com/images/hotel/max1024x768/439/43917426.jpg"
         },
         {
           id: 2,
@@ -20,7 +21,7 @@ export async function getVillages() {
           description:
             "If Sirogojno looks like something out of a dream to you, do not be alarmed. There is no need to rub your eyes frantically or resort to pinching bits of skin. Part of this village in Zlatibor is made up of an open-air museum, showcasing traditional ways of life from the region, dating all the way back to the 19th century. The wooden buildings that dot the landscape further enhance the time-travelling experience.",
           image:
-            "https://www.panacomp.net/wp-content/uploads/2015/10/featured-sirogojno-plot-47023.jpg",
+            "https://www.panacomp.net/wp-content/uploads/2015/10/featured-sirogojno-plot-47023.jpg"
         },
         {
           id: 3,
@@ -28,7 +29,7 @@ export async function getVillages() {
           description:
             "Near the mountain village of Divčibare, at 650 metres above sea level, tucked away in nature’s embrace hides a beautiful village called Mionica. And in it is the interesting household of Gostoljublje where recreation and relaxation are so much more than a regular outing.You must be wondering why? There are several reasons. We’ll just tell you that here you can relax in authentic little houses and try different specialties of traditional Serbian cuisine. We leave it to you to find the rest out for yourself!",
           image:
-            "https://r-cf.bstatic.com/images/hotel/max1024x768/439/43917426.jpg",
+            "https://r-cf.bstatic.com/images/hotel/max1024x768/439/43917426.jpg"
         },
         {
           id: 4,
@@ -36,7 +37,7 @@ export async function getVillages() {
           description:
             "If Sirogojno looks like something out of a dream to you, do not be alarmed. There is no need to rub your eyes frantically or resort to pinching bits of skin. Part of this village in Zlatibor is made up of an open-air museum, showcasing traditional ways of life from the region, dating all the way back to the 19th century. The wooden buildings that dot the landscape further enhance the time-travelling experience.",
           image:
-            "https://www.panacomp.net/wp-content/uploads/2015/10/featured-sirogojno-plot-47023.jpg",
+            "https://www.panacomp.net/wp-content/uploads/2015/10/featured-sirogojno-plot-47023.jpg"
         },
         {
           id: 5,
@@ -44,7 +45,7 @@ export async function getVillages() {
           description:
             "Near the mountain village of Divčibare, at 650 metres above sea level, tucked away in nature’s embrace hides a beautiful village called Mionica. And in it is the interesting household of Gostoljublje where recreation and relaxation are so much more than a regular outing.You must be wondering why? There are several reasons. We’ll just tell you that here you can relax in authentic little houses and try different specialties of traditional Serbian cuisine. We leave it to you to find the rest out for yourself!",
           image:
-            "https://r-cf.bstatic.com/images/hotel/max1024x768/439/43917426.jpg",
+            "https://r-cf.bstatic.com/images/hotel/max1024x768/439/43917426.jpg"
         },
         {
           id: 6,
@@ -52,11 +53,11 @@ export async function getVillages() {
           description:
             "If Sirogojno looks like something out of a dream to you, do not be alarmed. There is no need to rub your eyes frantically or resort to pinching bits of skin. Part of this village in Zlatibor is made up of an open-air museum, showcasing traditional ways of life from the region, dating all the way back to the 19th century. The wooden buildings that dot the landscape further enhance the time-travelling experience.",
           image:
-            "https://www.panacomp.net/wp-content/uploads/2015/10/featured-sirogojno-plot-47023.jpg",
-        },
-      ],
+            "https://www.panacomp.net/wp-content/uploads/2015/10/featured-sirogojno-plot-47023.jpg"
+        }
+      ]
     },
-    status: OK,
+    status: OK
   };
 }
 
@@ -75,8 +76,46 @@ export async function getVillageName(id) {
   }
   return {
     data: {
-      name: villageName,
+      name: villageName
     },
-    status: OK,
+    status: OK
   };
+}
+
+export function getCountryName(id) {
+  switch (id) {
+    case 1:
+      return strings.countries.rs;
+      break;
+    case 2:
+      return strings.countries.gb;
+      break;
+    case 3:
+      return strings.countries.de;
+    default:
+      return "undefined";
+      break;
+  }
+
+  /*let countryName = undefined;
+  switch (id) {
+    case 1:
+      countryName = strings.countries.rs;
+      break;
+    case 2:
+      countryName = strings.countries.gb;
+      break;
+    case 3:
+      countryName = strings.countries.de;
+      break;
+    default:
+      countryName = undefined;
+      break;
+  }
+  return {
+    data: {
+      name: countryName
+    },
+    status: OK
+  };*/
 }

@@ -58,6 +58,12 @@ let strings = new LocalizedStrings({
       skip: "Skip"
     },
 
+    countries: {
+      rs: "Serbia",
+      gb: "Great Britain",
+      de: "Germany"
+    },
+
     quickSearch: {
       title: "Quick search:",
       gender: "I am:",
@@ -88,7 +94,35 @@ let strings = new LocalizedStrings({
       searchFor: "Search for ",
       from: " from ",
       to: " to ",
-      photo: " Photo"
+      photo: " Photo",
+      seeAllPhotos: "See all photos",
+      country: "Country",
+      sendMessage: "Send a message",
+      chat: "Chat",
+      addToHotList: "Add to hot list",
+      sendKiss: "Send a kiss",
+      sendGift: "Send a gift",
+      myDescription: "My description",
+      lookingForInPartner: "Looking for in a partner",
+      myInterests: "My interests",
+      nationality: "Nationality",
+      languages: "Languages",
+      height: "Height",
+      weight: "Weight",
+      figure: "Figure",
+      hair: "Hair",
+      hairLength: "Hair length",
+      eyes: "Eyes",
+      ethnicOrigin: "Ethnic origin",
+      religion: "Religion",
+      academicDegree: "Academic degree",
+      profession: "Profession",
+      income: "Income",
+      maritalStatus: "Marital status",
+      children: "Children",
+      smokingHabits: "Smoking habits",
+      drinkingHabits: "Drinking habits",
+      zodiac: "Zodiac"
     },
 
     gender: {
@@ -367,6 +401,12 @@ let strings = new LocalizedStrings({
       LanguageSwitch: "Sprache ändern"
     },
 
+    countries: {
+      rs: "Serbien",
+      gb: "Großbritannien",
+      de: "Deutschland"
+    },
+
     loginForm: {
       title: "Mitglieder Login",
       username: "Nutzername",
@@ -480,7 +520,35 @@ let strings = new LocalizedStrings({
       searchFor: "Suche nach ",
       from: " von ",
       to: " bis ",
-      photo: " Foto"
+      photo: " Foto",
+      seeAllPhotos: "Alle Fotos anzeigen",
+      country: "Land",
+      sendMessage: "Nachricht senden",
+      chat: "Chat",
+      addToHotList: "Zur Hotlist hinzufügen",
+      sendKiss: "Sende einen Kuss",
+      sendGift: "Sende ein Geschenk",
+      myDescription: "Meine Beschreibung",
+      lookingForInPartner: "Im Partner suchen nach",
+      myInterests: "Meine Interessen",
+      nationality: "Nationalität",
+      languages: "Sprachen",
+      height: "Höhe",
+      weight: "Gewicht",
+      figure: "Abbildung",
+      hair: "Haare",
+      hairLength: "Haarlänge",
+      eyes: "Augen",
+      ethnicOrigin: "Ethnische Herkunft",
+      religion: "Religion",
+      academicDegree: "Hochschulabschluss",
+      profession: "Beruf",
+      income: "Einkommen",
+      maritalStatus: "Familienstand",
+      children: "Kinder",
+      smokingHabits: "Rauchgewohnheiten",
+      drinkingHabits: "Trinkgewohnheiten",
+      zodiac: "Tierkreis"
     },
 
     home: {
@@ -724,6 +792,12 @@ let strings = new LocalizedStrings({
       LanguageSwitch: "Promenite jezik"
     },
 
+    countries: {
+      rs: "Srbija",
+      gb: "Velika Britanija",
+      de: "Nemačka"
+    },
+
     loginForm: {
       title: "Korisnička prijava",
       username: "Korisničko ime",
@@ -807,7 +881,35 @@ let strings = new LocalizedStrings({
       searchFor: "Traži ",
       from: " od ",
       to: " do ",
-      photo: " Slika"
+      photo: " Slika",
+      seeAllPhotos: "Pogledajte sve slike",
+      country: "Država",
+      sendMessage: "Pošaljite poruku",
+      chat: "Dopisivanje",
+      addToHotList: "Dodajte na HOT listu",
+      sendKiss: "Pošaljite poljubac",
+      sendGift: "Pošaljite poklon",
+      myDescription: "Moj opis",
+      lookingForInPartner: "Tražim u partneru",
+      myInterests: "Moja interesovanja",
+      nationality: "Nacionalnost",
+      languages: "Jezici",
+      height: "Visina",
+      weight: "Težina",
+      figure: "Figure",
+      hair: "Boja kosa",
+      hairLength: "Dužina kose",
+      eyes: "Oči",
+      ethnicOrigin: "Etničko poreklo",
+      religion: "Religija",
+      academicDegree: "Akademska diploma",
+      profession: "Profesija",
+      income: "Primanja",
+      maritalStatus: "Bračno stanje",
+      children: "Deca",
+      smokingHabits: "Pušač?",
+      drinkingHabits: "Konzumirate alkohol?",
+      zodiac: "Horoskop"
     },
 
     forgotPassword: {
