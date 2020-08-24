@@ -26,7 +26,10 @@ class BlogPreview extends Component {
           <div
             className="header"
             style={{
-              background: "url(" + this.state.blog.image + ")"
+              background:
+                "url(images/blogs_photos/" +
+                this.state.blog.id +
+                "/header_photo.png)"
             }}
           ></div>
 
@@ -70,7 +73,10 @@ class BlogPreview extends Component {
           <div
             className="header"
             style={{
-              background: "url(" + this.state.blog.image + ")"
+              background:
+                "url(images/blogs_photos/" +
+                this.state.blog.id +
+                "/header_photo.png)"
             }}
           ></div>
 

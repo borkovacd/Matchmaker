@@ -823,6 +823,11 @@ select {
     .pagination .container i {
       color: #00498e;
       font-size: larger; }
+  .pagination .disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    .pagination .disabled i {
+      font-size: larger; }
   .pagination .active {
     background: #00498e;
     color: #fff; }

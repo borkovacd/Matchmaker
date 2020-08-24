@@ -87,7 +87,10 @@ class BlogDetails extends Page {
             <div
               className="header"
               style={{
-                background: "url(" + this.state.blogDetails.image + ")"
+                background:
+                  "url(images/blogs_photos/" +
+                  this.state.blogDetails.id +
+                  "/header_photo.png)"
               }}
             ></div>
             <div className="content">
