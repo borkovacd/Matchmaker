@@ -135,6 +135,8 @@ class Page extends FormComponent {
 
     this.props.history.push(this.buildParams());
 
+    window.location.reload(false); //alternative?
+
     this.fetchData();
   }
 }
