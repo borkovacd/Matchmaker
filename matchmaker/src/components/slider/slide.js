@@ -9,7 +9,9 @@ class Slide extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.state.items = nextProps.items;
+    this.setState({
+      items: nextProps.items
+    });
   }
 
   render() {

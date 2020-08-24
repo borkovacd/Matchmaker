@@ -8,7 +8,7 @@ class Pagination extends Component {
     this.state = {
       page: props.page ? props.page : 1,
       perPage: props.perPage ? props.perPage : CONFIG.perPage,
-      total: props.total ? props.total : 0,
+      total: props.total ? props.total : 0
     };
 
     this.state.pageNumber = this.getPageNumber(
@@ -22,9 +22,11 @@ class Pagination extends Component {
   }
 
   componentWillReceiveProps(props) {
-    this.state.total = props.total;
-    this.state.page = props.page;
-    this.state.pageNumber = this.getPageNumber(props.total, this.state.perPage);
+    this.setState({
+      total: props.total,
+      page: props.page,
+      pageNumber: this.getPageNumber(props.total, this.state.perPage)
+    });
   }
 
   renderPages() {
@@ -46,7 +48,7 @@ class Pagination extends Component {
         <a
           onClick={() => this.props.setPage(i)}
           key={"page-" + i}
-          className={i === this.state.page && "active"}
+          className={i === this.state.page ? "container active " : "container"}
         >
           {i}
         </a>
@@ -65,23 +67,25 @@ class Pagination extends Component {
       <div className="pagination">
         <div
           className={
-            this.state.page === 1 ? "controls left disabled" : "controls left"
+            this.state.page === 1
+              ? "container controls left disabled"
+              : "container controls left"
           }
         >
           <a onClick={() => this.props.setPage(1)}>
-            <img src={"images/arrows/arrow-left.png"} />
+            <i class="fas fa-angle-double-left"></i>
           </a>
         </div>
         <div className="pages">{this.renderPages()}</div>
         <div
           className={
             this.state.page === this.state.pageNumber
-              ? "controls right disabled"
-              : "controls right"
+              ? "controls container right disabled"
+              : "controls container right"
           }
         >
           <a onClick={() => this.props.setPage(this.state.pageNumber)}>
-            <img src={"images/arrows/arrow-right.png"} />
+            <i class="fas fa-angle-double-right"></i>
           </a>
         </div>
       </div>

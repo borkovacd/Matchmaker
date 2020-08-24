@@ -20,7 +20,7 @@ class SearchResults extends Page {
     this.state = {
       search: "",
       result: undefined,
-      resultCount: 0,
+      resultCount: 0
     };
   }
 
@@ -33,12 +33,12 @@ class SearchResults extends Page {
 
     this.loadParams();
 
-    searchUsers(this.state.searchData).then((response) => {
+    searchUsers(this.state.searchData).then(response => {
       this.props.hideLoader();
 
       this.setState({
         result: response.data,
-        resultCount: response.total,
+        resultCount: response.total
       });
     });
   }
@@ -77,7 +77,12 @@ class SearchResults extends Page {
               <div className="space-between">
                 <div className="column-row">
                   {strings.searchResults.searchResults}
-                  <div className="value-color">500 pages</div>
+                  <div className="value-color">
+                    {Math.ceil(
+                      this.state.resultCount / this.state.searchData.perPage
+                    )}{" "}
+                    {strings.searchResults.pages}
+                  </div>
                 </div>
               </div>
               <div className="space-between">
@@ -104,7 +109,7 @@ class SearchResults extends Page {
         <div className="pagination-time">
           <Pagination
             page={this.state.searchData.page}
-            perPage={2}
+            perPage={this.state.searchData.perPage}
             total={this.state.resultCount}
             setPage={this.setPage}
           />
@@ -118,7 +123,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

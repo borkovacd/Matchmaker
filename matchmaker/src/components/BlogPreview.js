@@ -13,8 +13,10 @@ class BlogPreview extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.state.blog = nextProps.blog;
-    this.state.onlyTitle = nextProps.onlyTitle;
+    this.setState({
+      blog: nextProps.blog,
+      onlyTitle: nextProps.onlyTitle
+    });
   }
 
   renderBlog() {

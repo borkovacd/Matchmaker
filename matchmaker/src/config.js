@@ -10,8 +10,7 @@ let CONFIG = {
   googleClientId: "GOOGLE_CLIENT_ID",
   googleClientSecret: "GOOGLE_CLIENT_SECRET",
   linkedInClientId: "LINKEDIN_CLIENT_ID",
-  linkedInCliendSecret: "LINKEDIN_CLIENT_SECRET",
-  perPage: 2,
+  linkedInCliendSecret: "LINKEDIN_CLIENT_SECRET"
 };
 
 export default CONFIG;

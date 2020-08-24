@@ -16,7 +16,7 @@ let users = [
     interestedFor: [1, 2, 3, 4],
     village: 1,
     description:
-      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ let users = [
     interestedFor: [1, 2, 4],
     village: 2,
     description:
-      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ let users = [
     interestedFor: [2],
     village: 1,
     description:
-      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
   },
   {
     id: 4,
@@ -58,8 +58,179 @@ let users = [
     interestedFor: [1, 3],
     village: 2,
     description:
-      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you.",
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
   },
+  {
+    id: 5,
+    username: "marko",
+    name: "Marko",
+    //email
+    birthday: "05/05/1990",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 25,
+    interestedInAgeMax: 35,
+    interestedFor: [1, 2, 3, 4],
+    village: 1,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 6,
+    username: "nikola",
+    name: "Nikola",
+    birthday: "05/05/1955",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 50,
+    interestedInAgeMax: 70,
+    interestedFor: [1, 2, 4],
+    village: 2,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 7,
+    username: "milos",
+    name: "Miloš",
+    birthday: "05/05/1970",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 50,
+    interestedInAgeMax: 60,
+    interestedFor: [2],
+    village: 1,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 8,
+    username: "petar",
+    name: "Petar",
+    birthday: "05/05/1985",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 30,
+    interestedInAgeMax: 45,
+    interestedFor: [1, 3],
+    village: 2,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 9,
+    username: "marko",
+    name: "Marko",
+    //email
+    birthday: "05/05/1990",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 25,
+    interestedInAgeMax: 35,
+    interestedFor: [1, 2, 3, 4],
+    village: 1,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 10,
+    username: "nikola",
+    name: "Nikola",
+    birthday: "05/05/1955",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 50,
+    interestedInAgeMax: 70,
+    interestedFor: [1, 2, 4],
+    village: 2,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 11,
+    username: "milos",
+    name: "Miloš",
+    birthday: "05/05/1970",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 50,
+    interestedInAgeMax: 60,
+    interestedFor: [2],
+    village: 1,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 12,
+    username: "petar",
+    name: "Petar",
+    birthday: "05/05/1985",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 30,
+    interestedInAgeMax: 45,
+    interestedFor: [1, 3],
+    village: 2,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 13,
+    username: "marko",
+    name: "Marko",
+    //email
+    birthday: "05/05/1990",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 25,
+    interestedInAgeMax: 35,
+    interestedFor: [1, 2, 3, 4],
+    village: 1,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 14,
+    username: "nikola",
+    name: "Nikola",
+    birthday: "05/05/1955",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 50,
+    interestedInAgeMax: 70,
+    interestedFor: [1, 2, 4],
+    village: 2,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 15,
+    username: "milos",
+    name: "Miloš",
+    birthday: "05/05/1970",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 50,
+    interestedInAgeMax: 60,
+    interestedFor: [2],
+    village: 1,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  },
+  {
+    id: 16,
+    username: "petar",
+    name: "Petar",
+    birthday: "05/05/1985",
+    gender: 1,
+    interestedInGender: 2,
+    interestedInAgeMin: 30,
+    interestedInAgeMax: 45,
+    interestedFor: [1, 3],
+    village: 2,
+    description:
+      "Honest and faithful, romantic I'm an intellectual. I want to introduce myself and start a strong family. Who really wants to start such a beautiful family. I am waiting you."
+  }
 ];
 
 export async function register(user) {
@@ -69,15 +240,15 @@ export async function register(user) {
     data: {
       user: {
         username: "borkovac",
-        email: "borkovac.dragan@gmail.com",
+        email: "borkovac.dragan@gmail.com"
       },
       token: {
         access_token:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zS8VfSEv7h7nNVSkNhDIE783bVJTgPP9JlOHSDaIy1I",
         refresh_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY",
-      },
-    },
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY"
+      }
+    }
   };
 }
 

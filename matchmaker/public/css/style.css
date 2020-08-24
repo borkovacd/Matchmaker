@@ -804,6 +804,33 @@ select {
   .load-more-text:hover {
     opacity: 1; }
 
+.pagination {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .pagination .container {
+    border: 1px solid #00498e;
+    color: #00498e;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer; }
+    .pagination .container i {
+      color: #00498e;
+      font-size: larger; }
+  .pagination .active {
+    background: #00498e;
+    color: #fff; }
+  .pagination .pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+
 .quick-search-form-container {
   text-align: left;
   background-color: #fff;
@@ -1424,6 +1451,12 @@ select {
     color: #00498e;
     font-size: x-large;
     font-weight: 600; }
+  @media screen and (max-width: 1220px) {
+    .search-results-page .find-your-match {
+      margin-top: 15%; } }
+  @media screen and (max-width: 992px) {
+    .search-results-page .find-your-match {
+      margin-top: 20%; } }
   .search-results-page .center-and-margin {
     text-align: center;
     margin-top: 2%; }
@@ -1464,10 +1497,20 @@ select {
           margin-left: 1%; }
       .search-results-page .search-results-component .content .last-column {
         text-align: right; }
+    @media screen and (max-width: 992px) {
+      .search-results-page .search-results-component .content {
+        grid-template-columns: 40% 15% 20%; } }
   .search-results-page .users-grid-container {
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: space-between; }
+  @media screen and (max-width: 1220px) {
+    .search-results-page .users-grid-container {
+      grid-template-columns: 50% 50%; } }
+  @media screen and (max-width: 992px) {
+    .search-results-page .users-grid-container {
+      display: flex;
+      flex-direction: column; } }
 
 .transparent-btn {
   color: #00498e;

@@ -14,27 +14,29 @@ class UserPreview extends Component {
     super(props);
 
     this.state = {
-      user: props.user ? props.user : undefined,
+      user: props.user ? props.user : undefined
       //onlyTitle: props.onlyTitle ? props.onlyTitle : false
     };
   }
 
   componentWillReceiveProps(nextProps) {
-    this.state.user = nextProps.user;
+    this.setState({
+      user: nextProps.user
+    });
     //this.state.onlyTitle = nextProps.onlyTitle;
   }
 
   componentDidMount() {
     this.props.showLoader();
 
-    getVillageName(this.state.user.village).then((response) => {
+    getVillageName(this.state.user.village).then(response => {
       this.props.hideLoader();
       /* if (!response || !response.ok) {
         return;
       } */
 
       this.setState({
-        villageName: response.data.name,
+        villageName: response.data.name
       });
     });
   }
@@ -49,7 +51,7 @@ class UserPreview extends Component {
             background:
               "url(images/users_photos/" +
               this.state.user.id +
-              "/profile_photo.png)",
+              "/profile_photo.png)"
           }}
         ></div>
 
@@ -89,19 +91,19 @@ class UserPreview extends Component {
           </div>
           <div className="last-row">
             <a href="#">
-              <i class="fas fa-envelope"></i>
+              <i className="fas fa-envelope"></i>
             </a>
             <a href="#">
-              <i class="fas fa-comments"></i>
+              <i className="fas fa-comments"></i>
             </a>
             <a href="#">
-              <i class="fas fa-heart"></i>
+              <i className="fas fa-heart"></i>
             </a>
             <a href="#">
-              <i class="fas fa-kiss-wink-heart"></i>
+              <i className="fas fa-kiss-wink-heart"></i>
             </a>
             <a href="#">
-              <i class="fas fa-gift"></i>
+              <i className="fas fa-gift"></i>
             </a>
           </div>
         </div>
@@ -143,7 +145,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );
