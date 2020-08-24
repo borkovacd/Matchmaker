@@ -1717,13 +1717,14 @@ select {
         font-weight: bolder;
         font-size: larger; }
   .search-results-page .about-user-content-container {
-    margin-top: 5%;
-    display: flex;
-    padding: 2% 2%;
-    background: green; }
+    margin-top: 90px;
+    display: flex; }
     .search-results-page .about-user-content-container .my-description-container {
+      border: 2px solid #d93943;
+      border-radius: 10px;
+      padding-top: 20px;
       width: 100%;
-      background: khaki;
+      min-height: 400px;
       display: grid;
       grid-template-columns: 20% 20% 10% 20% 20%;
       align-items: baseline;
@@ -1731,17 +1732,51 @@ select {
       .search-results-page .about-user-content-container .my-description-container .first-third-column {
         font-weight: bold;
         font-size: medium;
-        text-align: left; }
-        .search-results-page .about-user-content-container .my-description-container .first-third-column .row {
-          margin-top: 5%; }
+        text-align: left;
+        line-height: 30px; }
       .search-results-page .about-user-content-container .my-description-container .second-fourth-column {
         font-size: medium;
-        text-align: left; }
+        text-align: left;
+        line-height: 30px; }
     .search-results-page .about-user-content-container .looking-for-container {
+      border: 2px solid #00498e;
+      border-radius: 10px;
+      padding-top: 20px;
       width: 100%;
-      min-height: 100px;
-      background: darkslategrey; }
+      min-height: 400px;
+      display: grid;
+      grid-template-columns: 20% 70%;
+      align-items: baseline;
+      justify-content: center; }
+      .search-results-page .about-user-content-container .looking-for-container .first-column {
+        font-weight: bold;
+        font-size: medium;
+        text-align: left;
+        line-height: 30px; }
+      .search-results-page .about-user-content-container .looking-for-container .second-column {
+        font-size: medium;
+        text-align: left;
+        line-height: 30px; }
     .search-results-page .about-user-content-container .my-interests-container {
+      border: 2px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      padding-top: 20px;
       width: 100%;
-      min-height: 100px;
-      background: navy; }
+      min-height: 200px;
+      display: grid;
+      grid-template-columns: 10% 20% 10% 20% 10% 20%;
+      align-items: baseline;
+      justify-content: center;
+      padding-left: 10%; }
+      .search-results-page .about-user-content-container .my-interests-container .first-column {
+        font-weight: bold;
+        font-size: medium;
+        text-align: left;
+        line-height: 30px; }
+      .search-results-page .about-user-content-container .my-interests-container .second-column {
+        font-size: medium;
+        text-align: left;
+        line-height: 30px; }
+        .search-results-page .about-user-content-container .my-interests-container .second-column i {
+          color: #d93943; }

@@ -21,7 +21,7 @@ class UserDetails extends Page {
     this.state = {
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false
+      myInterestsActive: false,
     };
   }
 
@@ -29,7 +29,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false
+      myInterestsActive: false,
     });
   }
 
@@ -37,7 +37,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: true,
-      myInterestsActive: false
+      myInterestsActive: false,
     });
   }
 
@@ -45,7 +45,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: false,
-      myInterestsActive: true
+      myInterestsActive: true,
     });
   }
 
@@ -58,7 +58,7 @@ class UserDetails extends Page {
 
     this.props.showLoader();
 
-    getUserDetails(this.state.searchData.user).then(response => {
+    getUserDetails(this.state.searchData.user).then((response) => {
       this.props.hideLoader();
 
       /*if (!response || !response.ok) {
@@ -66,20 +66,74 @@ class UserDetails extends Page {
       }*/
 
       this.setState({
-        user: response.data
+        user: response.data,
       });
 
-      getVillageName(this.state.user.village).then(response => {
+      getVillageName(this.state.user.village).then((response) => {
         this.props.hideLoader();
         /* if (!response || !response.ok) {
             return;
           } */
 
         this.setState({
-          villageName: response.data.name
+          villageName: response.data.name,
         });
       });
     });
+  }
+
+  renderStars(value) {
+    if (value === 1) {
+      return (
+        <>
+          <i className="fas fa-star"></i>
+          <i className="far fa-star"></i>
+          <i className="far fa-star"></i>
+          <i className="far fa-star"></i>
+          <i className="far fa-star"></i>
+        </>
+      );
+    } else if (value === 2) {
+      return (
+        <>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="far fa-star"></i>
+          <i className="far fa-star"></i>
+          <i className="far fa-star"></i>
+        </>
+      );
+    } else if (value === 3) {
+      return (
+        <>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="far fa-star"></i>
+          <i className="far fa-star"></i>
+        </>
+      );
+    } else if (value === 4) {
+      return (
+        <>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="far fa-star"></i>
+        </>
+      );
+    } else if (value === 5) {
+      return (
+        <>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+        </>
+      );
+    }
   }
 
   render() {
@@ -119,7 +173,7 @@ class UserDetails extends Page {
                   background:
                     "url(images/users_photos/" +
                     this.state.user.id +
-                    "/profile_photo.png)"
+                    "/profile_photo.png)",
                 }}
               ></div>
               <div className="btn-see-all">
@@ -238,67 +292,347 @@ class UserDetails extends Page {
             ${this.state.myInterestsActive ? "my-interests-container" : ""}
             `}
           >
-            <div className="first-third-column">
-              <div className="row">
-                <div>{strings.user.nationality}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.languages}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.height}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.weight}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.figure}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.hair}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.hairLength}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.eyes}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.ethnicOrigin}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.religion}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.academicDegree}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.profession}:</div>
-              </div>
-            </div>
-            <div className="second-fourth-column"></div>
-            <div></div>
-            <div className="first-third-column">
-              <div className="row">
-                <div>{strings.user.income}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.maritalStatus}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.children}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.smokingHabits}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.drinkingHabits}:</div>
-              </div>
-              <div className="row">
-                <div>{strings.user.zodiac}:</div>
-              </div>
-            </div>
-            <div className="second-fourth-column"></div>
+            {this.state.myDescriptionActive && (
+              <>
+                <div className="first-third-column">
+                  <div className="row">
+                    <div>{strings.user.nationality}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.languages}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.height}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.weight}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.figure}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.hair}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.hairLength}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.eyes}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.ethnicOrigin}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.religion}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.academicDegree}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.profession}:</div>
+                  </div>
+                </div>
+                <div className="second-fourth-column">
+                  <div className="row">
+                    <div>{this.state.user.nationality}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.languages}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.height}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.weight}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.figure}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.hair}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.hairLength}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.eyes}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.ethnicOrigin}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.religion}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.academicDegree}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.profession}</div>
+                  </div>
+                </div>
+                <div></div>
+                <div className="first-third-column">
+                  <div className="row">
+                    <div>{strings.user.income}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.maritalStatus}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.children}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.smokingHabits}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.drinkingHabits}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.zodiac}:</div>
+                  </div>
+                </div>
+                <div className="second-fourth-column">
+                  <div className="row">
+                    <div>{this.state.user.income}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.maritalStatus}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.children}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.smokingHabits}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.drinkingHabits}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.zodiac}</div>
+                  </div>
+                </div>
+              </>
+            )}
+            {this.state.lookingForInPartnerActive && (
+              <>
+                <div className="first-column">
+                  <div className="row">
+                    <div>{strings.registrationForm.intrestedInGender}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.registrationForm.intrestedFor}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.height}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.weight}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.figure}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.hair}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.hairLength}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.eyes}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.ethnicOrigin}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.religion}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.academicDegree}:</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.user.profession}:</div>
+                  </div>
+                </div>
+                <div className="second-column">
+                  <div className="row">
+                    <div>
+                      {getGenderString(this.state.user.interestedInGender)}{" "}
+                      {this.state.user.interestedInAgeMin} -
+                      {this.state.user.interestedInAgeMax}{" "}
+                      {strings.user.yearsOld}
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div>
+                      {getRelationshipTypesStrings(
+                        this.state.user.interestedFor
+                      )}
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div>
+                      {this.state.user.interestedInHeightMin} -{" "}
+                      {this.state.user.interestedInHeightMax} cm
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div>
+                      {" "}
+                      {this.state.user.interestedInWeightMin} -{" "}
+                      {this.state.user.interestedInWeightMax} kg
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInFigure}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInHair}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInHairLength}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInEyes}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInEthnicOrigin}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInReligion}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInAcademicDegree}</div>
+                  </div>
+                  <div className="row">
+                    <div>{this.state.user.interestedInProfession}</div>
+                  </div>
+                </div>
+              </>
+            )}
+            {this.state.myInterestsActive && (
+              <>
+                <div className="first-column">
+                  <div className="row">
+                    <div>{strings.userInterests.arts}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.kitchen}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.oddJobs}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.theater}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.cars}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.lecture}</div>
+                  </div>
+                </div>
+                <div className="second-column">
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[0].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[1].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[2].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[3].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[4].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[5].value)}
+                  </div>
+                </div>
+                <div className="first-column">
+                  <div className="row">
+                    <div>{strings.userInterests.painting}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.travels}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.cinema}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.literature}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.restaurant}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.tv}</div>
+                  </div>
+                </div>
+                <div className="second-column">
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[6].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[7].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[8].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[9].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[10].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[11].value)}
+                  </div>
+                </div>
+                <div className="first-column">
+                  <div className="row">
+                    <div>{strings.userInterests.dance}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.museum}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.shopping}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.internet}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.animals}</div>
+                  </div>
+                  <div className="row">
+                    <div>{strings.userInterests.sport}</div>
+                  </div>
+                </div>
+                <div className="second-column">
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[12].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[13].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[14].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[15].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[16].value)}
+                  </div>
+                  <div className="row">
+                    {this.renderStars(this.state.user.interests[17].value)}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -310,7 +644,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );

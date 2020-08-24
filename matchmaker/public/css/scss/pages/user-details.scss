@@ -259,15 +259,15 @@
   }
 
   .about-user-content-container {
-    margin-top: 5%;
+    margin-top: 90px;
     display: flex;
-    padding: 2% 2%;
-    background: green;
 
     .my-description-container {
+      border: 2px solid $red;
+      border-radius: 10px;
+      padding-top: 20px;
       width: 100%;
-
-      background: khaki;
+      min-height: 400px;
       display: grid;
       grid-template-columns: 20% 20% 10% 20% 20%;
       align-items: baseline;
@@ -277,29 +277,70 @@
         font-weight: bold;
         font-size: medium;
         text-align: left;
-
-        .row {
-          margin-top: 5%;
-        }
+        line-height: 30px;
       }
 
       .second-fourth-column {
         font-size: medium;
         text-align: left;
+        line-height: 30px;
       }
     }
 
     .looking-for-container {
+      border: 2px solid $blue;
+      border-radius: 10px;
+      padding-top: 20px;
       width: 100%;
-      min-height: 100px;
+      min-height: 400px;
+      display: grid;
+      grid-template-columns: 20% 70%;
+      align-items: baseline;
+      justify-content: center;
 
-      background: darkslategrey;
+      .first-column {
+        font-weight: bold;
+        font-size: medium;
+        text-align: left;
+        line-height: 30px;
+      }
+
+      .second-column {
+        font-size: medium;
+        text-align: left;
+        line-height: 30px;
+      }
     }
 
     .my-interests-container {
+      border: 2px solid $white;
+      border-radius: 10px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      padding-top: 20px;
       width: 100%;
-      min-height: 100px;
-      background: navy;
+      min-height: 200px;
+      display: grid;
+      grid-template-columns: 10% 20% 10% 20% 10% 20%;
+      align-items: baseline;
+      justify-content: center;
+      padding-left: 10%;
+
+      .first-column {
+        font-weight: bold;
+        font-size: medium;
+        text-align: left;
+        line-height: 30px;
+      }
+
+      .second-column {
+        font-size: medium;
+        text-align: left;
+        line-height: 30px;
+
+        i {
+          color: $red;
+        }
+      }
     }
   }
 }
