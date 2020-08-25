@@ -12,6 +12,7 @@ import strings from "../localization";
 import { getNewPeople } from "../services/UserService";
 import { calculateAge } from "../util/DateUtil";
 import VillagePreview from "../components/VillagePreview";
+import { OK } from "http-status-codes";
 
 class Home extends Component {
   constructor(props) {
@@ -20,14 +21,14 @@ class Home extends Component {
     this.state = {
       activeIndex: 0,
       villages: [],
-      newPeople: []
+      newPeople: [],
     };
   }
 
   componentDidMount() {
     this.props.showLoader();
 
-    getVillages().then(response => {
+    getVillages().then((response) => {
       this.props.hideLoader();
 
       /* if (!response || !response.ok) {
@@ -35,15 +36,19 @@ class Home extends Component {
       } */
 
       this.setState({
-        villages: response.data.villages
+        villages: response.data.villages,
       });
     });
 
-    getNewPeople(4).then(response => {
+    getNewPeople(4).then((response) => {
       this.props.hideLoader();
 
+      if (response.status !== OK) {
+        return;
+      }
+
       this.setState({
-        newPeople: response.data
+        newPeople: response.data,
       });
     });
   }
@@ -59,7 +64,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index
+      activeIndex: index,
     });
   }
 
@@ -74,7 +79,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index
+      activeIndex: index,
     });
   }
 
@@ -88,11 +93,11 @@ class Home extends Component {
     {
       for (let user of this.state.newPeople) {
         result.push(
-          <div className="item-with-text">
+          <div key={user.id} className="item-with-text">
             <div
               className="item-photo-container"
               style={{
-                background: "url(images/circle.png)"
+                background: "url(images/circle.png)",
               }}
             >
               <img
@@ -121,7 +126,7 @@ class Home extends Component {
     {
       for (let village of this.state.villages) {
         if (numberOfVillages < 3) {
-          result.push(<VillagePreview village={village} />);
+          result.push(<VillagePreview village={village} key={village.id} />);
           numberOfVillages++;
         }
       }
@@ -136,7 +141,7 @@ class Home extends Component {
         <div
           className="slider-items-container"
           style={{
-            background: "url(../../images/slider-index.png)"
+            background: "url(../../images/slider-index.png)",
           }}
         >
           <LeftArrow goToPrevSlide={() => this.goToPrevSlide()} />
@@ -182,17 +187,16 @@ function mapDispatchToProps(dispatch) {
     {
       showLoader: Actions.showLoader,
       hideLoader: Actions.hideLoader,
-      setFilterData: Actions.setData
+      //setFilterData: Actions.setData,
     },
     dispatch
   );
 }
 
-function mapStateToProps({ menuReducers, authReducers, filterReducers }) {
+function mapStateToProps({ authReducers }) {
   return {
-    menu: menuReducers,
     user: authReducers.user,
-    filter: filterReducers
+    //filterReducers
   };
 }
 

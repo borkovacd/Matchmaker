@@ -9,11 +9,12 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import LoginForm from "../../components/forms/user/LoginForm";
+import { OK } from "http-status-codes";
 
 class Login extends Page {
   validationList = {
     username: [{ type: Validators.REQUIRED }],
-    password: [{ type: Validators.REQUIRED }]
+    password: [{ type: Validators.REQUIRED }],
   };
 
   constructor(props) {
@@ -22,7 +23,9 @@ class Login extends Page {
     this.state = {
       data: {},
       errors: {},
-      redirectUrl: props.location.state ? props.location.state.redirectUrl : "/"
+      redirectUrl: props.location.state
+        ? props.location.state.redirectUrl
+        : "/",
     };
 
     this.keyPress = this.keyPress.bind(this);
@@ -39,18 +42,19 @@ class Login extends Page {
       return;
     }
 
-    login(this.state.data.username, this.state.data.password).then(response => {
-      /*if (!response || !response.ok) {
-        this.setError("username", strings.login.wrongCredentials);
-        return;
-      }*/
+    login(this.state.data.username, this.state.data.password).then(
+      (response) => {
+        if (response.status !== OK) {
+          this.setError("username", strings.loginForm.wrongCredentials);
+          return;
+        }
+        this.props.login(response.data.user);
 
-      this.props.login(response.data.user);
-
-      this.props.history.push({
-        pathname: this.state.redirectUrl
-      });
-    });
+        this.props.history.push({
+          pathname: this.state.redirectUrl,
+        });
+      }
+    );
   }
 
   render() {
@@ -73,20 +77,20 @@ class Login extends Page {
             </div>
 
             <div className="row">
-              <a href="#" className="fb social-btn">
+              <a className="fb social-btn">
                 <i className="fab fa-facebook-f i"></i>{" "}
                 {strings.loginForm.continueWith} Facebook
               </a>
             </div>
 
             <div className="row">
-              <a href="#" className="twitter social-btn">
+              <a className="twitter social-btn">
                 <i className="fab fa-twitter i"></i>{" "}
                 {strings.loginForm.continueWith} Twitter
               </a>
             </div>
             <div className="row">
-              <a href="#" className="google social-btn">
+              <a className="google social-btn">
                 <i className="fab fa-google-plus-g i"></i>{" "}
                 {strings.loginForm.continueWith} Google
               </a>
@@ -101,7 +105,7 @@ class Login extends Page {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      login: Actions.login
+      login: Actions.login,
     },
     dispatch
   );

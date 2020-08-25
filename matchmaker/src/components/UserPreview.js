@@ -8,41 +8,39 @@ import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
 import * as Actions from "../actions/Actions";
+import { OK } from "http-status-codes";
 
 class UserPreview extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user: props.user ? props.user : undefined
-      //onlyTitle: props.onlyTitle ? props.onlyTitle : false
+      user: props.user ? props.user : undefined,
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      user: nextProps.user
+      user: nextProps.user,
     });
-    //this.state.onlyTitle = nextProps.onlyTitle;
   }
 
   componentDidMount() {
     this.props.showLoader();
 
-    getVillageName(this.state.user.village).then(response => {
+    getVillageName(this.state.user.village).then((response) => {
       this.props.hideLoader();
-      /* if (!response || !response.ok) {
+      if (response.status !== OK) {
         return;
-      } */
+      }
 
       this.setState({
-        villageName: response.data.name
+        villageName: response.data.name,
       });
     });
   }
 
   renderUser() {
-    //if (!this.state.onlyTitle) {
     return (
       <React.Fragment>
         <div
@@ -51,7 +49,7 @@ class UserPreview extends Component {
             background:
               "url(images/users_photos/" +
               this.state.user.id +
-              "/profile_photo.png)"
+              "/profile_photo.png)",
           }}
         ></div>
 
@@ -90,46 +88,29 @@ class UserPreview extends Component {
             <div className="description">"{this.state.user.description}"</div>
           </div>
           <div className="last-row">
-            <a href="#">
+            <a>
               <i className="fas fa-envelope"></i>
             </a>
-            <a href="#">
+            <a>
               <i className="fas fa-comments"></i>
             </a>
-            <a href="#">
+            <a>
               <i className="fas fa-heart"></i>
             </a>
-            <a href="#">
+            <a>
               <i className="fas fa-kiss-wink-heart"></i>
             </a>
-            <a href="#">
+            <a>
               <i className="fas fa-gift"></i>
             </a>
           </div>
         </div>
       </React.Fragment>
     );
-  } /*else {
-      return (
-        <div className="related-post">
-          <div
-            className="header"
-            style={{
-              background: "url(" + this.state.blog.image + ")"
-            }}
-          ></div>
-
-          <Link className="title" to={"/blog?blog=" + this.state.blog.id}>
-            {this.state.blog.title}
-          </Link>
-        </div>
-      );
-    }
-  }*/
+  }
 
   render() {
     if (!this.state.user) {
-      console.log("Nije prosledjen user kao props!"); //
       return "";
     }
 
@@ -145,13 +126,13 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );
 }
 
-function mapStateToProps({}) {
+function mapStateToProps() {
   return {};
 }
 

@@ -28,11 +28,10 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({}, dispatch);
 }
 
-function mapStateToProps({ authReducers, siteDataReducers }) {
+function mapStateToProps({ siteDataReducers }) {
   return {
     loader: siteDataReducers.loader,
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages,
   };
 }
 

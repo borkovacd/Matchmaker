@@ -76,8 +76,6 @@ class Page extends FormComponent {
       }
 
       loadedData[param.name] = value;
-
-      console.log(value);
     }
 
     this.state[data] = loadedData;

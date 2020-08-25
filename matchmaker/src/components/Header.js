@@ -7,15 +7,8 @@ import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
 
 class Header extends Component {
-  /*constructor(props) {
-    super(props);
-    //this.toggleFilter = this.toggleFilter.bind(this);
-    //this.toggleMenu = this.toggleMenu.bind(this);
-  }*/
-
   logout() {
     logout();
-    //this.props.push('/');
   }
 
   render() {
@@ -46,7 +39,7 @@ class Header extends Component {
                 <Link to={"/profile"}>{strings.menu.Profile}</Link>
               </div>
               <div className="btn-register" onClick={this.logout}>
-                <a href="#">{strings.menu.Logout}</a>
+                <a>{strings.menu.Logout}</a>
               </div>
             </React.Fragment>
           )}
@@ -57,21 +50,12 @@ class Header extends Component {
     );
   }
 }
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    {
-      //toggleFilter: Actions.toggleFilter,
-      // toggleMenu: Actions.toggleMenu
-    },
-    dispatch
-  );
-}
 
 function mapStateToProps({ siteDataReducers }) {
   return {
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages
+    //languages: siteDataReducers.languages,
   };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
+export default withRouter(connect(mapStateToProps, null)(Header));

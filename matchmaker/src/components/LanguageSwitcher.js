@@ -4,9 +4,6 @@ import * as Actions from "../actions/Actions";
 import { withRouter } from "react-router-dom";
 import connect from "react-redux/es/connect/connect";
 import Select from ".//controls/Select";
-import { stringToDate } from "../util/DateUtil";
-import strings from "../localization";
-import { changeLanguage } from "../actions/Actions";
 
 class LanguageSwitcher extends Component {
   constructor(props) {
@@ -38,7 +35,7 @@ class LanguageSwitcher extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      changeLanguage: Actions.changeLanguage
+      changeLanguage: Actions.changeLanguage,
     },
     dispatch
   );
@@ -47,7 +44,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ siteDataReducers }) {
   return {
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages
+    languages: siteDataReducers.languages,
   };
 }
 

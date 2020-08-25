@@ -11,7 +11,7 @@ class FormComponent extends BaseComponent {
 
     this.state = {
       data: {},
-      errors: {}
+      errors: {},
     };
 
     this.changeData = this.changeData.bind(this);
@@ -22,8 +22,8 @@ class FormComponent extends BaseComponent {
   changeData(event) {
     this.setState({
       data: update(this.state.data, {
-        [event.target.name]: { $set: event.target.value }
-      })
+        [event.target.name]: { $set: event.target.value },
+      }),
     });
   }
 
@@ -33,7 +33,7 @@ class FormComponent extends BaseComponent {
     data[field] = !data[field];
 
     this.setState({
-      data
+      data,
     });
   }
 
@@ -60,8 +60,8 @@ class FormComponent extends BaseComponent {
   setError(key, value) {
     this.setState({
       errors: update(this.state.errors, {
-        [key]: { $set: [{ message: value }] }
-      })
+        [key]: { $set: [{ message: value }] },
+      }),
     });
   }
 }

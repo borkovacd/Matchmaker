@@ -10,6 +10,7 @@ import Provider from "react-redux/es/components/Provider";
 import BaseLayout from "./base/BaseLayout";
 import { getHomeData } from "./services/HomeService";
 import { loadData } from "./actions/SiteDataActions";
+import { OK } from "http-status-codes";
 
 const store = createStore(appReducers);
 store.dispatch(loadUser());
@@ -31,11 +32,10 @@ const App = () => (
 );
 
 function load() {
-  getHomeData().then(response => {
-    /*
-    if (!response || !response.ok) {
+  getHomeData().then((response) => {
+    if (response.status !== OK) {
       return;
-    }*/
+    }
 
     store.dispatch(
       loadData(

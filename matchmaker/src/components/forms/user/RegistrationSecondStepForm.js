@@ -4,12 +4,11 @@ import ErrorViewer from "../../ErrorViewer";
 import { Link } from "react-router-dom";
 
 const RegistrationSecondStepForm = ({
-  onChange,
   errors,
   data,
   onSubmit,
   file,
-  onFileChanged
+  onFileChanged,
 }) => (
   <form id="register-form-2" className="lrp-form-container padding-2">
     <div className="lrp-form-title">{strings.registrationForm2.title}</div>
@@ -51,7 +50,7 @@ const RegistrationSecondStepForm = ({
     <div className="form-row">
       <div className="column center">
         <a
-          onClick={event => onSubmit(event)}
+          onClick={(event) => onSubmit(event)}
           className="btn lrp-btn btn-red uppercase"
         >
           {strings.registrationForm2.upload}
@@ -61,7 +60,7 @@ const RegistrationSecondStepForm = ({
 
     <div className="form-row">
       <div className="column not-a-member center">
-        <Link to={"/registration"}>{strings.registrationForm2.skip}</Link>
+        <Link to={"/"}>{strings.registrationForm2.skip}</Link>
       </div>
     </div>
   </form>

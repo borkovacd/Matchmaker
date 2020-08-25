@@ -24,7 +24,6 @@
   }
 
   i {
-    position: absolute;
     right: 0;
     color: $red;
     font-size: 22px;
@@ -38,13 +37,13 @@
 
   .options {
     position: absolute;
+    left: 0;
     display: none;
     background: $red;
     text-align: center;
     color: $white;
     width: 100%;
     top: 30px;
-    left: 0;
     max-height: 200px;
     overflow-y: scroll;
     overflow-x: hidden;

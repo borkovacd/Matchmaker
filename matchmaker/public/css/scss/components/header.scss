@@ -1,5 +1,6 @@
 #header {
   position: fixed !important;
+  z-index: 99999;
   top: 0 !important;
   display: flex;
   justify-content: space-between;

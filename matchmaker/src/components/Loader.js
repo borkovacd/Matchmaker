@@ -8,22 +8,22 @@ const Loader = () => (
       height: "100vh",
       position: "fixed",
       zIndex: 999999999999999999,
-      background: "rgba(3, 24, 86, 1)",
+      backgroundColor: "whitesmoke",
       top: 0,
-      left: 0
+      left: 0,
     }}
   >
     <div
       style={{
         position: "absolute",
-        width: "60%",
-        height: "60%",
+        width: "50%",
+        height: "40%",
         left: "20%",
         top: "20%",
         background: "url('../../images/logo.png')",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "contain"
+        backgroundSize: "contain",
       }}
     ></div>
   </div>

@@ -1,9 +1,6 @@
 import React from "react";
 import BaseControl from "./BaseControl";
-import { bindActionCreators } from "redux";
-import * as Actions from "../../actions/Actions";
 import { withRouter } from "react-router-dom";
-import connect from "react-redux/es/connect/connect";
 
 class CheckGroup extends BaseControl {
   constructor(props) {
@@ -14,7 +11,7 @@ class CheckGroup extends BaseControl {
       selectedItems: props.selectedItems ? props.selectedItems : [],
       displayKey: props.displayKey,
       valueKey: props.valueKey,
-      onlyOne: props.onlyOne
+      onlyOne: props.onlyOne,
     };
   }
 
@@ -61,7 +58,7 @@ class CheckGroup extends BaseControl {
     this.createEvent(eventResult);
 
     this.setState({
-      selectedItems: result
+      selectedItems: result,
     });
   }
 
@@ -89,19 +86,4 @@ class CheckGroup extends BaseControl {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    {
-      setFilterData: Actions.setData
-    },
-    dispatch
-  );
-}
-
-function mapStateToProps({ siteDataReducers }) {
-  return { sideData: siteDataReducers };
-}
-
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(CheckGroup)
-);
+export default CheckGroup;

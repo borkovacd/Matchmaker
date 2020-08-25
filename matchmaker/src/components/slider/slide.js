@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import strings from "../../localization";
+import { withRouter } from "react-router-dom";
+import { bindActionCreators } from "redux";
+import connect from "react-redux/es/connect/connect";
+import * as Actions from "../../actions/Actions";
 
 class Slide extends Component {
   constructor(props) {
@@ -10,7 +14,7 @@ class Slide extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      items: nextProps.items
+      items: nextProps.items,
     });
   }
 

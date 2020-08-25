@@ -9,7 +9,7 @@ let strings = new LocalizedStrings({
       Login: "Login",
       Profile: "Profile",
       Logout: "Logout",
-      LanguageSwitch: "Change language"
+      LanguageSwitch: "Change language",
     },
 
     loginForm: {
@@ -25,7 +25,8 @@ let strings = new LocalizedStrings({
       notMember: "Not a member?",
       signUpNow: "Sign Up Now",
       loginWith: "Login with: ",
-      continueWith: "Continue with"
+      continueWith: "Continue with",
+      wrongCredentials: "Wrong login data",
     },
 
     registrationForm: {
@@ -41,7 +42,9 @@ let strings = new LocalizedStrings({
       continue: "Continue",
       continueWithDescription:
         "Please add personal details about yourself to register and find friends!",
-      continueWith: "Continue with"
+      continueWith: "Continue with",
+      years: "Years",
+      emailExists: "Email exists!",
     },
 
     registrationForm2: {
@@ -50,13 +53,13 @@ let strings = new LocalizedStrings({
       description:
         "Photo size must not exceed 10MB and width X height must not be more than 6000px X 6000px",
       upload: "Upload",
-      skip: "Skip"
+      skip: "Skip",
     },
 
     countries: {
       rs: "Serbia",
       gb: "Great Britain",
-      de: "Germany"
+      de: "Germany",
     },
 
     quickSearch: {
@@ -67,7 +70,7 @@ let strings = new LocalizedStrings({
       and: "and",
       search: "Search",
       signUp: "Sign Up",
-      signUpWith: "Sign up with:"
+      signUpWith: "Sign up with:",
     },
 
     searchResults: {
@@ -77,7 +80,7 @@ let strings = new LocalizedStrings({
       membersOnline: "Members online:",
       orderBy: "Order by:",
       quickSearch: "Quick Search Filter",
-      pages: " pages"
+      pages: " pages",
     },
 
     user: {
@@ -117,7 +120,7 @@ let strings = new LocalizedStrings({
       children: "Children",
       smokingHabits: "Smoking habits",
       drinkingHabits: "Drinking habits",
-      zodiac: "Zodiac"
+      zodiac: "Zodiac",
     },
 
     userInterests: {
@@ -138,26 +141,26 @@ let strings = new LocalizedStrings({
       shopping: "Shopping",
       internet: "Internet",
       animals: "Animals",
-      sport: "Sport"
+      sport: "Sport",
     },
 
     gender: {
       female: "Female",
-      male: "Male"
+      male: "Male",
     },
 
     relationship: {
       friendship: "Friendship",
       marriage: "Marriage",
       romance: "Romance",
-      relationship: "Relationship"
+      relationship: "Relationship",
     },
 
     forgotPassword: {
       text: "Reset password",
       resetPassword: "Reset password",
       requested: "Reset password already requested",
-      sentText: "Reset password requested. Please check your email."
+      sentText: "Reset password requested. Please check your email.",
     },
 
     resetPassword: {
@@ -166,14 +169,14 @@ let strings = new LocalizedStrings({
       passwordDoNotMatch: "Passwords do not match",
       text: "Enter new password",
       doneText: "Your password has changed, please go to ",
-      login: "login"
+      login: "login",
     },
 
     blogs: {
       blogPage: "Blog Page",
       readMore: "Read more..",
       relatedPosts: "Related Posts",
-      loadMore: "Load more"
+      loadMore: "Load more",
     },
 
     footer: {
@@ -181,14 +184,14 @@ let strings = new LocalizedStrings({
       copyright: "Copyright Lilly021. All rights reserved.",
       privacyPolicy: "Privacy Policy",
       termsAndConditions: "Terms & Conditions",
-      helpCenter: "Help Center"
+      helpCenter: "Help Center",
     },
 
     home: {
       viewMore: "View more",
       newPeople: "New People",
       beuty: "Beauty of Serbia villages",
-      findYourMatch: "Find your match"
+      findYourMatch: "Find your match",
     },
 
     privacyPolicy: {
@@ -196,7 +199,7 @@ let strings = new LocalizedStrings({
       content:
         "<p>This website does not share personal information with third parties nor do we store any information about your visit to this blog other than to analyze and optimize your content and reading experience through the use of cookies.</p>" +
         "<p>You can turn off the use of cookies at anytime by changing your specific browser settings. We are not responsible for republished content from this blog on other blogs or websites without our permission.</p>" +
-        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>"
+        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>",
     },
 
     termsOfUse: {
@@ -224,7 +227,7 @@ let strings = new LocalizedStrings({
         "<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>" +
         "<h3>Changes</h3>" +
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
-        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
+        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>",
     },
     validation: {
       RequiredErrorMessage: "required",
@@ -236,7 +239,7 @@ let strings = new LocalizedStrings({
       UserExistsErrorMessage: "User with this email address already exists",
       OldPasswordDidNotMatch: "Old password did not match",
       PasswordsNotEqual: "Passwords do not match",
-      notNumber: "Not number"
+      notNumber: "Not number",
     },
 
     months: {
@@ -251,7 +254,7 @@ let strings = new LocalizedStrings({
       september: "September",
       october: "October",
       november: "November",
-      december: "December"
+      december: "December",
     },
 
     select: {
@@ -259,14 +262,14 @@ let strings = new LocalizedStrings({
       day: "Day",
       month: "Month",
       year: "Year",
-      search: "Search..."
+      search: "Search...",
     },
 
     euPassport: {
       yes: "Yes",
       no: "No",
-      nevermind: "Nevermind"
-    }
+      nevermind: "Nevermind",
+    },
   },
 
   de: {
@@ -277,13 +280,13 @@ let strings = new LocalizedStrings({
       Login: "Anmelden",
       Profile: "Profil",
       Logout: "Abmelden",
-      LanguageSwitch: "Sprache ändern"
+      LanguageSwitch: "Sprache ändern",
     },
 
     countries: {
       rs: "Serbien",
       gb: "Großbritannien",
-      de: "Deutschland"
+      de: "Deutschland",
     },
 
     loginForm: {
@@ -299,7 +302,8 @@ let strings = new LocalizedStrings({
       notMember: "Kein Mitglied?",
       signUpNow: "Jetzt registrieren",
       loginWith: "Einloggen mit",
-      continueWith: "Fortsetzen mit"
+      continueWith: "Fortsetzen mit",
+      wrongCredentials: "Falsche Zugangsdaten",
     },
 
     registrationForm: {
@@ -319,7 +323,9 @@ let strings = new LocalizedStrings({
       firstName: "Vorname",
       lastName: "Name",
       password: "Passwort",
-      repeatPassword: "Passwort wiederholen"
+      repeatPassword: "Passwort wiederholen",
+      years: "Jahre",
+      emailExists: "Email existiert!",
     },
 
     registrationForm2: {
@@ -328,7 +334,7 @@ let strings = new LocalizedStrings({
       description:
         "Die Fotogröße darf 10 MB nicht überschreiten und die Breite x Höhe darf 6000px x 6000px nicht überschreiten",
       upload: "Hochladen",
-      skip: "Überspringen"
+      skip: "Überspringen",
     },
 
     quickSearch: {
@@ -339,7 +345,7 @@ let strings = new LocalizedStrings({
       and: "und",
       search: "Suchen",
       signUp: "Registrieren",
-      signUpWith: "Registrieren mit:"
+      signUpWith: "Registrieren mit:",
     },
 
     searchResults: {
@@ -350,21 +356,21 @@ let strings = new LocalizedStrings({
       membersOnline: "Mitglieder online:",
       orderBy: "Sortieren nach:",
       quickSearch: "Schnellsuchfilter",
-      pages: " Seiten"
+      pages: " Seiten",
     },
 
     relationship: {
       friendship: "Freundschaft",
       marriage: "Ehe",
       romance: "Romanze",
-      relationship: "Beziehung"
+      relationship: "Beziehung",
     },
 
     forgotPassword: {
       text: "Passwort zurücksetzen",
       resetPassword: "Passwort zurücksetzen",
       requested: "Reset already requested",
-      sentText: "Passwort zurücksetzen angefordert. Bitte prüfe deine E-Mails."
+      sentText: "Passwort zurücksetzen angefordert. Bitte prüfe deine E-Mails.",
     },
 
     resetPassword: {
@@ -373,14 +379,14 @@ let strings = new LocalizedStrings({
       passwordDoNotMatch: "Passwörter stimmen nicht überein",
       text: "Neues Passwort eingeben",
       doneText: "Dein Passwort hat sich geändert, gehe zu ",
-      login: "Anmelden"
+      login: "Anmelden",
     },
 
     blogs: {
       blogPage: "Blog-Seite",
       readMore: "Weiterlesen..",
       relatedPosts: "Zusammenhängende Posts",
-      loadMore: "Mehr laden"
+      loadMore: "Mehr laden",
     },
 
     footer: {
@@ -388,7 +394,7 @@ let strings = new LocalizedStrings({
       copyright: "Urheberrechte Lilly021. Alle Rechte vorbehalten.",
       privacyPolicy: "Datenschutz-Bestimmungen",
       termsAndConditions: "Geschäftsbedingungen",
-      helpCenter: "Hilfezentrum"
+      helpCenter: "Hilfezentrum",
     },
 
     user: {
@@ -428,7 +434,7 @@ let strings = new LocalizedStrings({
       children: "Kinder",
       smokingHabits: "Rauchgewohnheiten",
       drinkingHabits: "Trinkgewohnheiten",
-      zodiac: "Tierkreis"
+      zodiac: "Tierkreis",
     },
 
     userInterests: {
@@ -449,13 +455,14 @@ let strings = new LocalizedStrings({
       shopping: "Einkaufen",
       internet: "Internet",
       animals: "Tiere",
-      sport: "Sport"
+      sport: "Sport",
     },
 
     home: {
+      viewMore: "Mehr sehen",
       newPeople: "Neue Leute",
       beuty: "Schönheit der serbischen Dörfer",
-      findYourMatch: "Finde dein Match"
+      findYourMatch: "Finde dein Match",
     },
 
     privacyPolicy: {
@@ -463,7 +470,7 @@ let strings = new LocalizedStrings({
       content:
         "<p>This website does not share personal information with third parties nor do we store any information about your visit to this blog other than to analyze and optimize your content and reading experience through the use of cookies.</p>" +
         "<p>You can turn off the use of cookies at anytime by changing your specific browser settings. We are not responsible for republished content from this blog on other blogs or websites without our permission.</p>" +
-        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>"
+        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>",
     },
 
     termsOfUse: {
@@ -491,7 +498,7 @@ let strings = new LocalizedStrings({
         "<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>" +
         "<h3>Changes</h3>" +
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
-        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
+        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>",
     },
 
     validation: {
@@ -505,12 +512,12 @@ let strings = new LocalizedStrings({
         "Benutzer mit dieser E-Mail-Adresse ist bereits vorhanden",
       OldPasswordDidNotMatch: "Das alte Passwort stimmt nicht überein",
       PasswordsNotEqual: "Passwörter stimmen nicht überein",
-      notNumber: "Nicht nummer"
+      notNumber: "Nicht nummer",
     },
 
     gender: {
       female: "Weiblich",
-      male: "Männlich"
+      male: "Männlich",
     },
 
     months: {
@@ -525,7 +532,7 @@ let strings = new LocalizedStrings({
       september: "September",
       october: "Oktober",
       november: "November",
-      december: "Dezember"
+      december: "Dezember",
     },
 
     select: {
@@ -533,8 +540,8 @@ let strings = new LocalizedStrings({
       day: "Tag",
       month: "Monat",
       year: "Jahr",
-      search: "Suchen..."
-    }
+      search: "Suchen...",
+    },
   },
 
   rs: {
@@ -545,13 +552,13 @@ let strings = new LocalizedStrings({
       Login: "Prijavite se",
       Profile: "Profil",
       Logout: "Odjavite se",
-      LanguageSwitch: "Promenite jezik"
+      LanguageSwitch: "Promenite jezik",
     },
 
     countries: {
       rs: "Srbija",
       gb: "Velika Britanija",
-      de: "Nemačka"
+      de: "Nemačka",
     },
 
     loginForm: {
@@ -567,7 +574,8 @@ let strings = new LocalizedStrings({
       notMember: "Niste korisnik?",
       signUpNow: "Registrujte se sada",
       loginWith: "Prijavite se sa:",
-      continueWith: "Nastavite koristeći"
+      continueWith: "Nastavite koristeći",
+      wrongCredentials: "Pogrešni podaci za prijavu",
     },
 
     registrationForm: {
@@ -583,7 +591,9 @@ let strings = new LocalizedStrings({
       continue: "Nastavite",
       continueWithDescription:
         "Dodajte lične podatke o sebi kako biste se registrovali i pronašli prijatelje!",
-      continueWith: "Nastavite koristeći"
+      continueWith: "Nastavite koristeći",
+      years: "Godine",
+      emailExists: "Email već postoji!",
     },
 
     registrationForm2: {
@@ -592,7 +602,7 @@ let strings = new LocalizedStrings({
       description:
         "Veličina slike ne sme biti veća od 10MB i širina X visina ne sme biti veća od 6000px X 6000px",
       upload: "Otpremi",
-      skip: "Preskoči"
+      skip: "Preskoči",
     },
 
     quickSearch: {
@@ -600,10 +610,10 @@ let strings = new LocalizedStrings({
       gender: "Ja sam:",
       intrestedInGender: "Tražim:",
       intrestedInAge: "Starosti između:",
-      and: " i ",
+      and: "i",
       search: "Traži",
       signUp: "Registrujte se",
-      signUpWith: "Registrujte se sa:"
+      signUpWith: "Registrujte se sa:",
     },
 
     searchResults: {
@@ -613,14 +623,14 @@ let strings = new LocalizedStrings({
       membersOnline: "Korisnici na mreži:",
       orderBy: "Sortiraj:",
       quickSearch: "Filter za brzu pretragu",
-      pages: " strane"
+      pages: " strane",
     },
 
     relationship: {
       friendship: "Prijateljstvo",
       marriage: "Brak",
       romance: "Romansa",
-      relationship: "Veza"
+      relationship: "Veza",
     },
 
     user: {
@@ -660,7 +670,7 @@ let strings = new LocalizedStrings({
       children: "Deca",
       smokingHabits: "Pušač?",
       drinkingHabits: "Konzumirate alkohol?",
-      zodiac: "Horoskop"
+      zodiac: "Horoskop",
     },
 
     userInterests: {
@@ -681,14 +691,14 @@ let strings = new LocalizedStrings({
       shopping: "Šoping",
       internet: "Internet",
       animals: "Životinje",
-      sport: "Sport"
+      sport: "Sport",
     },
 
     forgotPassword: {
       text: "Resetujte lozinku",
       resetPassword: "Resetujte lozinku",
       requested: "Resetovanje već zahtevano",
-      sentText: "Resetovanje lozinke zahtevano. Molimo proverite vaš e-mail."
+      sentText: "Resetovanje lozinke zahtevano. Molimo proverite vaš e-mail.",
     },
 
     resetPassword: {
@@ -697,20 +707,21 @@ let strings = new LocalizedStrings({
       passwordDoNotMatch: "Lozinke se ne podudaraju",
       text: "Upišite lozinku",
       doneText: "Vaša lozinka je promenjena, idite na ",
-      login: "prijava"
+      login: "prijava",
     },
 
     blogs: {
       blogPage: "Blog stranica",
       readMore: "Pročitajte više..",
       relatedPosts: "Povezane objave",
-      loadMore: "Učitajte više"
+      loadMore: "Učitajte više",
     },
 
     home: {
+      viewMore: "Vidite više",
       newPeople: "Novi korisnici",
       beuty: "Lepote srpskih sela",
-      findYourMatch: "Nađite svoj par"
+      findYourMatch: "Nađite svoj par",
     },
 
     privacyPolicy: {
@@ -718,7 +729,7 @@ let strings = new LocalizedStrings({
       content:
         "<p>This website does not share personal information with third parties nor do we store any information about your visit to this blog other than to analyze and optimize your content and reading experience through the use of cookies.</p>" +
         "<p>You can turn off the use of cookies at anytime by changing your specific browser settings. We are not responsible for republished content from this blog on other blogs or websites without our permission.</p>" +
-        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>"
+        "<p>This privacy policy is subject to change without notice and was last updated on 27. January 2019.</p>",
     },
 
     termsOfUse: {
@@ -746,7 +757,7 @@ let strings = new LocalizedStrings({
         "<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>" +
         "<h3>Changes</h3>" +
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
-        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
+        "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>",
     },
 
     validation: {
@@ -759,7 +770,7 @@ let strings = new LocalizedStrings({
       UserExistsErrorMessage: "Korisnik sa upisanim e-mailom već postoji.",
       OldPasswordDidNotMatch: "Stara lozinka se ne podudara",
       PasswordsNotEqual: "Lozinke se ne podudaraju",
-      notNumber: "Unesite broj"
+      notNumber: "Unesite broj",
     },
 
     footer: {
@@ -767,12 +778,12 @@ let strings = new LocalizedStrings({
       copyright: "Autorska prava Lilly021. Sva prava zadržana.",
       privacyPolicy: "Politika privatnosti",
       helpCenter: "Centar za pomoć",
-      termsAndConditions: "Uslovi korišćenja"
+      termsAndConditions: "Uslovi korišćenja",
     },
 
     gender: {
       female: "Žena",
-      male: "Muškarac"
+      male: "Muškarac",
     },
 
     months: {
@@ -787,7 +798,7 @@ let strings = new LocalizedStrings({
       september: "Septembar",
       october: "Octobar",
       november: "Novembar",
-      december: "Decembar"
+      december: "Decembar",
     },
 
     select: {
@@ -795,9 +806,9 @@ let strings = new LocalizedStrings({
       day: "Dan",
       month: "Mesec",
       year: "Godina",
-      search: "Pretraga..."
-    }
-  }
+      search: "Pretraga...",
+    },
+  },
 });
 
 export default strings;

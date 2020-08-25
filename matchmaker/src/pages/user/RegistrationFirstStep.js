@@ -1,7 +1,6 @@
 import React from "react";
 import Page from "../../common/Page";
 import {
-  login,
   setTokenToLocalStorage,
   setUserToLocalStorage,
 } from "../../base/OAuth";
@@ -13,6 +12,7 @@ import { bindActionCreators } from "redux";
 import RegistrationFirstStepForm from "../../components/forms/user/RegistrationFirstStepForm";
 import { register } from "../../services/UserService";
 import strings from "../../localization";
+import { OK } from "http-status-codes";
 
 class RegistrationFirstStep extends Page {
   registerValidationList = {
@@ -37,29 +37,21 @@ class RegistrationFirstStep extends Page {
     this.validationList = this.registerValidationList;
   }
 
-  /*checkPassword() {
-    return this.state.data.password === this.state.data.repeatPassword;
-  }*/
-
   submit() {
     if (!this.validate()) {
       return;
     }
 
-    /*if (!this.checkPassword()) {
-      this.setError("password", strings.registrationForm.passwordNotMatch);
-      return;
-    }*/
-
-    //this.props.showLoader();
+    this.props.showLoader();
 
     register(this.state.data).then((response) => {
-      /*if (!response || !response.ok) {
+      if (response.status !== OK) {
         this.setError("email", strings.registrationForm.emailExists);
         this.props.hideLoader();
         return;
-      }*/
+      }
 
+      this.props.hideLoader();
       setTokenToLocalStorage(
         response.data.token.access_token,
         response.data.token.refresh_token
@@ -67,6 +59,21 @@ class RegistrationFirstStep extends Page {
       setUserToLocalStorage(response.data.user);
 
       this.props.history.push("/registration2");
+    });
+  }
+
+  rangeChange(event, name) {
+    let data = this.state.data;
+
+    if (event[0] > event[1] || event[1] < event[0]) {
+      return;
+    }
+
+    data[name + "From"] = event[0];
+    data[name + "To"] = event[1];
+
+    this.setState({
+      data: data,
     });
   }
 
@@ -81,6 +88,7 @@ class RegistrationFirstStep extends Page {
             errors={this.state.errors}
             onSubmit={this.submit}
             onChange={this.changeData}
+            rangeChange={(event) => this.rangeChange(event, "years")}
             refs={this.state.refs}
           />
 
@@ -90,20 +98,20 @@ class RegistrationFirstStep extends Page {
             </div>
 
             <div className="row">
-              <a href="#" className="fb social-btn">
-                <i className="fab fa-facebook-f i"></i>{" "}
+              <a className="fb social-btn">
+                <i className="fab fa-facebook-f i"></i>
                 {strings.registrationForm.continueWith} Facebook
               </a>
             </div>
 
             <div className="row">
-              <a href="#" className="twitter social-btn">
+              <a className="twitter social-btn">
                 <i className="fab fa-twitter i"></i>{" "}
                 {strings.registrationForm.continueWith} Twitter
               </a>
             </div>
             <div className="row">
-              <a href="#" className="google social-btn">
+              <a className="google social-btn">
                 <i className="fab fa-google-plus-g i"></i>
                 {strings.registrationForm.continueWith} Google
               </a>
@@ -125,7 +133,7 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapStateToProps({ siteDataReducers, authReducers }) {
+function mapStateToProps({ siteDataReducers }) {
   return siteDataReducers;
 }
 

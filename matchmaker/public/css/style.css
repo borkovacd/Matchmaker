@@ -298,6 +298,7 @@ select {
 
 #header {
   position: fixed !important;
+  z-index: 99999;
   top: 0 !important;
   display: flex;
   justify-content: space-between;
@@ -626,7 +627,6 @@ select {
     width: 100%;
     line-height: 30px; }
   .select i {
-    position: absolute;
     right: 0;
     color: #d93943;
     font-size: 22px; }
@@ -636,13 +636,13 @@ select {
     width: 100%; }
   .select .options {
     position: absolute;
+    left: 0;
     display: none;
     background: #d93943;
     text-align: center;
     color: #fff;
     width: 100%;
     top: 30px;
-    left: 0;
     max-height: 200px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -698,19 +698,8 @@ select {
   margin: 15px 0;
   align-items: center; }
   .slider-container .rc-slider {
-    margin: 0 10px;
-    /*.rc-slider-handle {
-      width: 30px;
-      height: 30px;
-      margin-top: -15px;
-      border: none;
-      background: $btnBlue;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }*/ }
+    margin: 0 10px; }
     .slider-container .rc-slider .handle-wrapper span {
-      position: absolute;
       left: 0; }
 
 .blog-preview-container {
@@ -1125,7 +1114,8 @@ select {
 .login-registration-page {
   margin-top: 200px;
   text-align: center;
-  color: #737373; }
+  color: #737373;
+  margin-bottom: 5%; }
 
 .lrp-title {
   text-transform: uppercase;
@@ -1193,12 +1183,11 @@ select {
     margin-bottom: 10%; }
 
 .social-btn {
-  position: relative;
   font-weight: 600;
   min-height: 40px;
   min-width: 260px;
   padding-top: 3%;
-  padding-left: 15%;
+  cursor: pointer;
   padding-right: 5%;
   border: none;
   border-radius: 4px;
@@ -1210,8 +1199,7 @@ select {
   text-decoration: none;
   text-align: center; }
   .social-btn .i {
-    position: absolute;
-    left: 10%;
+    padding-right: 10%;
     font-size: medium; }
 
 .social-btn:hover {
@@ -1231,7 +1219,7 @@ select {
 
 @media screen and (max-width: 1660px) {
   .lrp-grid-container {
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 45% 45%; } }
 
 @media screen and (max-width: 1220px) {
   .lrp-grid-container.second-step {
@@ -1307,6 +1295,10 @@ select {
     top: 0;
     cursor: pointer;
     z-index: 999999999999; }
+
+@media screen and (max-width: 768px) {
+  .login-registration-page {
+    margin-top: 280px; } }
 
 .blogs-page {
   margin: 104px auto;

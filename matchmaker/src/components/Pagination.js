@@ -8,7 +8,7 @@ class Pagination extends Component {
     this.state = {
       page: props.page ? props.page : 1,
       perPage: props.perPage ? props.perPage : CONFIG.perPage,
-      total: props.total ? props.total : 0
+      total: props.total ? props.total : 0,
     };
 
     this.state.pageNumber = this.getPageNumber(
@@ -25,7 +25,7 @@ class Pagination extends Component {
     this.setState({
       total: props.total,
       page: props.page,
-      pageNumber: this.getPageNumber(props.total, this.state.perPage)
+      pageNumber: this.getPageNumber(props.total, this.state.perPage),
     });
   }
 
@@ -73,7 +73,7 @@ class Pagination extends Component {
           }
         >
           <a onClick={() => this.props.setPage(1)}>
-            <i class="fas fa-angle-double-left"></i>
+            <i className="fas fa-angle-double-left"></i>
           </a>
         </div>
         <div className="pages">{this.renderPages()}</div>
@@ -85,7 +85,7 @@ class Pagination extends Component {
           }
         >
           <a onClick={() => this.props.setPage(this.state.pageNumber)}>
-            <i class="fas fa-angle-double-right"></i>
+            <i className="fas fa-angle-double-right"></i>
           </a>
         </div>
       </div>

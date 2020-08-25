@@ -21,7 +21,7 @@ class BlogDetails extends Page {
 
     this.props.showLoader();
 
-    getBlogDetails(this.state.searchData.blog).then(response => {
+    getBlogDetails(this.state.searchData.blog).then((response) => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -29,7 +29,7 @@ class BlogDetails extends Page {
       }
 
       this.setState({
-        blogDetails: response.data
+        blogDetails: response.data,
       });
 
       this.loadRelatedBlogs(this.state.blogDetails.id);
@@ -39,7 +39,7 @@ class BlogDetails extends Page {
   loadRelatedBlogs() {
     this.props.showLoader();
 
-    getRelatedBlogs().then(response => {
+    getRelatedBlogs().then((response) => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -48,7 +48,7 @@ class BlogDetails extends Page {
 
       this.setState({
         relatedBlogs: response.data,
-        visible: 3 //number of related posts
+        visible: 3, //number of related posts
       });
     });
   }
@@ -93,7 +93,7 @@ class BlogDetails extends Page {
                 background:
                   "url(images/blogs_photos/" +
                   this.state.blogDetails.id +
-                  "/header_photo.png)"
+                  "/header_photo.png)",
               }}
             ></div>
             <div className="content">
@@ -133,7 +133,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );

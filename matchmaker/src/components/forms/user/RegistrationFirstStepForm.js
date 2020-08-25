@@ -2,7 +2,6 @@ import React from "react";
 import strings from "../../../localization";
 import ErrorViewer from "../../ErrorViewer";
 import getErrorClass from "../../../functions/Validation";
-import Select from "../../controls/Select";
 import { getGenderList } from "../../../constants/Gender";
 import { getRelationshipTypesList } from "../../../constants/RelationshipType";
 import CheckGroup from "../../controls/CheckGroup";
@@ -10,7 +9,13 @@ import DateSelect from "../../controls/DateSelect";
 import "rc-slider/assets/index.css";
 import Range from "rc-slider";
 
-const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
+const RegistrationFirstStepForm = ({
+  onChange,
+  errors,
+  data,
+  onSubmit,
+  rangeChange,
+}) => (
   <form id="register-form" className="lrp-form-container">
     <div className="lrp-form-title">{strings.registrationForm.title}</div>
     <div className="form-row mb-5">
@@ -77,12 +82,11 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
       <div className="column column-half">
         <div className="label">
           <label htmlFor="birthday">{strings.registrationForm.birthday}</label>
-          <ErrorViewer data={data} errors={errors} type={"birthday"} />
         </div>
       </div>
       <div className="column column-half">
         <DateSelect
-          name={"birthday"}
+          name="birthday"
           onChange={onChange}
           date={data.birthday}
           displayKey={"name"}
@@ -94,16 +98,14 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
       <div className="column column-half">
         <div className="label">
           <label htmlFor="gender">{strings.registrationForm.gender}</label>
-          <ErrorViewer data={data} errors={errors} type={"gender"} />
         </div>
       </div>
-      <div id="gender-checkbox" className="column column-half">
+      <div id="gender" className="column column-half">
         <CheckGroup
           name="gender"
           items={getGenderList()}
           onChange={onChange}
           onlyOne={true}
-          selectedItem={{ value: data.gender }}
           displayKey={"name"}
           valueKey={"value"}
         />
@@ -115,17 +117,15 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
           <label htmlFor="intrestedInGender">
             {strings.registrationForm.intrestedInGender}
           </label>
-          <ErrorViewer data={data} errors={errors} type={"intrestedInGender"} />
         </div>
       </div>
 
-      <div id="iigender-checkbox" className="column column-half">
+      <div id="interestedInGender" className="column column-half">
         <CheckGroup
-          name="intrestedInGender"
+          name="interestedInGender"
           items={getGenderList()}
           onChange={onChange}
           onlyOne={true}
-          selectedItem={{ value: data.intrestedInGender }}
           displayKey={"name"}
           valueKey={"value"}
         />
@@ -137,11 +137,10 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
           <label htmlFor="intrestedInAge">
             {strings.registrationForm.intrestedInAge}
           </label>
-          <ErrorViewer data={data} errors={errors} type={"intrestedInAge"} />
         </div>
       </div>
       <div className="column column-half mb-5">
-        <label className="center">{strings.filter.years}</label>
+        <label className="center">{strings.registrationForm.years}</label>
         <div className="slider-container">
           <span>18</span>
           <Range
@@ -149,7 +148,7 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
             max={100}
             step={1}
             value={[18, 100]}
-            onChange={onChange}
+            onChange={rangeChange}
           />
           <span>100</span>
         </div>
@@ -161,7 +160,6 @@ const RegistrationFirstStepForm = ({ onChange, errors, data, onSubmit }) => (
           <label htmlFor="interestedFor">
             {strings.registrationForm.intrestedFor}
           </label>
-          <ErrorViewer data={data} errors={errors} type={"interestedFor"} />
         </div>
       </div>
       <div className="column column-half fo-columns">

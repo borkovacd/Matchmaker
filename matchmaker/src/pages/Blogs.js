@@ -25,7 +25,7 @@ class Blogs extends Page {
   loadBlogs() {
     this.props.showLoader();
 
-    getBlogs().then(response => {
+    getBlogs().then((response) => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -33,13 +33,13 @@ class Blogs extends Page {
       }
 
       this.setState({
-        blogs: response.data
+        blogs: response.data,
       });
     });
   }
 
   loadMore() {
-    this.setState(prev => {
+    this.setState((prev) => {
       return { visible: prev.visible + 3 };
     });
   }
@@ -87,7 +87,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );
