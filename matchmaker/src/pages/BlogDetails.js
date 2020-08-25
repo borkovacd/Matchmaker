@@ -4,16 +4,16 @@ import { bindActionCreators } from "redux";
 import * as Actions from "../actions/Actions";
 import { withRouter } from "react-router-dom";
 import connect from "react-redux/es/connect/connect";
-import { getBlogDetails, getRelatedPosts } from "../services/BlogService";
+import { getBlogDetails, getRelatedBlogs } from "../services/BlogService";
 import strings from "../localization";
 import BlogPreview from "../components/BlogPreview";
+import { OK } from "http-status-codes";
 
 class BlogDetails extends Page {
   params = [{ name: "blog", defaultValue: -1 }];
 
   componentDidMount() {
     this.loadBlog();
-    this.loadRelatedPosts();
   }
 
   loadBlog() {
@@ -24,46 +24,49 @@ class BlogDetails extends Page {
     getBlogDetails(this.state.searchData.blog).then(response => {
       this.props.hideLoader();
 
-      /*if (!response || !response.ok) {
+      if (response.status !== OK) {
         return;
-      }*/
+      }
 
       this.setState({
         blogDetails: response.data
       });
+
+      this.loadRelatedBlogs(this.state.blogDetails.id);
     });
   }
 
-  loadRelatedPosts() {
+  loadRelatedBlogs() {
     this.props.showLoader();
 
-    getRelatedPosts().then(response => {
+    getRelatedBlogs().then(response => {
       this.props.hideLoader();
 
-      /*if (!response || !response.ok) {
-        console.log("Nema odgovora ili je status razlicit od OK");
+      if (response.status !== OK) {
         return;
-      }*/
+      }
 
       this.setState({
-        relatedPosts: response.data,
-        visible: 3
+        relatedBlogs: response.data,
+        visible: 3 //number of related posts
       });
     });
   }
 
-  renderRelatedPosts() {
+  renderRelatedBlogs() {
     let result = [];
 
-    if (!this.state.relatedPosts) {
+    if (!this.state.relatedBlogs) {
       return result;
     }
 
     {
-      this.state.relatedPosts
+      this.state.relatedBlogs
         .slice(0, this.state.visible)
         .map((item, index) => {
-          result.push(<BlogPreview onlyTitle={true} blog={item} />);
+          result.push(
+            <BlogPreview onlyTitle={true} blog={item} key={item.id} />
+          );
         });
     }
 
@@ -118,7 +121,7 @@ class BlogDetails extends Page {
 
           <div className="related-posts-container">
             <div className="title-container">{strings.blogs.relatedPosts}</div>
-            <div className="post-container">{this.renderRelatedPosts()}</div>
+            <div className="post-container">{this.renderRelatedBlogs()}</div>
           </div>
         </div>
       </div>

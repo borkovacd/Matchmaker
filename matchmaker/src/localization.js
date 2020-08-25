@@ -41,12 +41,7 @@ let strings = new LocalizedStrings({
       continue: "Continue",
       continueWithDescription:
         "Please add personal details about yourself to register and find friends!",
-      continueWith: "Continue with",
-
-      firstName: "First name",
-      lastName: "Last name",
-      password: "Password",
-      repeatPassword: "Repeat password"
+      continueWith: "Continue with"
     },
 
     registrationForm2: {
@@ -177,7 +172,8 @@ let strings = new LocalizedStrings({
     blogs: {
       blogPage: "Blog Page",
       readMore: "Read more..",
-      relatedPosts: "Related Posts"
+      relatedPosts: "Related Posts",
+      loadMore: "Load more"
     },
 
     footer: {
@@ -192,30 +188,7 @@ let strings = new LocalizedStrings({
       viewMore: "View more",
       newPeople: "New People",
       beuty: "Beauty of Serbia villages",
-      findYourMatch: "Find your match",
-      search: "Search...",
-      text1:
-        "<ul>" +
-        "<li>You are playing handball</li>" +
-        "<li>No one sees you</li>" +
-        "<li>You are on the right place</li>" +
-        "<li>Enter the world of professional handball</li>" +
-        "<li>Handball Hunter is the place for your promotion</li>" +
-        "<li>Register for free</li>" +
-        "</ul>",
-      text2:
-        "<br>Handball Hunter is the web platform specialized for promotion of handball players. We want to help all handball players to find their professional engagement and to make their dreams come true. Registration on our web site is completely free. With the simple registration, you will get an...</p>",
-      playing: "Playing",
-      handball: "Handball?",
-      weAre: "We are",
-      hunters: "Hunters!",
-      register: "Register",
-
-      new: "Recently",
-      ones: "Registered.",
-      instagram: "Instagram",
-      feed: "Feed.",
-      follow: "Follow"
+      findYourMatch: "Find your match"
     },
 
     privacyPolicy: {
@@ -253,90 +226,6 @@ let strings = new LocalizedStrings({
         "<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>" +
         "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
     },
-
-    filter: {
-      gender: "Gender",
-      position: "Position",
-      years: "Years",
-      height: "Height (cm)",
-      weight: "Weight (kg)",
-      euPassport: "EU Passport",
-      nationality: "Nationality",
-      search: "Search"
-    },
-
-    login: {
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      wrongCredentials: "Wrong login data"
-    },
-
-    about: {
-      weAre: "About",
-      hunters: "Us",
-      text:
-        "<p>Handball Hunter is the web platform specialized for promotion of handball players. We want to help all handball players to find their professional engagement and to make their dreams come true. </p>" +
-        "<p>Registration on our web site is completely free. With the simple registration, you will get an opportunity to be transparent and noticed by all clubs and managers in the world. We are giving you the opportunity to come out from handball anonymity and to become a professional player. </p>" +
-        "<p>Handball Hunter is an idea, that came from professional handball players and managers that have started their careers from small areas and environments, and that know how hard is it to be noticed and found as a talent.</p>" +
-        "<p>We are there to help you. Handball Hunter is what we were waiting for a long time, managers, coaches and handball players, all at the same place.</p>" +
-        "<p>Handball is the game, which is played not only in the handball court, but out of the court as well. Win with us. </p>"
-    },
-
-    premium: {
-      title: "Go",
-      titleOrange: "Premium.",
-      subtitle: "More visible to other people.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      payNow: "Pay now",
-
-      option1: {
-        title: "Home page",
-        price: "10$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      },
-
-      option2: {
-        title: "Search results",
-        price: "15$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      },
-
-      option3: {
-        title: "Most visible player",
-        price: "25$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      }
-    },
-
-    userInfo: {
-      editYourProfile: "Edit your profile",
-      premiumAccount: "Premium Account",
-      position: "Position",
-      currentClub: "Current Club",
-      weight: "Weight",
-      height: "Height",
-      placeOfBirth: "Place of birth",
-      dateOfBirth: "Date of birth",
-      info: "Info",
-      links: "Links",
-      deactivate: "Deactivate",
-      activate: "Activate",
-      yes: "Yes",
-      no: "No",
-      confirmAction: "Confirm Action"
-    },
-
-    socialShare: {
-      facebook: "facebook",
-      whatsapp: "whatsapp",
-      viber: "viber",
-      copy: "copy"
-    },
-
     validation: {
       RequiredErrorMessage: "required",
       MinLengthErrorMessage: "Minimal length is ",
@@ -348,21 +237,6 @@ let strings = new LocalizedStrings({
       OldPasswordDidNotMatch: "Old password did not match",
       PasswordsNotEqual: "Passwords do not match",
       notNumber: "Not number"
-    },
-
-    registrationStep: {
-      step: "Step"
-    },
-
-    position: {
-      all: "All",
-      goalkeeper: "Goalkeeper",
-      rightWingman: "Right Wing",
-      leftWingman: "Left Wing",
-      pivot: "Pivot",
-      leftBackcourt: "Left Back",
-      rightBackcourt: "Right Back",
-      centerBackcourt: "Center Back"
     },
 
     months: {
@@ -392,29 +266,9 @@ let strings = new LocalizedStrings({
       yes: "Yes",
       no: "No",
       nevermind: "Nevermind"
-    },
-
-    profile: {
-      languages: "Languages",
-      clubs: "Clubs",
-      nationalTeams: "National team",
-      clubAwards: "Club awards",
-      clubHonors: "Club honors",
-      nationalTeamAwards: "National team awards",
-      nationalTeamHonors: "National team honors",
-      youtube: "YouTube",
-      otherLinks: "Other links"
-    },
-
-    addMore: "+ Add",
-    edit: "Edit",
-    back: "Back",
-    next: "Next",
-    checkYourProfile: "Check your profile",
-    goToHomePage: "Go to home page",
-
-    dateFormatString: "DD-MM-YYYY"
+    }
   },
+
   de: {
     menu: {
       Home: "Heirate sich, Serbe!",
@@ -525,7 +379,8 @@ let strings = new LocalizedStrings({
     blogs: {
       blogPage: "Blog-Seite",
       readMore: "Weiterlesen..",
-      relatedPosts: "Zusammenhängende Posts"
+      relatedPosts: "Zusammenhängende Posts",
+      loadMore: "Mehr laden"
     },
 
     footer: {
@@ -600,30 +455,7 @@ let strings = new LocalizedStrings({
     home: {
       newPeople: "Neue Leute",
       beuty: "Schönheit der serbischen Dörfer",
-      findYourMatch: "Finde dein Match",
-      search: "Suchen...",
-      text1:
-        "<ul>" +
-        "<li>Du spielst Handball</li>" +
-        "<li>Keiner sieht dich</li>" +
-        "<li>Du bist hier genau am richtigen Ort</li>" +
-        "<li>Steige in die Welt des Profi-Handballs ein</li>" +
-        "<li>Handball Hunter ist der perfekte Ort, um dich zu präsentieren und entdeckt zu werden</li>" +
-        "<li>Melde dich gratis an</li>" +
-        "</ul>",
-      text2:
-        "<br>Handball Hunter ist eine Internetplattform zur Repräsentation von Handballspielern/Handballspielerinnen. Wir wollen allen Handballspielern / Handballspielerinnen helfen, ein professionelles Engagement zu finden und deren Träume wahr werden zu lassen.Die Anmeldung auf unserer Homepage ist komplett kostenlos. Mit der einfachen...</p>",
-      playing: "Spielst",
-      handball: "du Handball?",
-      weAre: "Wir sind",
-      hunters: "Hunters!",
-      register: "Anmelden",
-      viewMore: "Siehe mehr",
-      new: "Kürzlich",
-      ones: "Angemeldet.",
-      instagram: "Instagram",
-      feed: "Feed.",
-      follow: "Folgen"
+      findYourMatch: "Finde dein Match"
     },
 
     privacyPolicy: {
@@ -662,88 +494,6 @@ let strings = new LocalizedStrings({
         "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
     },
 
-    filter: {
-      gender: "Geschlecht",
-      position: "Position",
-      years: "Alter",
-      height: "Grösse (cm)",
-      weight: "Gewicht (kg)",
-      euPassport: "EU Pass",
-      nationality: "Nationalität",
-      search: "Suchen"
-    },
-
-    login: {
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      wrongCredentials: "Falsche Zugangsdaten"
-    },
-
-    about: {
-      weAre: "Über",
-      hunters: "Uns.",
-      text:
-        "<p>Handball Hunter ist eine Internetplattform zur Repräsentation von Handballspielern / Handballspielerinnen. Wir wollen allen Handballspielern / Handballspielerinnen helfen, ein professionelles Engagement zu finden und deren Träume wahr werden zu lassen. </p>" +
-        "<p>Die Anmeldung auf unserer Homepage ist komplett kostenlos. Mit der einfachen Anmeldung wirst du die Chance kriegen, von allen Vereinen und Spielerberatern / Spielerberaterinnen der Welt entdeckt zu werden. Wir ermöglichen dir, aus der Handball - Anonymität rauszukommen und ein Profi zu werden. </p>" +
-        "<p>Handball Hunter ist eine Idee, geschaffen von Profihandballern und Spielerberatern, die ihre Karrieren in kleinen Gebieten starteten und somit wissen, wie hart es ist, entdeckt zu werden.</p>" +
-        "<p>Wir sind hier, um dir zu helfen. Auf Handball Hunter haben wir lange gewartet – Spielerberater, Trainer und Handballspieler / Handballspielerinnen - alle am gleichen Ort. </p>" +
-        "<p>Handball ist das Spiel, das nicht nur auf dem Feld gespielt wird, sondern auch neben dem Feld. Gewinne mit uns. </p>"
-    },
-
-    premium: {
-      title: "Go",
-      titleOrange: "Premium.",
-      subtitle: "More visible to other people.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      payNow: "Pay now",
-      option1: {
-        title: "Home page",
-        price: "10$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      },
-
-      option2: {
-        title: "Search results",
-        price: "15$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      },
-
-      option3: {
-        title: "Most visible player",
-        price: "25$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      }
-    },
-
-    userInfo: {
-      editYourProfile: "Profil bearbeiten",
-      premiumAccount: "Premium Account",
-      position: "Position",
-      currentClub: "Actueller Verein",
-      weight: "Gewicht",
-      height: "Grösse",
-      placeOfBirth: "Geburtsort",
-      dateOfBirth: "Geburtsdatum",
-      info: "Info",
-      links: "Link",
-      deactivate: "Deaktivieren",
-      activate: "Aktivieren",
-      yes: "Ja",
-      no: "Nein",
-      confirmAction: "Bestätige die Handlung"
-    },
-
-    socialShare: {
-      facebook: "facebook",
-      whatsapp: "whatsapp",
-      viber: "viber",
-      copy: "copy"
-    },
-
     validation: {
       RequiredErrorMessage: "Erforderlich",
       MinLengthErrorMessage: "Minimale Länge ist ",
@@ -758,24 +508,9 @@ let strings = new LocalizedStrings({
       notNumber: "Nicht nummer"
     },
 
-    registrationStep: {
-      step: "Schritt"
-    },
-
     gender: {
       female: "Weiblich",
       male: "Männlich"
-    },
-
-    position: {
-      all: "Alle",
-      goalkeeper: "Torhüter",
-      rightWingman: "Rechtsaussen",
-      leftWingman: "Linksaussen",
-      pivot: "Kreisläufer",
-      leftBackcourt: "Rückraum Links",
-      rightBackcourt: "Rückraum Rechts",
-      centerBackcourt: "Rückraum Mitte"
     },
 
     months: {
@@ -799,35 +534,7 @@ let strings = new LocalizedStrings({
       month: "Monat",
       year: "Jahr",
       search: "Suchen..."
-    },
-
-    euPassport: {
-      yes: "Ja",
-      no: "Nein",
-      nevermind: "Egal"
-    },
-
-    profile: {
-      languages: "Sprachen",
-      clubs: "Vereine",
-      nationalTeams: "Nationalmannschaft",
-      clubAwards: "Persönliche Auszeichnungen und Erfolge (mit Vereinen)",
-      clubHonors: "Gruppen Auszeichnungen und Erfolge (mit Vereinen)",
-      nationalTeamAwards:
-        "Persönliche Auszeichnungen und Erfolge (mit Nationalmannschaft)",
-      nationalTeamHonors:
-        "Gruppen Auszeichnungen und Erfolge (mit Nationalmannschaft)",
-      youtube: "YouTube",
-      otherLinks: "Andere Links"
-    },
-
-    addMore: "+ Hinzufügen",
-    edit: "Bearbeiten",
-    back: "Zurück",
-    next: "Next",
-    checkYourProfile: "Überprüfe dein Profil",
-    goToHomePage: "Gehe zur Startseite",
-    dateFormatString: "DD-MM-YYYY"
+    }
   },
 
   rs: {
@@ -876,12 +583,7 @@ let strings = new LocalizedStrings({
       continue: "Nastavite",
       continueWithDescription:
         "Dodajte lične podatke o sebi kako biste se registrovali i pronašli prijatelje!",
-      continueWith: "Nastavite koristeći",
-
-      firstName: "Ime",
-      lastName: "Prezime",
-      password: "Lozinka",
-      repeatPassword: "Ponovite lozinku"
+      continueWith: "Nastavite koristeći"
     },
 
     registrationForm2: {
@@ -898,7 +600,7 @@ let strings = new LocalizedStrings({
       gender: "Ja sam:",
       intrestedInGender: "Tražim:",
       intrestedInAge: "Starosti između:",
-      and: "i",
+      and: " i ",
       search: "Traži",
       signUp: "Registrujte se",
       signUpWith: "Registrujte se sa:"
@@ -1001,36 +703,14 @@ let strings = new LocalizedStrings({
     blogs: {
       blogPage: "Blog stranica",
       readMore: "Pročitajte više..",
-      relatedPosts: "Povezane objave"
+      relatedPosts: "Povezane objave",
+      loadMore: "Učitajte više"
     },
 
     home: {
       newPeople: "Novi korisnici",
       beuty: "Lepote srpskih sela",
-      findYourMatch: "Nađite svoj par",
-      search: "Pretraga...",
-      text1:
-        "<ul>" +
-        "<li>Igrate rukomet</li>" +
-        "<li>Niko vas ne primećuje</li>" +
-        "<li>Na pravom ste mestu</li>" +
-        "<li>Otvorite svet profesionalnog rukometa</li>" +
-        "<li>Handball Hunter je mesto vaše promocije</li>" +
-        "<li>Registrujte se besplatno</li>" +
-        "</ul>",
-      text2:
-        "<br>Handball Hunter je veb platforma specijalizovana za promociju rukometaša. Želimo svima da pomognemo da pronađu profesionalni angažman i da ispune svoje snove. Registracija na našem sajtu je potpuno besplatna. Uz jednostavnu registraciju...</p>",
-      playing: "Igrate",
-      handball: "Rukomet?",
-      weAre: "Mi smo",
-      hunters: "Hunters!",
-      register: "Registrujte se",
-      viewMore: "Vidi još",
-      new: "Poslednje",
-      ones: "Registovani.",
-      instagram: "Instagram",
-      feed: "Profil.",
-      follow: "Pratite"
+      findYourMatch: "Nađite svoj par"
     },
 
     privacyPolicy: {
@@ -1069,87 +749,6 @@ let strings = new LocalizedStrings({
         "<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>"
     },
 
-    filter: {
-      gender: "Pol",
-      position: "Pozicija",
-      years: "Godine",
-      height: "Visina (cm)",
-      weight: "Težina (kg)",
-      euPassport: "EU Pasoš",
-      nationality: "Nacionalnost",
-      search: "Pretraga"
-    },
-
-    login: {
-      wrongCredentials: "Pogrešni podaci za prijavu"
-    },
-
-    about: {
-      weAre: "O",
-      hunters: "Nama.",
-      text:
-        "<p>Handball Hunter je platorma specijalizovana za promociju rukometaša. Želimo svima da pomognemo da pronađu svoje profesionalno angažovanje i da ostvare svoje snove. </p>" +
-        "<p>Registracija na našem sajtu je potpuno besplatna. Uz jednostavnu registraciju, dobićete mogućnost da budete transparentni i primećeni od strane svih klubova i menadžera na svetu. Dajemo vam mogućnost da izađete iz rukometne anonimnosti i da postanete profesionalni igrač. </p>" +
-        "<p>Handball Hunter je ideja, koja je potekla od profesionalnih rukometaša i menadžera koji su započeli svoje karijere u malim sredinama i okruženjima, koji znaju koliko je teško biti primećen i prepoznat kao talenat.</p>" +
-        "<p>Tu smo da vam pomognemo. Handball Hunter je nešto što smo svi dugo čekali - igrači. treneri. menadžeri, i to svi na istom mestu.</p>" +
-        "<p>Rukomet je igra koja se ne igra samo na terenu, već i izvan njega. Pobedite sa nama. </p>"
-    },
-
-    premium: {
-      title: "Go",
-      titleOrange: "Premium.",
-      subtitle: "More visible to other people.",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      payNow: "Pay now",
-
-      option1: {
-        title: "Home page",
-        price: "10$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      },
-
-      option2: {
-        title: "Search results",
-        price: "15$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      },
-
-      option3: {
-        title: "Most visible player",
-        price: "25$/mo",
-        description:
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestia."
-      }
-    },
-
-    userInfo: {
-      editYourProfile: "Uredite profil",
-      premiumAccount: "Premium Profil",
-      position: "Pozicija",
-      currentClub: "Trenutni klub",
-      weight: "Težina",
-      height: "Visina",
-      placeOfBirth: "Mesto rođenja",
-      dateOfBirth: "Datum rođenja",
-      info: "Informacije",
-      links: "Linkovi",
-      deactivate: "Deaktivirajte profil",
-      activate: "Aktivirajte porofil",
-      yes: "Da",
-      no: "Ne",
-      confirmAction: "Da li ste sigurni?"
-    },
-
-    socialShare: {
-      facebook: "facebook",
-      whatsapp: "whatsapp",
-      viber: "viber",
-      copy: "copy"
-    },
-
     validation: {
       RequiredErrorMessage: "obavezno",
       MinLengthErrorMessage: "Minimalna dužina je ",
@@ -1171,24 +770,9 @@ let strings = new LocalizedStrings({
       termsAndConditions: "Uslovi korišćenja"
     },
 
-    registrationStep: {
-      step: "Korak"
-    },
-
     gender: {
       female: "Žena",
       male: "Muškarac"
-    },
-
-    position: {
-      all: "Sve",
-      goalkeeper: "Golman",
-      rightWingman: "Desno krilo",
-      leftWingman: "Levo krilo",
-      pivot: "Pivot",
-      leftBackcourt: "Levi bek",
-      rightBackcourt: "Desni bek",
-      centerBackcourt: "Srednji bek"
     },
 
     months: {
@@ -1212,34 +796,7 @@ let strings = new LocalizedStrings({
       month: "Mesec",
       year: "Godina",
       search: "Pretraga..."
-    },
-
-    euPassport: {
-      yes: "Da",
-      no: "Ne",
-      nevermind: "Nije bitno"
-    },
-
-    profile: {
-      languages: "Jezici",
-      clubs: "Klubovi",
-      nationalTeams: "Reprezentacija",
-      clubAwards: "Lične nagrade i dostignuća (sa klubom)",
-      clubHonors: "Nagrade i dostignuća tima (sa klubom)",
-      nationalTeamAwards: "Lične nagrade i dostignuća (sa reprezentacijom)",
-      nationalTeamHonors: "Nagrade i dostignuća tima (sa reprezentacijom)",
-      youtube: "YouTube",
-      otherLinks: "Ostali linkovi"
-    },
-
-    addMore: "+ Dodajte",
-    edit: "Izmenite",
-    back: "Nazad",
-    next: "Dalje",
-    checkYourProfile: "Proverite profil",
-    goToHomePage: "Idite na početnu stranicu",
-
-    dateFormatString: "DD-MM-YYYY"
+    }
   }
 });
 

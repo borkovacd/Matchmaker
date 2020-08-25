@@ -7,10 +7,13 @@ import connect from "react-redux/es/connect/connect";
 import { getBlogs } from "../services/BlogService";
 import strings from "../localization";
 import BlogPreview from "../components/BlogPreview";
+import { OK } from "http-status-codes";
 
 class Blogs extends Page {
   constructor(props) {
     super(props);
+
+    this.state = { visible: 6 };
 
     this.loadMore = this.loadMore.bind(this);
   }
@@ -25,15 +28,12 @@ class Blogs extends Page {
     getBlogs().then(response => {
       this.props.hideLoader();
 
-      /*if (!response || !response.ok) {
-        console.log("Nema odgovora ili je status razlicit od OK"); 
+      if (response.status !== OK) {
         return;
-      }*/
+      }
 
-      console.log(response.data); //
       this.setState({
-        blogs: response.data,
-        visible: 3
+        blogs: response.data
       });
     });
   }
@@ -46,23 +46,16 @@ class Blogs extends Page {
 
   renderBlogs() {
     let result = [];
-
-    if (!this.state.blogs) {
-      return result;
-    }
-
     {
       this.state.blogs.slice(0, this.state.visible).map((item, index) => {
-        result.push(<BlogPreview blog={item} />);
+        result.push(<BlogPreview blog={item} key={item.id} />);
       });
     }
-
     return result;
   }
 
   render() {
     if (!this.state.blogs) {
-      console.log("Nema blogova..."); //
       return "";
     }
 
@@ -79,7 +72,7 @@ class Blogs extends Page {
               </div>
               <div>
                 <button onClick={this.loadMore} className="load-more-text">
-                  Load more
+                  {strings.blogs.loadMore}
                 </button>
               </div>
             </React.Fragment>
@@ -100,8 +93,4 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapStateToProps({ siteDataReducers }) {
-  return siteDataReducers;
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Blogs));
+export default withRouter(connect(null, mapDispatchToProps)(Blogs));

@@ -8,7 +8,7 @@ class BlogPreview extends Component {
 
     this.state = {
       blog: props.blog ? props.blog : undefined,
-      onlyTitle: props.onlyTitle ? props.onlyTitle : false
+      onlyTitle: props.onlyTitle ? props.onlyTitle : false //for easier rendering only
     };
   }
 
@@ -44,13 +44,13 @@ class BlogPreview extends Component {
                 </Link>
               </div>
               <div className="content-buttons-container">
-                <a href="#" className="button-round-container">
+                <a className="button-round-container">
                   <i className="fab fa-twitter i"></i>
                 </a>
-                <a href="#" className="button-round-container">
+                <a className="button-round-container">
                   <i className="fab fa-facebook-f i"></i>
                 </a>
-                <a href="#" className="button-round-container">
+                <a className="button-round-container">
                   <i className="fa fa-share-alt i"></i>
                 </a>
               </div>
@@ -90,11 +90,8 @@ class BlogPreview extends Component {
 
   render() {
     if (!this.state.blog) {
-      console.log("Nije prosledjen blog kao props!"); //
       return "";
     }
-
-    console.log("BLOG:" + this.state.blog); //
 
     return (
       <div id={this.state.blog.id} className="blog-preview-container">
