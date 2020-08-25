@@ -8,6 +8,10 @@ import Slide from "../components/slider/slide";
 import LeftArrow from "../components/slider/left-arrow";
 import RightArrow from "../components/slider/right-arrow";
 import QuickSearch from "../components/forms/QuickSearchForm";
+import strings from "../localization";
+import { getNewPeople } from "../services/UserService";
+import { calculateAge } from "../util/DateUtil";
+import VillagePreview from "../components/VillagePreview";
 
 class Home extends Component {
   constructor(props) {
@@ -16,13 +20,14 @@ class Home extends Component {
     this.state = {
       activeIndex: 0,
       villages: [],
+      newPeople: []
     };
   }
 
   componentDidMount() {
     this.props.showLoader();
 
-    getVillages().then((response) => {
+    getVillages().then(response => {
       this.props.hideLoader();
 
       /* if (!response || !response.ok) {
@@ -30,7 +35,15 @@ class Home extends Component {
       } */
 
       this.setState({
-        villages: response.data.villages,
+        villages: response.data.villages
+      });
+    });
+
+    getNewPeople(4).then(response => {
+      this.props.hideLoader();
+
+      this.setState({
+        newPeople: response.data
       });
     });
   }
@@ -46,7 +59,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index,
+      activeIndex: index
     });
   }
 
@@ -61,8 +74,60 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index,
+      activeIndex: index
     });
+  }
+
+  renderNewPeople() {
+    let result = [];
+
+    if (!this.state.newPeople) {
+      return result;
+    }
+
+    {
+      for (let user of this.state.newPeople) {
+        result.push(
+          <div className="item-with-text">
+            <div
+              className="item-photo-container"
+              style={{
+                background: "url(images/circle.png)"
+              }}
+            >
+              <img
+                src={"images/users_photos/" + user.id + "/circle_image.png"}
+              ></img>
+            </div>
+            <div className="item-text">
+              {user.name}, {calculateAge(user.birthday)}
+            </div>
+          </div>
+        );
+      }
+    }
+
+    return result;
+  }
+
+  renderVillages() {
+    let result = [];
+    let numberOfVillages = 0;
+
+    if (!this.state.villages) {
+      return result;
+    }
+
+    {
+      for (let village of this.state.villages) {
+        if (numberOfVillages < 3) {
+          result.push(<VillagePreview village={village} />);
+          numberOfVillages++;
+        }
+      }
+    }
+
+    return result;
   }
 
   render() {
@@ -71,7 +136,7 @@ class Home extends Component {
         <div
           className="slider-items-container"
           style={{
-            background: "url(../../images/slider-index.png)",
+            background: "url(../../images/slider-index.png)"
           }}
         >
           <LeftArrow goToPrevSlide={() => this.goToPrevSlide()} />
@@ -89,6 +154,24 @@ class Home extends Component {
           </div>
           <RightArrow goToNextSlide={() => this.goToNextSlide()} />
         </div>
+        <div className="new-people-container">
+          <div className="new-people-title">
+            <div className="flag">
+              <img src="images/flags/rs.png"></img>
+            </div>
+            <div className="title">{strings.home.newPeople}</div>
+          </div>
+          <div className="items-container">{this.renderNewPeople()}</div>
+        </div>
+        <div className="serbia-villages-container">
+          <div className="serbia-villages-title">
+            <div className="flag">
+              <img src="images/flags/rs.png"></img>
+            </div>
+            <div className="title">{strings.home.beuty}</div>
+          </div>
+          <div className="items-container">{this.renderVillages()}</div>
+        </div>
       </div>
     );
   }
@@ -99,7 +182,7 @@ function mapDispatchToProps(dispatch) {
     {
       showLoader: Actions.showLoader,
       hideLoader: Actions.hideLoader,
-      setFilterData: Actions.setData,
+      setFilterData: Actions.setData
     },
     dispatch
   );
@@ -109,7 +192,7 @@ function mapStateToProps({ menuReducers, authReducers, filterReducers }) {
   return {
     menu: menuReducers,
     user: authReducers.user,
-    filter: filterReducers,
+    filter: filterReducers
   };
 }
 

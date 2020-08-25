@@ -1077,6 +1077,43 @@ select {
       .user-preview-container .content .last-row a:hover {
         color: #d93943; }
 
+.village-preview-container {
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 475px; }
+  .village-preview-container .header {
+    height: 355px;
+    width: 475px;
+    background-size: cover !important;
+    background-position-x: center !important;
+    background-position-y: center !important;
+    background-repeat: no-repeat !important;
+    outline: none; }
+  .village-preview-container .content {
+    padding: 5% 5%;
+    align-items: left;
+    width: 90%; }
+    .village-preview-container .content .content-title-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .village-preview-container .content .content-title-buttons .content-title {
+        position: relative;
+        text-align: left;
+        font-size: large;
+        font-weight: 600;
+        color: #737373;
+        cursor: pointer;
+        margin-bottom: 5%;
+        text-decoration: none; }
+      .village-preview-container .content .content-title-buttons .content-buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+    .village-preview-container .content .content-text {
+      color: #737373;
+      font-weight: 500; }
+
 .login-registration-page {
   margin-top: 200px;
   text-align: center;
@@ -1836,3 +1873,119 @@ select {
     @media screen and (max-width: 768px) {
       .search-results-page .about-user-content-container .my-interests-container {
         grid-template-columns: 45% 45%; } }
+
+.new-people-container {
+  width: 100%; }
+  .new-people-container .new-people-title {
+    padding-left: 5%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center; }
+    .new-people-container .new-people-title .flag {
+      padding-right: 1%; }
+      .new-people-container .new-people-title .flag img {
+        width: 50px;
+        height: 30px; }
+    .new-people-container .new-people-title .title {
+      padding: 0;
+      margin: 0;
+      color: #737373;
+      font-weight: bold;
+      font-family: "Futura Md BT";
+      font-style: normal;
+      line-height: 50px;
+      width: 100%; }
+  .new-people-container .items-container {
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .new-people-container .items-container .item-with-text {
+      text-align: center; }
+      .new-people-container .items-container .item-with-text .item-photo-container {
+        margin: 0;
+        padding: 0;
+        height: 383px;
+        width: 436px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .new-people-container .items-container .item-with-text .item-photo-container img {
+          margin: 0;
+          padding: 0;
+          height: 340px;
+          width: 340px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      .new-people-container .items-container .item-with-text .item-text {
+        color: #737373;
+        font-weight: bold;
+        font-family: "Futura Md BT";
+        font-style: normal;
+        font-size: x-large; }
+  @media screen and (max-width: 1660px) {
+    .new-people-container .items-container {
+      display: grid;
+      grid-template-columns: 45% 45%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto; } }
+  @media screen and (max-width: 992px) {
+    .new-people-container .items-container {
+      display: grid;
+      grid-template-columns: 90%;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto; } }
+
+.serbia-villages-container {
+  width: 100%; }
+  .serbia-villages-container .serbia-villages-title {
+    padding-left: 5%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center; }
+    .serbia-villages-container .serbia-villages-title .flag {
+      padding-right: 1%; }
+      .serbia-villages-container .serbia-villages-title .flag img {
+        width: 50px;
+        height: 30px; }
+    .serbia-villages-container .serbia-villages-title .title {
+      padding: 0;
+      margin: 0;
+      color: #737373;
+      font-weight: bold;
+      font-family: "Futura Md BT";
+      font-style: normal;
+      line-height: 50px;
+      width: 100%; }
+  .serbia-villages-container .items-container {
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline; }
+  @media screen and (max-width: 1660px) {
+    .serbia-villages-container .items-container {
+      display: grid;
+      grid-template-columns: 45% 45%;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: auto; } }
+  @media screen and (max-width: 992px) {
+    .serbia-villages-container .items-container {
+      display: grid;
+      grid-template-columns: 90%;
+      align-items: center;
+      justify-content: center;
+      margin: auto; } }

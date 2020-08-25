@@ -1,7 +1,6 @@
 import { request } from "../base/HTTP";
 import HttpMethod from "../constants/HttpMethod";
 import { OK } from "http-status-codes";
-import { normalizeUnits } from "moment";
 
 let users = [
   {
@@ -1947,10 +1946,6 @@ export async function register(user) {
   };
 }
 
-export async function editUser(user) {
-  return await request("/users/edit", user, HttpMethod.PUT);
-}
-
 export async function getUserDetails(user) {
   //return await request("/users/details/" + user);
   let requestedUser = null;
@@ -1965,24 +1960,22 @@ export async function getUserDetails(user) {
   };
 }
 
-export async function getUserRegistrationDetailsData() {
-  return await request("/registration-details/");
+export async function getNewPeople(number) {
+  //return await request("/users/new/" + number);
+  let newPeople = [];
+  for (var i = 0; i < number; i++) {
+    if (users[i] != null) {
+      newPeople.push(users[i]);
+    }
+  }
+  return {
+    response: OK,
+    data: newPeople
+  };
 }
 
 export async function uploadProfileImage(data) {
   return await request("/user/profile_image/upload", data, HttpMethod.POST);
-}
-
-export async function resetPassword(data) {
-  return await request("/users/password/reset", data, HttpMethod.POST);
-}
-
-export async function resetPasswordForm(data) {
-  return await request("/users/password/reset-form", data, HttpMethod.POST);
-}
-
-export async function changeUserState(data) {
-  return await request("/users/state", data, HttpMethod.POST);
 }
 
 export function getAllUsers() {
