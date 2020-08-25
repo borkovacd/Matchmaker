@@ -21,7 +21,7 @@ class UserDetails extends Page {
     this.state = {
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false,
+      myInterestsActive: false
     };
   }
 
@@ -29,7 +29,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false,
+      myInterestsActive: false
     });
   }
 
@@ -37,7 +37,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: true,
-      myInterestsActive: false,
+      myInterestsActive: false
     });
   }
 
@@ -45,7 +45,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: false,
-      myInterestsActive: true,
+      myInterestsActive: true
     });
   }
 
@@ -58,7 +58,7 @@ class UserDetails extends Page {
 
     this.props.showLoader();
 
-    getUserDetails(this.state.searchData.user).then((response) => {
+    getUserDetails(this.state.searchData.user).then(response => {
       this.props.hideLoader();
 
       /*if (!response || !response.ok) {
@@ -66,17 +66,17 @@ class UserDetails extends Page {
       }*/
 
       this.setState({
-        user: response.data,
+        user: response.data
       });
 
-      getVillageName(this.state.user.village).then((response) => {
+      getVillageName(this.state.user.village).then(response => {
         this.props.hideLoader();
         /* if (!response || !response.ok) {
             return;
           } */
 
         this.setState({
-          villageName: response.data.name,
+          villageName: response.data.name
         });
       });
     });
@@ -85,53 +85,53 @@ class UserDetails extends Page {
   renderStars(value) {
     if (value === 1) {
       return (
-        <>
+        <React.Fragment>
           <i className="fas fa-star"></i>
           <i className="far fa-star"></i>
           <i className="far fa-star"></i>
           <i className="far fa-star"></i>
           <i className="far fa-star"></i>
-        </>
+        </React.Fragment>
       );
     } else if (value === 2) {
       return (
-        <>
+        <React.Fragment>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="far fa-star"></i>
           <i className="far fa-star"></i>
           <i className="far fa-star"></i>
-        </>
+        </React.Fragment>
       );
     } else if (value === 3) {
       return (
-        <>
+        <React.Fragment>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="far fa-star"></i>
           <i className="far fa-star"></i>
-        </>
+        </React.Fragment>
       );
     } else if (value === 4) {
       return (
-        <>
+        <React.Fragment>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="far fa-star"></i>
-        </>
+        </React.Fragment>
       );
     } else if (value === 5) {
       return (
-        <>
+        <React.Fragment>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
-        </>
+        </React.Fragment>
       );
     }
   }
@@ -173,7 +173,7 @@ class UserDetails extends Page {
                   background:
                     "url(images/users_photos/" +
                     this.state.user.id +
-                    "/profile_photo.png)",
+                    "/profile_photo.png)"
                 }}
               ></div>
               <div className="btn-see-all">
@@ -293,7 +293,7 @@ class UserDetails extends Page {
             `}
           >
             {this.state.myDescriptionActive && (
-              <>
+              <React.Fragment>
                 <div className="first-third-column">
                   <div className="row">
                     <div>{strings.user.nationality}:</div>
@@ -339,7 +339,7 @@ class UserDetails extends Page {
                   <div className="row">
                     <div>{this.state.user.languages}</div>
                   </div>
-                  <div className="row">
+                  <div className="row wider">
                     <div>{this.state.user.height}</div>
                   </div>
                   <div className="row">
@@ -370,7 +370,7 @@ class UserDetails extends Page {
                     <div>{this.state.user.profession}</div>
                   </div>
                 </div>
-                <div></div>
+                
                 <div className="first-third-column">
                   <div className="row">
                     <div>{strings.user.income}:</div>
@@ -411,10 +411,10 @@ class UserDetails extends Page {
                     <div>{this.state.user.zodiac}</div>
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             )}
             {this.state.lookingForInPartnerActive && (
-              <>
+              <React.Fragment>
                 <div className="first-column">
                   <div className="row">
                     <div>{strings.registrationForm.intrestedInGender}:</div>
@@ -507,10 +507,10 @@ class UserDetails extends Page {
                     <div>{this.state.user.interestedInProfession}</div>
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             )}
             {this.state.myInterestsActive && (
-              <>
+              <React.Fragment>
                 <div className="first-column">
                   <div className="row">
                     <div>{strings.userInterests.arts}</div>
@@ -631,7 +631,7 @@ class UserDetails extends Page {
                     {this.renderStars(this.state.user.interests[17].value)}
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             )}
           </div>
         </div>
@@ -644,7 +644,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

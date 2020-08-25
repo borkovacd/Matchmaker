@@ -1672,6 +1672,45 @@ select {
           .search-results-page .profile-component .content .fourth-column .action-text a .make-space {
             display: flex;
             padding-left: 5%; }
+        @media screen and (max-width: 992px) {
+          .search-results-page .profile-component .content .fourth-column .action-text a {
+            font-size: medium; } }
+        @media screen and (max-width: 768px) {
+          .search-results-page .profile-component .content .fourth-column .action-text a {
+            font-size: small; } }
+      @media screen and (max-width: 992px) {
+        .search-results-page .profile-component .content .fourth-column .second-column {
+          font-size: medium; }
+        .search-results-page .profile-component .content .fourth-column .third-column {
+          font-size: medium; } }
+    @media screen and (max-width: 768px) {
+      .search-results-page .profile-component .content {
+        display: grid;
+        grid-template-columns: 100%;
+        margin: auto;
+        justify-content: center; }
+        .search-results-page .profile-component .content .first-column {
+          width: 75%;
+          margin: auto; }
+        .search-results-page .profile-component .content .second-column {
+          padding-left: 2%;
+          margin: 0;
+          margin-top: 15px; }
+          .search-results-page .profile-component .content .second-column .line-height-6 {
+            margin: 0; }
+        .search-results-page .profile-component .content .third-column {
+          margin: 0;
+          margin-top: -140px;
+          margin-left: 200px; }
+          .search-results-page .profile-component .content .third-column .line-height-6 {
+            margin: 0; }
+        .search-results-page .profile-component .content .fourth-column {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center; }
+          .search-results-page .profile-component .content .fourth-column .action-text {
+            margin-top: 2%; } }
   .search-results-page .about-user-grid-container {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -1723,10 +1762,11 @@ select {
       border: 2px solid #d93943;
       border-radius: 10px;
       padding-top: 20px;
+      margin: auto;
       width: 100%;
       min-height: 400px;
       display: grid;
-      grid-template-columns: 20% 20% 10% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20%;
       align-items: baseline;
       justify-content: center; }
       .search-results-page .about-user-content-container .my-description-container .first-third-column {
@@ -1734,6 +1774,8 @@ select {
         font-size: medium;
         text-align: left;
         line-height: 30px; }
+        .search-results-page .about-user-content-container .my-description-container .first-third-column .wider {
+          width: 30%; }
       .search-results-page .about-user-content-container .my-description-container .second-fourth-column {
         font-size: medium;
         text-align: left;
@@ -1780,3 +1822,17 @@ select {
         line-height: 30px; }
         .search-results-page .about-user-content-container .my-interests-container .second-column i {
           color: #d93943; }
+    @media screen and (max-width: 1220px) {
+      .search-results-page .about-user-content-container .my-description-container {
+        grid-template-columns: 20% 25% 20% 25%; }
+      .search-results-page .about-user-content-container .my-interests-container {
+        grid-template-columns: 20% 30% 20% 30%; } }
+    @media screen and (max-width: 992px) {
+      .search-results-page .about-user-content-container .my-description-container {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        align-items: baseline;
+        justify-content: center; } }
+    @media screen and (max-width: 768px) {
+      .search-results-page .about-user-content-container .my-interests-container {
+        grid-template-columns: 45% 45%; } }

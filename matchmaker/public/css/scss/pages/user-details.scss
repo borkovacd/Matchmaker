@@ -192,6 +192,72 @@
               padding-left: 5%;
             }
           }
+
+          @media screen and (max-width: $break-md) {
+            a {
+              font-size: medium;
+            }
+          }
+
+          @media screen and (max-width: $break-sm) {
+            a {
+              font-size: small;
+            }
+          }
+        }
+
+        @media screen and (max-width: $break-md) {
+          .second-column {
+            font-size: medium;
+          }
+          .third-column {
+            font-size: medium;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $break-sm) {
+      .content {
+        display: grid;
+        grid-template-columns: 100%;
+        margin: auto;
+        justify-content: center;
+
+        .first-column {
+          width: 75%;
+          margin: auto;
+        }
+
+        .second-column {
+          padding-left: 2%;
+          margin: 0;
+          margin-top: 15px;
+
+          .line-height-6 {
+            margin: 0;
+          }
+        }
+
+        .third-column {
+          margin: 0;
+          margin-top: -140px;
+          margin-left: 200px;
+
+          .line-height-6 {
+            margin: 0;
+          }
+        }
+
+        .fourth-column {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .action-text {
+            margin-top: 2%;
+          }
         }
       }
     }
@@ -266,10 +332,11 @@
       border: 2px solid $red;
       border-radius: 10px;
       padding-top: 20px;
+      margin: auto;
       width: 100%;
       min-height: 400px;
       display: grid;
-      grid-template-columns: 20% 20% 10% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20%;
       align-items: baseline;
       justify-content: center;
 
@@ -278,6 +345,10 @@
         font-size: medium;
         text-align: left;
         line-height: 30px;
+
+        .wider {
+          width: 30%;
+        }
       }
 
       .second-fourth-column {
@@ -340,6 +411,30 @@
         i {
           color: $red;
         }
+      }
+    }
+
+    @media screen and (max-width: $break-lg) {
+      .my-description-container {
+        grid-template-columns: 20% 25% 20% 25%;
+      }
+      .my-interests-container {
+        grid-template-columns: 20% 30% 20% 30%;
+      }
+    }
+
+    @media screen and (max-width: $break-md) {
+      .my-description-container {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        align-items: baseline;
+        justify-content: center;
+      }
+    }
+
+    @media screen and (max-width: $break-sm) {
+      .my-interests-container {
+        grid-template-columns: 45% 45%;
       }
     }
   }
