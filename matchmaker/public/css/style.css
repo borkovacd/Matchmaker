@@ -853,6 +853,11 @@ select {
     border-bottom: 1px solid #949494;
     font-weight: bolder;
     margin-bottom: 5%; }
+  @media screen and (max-width: 992px) {
+    .quick-search-form-container .container {
+      display: grid;
+      grid-template-columns: 35% 30% 33%;
+      justify-content: space-between; } }
 
 .slider-items-container {
   display: flex;
@@ -860,12 +865,11 @@ select {
   align-items: center;
   width: 100%;
   margin-top: 105px;
-  background: black;
   min-height: 850px;
-  background-size: cover !important;
-  background-position-x: center !important;
-  background-position-y: center !important;
-  background-repeat: no-repeat !important; }
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat; }
   .slider-items-container .slider-grid-container {
     display: grid;
     grid-template-columns: 45% 55%; }
@@ -894,7 +898,7 @@ select {
   @media screen and (max-width: 1660px) {
     .slider-items-container .slider-grid-container {
       display: grid;
-      grid-template-columns: 45% 55%; }
+      grid-template-columns: 45% 50%; }
       .slider-items-container .slider-grid-container .search-form-container {
         width: 75%; }
       .slider-items-container .slider-grid-container .slider-village-container {
@@ -902,7 +906,7 @@ select {
   @media screen and (max-width: 1220px) {
     .slider-items-container .slider-grid-container {
       display: grid;
-      grid-template-columns: 45% 55%; }
+      grid-template-columns: 45% 50%; }
       .slider-items-container .slider-grid-container .search-form-container {
         width: 95%; }
       .slider-items-container .slider-grid-container .slider-village-container {
@@ -912,12 +916,16 @@ select {
       display: flex;
       flex-direction: column; }
       .slider-items-container .slider-grid-container .search-form-container {
-        width: 75%; }
+        width: 75%;
+        margin-bottom: 5%;
+        margin-top: 5%; }
       .slider-items-container .slider-grid-container .slider-village-container {
         width: 75%; } }
   @media screen and (max-width: 768px) {
     .slider-items-container .slider-grid-container .search-form-container {
-      width: 95%; }
+      width: 95%;
+      margin-bottom: 5%;
+      margin-top: 5%; }
     .slider-items-container .slider-grid-container .slider-village-container {
       width: 95%; } }
 

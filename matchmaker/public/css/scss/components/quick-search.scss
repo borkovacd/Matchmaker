@@ -17,4 +17,15 @@
     font-weight: bolder;
     margin-bottom: 5%;
   }
+
+  .container {
+  }
+
+  @media screen and (max-width: $break-md) {
+    .container {
+      display: grid;
+      grid-template-columns: 35% 30% 33%;
+      justify-content: space-between;
+    }
+  }
 }
