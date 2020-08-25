@@ -32,7 +32,7 @@ class Login extends Page {
   }
 
   keyPress(event) {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       this.login();
     }
   }

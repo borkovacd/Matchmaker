@@ -36,7 +36,7 @@ class Select extends BaseControl {
     }
 
     for (let item of this.state.items) {
-      if (item[this.state.valueKey] == value) {
+      if (item[this.state.valueKey] === value) {
         return item;
       }
     }

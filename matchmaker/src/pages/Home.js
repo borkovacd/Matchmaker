@@ -31,12 +31,12 @@ class Home extends Component {
     getVillages().then((response) => {
       this.props.hideLoader();
 
-      /* if (!response || !response.ok) {
+      if (response.status !== OK) {
         return;
-      } */
+      }
 
       this.setState({
-        villages: response.data.villages,
+        villages: response.data,
       });
     });
 
@@ -90,26 +90,24 @@ class Home extends Component {
       return result;
     }
 
-    {
-      for (let user of this.state.newPeople) {
-        result.push(
-          <div key={user.id} className="item-with-text">
-            <div
-              className="item-photo-container"
-              style={{
-                background: "url(images/circle.png)",
-              }}
-            >
-              <img
-                src={"images/users_photos/" + user.id + "/circle_image.png"}
-              ></img>
-            </div>
-            <div className="item-text">
-              {user.name}, {calculateAge(user.birthday)}
-            </div>
+    for (let user of this.state.newPeople) {
+      result.push(
+        <div key={user.id} className="item-with-text">
+          <div
+            className="item-photo-container"
+            style={{
+              background: "url(images/circle.png)",
+            }}
+          >
+            <img
+              src={"images/users_photos/" + user.id + "/circle_image.png"}
+            ></img>
           </div>
-        );
-      }
+          <div className="item-text">
+            {user.name}, {calculateAge(user.birthday)}
+          </div>
+        </div>
+      );
     }
 
     return result;

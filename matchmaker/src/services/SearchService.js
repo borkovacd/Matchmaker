@@ -1,4 +1,4 @@
-import { request } from "../base/HTTP";
+//import { request } from "../base/HTTP";
 import { OK } from "http-status-codes";
 import { getAllUsers } from "./UserService";
 
@@ -8,9 +8,6 @@ export async function searchUsers(data) {
   let users = getAllUsers();
   let result = [];
   let page = data.page;
-  /* console.log("***");
-  console.log("Page -> " + data.page);
-  console.log("Per Page -> " + data.perPage); */
   let perPage = data.perPage;
   let total = users.length;
 
@@ -24,6 +21,6 @@ export async function searchUsers(data) {
   return {
     data: result,
     total: total,
-    status: OK
+    status: OK,
   };
 }

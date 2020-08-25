@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 import { calculateAge } from "../util/DateUtil";
 import { getGenderString } from "../constants/Gender";
 import { getRelationshipTypesStrings } from "../constants/RelationshipType";
-import { getVillageName, getCountryName } from "../services/VillageService";
+import { getVillage } from "../services/VillageService";
+import { getCountryName } from "../util/CountryUtil";
+import { OK } from "http-status-codes";
 
 class UserDetails extends Page {
   params = [{ name: "user", defaultValue: -1 }];
@@ -21,7 +23,7 @@ class UserDetails extends Page {
     this.state = {
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false
+      myInterestsActive: false,
     };
   }
 
@@ -29,7 +31,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false
+      myInterestsActive: false,
     });
   }
 
@@ -37,7 +39,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: true,
-      myInterestsActive: false
+      myInterestsActive: false,
     });
   }
 
@@ -45,7 +47,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: false,
-      myInterestsActive: true
+      myInterestsActive: true,
     });
   }
 
@@ -58,25 +60,25 @@ class UserDetails extends Page {
 
     this.props.showLoader();
 
-    getUserDetails(this.state.searchData.user).then(response => {
+    getUserDetails(this.state.searchData.user).then((response) => {
       this.props.hideLoader();
 
-      /*if (!response || !response.ok) {
+      if (response.status !== OK) {
         return;
-      }*/
+      }
 
       this.setState({
-        user: response.data
+        user: response.data,
       });
 
-      getVillageName(this.state.user.village).then(response => {
+      getVillage(this.state.user.village).then((response) => {
         this.props.hideLoader();
-        /* if (!response || !response.ok) {
-            return;
-          } */
+        if (response.status !== OK) {
+          return;
+        }
 
         this.setState({
-          villageName: response.data.name
+          villageName: response.data.name,
         });
       });
     });
@@ -173,7 +175,7 @@ class UserDetails extends Page {
                   background:
                     "url(images/users_photos/" +
                     this.state.user.id +
-                    "/profile_photo.png)"
+                    "/profile_photo.png)",
                 }}
               ></div>
               <div className="btn-see-all">
@@ -370,7 +372,7 @@ class UserDetails extends Page {
                     <div>{this.state.user.profession}</div>
                   </div>
                 </div>
-                
+
                 <div className="first-third-column">
                   <div className="row">
                     <div>{strings.user.income}:</div>
@@ -644,7 +646,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader
+      hideLoader: Actions.hideLoader,
     },
     dispatch
   );

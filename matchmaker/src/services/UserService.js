@@ -1,6 +1,6 @@
-import { request } from "../base/HTTP";
-import HttpMethod from "../constants/HttpMethod";
-import { OK } from "http-status-codes";
+//import { request } from "../base/HTTP";
+//import HttpMethod from "../constants/HttpMethod";
+import { OK, NOT_FOUND } from "http-status-codes";
 
 let users = [
   {
@@ -1927,6 +1927,34 @@ let users = [
   },
 ];
 
+export async function getUserDetails(user) {
+  //return await request("/users/details/" + user);
+  let requestedUser = null;
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].id === user) {
+      requestedUser = users[i];
+    }
+  }
+  return {
+    data: requestedUser,
+    status: requestedUser ? OK : NOT_FOUND,
+  };
+}
+
+export async function getNewPeople(number) {
+  //return await request("/users/new/" + number);
+  let newPeople = [];
+  for (var i = 0; i < number; i++) {
+    if (users[i] != null) {
+      newPeople.push(users[i]);
+    }
+  }
+  return {
+    status: OK,
+    data: newPeople,
+  };
+}
+
 export async function register(user) {
   //return await request("/auth/signup", user, HttpMethod.POST);
   return {
@@ -1946,38 +1974,7 @@ export async function register(user) {
   };
 }
 
-export async function getUserDetails(user) {
-  //return await request("/users/details/" + user);
-  let requestedUser = null;
-  for (var i = 0; i < users.length; i++) {
-    if (users[i].id === user) {
-      requestedUser = users[i];
-    }
-  }
-  return {
-    status: OK,
-    data: requestedUser,
-  };
-}
-
-export async function getNewPeople(number) {
-  //return await request("/users/new/" + number);
-  let newPeople = [];
-  for (var i = 0; i < number; i++) {
-    if (users[i] != null) {
-      newPeople.push(users[i]);
-    }
-  }
-  return {
-    status: OK,
-    data: newPeople,
-  };
-}
-
-export async function uploadProfileImage(data) {
-  return await request("/user/profile_image/upload", data, HttpMethod.POST);
-}
-
+//helper method for Search
 export function getAllUsers() {
   return users;
 }

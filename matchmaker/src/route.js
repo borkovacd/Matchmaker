@@ -42,12 +42,12 @@ let ROUTES = {
   },
   Registration: {
     path: "/registration",
-    component: <RegistrationFirstStep edit={false} />,
+    component: <RegistrationFirstStep />,
     auth: false,
   },
   Registration2: {
     path: "/registration2",
-    component: <RegistrationSecondStep edit={false} />,
+    component: <RegistrationSecondStep />,
     auth: false,
   },
   Blogs: {

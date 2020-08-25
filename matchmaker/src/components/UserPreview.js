@@ -3,7 +3,7 @@ import strings from "../localization";
 import { Link } from "react-router-dom";
 import { calculateAge } from "../util/DateUtil";
 import { getGenderString } from "../constants/Gender";
-import { getVillageName } from "../services/VillageService";
+import { getVillage } from "../services/VillageService";
 import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
@@ -28,7 +28,7 @@ class UserPreview extends Component {
   componentDidMount() {
     this.props.showLoader();
 
-    getVillageName(this.state.user.village).then((response) => {
+    getVillage(this.state.user.village).then((response) => {
       this.props.hideLoader();
       if (response.status !== OK) {
         return;

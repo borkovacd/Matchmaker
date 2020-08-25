@@ -4,7 +4,7 @@ const RelationshipType = {
   Friendship: 1,
   Marriage: 2,
   Romance: 3,
-  Relationship: 4
+  Relationship: 4,
 };
 
 export default RelationshipType;
@@ -13,20 +13,20 @@ export function getRelationshipTypesList() {
   return [
     {
       name: strings.relationship.friendship,
-      value: RelationshipType.Friendship
+      value: RelationshipType.Friendship,
     },
     {
       name: strings.relationship.marriage,
-      value: RelationshipType.Marriage
+      value: RelationshipType.Marriage,
     },
     {
       name: strings.relationship.romance,
-      value: RelationshipType.Romance
+      value: RelationshipType.Romance,
     },
     {
       name: strings.relationship.relationship,
-      value: RelationshipType.Relationship
-    }
+      value: RelationshipType.Relationship,
+    },
   ];
 }
 
@@ -38,19 +38,19 @@ export function getRelationshipTypesStrings(...values) {
       resultString += strings.relationship.friendship;
     }
     if (values[0][i] === 2) {
-      if (resultString.length != 0) {
+      if (resultString.length !== 0) {
         resultString += ", ";
       }
       resultString += strings.relationship.marriage;
     }
     if (values[0][i] === 3) {
-      if (resultString.length != 0) {
+      if (resultString.length !== 0) {
         resultString += ", ";
       }
       resultString += strings.relationship.romance;
     }
     if (values[0][i] === 4) {
-      if (resultString.length != 0) {
+      if (resultString.length !== 0) {
         resultString += ", ";
       }
       resultString += strings.relationship.relationship;
