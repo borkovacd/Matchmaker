@@ -1077,7 +1077,8 @@ select {
 .village-preview-container {
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  width: 475px; }
+  width: 475px;
+  margin-bottom: 10%; }
   .village-preview-container .header {
     height: 355px;
     width: 475px;
@@ -1314,6 +1315,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   opacity: 0.2;
   color: #c8c8c8;
   font-family: "Futura Md BT";
@@ -1324,7 +1326,8 @@ select {
 .blogs-page-title {
   position: absolute;
   top: 250px;
-  left: 45%;
+  text-align: center;
+  left: 42%;
   text-transform: uppercase;
   font-style: initial;
   line-height: 40px;
@@ -1345,6 +1348,13 @@ select {
   .blogs-grid-container {
     grid-template-columns: 45% 45%;
     justify-content: space-around; } }
+
+@media screen and (max-width: 992px) {
+  .blogs-page-header {
+    opacity: 0;
+    height: 150px; }
+  .blogs-page-title {
+    top: 170px; } }
 
 @media screen and (max-width: 768px) {
   .blogs-grid-container {
@@ -1377,7 +1387,7 @@ select {
 .blog-details-title {
   position: absolute;
   top: 250px;
-  left: 45%;
+  left: 42%;
   text-transform: uppercase;
   font-style: initial;
   line-height: 40px;
@@ -1397,7 +1407,8 @@ select {
     border-radius: 1%;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 10%; }
     .blog-details-grid-container .blog-details-container .header {
       min-height: 550px;
       width: 100%;
@@ -1471,6 +1482,13 @@ select {
   .blog-details-grid-container {
     display: grid;
     grid-template-columns: 55% 35%; } }
+
+@media screen and (max-width: 992px) {
+  .blog-details-header {
+    opacity: 0;
+    height: 150px; }
+  .blog-details-title {
+    top: 170px; } }
 
 @media screen and (max-width: 1220px) {
   .blog-details-grid-container {
@@ -1989,3 +2007,44 @@ select {
       align-items: center;
       justify-content: center;
       margin: auto; } }
+
+.serbia-blogs-container {
+  width: 100%; }
+  .serbia-blogs-container .serbia-blogs-title {
+    padding-left: 5%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center; }
+    .serbia-blogs-container .serbia-blogs-title .flag {
+      padding-right: 1%; }
+      .serbia-blogs-container .serbia-blogs-title .flag img {
+        width: 50px;
+        height: 30px; }
+    .serbia-blogs-container .serbia-blogs-title .title {
+      padding: 0;
+      margin: 0;
+      color: #737373;
+      font-weight: bold;
+      font-family: "Futura Md BT";
+      font-style: normal;
+      line-height: 50px;
+      width: 100%; }
+
+.blogs-button {
+  display: flex;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  font-size: x-large;
+  margin-top: 2%;
+  margin-left: 12%;
+  margin-bottom: 5%;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #00498e;
+  color: #fff; }

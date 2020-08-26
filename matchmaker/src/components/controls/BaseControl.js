@@ -10,8 +10,8 @@ class BaseControl extends Component {
       let event = {
         target: {
           name: this.props.name,
-          value: value
-        }
+          value: value,
+        },
       };
 
       this.props.onChange(event);

@@ -8,14 +8,14 @@ class BlogPreview extends Component {
 
     this.state = {
       blog: props.blog ? props.blog : undefined,
-      onlyTitle: props.onlyTitle ? props.onlyTitle : false //for easier rendering only
+      onlyTitle: props.onlyTitle ? props.onlyTitle : false, //for easier rendering only
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
       blog: nextProps.blog,
-      onlyTitle: nextProps.onlyTitle
+      onlyTitle: nextProps.onlyTitle,
     });
   }
 
@@ -29,7 +29,7 @@ class BlogPreview extends Component {
               background:
                 "url(images/blogs_photos/" +
                 this.state.blog.id +
-                "/header_photo.png)"
+                "/header_photo.png)",
             }}
           ></div>
 
@@ -76,7 +76,7 @@ class BlogPreview extends Component {
               background:
                 "url(images/blogs_photos/" +
                 this.state.blog.id +
-                "/header_photo.png)"
+                "/header_photo.png)",
             }}
           ></div>
 

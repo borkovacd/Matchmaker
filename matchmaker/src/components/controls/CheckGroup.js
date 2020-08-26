@@ -1,6 +1,5 @@
 import React from "react";
 import BaseControl from "./BaseControl";
-import { withRouter } from "react-router-dom";
 
 class CheckGroup extends BaseControl {
   constructor(props) {

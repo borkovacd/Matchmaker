@@ -155,3 +155,53 @@
     }
   }
 }
+
+.serbia-blogs-container {
+  width: 100%;
+
+  .serbia-blogs-title {
+    padding-left: 5%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    .flag {
+      padding-right: 1%;
+      img {
+        width: 50px;
+        height: 30px;
+      }
+    }
+
+    .title {
+      padding: 0;
+      margin: 0;
+      color: $grayText;
+      font-weight: bold;
+      font-family: "Futura Md BT";
+      font-style: normal;
+      line-height: 50px;
+      width: 100%;
+    }
+  }
+}
+
+.blogs-button {
+  display: flex;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  font-size: x-large;
+  margin-top: 2%;
+  margin-left: 12%;
+  margin-bottom: 5%;
+  border: 1px solid $white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: $blue;
+  color: $white;
+}

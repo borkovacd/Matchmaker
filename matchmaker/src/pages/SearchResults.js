@@ -10,6 +10,7 @@ import { searchUsers } from "../services/SearchService";
 import { Link } from "react-router-dom";
 import UserPreview from "../components/UserPreview";
 import Pagination from "../components/Pagination";
+import { OK } from "http-status-codes";
 
 class SearchResults extends Page {
   params = getSearchDataParams();
@@ -18,7 +19,6 @@ class SearchResults extends Page {
     super(props);
 
     this.state = {
-      search: "",
       result: undefined,
       resultCount: 0,
     };
@@ -35,6 +35,10 @@ class SearchResults extends Page {
 
     searchUsers(this.state.searchData).then((response) => {
       this.props.hideLoader();
+
+      if (response.status !== OK) {
+        return;
+      }
 
       this.setState({
         result: response.data,

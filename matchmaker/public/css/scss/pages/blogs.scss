@@ -3,7 +3,7 @@
   width: 90%;
   background: none;
   background-color: $white;
-  min-height: 80vh; //random
+  min-height: 80vh;
   color: $grayText;
 }
 
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   opacity: 0.2;
   color: $serbia;
   font-family: "Futura Md BT";
@@ -25,7 +26,8 @@
 .blogs-page-title {
   position: absolute;
   top: 250px;
-  left: 45%;
+  text-align: center;
+  left: 42%;
   text-transform: uppercase;
   font-style: initial;
   line-height: 40px;
@@ -42,6 +44,7 @@
   grid-template-columns: 29% 29% 29%;
   justify-content: space-around;
   align-items: center;
+
   //background-color: black;
 }
 
@@ -49,6 +52,17 @@
   .blogs-grid-container {
     grid-template-columns: 45% 45%;
     justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: $break-md) {
+  .blogs-page-header {
+    opacity: 0;
+    height: 150px;
+  }
+
+  .blogs-page-title {
+    top: 170px;
   }
 }
 

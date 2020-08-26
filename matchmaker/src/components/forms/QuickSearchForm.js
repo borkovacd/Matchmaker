@@ -18,7 +18,6 @@ class QuickSearch extends Page {
     super(props);
 
     this.state = {
-      search: "",
       result: undefined,
       resultCount: 0,
     };
@@ -149,16 +148,16 @@ class QuickSearch extends Page {
               <div className="column not-a-member ">
                 <div className="space">{strings.quickSearch.signUpWith}</div>
 
-                <a href="#">
+                <a>
                   <i className="fab fa-google-plus-g i space gray-text"></i>
                 </a>
-                <a href="#">
+                <a>
                   <i className="fab fa-twitter i space gray-text"></i>
                 </a>
-                <a href="#">
+                <a>
                   <i className="fab fa-facebook-f i space gray-text"></i>
                 </a>
-                <a href="#">
+                <a>
                   <i className="fab fa-instagram space gray-text"></i>
                 </a>
               </div>
@@ -175,16 +174,13 @@ function mapDispatchToProps(dispatch) {
     {
       showLoader: Actions.showLoader,
       hideLoader: Actions.hideLoader,
-      //setFilterData: Actions.setData,
     },
     dispatch
   );
 }
 
 function mapStateToProps() {
-  return {
-    //filter: filterReducers,
-  };
+  return {};
 }
 
 export default withRouter(

@@ -13,6 +13,7 @@ import { getNewPeople } from "../services/UserService";
 import { calculateAge } from "../util/DateUtil";
 import VillagePreview from "../components/VillagePreview";
 import { OK } from "http-status-codes";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
@@ -165,6 +166,17 @@ class Home extends Component {
             <div className="title">{strings.home.newPeople}</div>
           </div>
           <div className="items-container">{this.renderNewPeople()}</div>
+        </div>
+        <div className="serbia-blogs-container">
+          <div className="serbia-blogs-title">
+            <div className="flag">
+              <img src="images/flags/rs.png"></img>
+            </div>
+            <div className="title">{strings.home.blogs}</div>
+          </div>
+          <Link className="blogs-button" to="/blogs">
+            {strings.home.blogsButton}
+          </Link>
         </div>
         <div className="serbia-villages-container">
           <div className="serbia-villages-title">

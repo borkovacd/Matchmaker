@@ -93,4 +93,8 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default withRouter(connect(null, mapDispatchToProps)(Blogs));
+function mapStateToProps({ siteDataReducers }) {
+  return siteDataReducers;
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Blogs));

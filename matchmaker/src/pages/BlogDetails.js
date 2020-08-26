@@ -36,10 +36,10 @@ class BlogDetails extends Page {
     });
   }
 
-  loadRelatedBlogs() {
+  loadRelatedBlogs(id) {
     this.props.showLoader();
 
-    getRelatedBlogs().then((response) => {
+    getRelatedBlogs(id).then((response) => {
       this.props.hideLoader();
 
       if (response.status !== OK) {

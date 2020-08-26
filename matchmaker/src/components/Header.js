@@ -51,11 +51,4 @@ class Header extends Component {
   }
 }
 
-function mapStateToProps({ siteDataReducers }) {
-  return {
-    language: siteDataReducers.language,
-    //languages: siteDataReducers.languages,
-  };
-}
-
-export default withRouter(connect(mapStateToProps, null)(Header));
+export default Header;

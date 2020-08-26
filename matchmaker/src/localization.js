@@ -192,6 +192,8 @@ let strings = new LocalizedStrings({
       newPeople: "New People",
       beuty: "Beauty of Serbia villages",
       findYourMatch: "Find your match",
+      blogs: "Serbian Blogs",
+      blogsButton: "Go to the page",
     },
 
     privacyPolicy: {
@@ -463,6 +465,8 @@ let strings = new LocalizedStrings({
       newPeople: "Neue Leute",
       beuty: "Schönheit der serbischen Dörfer",
       findYourMatch: "Finde dein Match",
+      blogs: "Serbische Blogs",
+      blogsButton: "Gehen Sie zur Seite",
     },
 
     privacyPolicy: {
@@ -722,6 +726,8 @@ let strings = new LocalizedStrings({
       newPeople: "Novi korisnici",
       beuty: "Lepote srpskih sela",
       findYourMatch: "Nađite svoj par",
+      blogs: "Blogovi iz Srbije",
+      blogsButton: "Idite na stranicu",
     },
 
     privacyPolicy: {
