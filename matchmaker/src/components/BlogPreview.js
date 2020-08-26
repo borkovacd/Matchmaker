@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import strings from "../localization";
 import { Link } from "react-router-dom";
+import { bindActionCreators } from "redux";
+import * as Actions from "../actions/Actions";
+import { withRouter } from "react-router-dom";
+import connect from "react-redux/es/connect/connect";
 
 class BlogPreview extends Component {
   constructor(props) {
@@ -8,15 +12,19 @@ class BlogPreview extends Component {
 
     this.state = {
       blog: props.blog ? props.blog : undefined,
-      onlyTitle: props.onlyTitle ? props.onlyTitle : false, //for easier rendering only
+      onlyTitle: props.onlyTitle ? props.onlyTitle : false //for easier rendering only
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
       blog: nextProps.blog,
-      onlyTitle: nextProps.onlyTitle,
+      onlyTitle: nextProps.onlyTitle
     });
+  }
+
+  openBlogDetails() {
+    window.location.href = "/blog?blog=" + this.state.blog.id;
   }
 
   renderBlog() {
@@ -29,7 +37,7 @@ class BlogPreview extends Component {
               background:
                 "url(images/blogs_photos/" +
                 this.state.blog.id +
-                "/header_photo.png)",
+                "/header_photo.png)"
             }}
           ></div>
 
@@ -76,13 +84,16 @@ class BlogPreview extends Component {
               background:
                 "url(images/blogs_photos/" +
                 this.state.blog.id +
-                "/header_photo.png)",
+                "/header_photo.png)"
             }}
           ></div>
 
-          <Link className="title" to={"/blog?blog=" + this.state.blog.id}>
+          <button
+            className="title btn-blog-details"
+            onClick={() => this.openBlogDetails()}
+          >
             {this.state.blog.title}
-          </Link>
+          </button>
         </div>
       );
     }

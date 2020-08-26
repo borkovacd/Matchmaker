@@ -65,7 +65,12 @@ class BlogDetails extends Page {
         .slice(0, this.state.visible)
         .map((item, index) => {
           result.push(
-            <BlogPreview onlyTitle={true} blog={item} key={item.id} />
+            <BlogPreview
+              onlyTitle={true}
+              blog={item}
+              key={item.id}
+              onClick={this.handleChange}
+            />
           );
         });
     }
@@ -100,13 +105,13 @@ class BlogDetails extends Page {
               <div className="content-title">
                 {this.state.blogDetails.title}
                 <div className="content-buttons-container">
-                  <a href="#" className="button-round-container">
+                  <a className="button-round-container">
                     <i className="fab fa-twitter i"></i>
                   </a>
-                  <a href="#" className="button-round-container">
+                  <a className="button-round-container">
                     <i className="fab fa-facebook-f i"></i>
                   </a>
-                  <a href="#" className="button-round-container">
+                  <a className="button-round-container">
                     <i className="fa fa-share-alt i"></i>
                   </a>
                 </div>

@@ -782,6 +782,9 @@ select {
       text-decoration: none;
       font-style: normal;
       overflow: hidden; }
+    .blog-preview-container .related-post .btn-blog-details {
+      border: none;
+      background: none; }
 
 .load-more-dots {
   color: #737373;
