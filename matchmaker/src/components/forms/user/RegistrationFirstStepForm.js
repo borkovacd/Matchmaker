@@ -168,7 +168,6 @@ const RegistrationFirstStepForm = ({
           name="interestedFor"
           items={getRelationshipTypesList()}
           onChange={onChange}
-          selectedItem={{ value: data.interestedFor }}
           displayKey={"name"}
           valueKey={"value"}
         />

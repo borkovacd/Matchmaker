@@ -10,7 +10,7 @@ class CheckGroup extends BaseControl {
       selectedItems: props.selectedItems ? props.selectedItems : [],
       displayKey: props.displayKey,
       valueKey: props.valueKey,
-      onlyOne: props.onlyOne,
+      onlyOne: props.onlyOne
     };
   }
 
@@ -44,7 +44,7 @@ class CheckGroup extends BaseControl {
       result.push(item);
     } else {
       if (!this.state.onlyOne) {
-        result.splice(index, 1);
+        result.slice(index, 1);
       }
     }
 
@@ -57,7 +57,7 @@ class CheckGroup extends BaseControl {
     this.createEvent(eventResult);
 
     this.setState({
-      selectedItems: result,
+      selectedItems: result
     });
   }
 

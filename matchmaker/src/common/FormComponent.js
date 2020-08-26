@@ -19,12 +19,22 @@ class FormComponent extends BaseComponent {
     };
 
     this.changeData = this.changeData.bind(this);
+    this.changeGroupCheckBox = this.changeGroupCheckBox.bind(this);
     this.changeCheckBox = this.changeCheckBox.bind(this);
     this.rangeChange = this.rangeChange.bind(this);
     this.validate = this.validate.bind(this);
   }
 
   changeData(event) {
+    console.log("THIS -> " + event.target.name + " -> " + event.target.value);
+    this.setState({
+      data: update(this.state.data, {
+        [event.target.name]: { $set: event.target.value }
+      })
+    });
+  }
+
+  changeGroupCheckBox(event) {
     this.setState({
       data: update(this.state.data, {
         [event.target.name]: { $set: event.target.value }

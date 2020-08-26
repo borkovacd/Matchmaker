@@ -26,9 +26,9 @@ class Page extends FormComponent {
 
   fetchData() {}
 
-  componentDidUpdate() {
+  /*componentDidUpdate() {
     window.scrollTo(0, 0);
-  }
+  }*/
 
   getSearchParam(param) {
     let url = new URL(window.location);

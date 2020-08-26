@@ -23,7 +23,7 @@ class UserDetails extends Page {
     this.state = {
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false,
+      myInterestsActive: false
     };
   }
 
@@ -31,7 +31,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: true,
       lookingForInPartnerActive: false,
-      myInterestsActive: false,
+      myInterestsActive: false
     });
   }
 
@@ -39,7 +39,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: true,
-      myInterestsActive: false,
+      myInterestsActive: false
     });
   }
 
@@ -47,7 +47,7 @@ class UserDetails extends Page {
     this.setState({
       myDescriptionActive: false,
       lookingForInPartnerActive: false,
-      myInterestsActive: true,
+      myInterestsActive: true
     });
   }
 
@@ -60,7 +60,7 @@ class UserDetails extends Page {
 
     this.props.showLoader();
 
-    getUserDetails(this.state.searchData.user).then((response) => {
+    getUserDetails(this.state.searchData.user).then(response => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -68,17 +68,17 @@ class UserDetails extends Page {
       }
 
       this.setState({
-        user: response.data,
+        user: response.data
       });
 
-      getVillage(this.state.user.village).then((response) => {
+      getVillage(this.state.user.village).then(response => {
         this.props.hideLoader();
         if (response.status !== OK) {
           return;
         }
 
         this.setState({
-          villageName: response.data.name,
+          villageName: response.data.name
         });
       });
     });
@@ -175,7 +175,7 @@ class UserDetails extends Page {
                   background:
                     "url(images/users_photos/" +
                     this.state.user.id +
-                    "/profile_photo.png)",
+                    "/profile_photo.png)"
                 }}
               ></div>
               <div className="btn-see-all">
@@ -646,7 +646,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );
