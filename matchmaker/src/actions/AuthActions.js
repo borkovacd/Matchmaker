@@ -7,20 +7,20 @@ export const LOAD_USER = "[AUTH] LOAD";
 export function login(user) {
   return {
     type: LOGIN,
-    user,
+    user
   };
 }
 
 export function logout(user) {
   return {
     type: LOGOUT,
-    user,
+    user
   };
 }
 
 export function loadUser() {
   return {
     type: LOAD_USER,
-    user: getUserFromLocalStorage(),
+    user: getUserFromLocalStorage()
   };
 }

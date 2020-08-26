@@ -51,77 +51,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 2,
@@ -171,77 +171,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 3,
@@ -291,77 +291,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 4,
@@ -411,77 +411,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 5,
@@ -532,77 +532,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 6,
@@ -652,77 +652,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 7,
@@ -772,77 +772,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 8,
@@ -892,77 +892,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 9,
@@ -1013,77 +1013,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 10,
@@ -1133,77 +1133,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 11,
@@ -1253,77 +1253,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 12,
@@ -1373,77 +1373,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 13,
@@ -1493,77 +1493,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 14,
@@ -1613,77 +1613,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 15,
@@ -1733,77 +1733,77 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
+        value: 4
+      }
+    ]
   },
   {
     id: 16,
@@ -1853,78 +1853,78 @@ let users = [
     interests: [
       {
         id: 1,
-        value: 3,
+        value: 3
       },
       {
         id: 2,
-        value: 2,
+        value: 2
       },
       {
         id: 3,
-        value: 3,
+        value: 3
       },
       {
         id: 4,
-        value: 5,
+        value: 5
       },
       {
         id: 5,
-        value: 3,
+        value: 3
       },
       {
         id: 6,
-        value: 2,
+        value: 2
       },
       {
         id: 7,
-        value: 5,
+        value: 5
       },
       {
         id: 8,
-        value: 3,
+        value: 3
       },
       {
         id: 9,
-        value: 1,
+        value: 1
       },
       {
         id: 10,
-        value: 4,
+        value: 4
       },
       {
         id: 11,
-        value: 3,
+        value: 3
       },
       {
         id: 12,
-        value: 5,
+        value: 5
       },
       {
         id: 13,
-        value: 4,
+        value: 4
       },
       {
         id: 14,
-        value: 2,
+        value: 2
       },
       {
         id: 15,
-        value: 3,
+        value: 3
       },
       {
         id: 16,
-        value: 1,
+        value: 1
       },
       {
         id: 17,
-        value: 5,
+        value: 5
       },
       {
         id: 18,
-        value: 4,
-      },
-    ],
-  },
+        value: 4
+      }
+    ]
+  }
 ];
 
 export async function getUserDetails(user) {
@@ -1937,7 +1937,7 @@ export async function getUserDetails(user) {
   }
   return {
     data: requestedUser,
-    status: requestedUser ? OK : NOT_FOUND,
+    status: requestedUser ? OK : NOT_FOUND
   };
 }
 
@@ -1951,7 +1951,7 @@ export async function getNewPeople(number) {
   }
   return {
     status: OK,
-    data: newPeople,
+    data: newPeople
   };
 }
 
@@ -1962,15 +1962,14 @@ export async function register(user) {
     data: {
       user: {
         username: "borkovac",
-        email: "borkovac.dragan@gmail.com",
+        email: "borkovac.dragan@gmail.com"
       },
-      token: {
-        access_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zS8VfSEv7h7nNVSkNhDIE783bVJTgPP9JlOHSDaIy1I",
-        refresh_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY",
-      },
-    },
+
+      access_token:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zS8VfSEv7h7nNVSkNhDIE783bVJTgPP9JlOHSDaIy1I",
+      refresh_token:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.makKgC-n7pxiletqYhN77RKRvoS_9V7p9Y45dGjZrEY"
+    }
   };
 }
 

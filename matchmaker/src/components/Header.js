@@ -3,10 +3,15 @@ import strings from "../localization";
 import { isUserLoggedIn, logout } from "../base/OAuth";
 import { Link } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { bindActionCreators } from "redux";
+import { withRouter } from "react-router-dom";
+import connect from "react-redux/es/connect/connect";
+import * as Actions from "../actions/Actions";
 
 class Header extends Component {
   logout() {
     logout();
+    this.props.logout(this.props.user);
   }
 
   render() {
@@ -36,7 +41,7 @@ class Header extends Component {
               <div className="btn-login">
                 <Link to={"/profile"}>{strings.menu.Profile}</Link>
               </div>
-              <div className="btn-register" onClick={this.logout}>
+              <div className="btn-register" onClick={() => this.logout()}>
                 <a>{strings.menu.Logout}</a>
               </div>
             </React.Fragment>
@@ -49,4 +54,19 @@ class Header extends Component {
   }
 }
 
-export default Header;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      logout: Actions.logout
+    },
+    dispatch
+  );
+}
+
+function mapStateToProps({ authReducers }) {
+  return {
+    user: authReducers.user
+  };
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

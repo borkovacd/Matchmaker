@@ -22,14 +22,14 @@ class Home extends Component {
     this.state = {
       activeIndex: 0,
       villages: [],
-      newPeople: [],
+      newPeople: []
     };
   }
 
   componentDidMount() {
     this.props.showLoader();
 
-    getVillages().then((response) => {
+    getVillages().then(response => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -37,11 +37,11 @@ class Home extends Component {
       }
 
       this.setState({
-        villages: response.data,
+        villages: response.data
       });
     });
 
-    getNewPeople(4).then((response) => {
+    getNewPeople(4).then(response => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -49,7 +49,7 @@ class Home extends Component {
       }
 
       this.setState({
-        newPeople: response.data,
+        newPeople: response.data
       });
     });
   }
@@ -65,7 +65,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index,
+      activeIndex: index
     });
   }
 
@@ -80,7 +80,7 @@ class Home extends Component {
     }
 
     this.setState({
-      activeIndex: index,
+      activeIndex: index
     });
   }
 
@@ -97,7 +97,7 @@ class Home extends Component {
           <div
             className="item-photo-container"
             style={{
-              background: "url(images/circle.png)",
+              background: "url(images/circle.png)"
             }}
           >
             <img
@@ -140,7 +140,7 @@ class Home extends Component {
         <div
           className="slider-items-container"
           style={{
-            background: "url(../../images/slider-index.png)",
+            background: "url(../../images/slider-index.png)"
           }}
         >
           <LeftArrow goToPrevSlide={() => this.goToPrevSlide()} />
@@ -196,8 +196,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
-      //setFilterData: Actions.setData,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );
@@ -205,8 +204,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps({ authReducers }) {
   return {
-    user: authReducers.user,
-    //filterReducers
+    user: authReducers.user
   };
 }
 

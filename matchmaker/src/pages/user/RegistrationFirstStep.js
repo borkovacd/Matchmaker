@@ -2,7 +2,7 @@ import React from "react";
 import Page from "../../common/Page";
 import {
   setTokenToLocalStorage,
-  setUserToLocalStorage,
+  setUserToLocalStorage
 } from "../../base/OAuth";
 import Validators from "../../constants/ValidatorTypes";
 import { withRouter } from "react-router-dom";
@@ -18,7 +18,7 @@ class RegistrationFirstStep extends Page {
   registerValidationList = {
     username: [{ type: Validators.REQUIRED }],
     name: [{ type: Validators.REQUIRED }],
-    email: [{ type: Validators.EMAIL }],
+    email: [{ type: Validators.EMAIL }]
   };
 
   constructor(props) {
@@ -27,9 +27,7 @@ class RegistrationFirstStep extends Page {
     this.state = {
       data: {},
       errors: {},
-      redirectUrl: props.location.state
-        ? props.location.state.redirectUrl
-        : "/",
+      redirectUrl: props.location.state ? props.location.state.redirectUrl : "/"
     };
 
     this.submit = this.submit.bind(this);
@@ -44,7 +42,7 @@ class RegistrationFirstStep extends Page {
 
     this.props.showLoader();
 
-    register(this.state.data).then((response) => {
+    register(this.state.data).then(response => {
       if (response.status !== OK) {
         this.setError("email", strings.registrationForm.emailExists);
         this.props.hideLoader();
@@ -53,10 +51,11 @@ class RegistrationFirstStep extends Page {
 
       this.props.hideLoader();
       setTokenToLocalStorage(
-        response.data.token.access_token,
-        response.data.token.refresh_token
+        response.data.access_token,
+        response.data.refresh_token
       );
       setUserToLocalStorage(response.data.user);
+      this.props.login(response.data.user);
 
       this.props.history.push("/registration2");
     });
@@ -73,7 +72,7 @@ class RegistrationFirstStep extends Page {
     data[name + "To"] = event[1];
 
     this.setState({
-      data: data,
+      data: data
     });
   }
 
@@ -88,7 +87,7 @@ class RegistrationFirstStep extends Page {
             errors={this.state.errors}
             onSubmit={this.submit}
             onChange={this.changeData}
-            rangeChange={(event) => this.rangeChange(event, "years")}
+            rangeChange={event => this.rangeChange(event, "years")}
             refs={this.state.refs}
           />
 
@@ -128,13 +127,14 @@ function mapDispatchToProps(dispatch) {
     {
       showLoader: Actions.showLoader,
       hideLoader: Actions.hideLoader,
+      login: Actions.login
     },
     dispatch
   );
 }
 
-function mapStateToProps({ siteDataReducers }) {
-  return siteDataReducers;
+function mapStateToProps({ siteDataReducers, authReducers }) {
+  return siteDataReducers, authReducers;
 }
 
 export default withRouter(
