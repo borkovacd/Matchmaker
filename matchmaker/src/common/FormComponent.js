@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { validate, isFormValid } from "../functions/Validation";
 import BaseComponent from "../common/BaseComponent";
 import update from "immutability-helper";
+import Slider from "rc-slider";
+import Range from "rc-slider";
+
+const Handle = Range.Handle;
 
 class FormComponent extends BaseComponent {
   validationList = {};
@@ -11,19 +15,20 @@ class FormComponent extends BaseComponent {
 
     this.state = {
       data: {},
-      errors: {},
+      errors: {}
     };
 
     this.changeData = this.changeData.bind(this);
     this.changeCheckBox = this.changeCheckBox.bind(this);
+    this.rangeChange = this.rangeChange.bind(this);
     this.validate = this.validate.bind(this);
   }
 
   changeData(event) {
     this.setState({
       data: update(this.state.data, {
-        [event.target.name]: { $set: event.target.value },
-      }),
+        [event.target.name]: { $set: event.target.value }
+      })
     });
   }
 
@@ -33,7 +38,32 @@ class FormComponent extends BaseComponent {
     data[field] = !data[field];
 
     this.setState({
-      data,
+      data
+    });
+  }
+
+  handle = props => {
+    const { value, dragging, index, ...restProps } = props;
+
+    return (
+      <Handle value={value} {...restProps}>
+        <span>{value}</span>
+      </Handle>
+    );
+  };
+
+  rangeChange(event, name) {
+    let data = this.state.data;
+
+    if (event[0] > event[1] || event[1] < event[0]) {
+      return;
+    }
+
+    data[name + "Min"] = event[0];
+    data[name + "Max"] = event[1];
+
+    this.setState({
+      data: data
     });
   }
 
@@ -60,8 +90,8 @@ class FormComponent extends BaseComponent {
   setError(key, value) {
     this.setState({
       errors: update(this.state.errors, {
-        [key]: { $set: [{ message: value }] },
-      }),
+        [key]: { $set: [{ message: value }] }
+      })
     });
   }
 }

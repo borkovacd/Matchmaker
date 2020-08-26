@@ -7,7 +7,7 @@ import { getRelationshipTypesList } from "../../../constants/RelationshipType";
 import CheckGroup from "../../controls/CheckGroup";
 import DateSelect from "../../controls/DateSelect";
 import "rc-slider/assets/index.css";
-import Range from "rc-slider";
+import { Range } from "rc-slider";
 
 const RegistrationFirstStepForm = ({
   onChange,
@@ -15,6 +15,7 @@ const RegistrationFirstStepForm = ({
   data,
   onSubmit,
   rangeChange,
+  handle
 }) => (
   <form id="register-form" className="lrp-form-container">
     <div className="lrp-form-title">{strings.registrationForm.title}</div>
@@ -147,7 +148,7 @@ const RegistrationFirstStepForm = ({
             min={18}
             max={100}
             step={1}
-            value={[18, 100]}
+            handle={handle}
             onChange={rangeChange}
           />
           <span>100</span>

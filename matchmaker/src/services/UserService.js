@@ -1957,6 +1957,7 @@ export async function getNewPeople(number) {
 
 export async function register(user) {
   //return await request("/auth/signup", user, HttpMethod.POST);
+
   return {
     status: OK,
     data: {

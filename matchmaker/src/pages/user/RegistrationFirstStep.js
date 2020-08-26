@@ -61,21 +61,6 @@ class RegistrationFirstStep extends Page {
     });
   }
 
-  rangeChange(event, name) {
-    let data = this.state.data;
-
-    if (event[0] > event[1] || event[1] < event[0]) {
-      return;
-    }
-
-    data[name + "From"] = event[0];
-    data[name + "To"] = event[1];
-
-    this.setState({
-      data: data
-    });
-  }
-
   render() {
     return (
       <div className="login-registration-page">
@@ -87,8 +72,8 @@ class RegistrationFirstStep extends Page {
             errors={this.state.errors}
             onSubmit={this.submit}
             onChange={this.changeData}
-            rangeChange={event => this.rangeChange(event, "years")}
-            refs={this.state.refs}
+            handle={this.handle}
+            rangeChange={event => this.rangeChange(event, "interestedInAge")}
           />
 
           <div className="lrp-social-buttons">
