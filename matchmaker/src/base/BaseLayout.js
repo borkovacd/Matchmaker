@@ -31,7 +31,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ siteDataReducers }) {
   return {
     loader: siteDataReducers.loader,
-    language: siteDataReducers.language,
+    language: siteDataReducers.language
   };
 }
 

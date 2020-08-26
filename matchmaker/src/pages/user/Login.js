@@ -14,7 +14,7 @@ import { OK } from "http-status-codes";
 class Login extends Page {
   validationList = {
     username: [{ type: Validators.REQUIRED }],
-    password: [{ type: Validators.REQUIRED }],
+    password: [{ type: Validators.REQUIRED }]
   };
 
   constructor(props) {
@@ -23,9 +23,7 @@ class Login extends Page {
     this.state = {
       data: {},
       errors: {},
-      redirectUrl: props.location.state
-        ? props.location.state.redirectUrl
-        : "/",
+      redirectUrl: props.location.state ? props.location.state.redirectUrl : "/"
     };
 
     this.keyPress = this.keyPress.bind(this);
@@ -42,19 +40,17 @@ class Login extends Page {
       return;
     }
 
-    login(this.state.data.username, this.state.data.password).then(
-      (response) => {
-        if (response.status !== OK) {
-          this.setError("username", strings.loginForm.wrongCredentials);
-          return;
-        }
-        this.props.login(response.data.user);
-
-        this.props.history.push({
-          pathname: this.state.redirectUrl,
-        });
+    login(this.state.data.username, this.state.data.password).then(response => {
+      if (response.status !== OK) {
+        this.setError("username", strings.loginForm.wrongCredentials);
+        return;
       }
-    );
+      this.props.login(response.data.user);
+
+      this.props.history.push({
+        pathname: this.state.redirectUrl
+      });
+    });
   }
 
   render() {
@@ -105,7 +101,7 @@ class Login extends Page {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      login: Actions.login,
+      login: Actions.login
     },
     dispatch
   );

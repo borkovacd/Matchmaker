@@ -35,7 +35,7 @@ class LanguageSwitcher extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      changeLanguage: Actions.changeLanguage,
+      changeLanguage: Actions.changeLanguage
     },
     dispatch
   );
@@ -44,7 +44,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ siteDataReducers }) {
   return {
     language: siteDataReducers.language,
-    languages: siteDataReducers.languages,
+    languages: siteDataReducers.languages
   };
 }
 

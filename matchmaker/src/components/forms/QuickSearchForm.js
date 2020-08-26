@@ -19,7 +19,7 @@ class QuickSearch extends Page {
 
     this.state = {
       result: undefined,
-      resultCount: 0,
+      resultCount: 0
     };
 
     this.doSearch = this.doSearch.bind(this);
@@ -32,7 +32,7 @@ class QuickSearch extends Page {
     searchData[event.target.name] = event.target.value;
 
     this.setState({
-      searchData: searchData,
+      searchData: searchData
     });
   }
 
@@ -173,7 +173,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

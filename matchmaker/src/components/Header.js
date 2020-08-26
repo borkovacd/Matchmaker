@@ -63,9 +63,10 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapStateToProps({ authReducers }) {
+function mapStateToProps({ authReducers, siteDataReducers }) {
   return {
-    user: authReducers.user
+    user: authReducers.user,
+    language: siteDataReducers.language
   };
 }
 
