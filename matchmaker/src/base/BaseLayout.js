@@ -24,10 +24,6 @@ class BaseLayout extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
-}
-
 function mapStateToProps({ siteDataReducers }) {
   return {
     loader: siteDataReducers.loader,
@@ -35,6 +31,4 @@ function mapStateToProps({ siteDataReducers }) {
   };
 }
 
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(BaseLayout)
-);
+export default withRouter(connect(mapStateToProps)(BaseLayout));
