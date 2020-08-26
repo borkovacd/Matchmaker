@@ -5,7 +5,7 @@ const initialState = {
   loader: false,
   loaderCount: 0,
   languages: [],
-  language: "en",
+  language: "en"
 };
 
 const siteDataReducers = (state = initialState, action) => {
@@ -18,24 +18,24 @@ const siteDataReducers = (state = initialState, action) => {
       return {
         ...state,
         loaderCount: loaderCount,
-        loader: loaderCount > 0,
+        loader: loaderCount > 0
       };
     case Actions.FORCE_HIDE_LOADER:
       return {
         ...state,
         loaderCount: 0,
-        loader: false,
+        loader: false
       };
     case Actions.LOAD_DATA:
       return {
         ...state,
-        languages: action.languages,
+        languages: action.languages
       };
     case Actions.CHANGE_LANGUAGE:
       strings.setLanguage(action.language);
       return {
         ...state,
-        language: action.language,
+        language: action.language
       };
 
     default:

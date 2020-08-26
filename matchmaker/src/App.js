@@ -32,7 +32,7 @@ const App = () => (
 );
 
 function load() {
-  getHomeData().then((response) => {
+  getHomeData().then(response => {
     if (response.status !== OK) {
       return;
     }
