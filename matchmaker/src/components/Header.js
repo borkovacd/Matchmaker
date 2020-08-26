@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import strings from "../localization";
 import { isUserLoggedIn, logout } from "../base/OAuth";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { bindActionCreators } from "redux";
-import connect from "react-redux/es/connect/connect";
 
 class Header extends Component {
   logout() {
@@ -20,7 +18,7 @@ class Header extends Component {
               <img src={"images/logo.png"} />
             </Link>
           </div>
-          <div className="title">{strings.menu.Home}</div>
+          <div className="header-brand-title">{strings.menu.Home}</div>
         </div>
         <div className="menu">
           {!isUserLoggedIn() && (

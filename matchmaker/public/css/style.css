@@ -318,7 +318,7 @@ select {
   height: 105px;
   width: 174px; }
 
-.title {
+.header-brand-title {
   margin-top: 14px;
   margin-left: 75px;
   height: 57px;
@@ -401,10 +401,17 @@ select {
 
 @media screen and (max-width: 768px) {
   .menu {
-    flex-direction: column;
-    position: fixed;
-    top: 105px;
     width: 174px; }
+  .brand {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 174px;
+    margin-right: 10px; }
+  .header-brand-title {
+    font-size: smaller;
+    margin-top: -30px;
+    color: #fff;
+    margin-left: 50px; }
   .btn-login {
     width: 174px; }
   .btn-register {
@@ -767,7 +774,8 @@ select {
       outline: none; }
     .blog-preview-container .related-post .title {
       display: flex;
-      font-weight: 500;
+      padding: 3% 3%;
+      font-weight: bold;
       color: #00498e;
       cursor: pointer;
       font-size: large;
@@ -1900,7 +1908,7 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    align-items: center; }
+    align-items: baseline; }
     .new-people-container .new-people-title .flag {
       padding-right: 1%; }
       .new-people-container .new-people-title .flag img {
@@ -1913,7 +1921,7 @@ select {
       font-weight: bold;
       font-family: "Futura Md BT";
       font-style: normal;
-      line-height: 50px;
+      font-size: 45px;
       width: 100%; }
   .new-people-container .items-container {
     padding: 5% 5%;
@@ -1972,7 +1980,7 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    align-items: center; }
+    align-items: baseline; }
     .serbia-villages-container .serbia-villages-title .flag {
       padding-right: 1%; }
       .serbia-villages-container .serbia-villages-title .flag img {
@@ -1985,7 +1993,7 @@ select {
       font-weight: bold;
       font-family: "Futura Md BT";
       font-style: normal;
-      line-height: 50px;
+      font-size: 45px;
       width: 100%; }
   .serbia-villages-container .items-container {
     padding: 5% 5%;
@@ -2016,7 +2024,7 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    align-items: center; }
+    align-items: baseline; }
     .serbia-blogs-container .serbia-blogs-title .flag {
       padding-right: 1%; }
       .serbia-blogs-container .serbia-blogs-title .flag img {
@@ -2029,7 +2037,7 @@ select {
       font-weight: bold;
       font-family: "Futura Md BT";
       font-style: normal;
-      line-height: 50px;
+      font-size: 45px;
       width: 100%; }
 
 .blogs-button {

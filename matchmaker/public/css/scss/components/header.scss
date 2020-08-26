@@ -25,7 +25,7 @@
   }
 }
 
-.title {
+.header-brand-title {
   margin-top: 14px;
   margin-left: 75px;
   height: 57px;
@@ -126,10 +126,25 @@
 
 @media screen and (max-width: $break-sm) {
   .menu {
-    flex-direction: column;
-    position: fixed;
-    top: 105px;
+    //flex-direction: column;
+    //position: fixed;
+    //top: 105px;
+
     width: 174px;
+  }
+
+  .brand {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 174px;
+    margin-right: 10px;
+  }
+
+  .header-brand-title {
+    font-size: smaller;
+    margin-top: -30px;
+    color: $white;
+    margin-left: 50px;
   }
 
   .btn-login {
