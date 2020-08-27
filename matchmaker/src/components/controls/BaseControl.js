@@ -1,4 +1,6 @@
 import { Component } from "react";
+import { withRouter } from "react-router-dom";
+import connect from "react-redux/es/connect/connect";
 
 class BaseControl extends Component {
   constructor(props) {
@@ -10,8 +12,8 @@ class BaseControl extends Component {
       let event = {
         target: {
           name: this.props.name,
-          value: value,
-        },
+          value: value
+        }
       };
 
       this.props.onChange(event);
@@ -19,4 +21,11 @@ class BaseControl extends Component {
   }
 }
 
+/*function mapStateToProps({ siteDataReducers }) {
+  return {
+    language: siteDataReducers.language
+  };
+}
+
+export default withRouter(connect(mapStateToProps)(BaseControl));*/
 export default BaseControl;

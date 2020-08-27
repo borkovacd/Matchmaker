@@ -6,6 +6,8 @@ import strings from "../../localization";
 import BaseControl from "./BaseControl";
 import { getYears, getYearObject } from "../../util/DateUtil";
 import moment from "moment";
+import { withRouter } from "react-router-dom";
+import connect from "react-redux/es/connect/connect";
 
 class DateSelect extends BaseControl {
   constructor(props) {
@@ -145,4 +147,12 @@ class DateSelect extends BaseControl {
   }
 }
 
-export default DateSelect;
+//export default DateSelect;
+
+function mapStateToProps({ siteDataReducers }) {
+  return {
+    language: siteDataReducers.language
+  };
+}
+
+export default withRouter(connect(mapStateToProps)(DateSelect));

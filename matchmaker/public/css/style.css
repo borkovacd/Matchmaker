@@ -25,7 +25,8 @@ p {
 a {
   color: #d93943;
   font-size: 15px;
-  opacity: 1; }
+  opacity: 1;
+  cursor: pointer; }
   a:hover {
     opacity: 0.85; }
 

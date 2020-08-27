@@ -56,7 +56,7 @@ class FormComponent extends BaseComponent {
     const { value, dragging, index, ...restProps } = props;
 
     return (
-      <Handle value={value} {...restProps}>
+      <Handle value={value} key={index} {...restProps}>
         <span>{value}</span>
       </Handle>
     );
