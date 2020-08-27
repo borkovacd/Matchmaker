@@ -27,20 +27,35 @@ class Select extends BaseControl {
   componentWillReceiveProps(nextProps) {
     this.setState({
       items: nextProps.items ? nextProps.items : [],
-      selectedItem: this.getSelectedItem(nextProps.selectedItem),
+      selectedItem: this.getSelectedItem(
+        nextProps.selectedItem,
+        nextProps.items
+      ),
       disabled: nextProps.disabled,
       placeholder: nextProps.placeholder
     });
   }
 
-  getSelectedItem(value) {
+  getSelectedItem(value, newItems) {
     if (!value) {
       return undefined;
     }
 
-    for (let item of this.state.items) {
-      if (item[this.state.valueKey] === value) {
-        return item;
+    if (!newItems) {
+      for (let item of this.state.items) {
+        console.log("ITEM: " + item.name);
+        if (item[this.state.valueKey] === value) {
+          return item;
+        }
+      }
+    } else {
+      console.log("USAO NEKAD");
+      for (let item of newItems) {
+        console.log("ITEM: " + item.name);
+        console.log("ITEM: " + item.value);
+        if (item[this.state.valueKey] === value) {
+          return item;
+        }
       }
     }
 
