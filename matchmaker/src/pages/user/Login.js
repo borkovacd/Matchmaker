@@ -35,6 +35,12 @@ class Login extends Page {
     }
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  componentDidUpdate() {}
+
   login() {
     if (!this.validate()) {
       return;
