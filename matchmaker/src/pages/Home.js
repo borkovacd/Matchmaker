@@ -56,6 +56,7 @@ class Home extends Page {
   }
 
   componentDidUpdate() {}
+
   goToPrevSlide() {
     let index = this.state.activeIndex;
     let length = this.state.villages.length;

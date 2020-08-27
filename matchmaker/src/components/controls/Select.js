@@ -43,16 +43,12 @@ class Select extends BaseControl {
 
     if (!newItems) {
       for (let item of this.state.items) {
-        console.log("ITEM: " + item.name);
         if (item[this.state.valueKey] === value) {
           return item;
         }
       }
     } else {
-      console.log("USAO NEKAD");
       for (let item of newItems) {
-        console.log("ITEM: " + item.name);
-        console.log("ITEM: " + item.value);
         if (item[this.state.valueKey] === value) {
           return item;
         }
