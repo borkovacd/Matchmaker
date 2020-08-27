@@ -95,13 +95,19 @@
 
 .between-ages {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100%);
+  @media screen and (min-width: $break-md) {
+    width: calc(50% - 15px);
+  }
 
   .select {
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 35px;
-    width: 55px;
+    width: 100%;
     background: $language-switcher;
     border-radius: 4px;
     border: 0.5px solid $lightGrayBorder;
@@ -148,4 +154,9 @@
       }
     }
   }
+}
+
+.little-space {
+  margin-left: 3px;
+  margin-right: 3px;
 }

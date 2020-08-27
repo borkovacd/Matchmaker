@@ -53,20 +53,18 @@ class QuickSearch extends Page {
                   <label htmlFor="gender">{strings.quickSearch.gender}</label>
                 </div>
               </div>
-              <div id="gender-select" className="column column-half">
-                <div className="language-switcher">
-                  <Select
-                    name="gender"
-                    items={getGenderList()}
-                    selectedItem={this.state.searchData.gender}
-                    displayKey={"name"}
-                    valueKey={"value"}
-                    onChange={this.onChange}
-                    placeholder={getGenderString(
-                      getSearchDataParams()[0].default
-                    )}
-                  />
-                </div>
+              <div id="gender-select" className="column-half between-ages">
+                <Select
+                  name="gender"
+                  items={getGenderList()}
+                  selectedItem={this.state.searchData.gender}
+                  displayKey={"name"}
+                  valueKey={"value"}
+                  onChange={this.onChange}
+                  placeholder={getGenderString(
+                    getSearchDataParams()[0].default
+                  )}
+                />
               </div>
             </div>
             <div className="form-row mb-5">
@@ -78,27 +76,23 @@ class QuickSearch extends Page {
                 </div>
               </div>
 
-              <div id="iigender-select" className="column column-half">
-                <div className="language-switcher">
-                  <Select
-                    name="interestedInGender"
-                    items={getGenderList()}
-                    selectedItem={this.state.searchData.interestedInGender}
-                    displayKey={"name"}
-                    valueKey={"value"}
-                    onChange={this.onChange}
-                    placeholder={getGenderString(
-                      getSearchDataParams()[1].default
-                    )}
-                  />
-                </div>
+              <div id="iigender-select" className="column-half between-ages">
+                <Select
+                  name="interestedInGender"
+                  items={getGenderList()}
+                  selectedItem={this.state.searchData.interestedInGender}
+                  displayKey={"name"}
+                  valueKey={"value"}
+                  onChange={this.onChange}
+                  placeholder={getGenderString(
+                    getSearchDataParams()[1].default
+                  )}
+                />
               </div>
             </div>
-          </div>
 
-          <div>
             <div className="form-row mb-5">
-              <div className="column column-half">
+              <div className="column-half">
                 <div className="label">
                   <label htmlFor="betweenAges-min">
                     {strings.quickSearch.intrestedInAge}
@@ -106,30 +100,26 @@ class QuickSearch extends Page {
                 </div>
               </div>
 
-              <div className="form-row">
-                <div id="betweenAges-min" className="between-ages">
-                  <Select
-                    items={getAgeObjects(18, 99)}
-                    name={"ageMin"}
-                    displayKey={"name"}
-                    valueKey={"value"}
-                    selectedItem={this.state.searchData.ageMin}
-                    onChange={this.onChange}
-                    placeholder={getSearchDataParams()[2].default}
-                  />
-                </div>
-                {strings.quickSearch.and}
-                <div id="betweenAges-max" className="between-ages">
-                  <Select
-                    items={getAgeObjects(18, 99)}
-                    name={"ageMax"}
-                    displayKey={"name"}
-                    valueKey={"value"}
-                    selectedItem={this.state.searchData.ageMax}
-                    onChange={this.onChange}
-                    placeholder={getSearchDataParams()[3].default}
-                  />
-                </div>
+              <div id="betweenAges-min" className="between-ages">
+                <Select
+                  items={getAgeObjects(18, 99)}
+                  name={"ageMin"}
+                  displayKey={"name"}
+                  valueKey={"value"}
+                  selectedItem={this.state.searchData.ageMin}
+                  onChange={this.onChange}
+                  placeholder={getSearchDataParams()[2].default}
+                />
+                <div className="little-space">{strings.quickSearch.and}</div>
+                <Select
+                  items={getAgeObjects(18, 99)}
+                  name={"ageMax"}
+                  displayKey={"name"}
+                  valueKey={"value"}
+                  selectedItem={this.state.searchData.ageMax}
+                  onChange={this.onChange}
+                  placeholder={getSearchDataParams()[3].default}
+                />
               </div>
             </div>
           </div>
