@@ -14,8 +14,9 @@ import { calculateAge } from "../util/DateUtil";
 import VillagePreview from "../components/VillagePreview";
 import { OK } from "http-status-codes";
 import { Link } from "react-router-dom";
+import Page from "../common/Page";
 
-class Home extends Component {
+class Home extends Page {
   constructor(props) {
     super(props);
 

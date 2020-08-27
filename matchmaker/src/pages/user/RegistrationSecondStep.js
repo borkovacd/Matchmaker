@@ -15,15 +15,21 @@ class RegistrationSecondStep extends Page {
       data: {},
       errors: {},
       file: undefined,
-      redirectUrl: props.location.state
-        ? props.location.state.redirectUrl
-        : "/",
+      redirectUrl: props.location.state ? props.location.state.redirectUrl : "/"
     };
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  componentDidUpdate() {
+    //window.scrollTo(0, 0);
   }
 
   render() {
     return (
-      <div className="login-registration-page">
+      <div id="registration-step-2" className="login-registration-page">
         <div className="lrp-title">{strings.menu.Register}</div>
 
         <div className="lrp-grid-container second-step">
@@ -51,7 +57,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

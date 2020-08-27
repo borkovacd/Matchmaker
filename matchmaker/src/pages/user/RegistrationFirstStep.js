@@ -35,6 +35,14 @@ class RegistrationFirstStep extends Page {
     this.validationList = this.registerValidationList;
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  componentDidUpdate() {
+    //window.scrollTo(0, 0);
+  }
+
   submit() {
     if (!this.validate()) {
       return;

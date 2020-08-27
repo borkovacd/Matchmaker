@@ -27,32 +27,13 @@ class UserDetails extends Page {
     };
   }
 
-  activateMyDescritpion() {
-    this.setState({
-      myDescriptionActive: true,
-      lookingForInPartnerActive: false,
-      myInterestsActive: false
-    });
-  }
-
-  activateLookingForInPartner() {
-    this.setState({
-      myDescriptionActive: false,
-      lookingForInPartnerActive: true,
-      myInterestsActive: false
-    });
-  }
-
-  activateMyInterests() {
-    this.setState({
-      myDescriptionActive: false,
-      lookingForInPartnerActive: false,
-      myInterestsActive: true
-    });
-  }
-
   componentDidMount() {
     this.loadUser();
+    window.scrollTo(0, 0);
+  }
+
+  componentDidUpdate() {
+    //window.scrollTo(0, 0);
   }
 
   loadUser() {
@@ -81,6 +62,30 @@ class UserDetails extends Page {
           villageName: response.data.name
         });
       });
+    });
+  }
+
+  activateMyDescritpion() {
+    this.setState({
+      myDescriptionActive: true,
+      lookingForInPartnerActive: false,
+      myInterestsActive: false
+    });
+  }
+
+  activateLookingForInPartner() {
+    this.setState({
+      myDescriptionActive: false,
+      lookingForInPartnerActive: true,
+      myInterestsActive: false
+    });
+  }
+
+  activateMyInterests() {
+    this.setState({
+      myDescriptionActive: false,
+      lookingForInPartnerActive: false,
+      myInterestsActive: true
     });
   }
 

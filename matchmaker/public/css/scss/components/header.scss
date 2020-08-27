@@ -17,6 +17,7 @@
 }
 
 .logo {
+  cursor: pointer;
   img {
     top: 0;
     left: 0;
@@ -36,13 +37,13 @@
   font-style: italic;
   font-weight: 700;
   line-height: 36px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .menu {
   position: relative;
   display: flex;
-  justify-content: space-evenly; //verovatno ce se menjati
+  justify-content: space-evenly;
   align-items: center;
   margin-right: 5%;
 }
@@ -58,6 +59,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.85;
@@ -66,7 +68,6 @@
 
   a {
     text-decoration: none;
-    cursor: pointer;
     border-radius: 4px;
     color: #fff;
     font-family: "Futura Md BT";
@@ -88,6 +89,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.85;
@@ -96,7 +98,6 @@
 
   a {
     text-decoration: none;
-    cursor: pointer;
     border-radius: 4px;
     color: $white;
     font-family: "Futura Md BT";

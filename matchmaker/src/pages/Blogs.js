@@ -20,12 +20,17 @@ class Blogs extends Page {
 
   componentDidMount() {
     this.loadBlogs();
+    window.scrollTo(0, 0);
+  }
+
+  componentDidUpdate() {
+    //window.scrollTo(0, 0);
   }
 
   loadBlogs() {
     this.props.showLoader();
 
-    getBlogs().then((response) => {
+    getBlogs().then(response => {
       this.props.hideLoader();
 
       if (response.status !== OK) {
@@ -33,13 +38,13 @@ class Blogs extends Page {
       }
 
       this.setState({
-        blogs: response.data,
+        blogs: response.data
       });
     });
   }
 
   loadMore() {
-    this.setState((prev) => {
+    this.setState(prev => {
       return { visible: prev.visible + 3 };
     });
   }
@@ -87,7 +92,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       showLoader: Actions.showLoader,
-      hideLoader: Actions.hideLoader,
+      hideLoader: Actions.hideLoader
     },
     dispatch
   );

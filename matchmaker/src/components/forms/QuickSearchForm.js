@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import strings from "../../localization";
-import { getGenderList } from "../../constants/Gender";
+import { getGenderList, getGenderString } from "../../constants/Gender";
 import Select from "../controls/Select";
 import { getAgeObjects } from "../../util/AgeUtil";
 import { getSearchDataParams } from "../../constants/DefaultSearchData";
@@ -62,6 +62,9 @@ class QuickSearch extends Page {
                     displayKey={"name"}
                     valueKey={"value"}
                     onChange={this.onChange}
+                    placeholder={getGenderString(
+                      getSearchDataParams()[0].default
+                    )}
                   />
                 </div>
               </div>
@@ -84,6 +87,9 @@ class QuickSearch extends Page {
                     displayKey={"name"}
                     valueKey={"value"}
                     onChange={this.onChange}
+                    placeholder={getGenderString(
+                      getSearchDataParams()[1].default
+                    )}
                   />
                 </div>
               </div>
@@ -109,6 +115,7 @@ class QuickSearch extends Page {
                     valueKey={"value"}
                     selectedItem={this.state.searchData.ageMin}
                     onChange={this.onChange}
+                    placeholder={getSearchDataParams()[2].default}
                   />
                 </div>
                 {strings.quickSearch.and}
@@ -120,6 +127,7 @@ class QuickSearch extends Page {
                     valueKey={"value"}
                     selectedItem={this.state.searchData.ageMax}
                     onChange={this.onChange}
+                    placeholder={getSearchDataParams()[3].default}
                   />
                 </div>
               </div>

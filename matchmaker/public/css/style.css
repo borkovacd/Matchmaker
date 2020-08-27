@@ -312,11 +312,13 @@ select {
   display: flex;
   justify-content: left; }
 
-.logo img {
-  top: 0;
-  left: 0;
-  height: 105px;
-  width: 174px; }
+.logo {
+  cursor: pointer; }
+  .logo img {
+    top: 0;
+    left: 0;
+    height: 105px;
+    width: 174px; }
 
 .header-brand-title {
   margin-top: 14px;
@@ -329,7 +331,7 @@ select {
   font-style: italic;
   font-weight: 700;
   line-height: 36px;
-  cursor: pointer; }
+  cursor: default; }
 
 .menu {
   position: relative;
@@ -348,13 +350,13 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
   .btn-login:hover {
     opacity: 0.85;
     color: white; }
   .btn-login a {
     text-decoration: none;
-    cursor: pointer;
     border-radius: 4px;
     color: #fff;
     font-family: "Futura Md BT";
@@ -373,13 +375,13 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
   .btn-register:hover {
     opacity: 0.85;
     color: white; }
   .btn-register a {
     text-decoration: none;
-    cursor: pointer;
     border-radius: 4px;
     color: #fff;
     font-family: "Futura Md BT";
@@ -937,7 +939,8 @@ select {
   display: block; }
 
 .slider-arrow {
-  color: #707070; }
+  color: #707070;
+  cursor: pointer; }
 
 #footer {
   width: 100%;
